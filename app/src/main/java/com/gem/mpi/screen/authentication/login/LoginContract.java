@@ -17,11 +17,13 @@ interface LoginContract {
   }
 
   interface View extends PresentView<Presenter> {
+    void showMessageSuccess();
+    void showMessageError();
   }
 
   interface Presenter extends IPresenter<View, Interactor> {
     void login(String username, String password);
-
+    void openScreenForgotPassWord();
   }
 }
 

@@ -13,6 +13,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.gem.mpi.R;
+import com.gem.mpi.util.Constants;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -56,15 +57,15 @@ public class FormInputView extends ConstraintLayout implements View.OnFocusChang
         mEventImg.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (view.getTag().equals("delete")) {
+                if (view.getTag().equals(Constants.LOGIN_ACTION_DELETE)) {
                     setText("");
-                } else if (view.getTag().equals("view")) {
+                } else if (view.getTag().equals(Constants.LOGIN_ACTION_VIEW)) {
                     setInputType(InputType.TYPE_CLASS_NUMBER);
-                    setAction("unview");
+                    setAction(Constants.LOGIN_ACTION_UNVIEW);
                     setEventImg(getResources().getDrawable(R.drawable.ic_view));
-                } else if (view.getTag().equals("unview")) {
+                } else if (view.getTag().equals(Constants.LOGIN_ACTION_UNVIEW)) {
                     setInputType(InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_VARIATION_PASSWORD);
-                    setAction("view");
+                    setAction(Constants.LOGIN_ACTION_VIEW);
                     setEventImg(getResources().getDrawable(R.drawable.ic_un_view));
                 }
             }

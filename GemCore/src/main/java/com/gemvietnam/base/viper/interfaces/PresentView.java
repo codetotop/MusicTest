@@ -12,6 +12,7 @@ public interface PresentView<P extends IPresenter> extends IView<P> {
   void hideProgress();
 
   void showToast(String message);
+  void showToast(int id_message);
 
   void showAlertDialog(String message);
 

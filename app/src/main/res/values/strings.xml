@@ -21,4 +21,5 @@
     <!--Base-->
     <string name="action_settings">Settings</string>
     <string name="logout">Đăng Xuất</string>
+    <string name="login_error_message">Đăng nhập thất bại</string>
 </resources>
