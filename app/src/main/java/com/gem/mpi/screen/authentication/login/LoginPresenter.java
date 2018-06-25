@@ -30,4 +30,9 @@ public class LoginPresenter extends Presenter<LoginContract.View, LoginContract.
   public LoginContract.View onCreateView(Bundle data) {
     return LoginFragment.getInstance(data);
   }
+
+  @Override
+  public void login(String username, String password) {
+
+  }
 }

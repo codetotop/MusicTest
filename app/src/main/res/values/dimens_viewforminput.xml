@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="viewforminput_edtvalue_marginleft">-4dp</dimen>
+
+</resources>
