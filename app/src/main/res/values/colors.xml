@@ -1,22 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <color name="colorPrimary">#ffffff</color>
-  <color name="colorPrimaryDark">#9b9b9b</color>
-  <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary">#ffffff</color>
+    <color name="colorPrimaryDark">#9b9b9b</color>
+    <color name="colorAccent">#FF4081</color>
 
-  <color name="colorWhite">#ffffff</color>
-  <color name="colorBlack">#000000</color>
-  <color name="colorBlackCommon">#030303</color>
-  <color name="colorGrayCommon">#323538</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorBlackCommon">#030303</color>
+    <color name="colorGrayCommon">#323538</color>
 
-  <color name="bgCommon">#f4f4f4</color>
+    <color name="bgCommon">#f4f4f4</color>
 
-  <color name="colorBlueActionToolbar">#007aff</color>
-  <color name="bg_blue_button_common">#2c84eb</color>
-  <color name="bg_blue_button_common_pressed">#5197ea</color>
+    <color name="bg_blue_button_common_normal">#2c84eb</color>
+    <color name="bg_blue_button_common_pressed">#5197ea</color>
 
-  <color name="colorTitleToobar">@color/colorBlackCommon</color>
-
-  <color name="color_divider_gray">#e0e0e0</color>
-  <color name="color_divider_bg">#e0e0e0</color>
+    <color name="colorBlueTextActionToolbar">#007aff</color>
+    <color name="colorTitleToobar">@color/colorBlackCommon</color>
+    <color name="color_divider_gray">#e0e0e0</color>
+    <color name="color_divider_bg">#e0e0e0</color>
 </resources>

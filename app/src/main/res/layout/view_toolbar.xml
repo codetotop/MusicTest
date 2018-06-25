@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimary"
+    android:minHeight="?actionBarSize">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/viewtoolbar_g_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/small_space" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/viewtoolbar_g_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/small_space" />
+
+    <ImageView
+        android:id="@+id/viewtoolbar_iv_action_left"
+        android:layout_width="@dimen/picture_large_size"
+        android:layout_height="@dimen/picture_large_size"
+        android:background="@drawable/bg_action_circle_gray"
+        android:clickable="true"
+        android:contentDescription="@null"
+        android:focusable="true"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_slide_menu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/viewtoolbar_v_divider_toolbar"
+        app:layout_constraintLeft_toLeftOf="@id/viewtoolbar_g_left"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/viewtoolbar_tv_action_left"
+        style="@style/TextActionToolbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/action_change"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/viewtoolbar_v_divider_toolbar"
+        app:layout_constraintLeft_toLeftOf="@id/viewtoolbar_g_left"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/viewtoolbar_iv_action_right"
+        android:layout_width="@dimen/picture_large_size"
+        android:layout_height="@dimen/picture_large_size"
+        android:background="@drawable/bg_action_circle_gray"
+        android:clickable="true"
+        android:contentDescription="@null"
+        android:focusable="true"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_cancel"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/viewtoolbar_v_divider_toolbar"
+        app:layout_constraintRight_toRightOf="@id/viewtoolbar_g_right"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/viewtoolbar_tv_action_right"
+        style="@style/TextActionToolbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/action_save"
+        app:layout_constraintBottom_toTopOf="@id/viewtoolbar_v_divider_toolbar"
+        app:layout_constraintRight_toRightOf="@id/viewtoolbar_g_right"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.constraint.Barrier
+        app:barrierDirection="left"
+        android:id="@+id/viewtoolbar_br_action_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="viewtoolbar_iv_action_right,viewtoolbar_tv_action_right" />
+
+    <android.support.constraint.Barrier
+        app:barrierDirection="right"
+        android:id="@+id/viewtoolbar_br_action_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="viewtoolbar_iv_action_left,viewtoolbar_tv_action_Left" />
+
+    <TextView
+        android:id="@+id/viewtoolbar_tv_title"
+        style="@style/TextTitleToolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/tiny_margin"
+        android:gravity="center"
+        android:text="@string/title_about_profile"
+        app:layout_constraintBottom_toTopOf="@id/viewtoolbar_v_divider_toolbar"
+        app:layout_constraintLeft_toRightOf="@id/viewtoolbar_br_action_left"
+        app:layout_constraintRight_toLeftOf="@id/viewtoolbar_br_action_right"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/viewtoolbar_v_divider_toolbar"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/small_divider"
+        android:background="@color/color_divider_gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
