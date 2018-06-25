@@ -1,0 +1,47 @@
+package com.gem.mpi.util;
+
+import android.content.Context;
+import android.graphics.Typeface;
+import android.os.Build;
+import android.support.annotation.NonNull;
+import android.text.Html;
+import android.view.ViewGroup;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.gem.mpi.model.LocationModel;
+
+/**
+ * CommonUtils
+ * Created by BaVV on 03/22/2018.
+ */
+public class CommonUtils {
+  private static Toast sToast;
+
+  public static LocationModel.ShiftModel getShift(LocationModel locationDTO) {
+    return new LocationModel.ShiftModel();  // TODO
+  }
+
+  public static void setTextHtml(TextView textView, String textHtml) {
+    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+      textView.setText(Html.fromHtml(textHtml, Html.FROM_HTML_MODE_COMPACT));
+    } else {
+      textView.setText(Html.fromHtml(textHtml));
+    }
+  }
+
+  public static void showToast(@NonNull Context context, int messageResId, int duration) {
+    showToast(context, context.getString(messageResId), duration);
+  }
+
+  public static void showToast(@NonNull Context context, CharSequence message, int duration) {
+    if (sToast != null) sToast.cancel();
+    sToast = Toast.makeText(context.getApplicationContext(), message, duration);
+    ViewGroup toastLayout = (ViewGroup) sToast.getView();
+    TextView toastTV = (TextView) toastLayout.getChildAt(0);
+    toastTV.setTextSize(18);
+    Typeface font = Typeface.createFromAsset(context.getApplicationContext().getAssets(), "fonts/sfui_display_medium.otf");
+    toastTV.setTypeface(font);
+    sToast.show();
+  }
+}

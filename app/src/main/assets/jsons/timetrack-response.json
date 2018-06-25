@@ -1,0 +1,404 @@
+{
+  "list": [
+    {
+      "meta": {
+        "total_wage": "0.00",
+        "max_wage": 1
+      },
+      "list": [
+        {
+          "id": 721,
+          "date": 1527786000,
+          "type": "working",
+          "time_in": null,
+          "time_out": null,
+          "display_wage": 0,
+          "leave_wage": 0,
+          "is_closed": 0,
+          "leave": null,
+          "adjust": null
+        },
+        {
+          "id": 722,
+          "date": 1527872400,
+          "type": "off-work",
+          "time_in": null,
+          "time_out": null,
+          "display_wage": 0,
+          "leave_wage": 0,
+          "is_closed": 0,
+          "leave": null,
+          "adjust": null
+        },
+        {
+          "id": 723,
+          "date": 1527958800,
+          "type": "off-work",
+          "time_in": null,
+          "time_out": null,
+          "display_wage": 0,
+          "leave_wage": 0,
+          "is_closed": 0,
+          "leave": null,
+          "adjust": null
+        }
+      ]
+    },
+    {
+      "meta": {
+        "total_wage": "0.00",
+        "max_wage": 5
+      },
+      "list": [
+        {
+          "id": 724,
+          "date": 1528045200,
+          "type": "working",
+          "time_in": null,
+          "time_out": null,
+          "display_wage": 0,
+          "leave_wage": 0,
+          "is_closed": 0,
+          "leave": null,
+          "adjust": null
+        },
+        {
+          "id": 725,
+          "date": 1528131600,
+          "type": "working",
+          "time_in": null,
+          "time_out": null,
+          "display_wage": 0,
+          "leave_wage": 0,
+          "is_closed": 0,
+          "leave": null,
+          "adjust": null
+        },
+        {
+          "id": 726,
+          "date": 1528218000,
+          "type": "working",
+          "time_in": null,
+          "time_out": null,
+          "display_wage": 0,
+          "leave_wage": 0,
+          "is_closed": 0,
+          "leave": null,
+          "adjust": null
+        },
+        {
+          "id": 727,
+          "date": 1528304400,
+          "type": "working",
+          "time_in": null,
+          "time_out": null,
+          "display_wage": 0,
+          "leave_wage": 0,
+          "is_closed": 0,
+          "leave": null,
+          "adjust": null
+        },
+        {
+          "id": 728,
+          "date": 1528390800,
+          "type": "working",
+          "time_in": null,
+          "time_out": null,
+          "display_wage": 0,
+          "leave_wage": 0,
+          "is_closed": 0,
+          "leave": null,
+          "adjust": null
+        },
+        {
+          "id": 729,
+          "date": 1528477200,
+          "type": "off-work",
+          "time_in": null,
+          "time_out": null,
+          "display_wage": 0,
+          "leave_wage": 0,
+          "is_closed": 0,
+          "leave": null,
+          "adjust": null
+        },
+        {
+          "id": 730,
+          "date": 1528563600,
+          "type": "off-work",
+          "time_in": null,
+          "time_out": null,
+          "display_wage": 0,
+          "leave_wage": 0,
+          "is_closed": 0,
+          "leave": null,
+          "adjust": null
+        }
+      ]
+    },
+    {
+      "meta": {
+        "total_wage": "0.00",
+        "max_wage": 5
+      },
+      "list": [
+        {
+          "id": 731,
+          "date": 1528650000,
+          "type": "working",
+          "time_in": null,
+          "time_out": null,
+          "display_wage": 0,
+          "leave_wage": 0,
+          "is_closed": 0,
+          "leave": null,
+          "adjust": null
+        },
+        {
+          "id": 732,
+          "date": 1528736400,
+          "type": "working",
+          "time_in": null,
+          "time_out": null,
+          "display_wage": 0,
+          "leave_wage": 0,
+          "is_closed": 0,
+          "leave": null,
+          "adjust": null
+        },
+        {
+          "id": 733,
+          "date": 1528822800,
+          "type": "working",
+          "time_in": null,
+          "time_out": null,
+          "display_wage": 0,
+          "leave_wage": 0,
+          "is_closed": 0,
+          "leave": null,
+          "adjust": null
+        },
+        {
+          "id": 734,
+          "date": 1528909200,
+          "type": "working",
+          "time_in": null,
+          "time_out": null,
+          "display_wage": 0,
+          "leave_wage": 0,
+          "is_closed": 0,
+          "leave": null,
+          "adjust": null
+        },
+        {
+          "id": 735,
+          "date": 1528995600,
+          "type": "working",
+          "time_in": null,
+          "time_out": null,
+          "display_wage": 0,
+          "leave_wage": 0,
+          "is_closed": 0,
+          "leave": null,
+          "adjust": null
+        },
+        {
+          "id": 736,
+          "date": 1529082000,
+          "type": "off-work",
+          "time_in": null,
+          "time_out": null,
+          "display_wage": 0,
+          "leave_wage": 0,
+          "is_closed": 0,
+          "leave": null,
+          "adjust": null
+        },
+        {
+          "id": 737,
+          "date": 1529168400,
+          "type": "off-work",
+          "time_in": null,
+          "time_out": null,
+          "display_wage": 0,
+          "leave_wage": 0,
+          "is_closed": 0,
+          "leave": null,
+          "adjust": null
+        }
+      ]
+    },
+    {
+      "meta": {
+        "total_wage": "0.00",
+        "max_wage": 5
+      },
+      "list": [
+        {
+          "id": 738,
+          "date": 1529254800,
+          "type": "working",
+          "time_in": null,
+          "time_out": null,
+          "display_wage": 0,
+          "leave_wage": 0,
+          "is_closed": 0,
+          "leave": null,
+          "adjust": null
+        },
+        {
+          "id": 739,
+          "date": 1529341200,
+          "type": "working",
+          "time_in": null,
+          "time_out": null,
+          "display_wage": 0,
+          "leave_wage": 0,
+          "is_closed": 0,
+          "leave": null,
+          "adjust": null
+        },
+        {
+          "id": 740,
+          "date": 1529427600,
+          "type": "working",
+          "time_in": null,
+          "time_out": null,
+          "display_wage": 0,
+          "leave_wage": 0,
+          "is_closed": 0,
+          "leave": null,
+          "adjust": null
+        },
+        {
+          "id": 741,
+          "date": 1529514000,
+          "type": "working",
+          "time_in": null,
+          "time_out": null,
+          "display_wage": 0,
+          "leave_wage": 0,
+          "is_closed": 0,
+          "leave": null,
+          "adjust": null
+        },
+        {
+          "id": 742,
+          "date": 1529600400,
+          "type": "working",
+          "time_in": null,
+          "time_out": null,
+          "display_wage": 0,
+          "leave_wage": 0,
+          "is_closed": 0,
+          "leave": null,
+          "adjust": null
+        },
+        {
+          "id": 743,
+          "date": 1529686800,
+          "type": "off-work",
+          "time_in": null,
+          "time_out": null,
+          "display_wage": 0,
+          "leave_wage": 0,
+          "is_closed": 0,
+          "leave": null,
+          "adjust": null
+        },
+        {
+          "id": 744,
+          "date": 1529773200,
+          "type": "off-work",
+          "time_in": null,
+          "time_out": null,
+          "display_wage": 0,
+          "leave_wage": 0,
+          "is_closed": 0,
+          "leave": null,
+          "adjust": null
+        }
+      ]
+    },
+    {
+      "meta": {
+        "total_wage": "0.00",
+        "max_wage": 5
+      },
+      "list": [
+        {
+          "id": 745,
+          "date": 1529859600,
+          "type": "working",
+          "time_in": null,
+          "time_out": null,
+          "display_wage": 0,
+          "leave_wage": 0,
+          "is_closed": 0,
+          "leave": null,
+          "adjust": null
+        },
+        {
+          "id": 746,
+          "date": 1529946000,
+          "type": "working",
+          "time_in": null,
+          "time_out": null,
+          "display_wage": 0,
+          "leave_wage": 0,
+          "is_closed": 0,
+          "leave": null,
+          "adjust": null
+        },
+        {
+          "id": 747,
+          "date": 1530032400,
+          "type": "working",
+          "time_in": null,
+          "time_out": null,
+          "display_wage": 0,
+          "leave_wage": 0,
+          "is_closed": 0,
+          "leave": null,
+          "adjust": null
+        },
+        {
+          "id": 748,
+          "date": 1530118800,
+          "type": "working",
+          "time_in": null,
+          "time_out": null,
+          "display_wage": 0,
+          "leave_wage": 0,
+          "is_closed": 0,
+          "leave": null,
+          "adjust": null
+        },
+        {
+          "id": 749,
+          "date": 1530205200,
+          "type": "working",
+          "time_in": null,
+          "time_out": null,
+          "display_wage": 0,
+          "leave_wage": 0,
+          "is_closed": 0,
+          "leave": null,
+          "adjust": null
+        },
+        {
+          "id": 750,
+          "date": 1530291600,
+          "type": "off-work",
+          "time_in": null,
+          "time_out": null,
+          "display_wage": 0,
+          "leave_wage": 0,
+          "is_closed": 0,
+          "leave": null,
+          "adjust": null
+        }
+      ]
+    }
+  ]
+}

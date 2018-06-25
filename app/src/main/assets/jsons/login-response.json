@@ -1,0 +1,25 @@
+{
+  "id": 30,
+  "employee_code": "00136",
+  "full_name": "Vũ Văn Ba",
+  "status": "working",
+  "birthday": "1990-09-08",
+  "gender": "male",
+  "address": "Số 9, ngách 250/60, Kim Giang, Thanh Xuân, Hà Nội",
+  "phone": "0985832073",
+  "department": {
+    "id": 9,
+    "code": "1",
+    "title": "BU 1",
+    "manager_id": null
+  },
+  "avatar": null,
+  "user": {
+    "id": 1182,
+    "username": "bavv",
+    "email": "bavv@gemvietnam.com",
+    "status": "working",
+    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiIsImp0aSI6IkF5RHZDV3Axa1lmTTdDc3AifQ.eyJpc3MiOiJodHRwOlwvXC8xNzIuMTYuMTAuMTE6NTAwODAiLCJzdWIiOiIxMTgyIiwianRpIjoiQXlEdkNXcDFrWWZNN0NzcCIsImlhdCI6MTUyODI1MTYxMywibmJmIjoxNTI4MjUxNjEzLCJleHAiOjE1MjgyNTE2NzMsInJsaSI6MTUyODY4MzY3M30.DX7MGZkORTS3k9rWk0D6L90yUfzBcI93fG60O2OMYmA",
+    "role": "employee"
+  }
+}

@@ -1,0 +1,71 @@
+package com.gem.mpi.data.remote.callback;
+
+import android.content.Context;
+import android.support.annotation.NonNull;
+
+import com.gem.mpi.App;
+import com.gem.mpi.R;
+import com.gem.mpi.data.dto.UserDTO;
+import com.gemvietnam.utils.DialogUtils;
+
+import okhttp3.ResponseBody;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
+/**
+ * Login callback
+ * Created by BaVV on 03/21/2018.
+ */
+public abstract class LoginCallback implements Callback<UserDTO> {
+  private static final String SERVER_ERROR = "server_error";
+  static final String NETWORK_ERROR = "network_error";
+
+  private Context mContext;
+  private boolean mErrorDialogAllowed = true;
+
+  protected LoginCallback(Context context) {
+    mContext = context;
+  }
+
+  protected LoginCallback(Context context, boolean mErrorDialogAllowed) {
+    mContext = context;
+    this.mErrorDialogAllowed = mErrorDialogAllowed;
+  }
+
+  @Override
+  public void onResponse(@NonNull Call<UserDTO> call, @NonNull Response<UserDTO> response) {
+    UserDTO loginDTO = response.body();
+    ResponseBody errorBody = response.errorBody();
+    if (loginDTO != null) {
+      onSuccess(loginDTO);
+    } else {
+      onError(SERVER_ERROR, getServerMsg());
+    }
+  }
+
+  @Override
+  public void onFailure(@NonNull Call<UserDTO> call, @NonNull Throwable t) {
+    t.printStackTrace();
+    try {
+      onError(NETWORK_ERROR, getServerMsg());
+    } catch (IllegalStateException | NullPointerException ex) {
+      ex.printStackTrace();
+    }
+  }
+
+  protected void onError(String error, String errorMessage) {
+    DialogUtils.dismissProgressDialog();
+    if (mContext != null && mErrorDialogAllowed) {
+      DialogUtils.showErrorAlert(mContext, errorMessage);
+    }
+  }
+
+  protected void onSuccess(UserDTO userDTO) {
+    DialogUtils.dismissProgressDialog();
+  }
+
+  private String getServerMsg() {
+    return App.getInstance().getString(R.string.server_error_message);
+  }
+}
