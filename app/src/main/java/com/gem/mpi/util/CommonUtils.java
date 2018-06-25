@@ -9,18 +9,12 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.gem.mpi.model.LocationModel;
-
 /**
  * CommonUtils
  * Created by BaVV on 03/22/2018.
  */
 public class CommonUtils {
   private static Toast sToast;
-
-  public static LocationModel.ShiftModel getShift(LocationModel locationDTO) {
-    return new LocationModel.ShiftModel();  // TODO
-  }
 
   public static void setTextHtml(TextView textView, String textHtml) {
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {

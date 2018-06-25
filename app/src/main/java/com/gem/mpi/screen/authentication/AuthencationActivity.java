@@ -1,16 +1,17 @@
-package com.gem.mpi.screen.main;
+package com.gem.mpi.screen.authentication;
 
 import android.os.Bundle;
 
 import com.gem.mpi.R;
+import com.gem.mpi.screen.authentication.login.LoginPresenter;
 import com.gem.mpi.screen.base.AppBaseActivity;
-import com.gem.mpi.screen.main.main.MainPresenter;
 import com.gemvietnam.base.viper.ViewFragment;
 
-public class MainActivity extends AppBaseActivity {
+public class AuthencationActivity extends AppBaseActivity {
+
   @Override
   public ViewFragment onCreateFirstFragment() {
-    return (ViewFragment) new MainPresenter(this).getFragment();
+    return (ViewFragment) new LoginPresenter(this).getFragment();
   }
 
   @Override
@@ -20,6 +21,6 @@ public class MainActivity extends AppBaseActivity {
 
   @Override
   public int getLayoutId() {
-    return R.layout.activity_main;
+    return R.layout.activity_authencation;
   }
 }

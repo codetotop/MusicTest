@@ -1,13 +1,13 @@
-package com.gem.mpi.screen.authentication.login;
+package com.gem.mpi.screen.main.main;
 
 import com.gemvietnam.base.viper.interfaces.IInteractor;
 import com.gemvietnam.base.viper.interfaces.IPresenter;
 import com.gemvietnam.base.viper.interfaces.PresentView;
 
 /**
- * The Login Contract
+ * The Main Contract
  */
-interface LoginContract {
+interface MainContract {
 
   interface Interactor extends IInteractor<Presenter> {
   }

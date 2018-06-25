@@ -1,9 +1,5 @@
 package com.gem.mpi.data.remote;
 
-import com.gem.mpi.App;
-import com.gem.mpi.data.dto.UserDTO;
-import com.gem.mpi.data.remote.services.SurveyService;
-import com.gem.mpi.pref.PrefWrapper;
 import com.gemvietnam.utils.StringUtils;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -12,8 +8,6 @@ import com.google.gson.JsonDeserializer;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParseException;
 import com.gem.mpi.BuildConfig;
-import com.gem.mpi.data.remote.services.LocationService;
-import com.gem.mpi.data.remote.services.CommonService;
 
 import java.io.IOException;
 import java.lang.reflect.Type;
@@ -55,11 +49,6 @@ public class ServiceBuilder {
                 .header("Content-Type", "application/json")
                 .method(original.method(), original.body());
 
-            UserDTO userDTO = PrefWrapper.getUser(App.getInstance());
-            if (userDTO != null && !StringUtils.isEmpty(userDTO.getToken())) {
-              builder.header("Authorization", userDTO.getToken());
-            }
-
             return chain.proceed(builder.build());
           }
         })
@@ -87,17 +76,5 @@ public class ServiceBuilder {
 
   private static String buildUrl(String serviceName) {
     return getBaseUrl() + BuildConfig.API_VERSION + "/" + (StringUtils.isEmpty(serviceName) ? "" : serviceName + "/");
-  }
-
-  public static LocationService getLocationService() {
-    return getRetrofit(buildUrl(LocationService.SERVICE_NAME)).create(LocationService.class);
-  }
-
-  public static SurveyService getSurveyService() {
-    return getRetrofit(buildUrl(SurveyService.SERVICE_NAME)).create(SurveyService.class);
-  }
-
-  public static CommonService getCommonService() {
-    return getRetrofit(buildUrl("")).create(CommonService.class);
   }
 }

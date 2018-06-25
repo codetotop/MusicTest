@@ -1,22 +1,13 @@
 package com.gem.mpi.screen.authentication.login;
 
-import android.content.Intent;
 import android.os.Bundle;
 
-import com.gem.mpi.data.dto.UserDTO;
-import com.gem.mpi.data.remote.callback.LoginCallback;
-import com.gem.mpi.realm.RealmController;
-import com.gem.mpi.screen.main.MainActivity;
 import com.gemvietnam.base.viper.Presenter;
 import com.gemvietnam.base.viper.interfaces.ContainerView;
-import com.gem.mpi.pref.PrefWrapper;
-import com.gemvietnam.utils.StringUtils;
 
 /**
- * Created by BaVV on 20/11/2017.
- * LoginPresenter
+ * The Login Presenter
  */
-
 public class LoginPresenter extends Presenter<LoginContract.View, LoginContract.Interactor>
     implements LoginContract.Presenter {
 
@@ -24,27 +15,10 @@ public class LoginPresenter extends Presenter<LoginContract.View, LoginContract.
     super(containerView);
   }
 
-  @Override
-  public LoginContract.View onCreateView(Bundle data) {
-    return LoginFragment.getInstance(data);
-  }
 
   @Override
   public void start() {
-    UserDTO user = PrefWrapper.getUser(getViewContext());
-    if (user != null && !StringUtils.isEmpty(user.getToken())) {
-      openMainScreen();
-    } else {
-      PrefWrapper.saveLocationSetting(getViewContext(), null);
-      PrefWrapper.setDeviceTokenRegistered(getViewContext(), false);
-      RealmController.getInstance().clearAllSurvey();
-      RealmController.getInstance().deleteCompleteSurvey();
-    }
-  }
-
-  private void openMainScreen() {
-    getViewContext().startActivity(new Intent(getViewContext(), MainActivity.class));
-    getViewContext().finish();
+    // Start getting data here
   }
 
   @Override
@@ -53,14 +27,7 @@ public class LoginPresenter extends Presenter<LoginContract.View, LoginContract.
   }
 
   @Override
-  public void login(final String username, final String password) {
-    mView.showProgress();
-    mInteractor.login(username, password, new LoginCallback(getViewContext()) {
-      @Override
-      protected void onSuccess(UserDTO userDTO) {
-        super.onSuccess(userDTO);
-        openMainScreen();
-      }
-    });
+  public LoginContract.View onCreateView(Bundle data) {
+    return LoginFragment.getInstance(data);
   }
 }
