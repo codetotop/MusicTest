@@ -1,5 +1,6 @@
 package com.gem.mpi.data.remote;
 
+import com.gem.mpi.data.remote.services.AuthenticationServices;
 import com.gemvietnam.utils.StringUtils;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -76,5 +77,9 @@ public class ServiceBuilder {
 
   private static String buildUrl(String serviceName) {
     return getBaseUrl() + BuildConfig.API_VERSION + "/" + (StringUtils.isEmpty(serviceName) ? "" : serviceName + "/");
+  }
+
+  private static AuthenticationServices getAuthenticationServices(){
+      return getRetrofit(buildUrl("")).create(AuthenticationServices.class);
   }
 }

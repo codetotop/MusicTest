@@ -21,4 +21,6 @@ public class ForgotPasswordFragment extends ViewFragment<ForgotPasswordContract.
     protected int getLayoutId() {
         return R.layout.fragment_forgot_password;
     }
+
+
 }

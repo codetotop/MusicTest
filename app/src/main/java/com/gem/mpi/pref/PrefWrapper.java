@@ -3,6 +3,9 @@ package com.gem.mpi.pref;
 import android.content.Context;
 import android.content.SharedPreferences;
 
+import com.gem.mpi.data.dto.LoginDTO;
+import com.gem.mpi.mapper.LoginMapper;
+import com.gem.mpi.model.LoginModel;
 import com.gem.mpi.util.FileUtils;
 import com.gemvietnam.utils.StringUtils;
 import com.google.gson.Gson;
@@ -22,6 +25,7 @@ public class PrefWrapper {
 
   private static final String KEY_LANGUAGE = "language";
   private static final String KEY_LOCATION = "location";
+  private static final String KEY_LOGIN = "login";
 
   private static SharedPreferences getPreference(Context context) {
     return context.getSharedPreferences(MY_PREFERENCES, Context.MODE_PRIVATE);
@@ -73,5 +77,18 @@ public class PrefWrapper {
     SharedPreferences.Editor editor = getPreference(context).edit();
     editor.clear();
     editor.apply();
+  }
+
+  public static void saveLoginResponse(Context context, LoginDTO loginDTO){
+    String loginResponse = new Gson().toJson(loginDTO);
+    SharedPreferences.Editor editor = (SharedPreferences.Editor) getPreference(context);
+    editor.putString(KEY_LOGIN,loginResponse);
+    editor.apply();
+  }
+
+  public static LoginModel getLoginResponse(Context context){
+    String loginResponse = getPreference(context).getString(KEY_LOGIN,"");
+    LoginDTO loginDTO = new Gson().fromJson(loginResponse,LoginDTO.class);
+    return LoginMapper.transform(loginDTO);
   }
 }
