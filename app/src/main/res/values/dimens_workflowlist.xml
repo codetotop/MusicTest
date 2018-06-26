@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="imgfolder_margintop">48dp</dimen>
+    <dimen name="tvheader_marginleft">8dp</dimen>
+    <dimen name="imgfolder_marginleft">15dp</dimen>
+    <dimen name="itemworkflowlist_imgstatus_marginleft">20dp</dimen>
+    <dimen name="itemworkflowlist_tvdocsymbol_margintop">8dp</dimen>
+    <dimen name="itemworkflowlist_tvnewidea_margintop">4dp</dimen>
+    <dimen name="itemworkflowlist_tvduration_margintop">4dp</dimen>
+    <dimen name="imgexpand_width">12dp</dimen>
+    <dimen name="imgexpand_height">12dp</dimen>
+    <dimen name="imgexpand_marginleft">9dp</dimen>
+    <dimen name="imgexpand_marginbottom">2dp</dimen>
+    <dimen name="rcvworklist_marginright">16dp</dimen>
+    <dimen name="rcvworklist_margintop">12dp</dimen>
+    <dimen name="tvdecorationline_height">1dp</dimen>
+    <dimen name="tvdecorationline_margintop">16dp</dimen>
+</resources>

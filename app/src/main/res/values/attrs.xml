@@ -9,6 +9,13 @@
         <attr name="imgevent_visibility" format="boolean" />
     </declare-styleable>
 
+    <declare-styleable name="DocumentView">
+        <attr name="imgavatardocument_backgound" format="reference|color"/>
+        <attr name="tvnamedocument_name" format="string"/>
+        <attr name="imgdownloaddocument_visible" format="boolean"/>
+        <attr name="imgdownloaddocument_backgound" format="reference|color"/>
+    </declare-styleable>
+
     <declare-styleable name="ProfileView">
         <attr name="profileview_avatar" format="reference|color" />
         <attr name="profileview_name" format="reference|string" />

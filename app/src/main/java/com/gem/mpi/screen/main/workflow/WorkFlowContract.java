@@ -1,13 +1,13 @@
-package com.gem.mpi.screen.cp_register;
+package com.gem.mpi.screen.main.workflow;
 
 import com.gemvietnam.base.viper.interfaces.IInteractor;
 import com.gemvietnam.base.viper.interfaces.IPresenter;
 import com.gemvietnam.base.viper.interfaces.PresentView;
 
 /**
- * The CompanyRigisterData Contract
+ * The WorkFlow Contract
  */
-interface CompanyRigisterDataContract {
+interface WorkFlowContract {
 
     interface Interactor extends IInteractor<Presenter> {
     }

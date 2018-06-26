@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:id="@+id/imgAvatarDocument"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/word"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+    <TextView
+        android:id="@+id/tvNameDocument"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/TextSmallGrayCommon"
+        android:text="Gui_Vu_CH.docx"
+        app:layout_constraintLeft_toRightOf="@+id/imgAvatarDocument"
+        app:layout_constraintRight_toLeftOf="@+id/imgDownloadDocument"
+        android:layout_marginLeft="10dp"
+        />
+    <ImageView
+        android:id="@+id/imgDownloadDocument"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_download"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/imgAvatarDocument"
+        app:layout_constraintBottom_toBottomOf="@id/imgAvatarDocument"
+        />
+</android.support.constraint.ConstraintLayout>

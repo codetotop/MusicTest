@@ -27,6 +27,20 @@
         <item name="android:textSize">@dimen/small_text_size</item>
     </style>
 
+    <style name="TextSmallBlackCommon">
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">@dimen/small_text_size</item>
+    </style>
+
+    <style name="TextSmallestBlackCommon">
+        <item name="android:textColor">@color/colorGrayCommon</item>
+        <item name="android:textSize">@dimen/smallest_text_size</item>
+    </style>
+    <style name="TextSmallSlateGreyCommon">
+        <item name="android:textColor">@color/colorSlateGrey</item>
+        <item name="android:textSize">@dimen/small_text_size</item>
+    </style>
+
     <style name="TextXSmallWhite">
         <item name="android:textColor">@color/colorWhite</item>
         <item name="android:textSize">@dimen/x_small_text_size</item>
