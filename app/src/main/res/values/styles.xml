@@ -58,6 +58,11 @@
         <item name="android:textSize">@dimen/large_text_size</item>
     </style>
 
+    <style name="TextTinyBlack">
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">@dimen/tiny_text_size</item>
+    </style>
+
     <!--Base view-->
 
     <style name="TextSlideMenuItemBlackCommon" parent="TextMediumGrayCommon">

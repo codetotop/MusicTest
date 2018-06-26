@@ -20,11 +20,11 @@ import butterknife.OnClick;
  * The Main Fragment
  */
 public class MainFragment extends ViewFragment<MainContract.Presenter> implements MainContract.View {
-  @BindView(R.id.fragmentmain_tv_toolbar)
+  @BindView(R.id.fragmentmain_tbv_toolbar)
   ToolbarView mToolbarTbv;
   @BindView(R.id.fragmentmain_dl_drawer)
   DrawerLayout mDrawerDl;
-  @BindView(R.id.fragmentmain_rv_slide_menu)
+  @BindView(R.id.fragmentmain_rv_list_slide_menu)
   RecyclerView mSlideMenuRv;
 
   public static MainFragment getInstance() {
@@ -67,7 +67,7 @@ public class MainFragment extends ViewFragment<MainContract.Presenter> implement
   }
 
   @Override
-  public void initSlideMenu() {
+  public void initListSlideMenu() {
     mSlideMenuRv.setLayoutManager(new LinearLayoutManager(getViewContext()));
     mSlideMenuRv.setAdapter(getPresenter().getSlideMenuAdaper());
   }

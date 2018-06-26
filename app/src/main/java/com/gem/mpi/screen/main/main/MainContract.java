@@ -25,7 +25,7 @@ interface MainContract {
 
     void onLogoutClick();
 
-    void initSlideMenu();
+    void initListSlideMenu();
   }
 
   interface Presenter extends IPresenter<View, Interactor> {

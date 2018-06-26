@@ -9,19 +9,19 @@ import com.gem.mpi.R;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SlideMenuAdaper extends BaseQuickAdapter<MenuItem, BaseViewHolder> {
+public class SlideMenuAdaper extends BaseQuickAdapter<SlideMenuItem, BaseViewHolder> {
 
-  public SlideMenuAdaper(@Nullable List<MenuItem> data) {
+  public SlideMenuAdaper(@Nullable List<SlideMenuItem> data) {
     super(R.layout.item_slide_menu, data);
-    List<MenuItem> listFake = new ArrayList<>();
+    List<SlideMenuItem> listFake = new ArrayList<>();
     for (int i = 0; i < 10; i++) {
-      listFake.add(new MenuItem());
+      listFake.add(new SlideMenuItem());
     }
     setNewData(listFake);
   }
 
   @Override
-  protected void convert(BaseViewHolder helper, MenuItem item) {
+  protected void convert(BaseViewHolder helper, SlideMenuItem item) {
 
   }
 }

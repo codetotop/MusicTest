@@ -19,7 +19,7 @@ public class MainPresenter extends Presenter<MainContract.View, MainContract.Int
   @Override
   public void start() {
     mSlideMenuAdaper = new SlideMenuAdaper(null);
-    getView().initSlideMenu();
+    getView().initListSlideMenu();
   }
 
   @Override
