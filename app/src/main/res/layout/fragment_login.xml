@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/white">
@@ -22,12 +21,12 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/tvsectorministries_margintop"
         android:gravity="center_horizontal"
+        android:text="@string/tvsectorministries_text"
         android:textColor="@color/colorBlack"
         android:textSize="@dimen/tvsectorministries_textsize"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgCountry"
-        android:text="@string/tvsectorministries_text" />
+        app:layout_constraintTop_toBottomOf="@+id/imgCountry" />
 
     <TextView
         android:id="@+id/tvSoftWareManagement"
@@ -35,35 +34,35 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/tvsoftwaremanagement_margintop"
         android:gravity="center_horizontal"
+        android:text="@string/tvsoftwaremanagement_text"
         android:textColor="@color/colorBlack"
         android:textSize="@dimen/tvsoftwaremanagement_textsize"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgCountry"
-        android:text="@string/tvsoftwaremanagement_text" />
+        app:layout_constraintTop_toBottomOf="@+id/imgCountry" />
 
     <com.gem.mpi.widget.FormInputView
         android:id="@+id/formInputUserName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/login_marginleft"
+        android:layout_marginRight="@dimen/login_marginright"
         android:layout_marginTop="@dimen/forminputviewusername_margintop"
         app:imgevent_source="@drawable/ic_clear"
         app:imgevent_visibility="false"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/imgCountry"
-        android:layout_marginRight="@dimen/login_marginright"
-        android:layout_marginLeft="@dimen/login_marginleft"
         app:tvlabel_name="@string/label_username_exp" />
 
     <com.gem.mpi.widget.FormInputView
         android:id="@+id/formInputPassWord"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/login_marginleft"
+        android:layout_marginRight="@dimen/login_marginright"
         app:imgevent_source="@drawable/ic_un_view"
         app:imgevent_visibility="false"
         app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginRight="@dimen/login_marginright"
-        android:layout_marginLeft="@dimen/login_marginleft"
         app:layout_constraintTop_toBottomOf="@+id/formInputUserName"
         app:tvlabel_name="@string/label_password_exp" />
 
@@ -71,36 +70,35 @@
         android:id="@+id/tvForgotPassWord"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="@dimen/tvforgotpassword_textsize"
-        android:textColor="@color/tvforgotpassword_textcolor"
-        android:text="@string/tvforgotpassword_text"
-        app:layout_constraintTop_toBottomOf="@+id/formInputPassWord"
-        android:layout_marginTop="@dimen/tvforgotpassword_margintop"
-        app:layout_constraintRight_toRightOf="parent"
         android:layout_marginRight="@dimen/login_marginleft"
-        />
+        android:layout_marginTop="@dimen/tvforgotpassword_margintop"
+        android:text="@string/tvforgotpassword_text"
+        android:textColor="@color/tvforgotpassword_textcolor"
+        android:textSize="@dimen/tvforgotpassword_textsize"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/formInputPassWord" />
+
     <Button
         android:id="@+id/btnLogin"
+        style="@style/ButtonCommon"
         android:layout_width="match_parent"
         android:layout_height="@dimen/btnlogin_height"
-        android:text="@string/btnlogin_text"
-        android:background="@drawable/shape_button"
-        android:layout_marginRight="@dimen/login_marginleft"
         android:layout_marginLeft="@dimen/login_marginright"
-        app:layout_constraintTop_toBottomOf="@+id/tvForgotPassWord"
+        android:layout_marginRight="@dimen/login_marginleft"
         android:layout_marginTop="@dimen/btnlogin_margintop"
-        />
+        android:background="@drawable/bg_blue_button_common"
+        android:text="@string/btnlogin_text"
+        app:layout_constraintTop_toBottomOf="@+id/tvForgotPassWord" />
 
     <TextView
         android:id="@+id/tvVersion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="@dimen/tvversion_textsize"
-        android:textColor="@color/tvversion_textcolor"
-        android:text="@string/tvversion_text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginBottom="@dimen/tvversion_marginbottom"
-        />
+        android:text="@string/tvversion_text"
+        android:textColor="@color/tvversion_textcolor"
+        android:textSize="@dimen/tvversion_textsize"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
 </android.support.constraint.ConstraintLayout>

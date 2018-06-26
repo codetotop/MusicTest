@@ -1,61 +1,76 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
-  <!-- Base application theme. -->
-  <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-    <!-- Customize your theme here. -->
-    <item name="colorPrimary">@color/colorPrimary</item>
-    <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-    <item name="colorAccent">@color/colorAccent</item>
-    <item name="windowActionBar">false</item>
-    <item name="windowNoTitle">true</item>
-  </style>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowTranslucentStatus" tools:targetApi="kitkat">true</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+    </style>
 
-  <style name="AppTheme.NoActionBar">
-    <item name="windowActionBar">false</item>
-    <item name="windowNoTitle">true</item>
-  </style>
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
 
-  <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
-  <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
-
-
-  <!--Base-->
-
-  <style name="TextSmallGrayCommon">
-    <item name="android:textColor">@color/colorGrayCommon</item>
-    <item name="android:textSize">@dimen/small_text_size</item>
-  </style>
-
-  <style name="TextXSmallWhite">
-    <item name="android:textColor">@color/colorWhite</item>
-    <item name="android:textSize">@dimen/x_small_text_size</item>
-  </style>
-
-  <style name="TextLargeBlackCommon">
-    <item name="android:textColor">@color/colorBlackCommon</item>
-    <item name="android:textSize">@dimen/large_text_size</item>
-  </style>
-
-  <style name="TextMediumBlack">
-    <item name="android:textColor">@color/colorBlack</item>
-    <item name="android:textSize">@dimen/medium_text_size</item>
-  </style>
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
 
-  <style name="TextMediumBlackCommon">
-    <item name="android:textColor">@color/colorBlackCommon</item>
-    <item name="android:textSize">@dimen/medium_text_size</item>
-  </style>
+    <!--Base-->
 
-  <style name="TextMediumGrayCommon">
-    <item name="android:textColor">@color/colorGrayCommon</item>
-    <item name="android:textSize">@dimen/medium_text_size</item>
-  </style>
+    <style name="TextSmallGrayCommon">
+        <item name="android:textColor">@color/colorGrayCommon</item>
+        <item name="android:textSize">@dimen/small_text_size</item>
+    </style>
 
-  <!--Base view-->
+    <style name="TextXSmallWhite">
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textSize">@dimen/x_small_text_size</item>
+    </style>
 
-  <style name="TextSlideMenuItemBlackCommon" parent="TextMediumGrayCommon" />
+    <style name="TextLargeBlackCommon">
+        <item name="android:textColor">@color/colorBlackCommon</item>
+        <item name="android:textSize">@dimen/large_text_size</item>
+    </style>
 
-  <style name="TextTitleToolbar" parent="TextLargeBlackCommon" />
+    <style name="TextMediumBlack">
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">@dimen/medium_text_size</item>
+    </style>
+
+
+    <style name="TextMediumBlackCommon">
+        <item name="android:textColor">@color/colorBlackCommon</item>
+        <item name="android:textSize">@dimen/medium_text_size</item>
+    </style>
+
+    <style name="TextMediumGrayCommon">
+        <item name="android:textColor">@color/colorGrayCommon</item>
+        <item name="android:textSize">@dimen/medium_text_size</item>
+    </style>
+
+    <style name="TextActionToolbar">
+        <item name="android:textColor">@color/colorBlueTextActionToolbar</item>
+        <item name="android:textSize">@dimen/large_text_size</item>
+    </style>
+
+    <!--Base view-->
+
+    <style name="TextSlideMenuItemBlackCommon" parent="TextMediumGrayCommon">
+
+    </style>
+
+    <style name="TextTitleToolbar" parent="TextLargeBlackCommon">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="ButtonCommon" parent="TextXSmallWhite">
+        <item name="android:background">@drawable/bg_blue_button_common</item>
+        <item name="android:minHeight">@dimen/blue_button_common_min_height</item>
+        <item name="android:stateListAnimator" tools:targetApi="lollipop">@null</item>
+    </style>
 </resources>

@@ -19,7 +19,12 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <!--Base-->
+    <string name="empty" />
     <string name="action_settings">Settings</string>
     <string name="logout">Đăng Xuất</string>
     <string name="login_error_message">Đăng nhập thất bại</string>
+
+    <string name="action_save">Lưu</string>
+    <string name="action_change">Sửa</string>
+    <string name="title_about_profile">Thông Tin Cá Nhân</string>
 </resources>

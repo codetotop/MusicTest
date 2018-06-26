@@ -8,8 +8,9 @@ import com.gemvietnam.base.viper.interfaces.ContainerView;
 /**
  * The Main Presenter
  */
-public class MainPresenter extends Presenter<MainContract.View, MainContract.Interactor>
-    implements MainContract.Presenter {
+public class MainPresenter extends Presenter<MainContract.View, MainContract.Interactor> implements MainContract.Presenter {
+
+  private SlideMenuAdaper mSlideMenuAdaper;
 
   public MainPresenter(ContainerView containerView) {
     super(containerView);
@@ -17,7 +18,8 @@ public class MainPresenter extends Presenter<MainContract.View, MainContract.Int
 
   @Override
   public void start() {
-    // Start getting data here
+    mSlideMenuAdaper = new SlideMenuAdaper(null);
+    getView().initSlideMenu();
   }
 
   @Override
@@ -28,5 +30,20 @@ public class MainPresenter extends Presenter<MainContract.View, MainContract.Int
   @Override
   public MainContract.View onCreateView(Bundle data) {
     return MainFragment.getInstance(data);
+  }
+
+  @Override
+  public SlideMenuAdaper getSlideMenuAdaper() {
+    return mSlideMenuAdaper;
+  }
+
+  @Override
+  public void handleActionLeft() {
+    getView().onMenuClick();
+  }
+
+  @Override
+  public void handleLogout() {
+    getView().showToast("LogOut");
   }
 }
