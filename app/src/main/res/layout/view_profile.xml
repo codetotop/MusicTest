@@ -53,10 +53,11 @@
 
     <ImageView
         android:id="@+id/viewprofile_iv_action"
-        android:layout_width="@dimen/picture_small_size"
-        android:layout_height="@dimen/picture_small_size"
+        android:layout_width="@dimen/picture_large_size"
+        android:layout_height="@dimen/picture_large_size"
         android:background="@drawable/bg_action_circle_gray"
         android:contentDescription="@null"
+        android:padding="@dimen/small_padding"
         android:scaleType="centerInside"
         android:src="@drawable/ic_settings"
         app:layout_constraintBottom_toBottomOf="@id/viewprofile_iv_avatar"

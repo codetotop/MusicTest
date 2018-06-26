@@ -124,9 +124,10 @@ public class ToolbarView extends ConstraintLayout implements View.OnClickListene
     mActionLeftIv.setImageDrawable(drawable);
   }
 
-  public void setImageActionLeft(Integer id) {
-    if (id != null)
-      mActionLeftIv.setImageResource(id);
+  public void setImageActionLeft(Integer idRes) {
+    if (idRes != null) {
+      mActionLeftIv.setImageResource(idRes);
+    }
   }
 
   public void setTextActionLeft(String action) {
@@ -134,8 +135,9 @@ public class ToolbarView extends ConstraintLayout implements View.OnClickListene
   }
 
   public void setTextActionLeft(Integer actionLeftStringId) {
-    if (actionLeftStringId != null)
+    if (actionLeftStringId != null) {
       mActionLeftTv.setText(getResources().getString(actionLeftStringId));
+    }
   }
 
   public String getTextActionLeft() {
@@ -146,9 +148,10 @@ public class ToolbarView extends ConstraintLayout implements View.OnClickListene
     mActionRightIv.setImageDrawable(drawable);
   }
 
-  public void setImageActionRight(Integer id) {
-    if (id != null)
-      mActionRightIv.setImageResource(id);
+  public void setImageActionRight(Integer idRes) {
+    if (idRes != null) {
+      mActionRightIv.setImageResource(idRes);
+    }
   }
 
   public void setTextActionRight(String action) {
@@ -156,8 +159,9 @@ public class ToolbarView extends ConstraintLayout implements View.OnClickListene
   }
 
   public void setTextActionRight(Integer actionRightStringId) {
-    if (actionRightStringId != null)
+    if (actionRightStringId != null) {
       mActionRightTv.setText(getResources().getString(actionRightStringId));
+    }
   }
 
   public String getTextActionRight() {
@@ -168,9 +172,10 @@ public class ToolbarView extends ConstraintLayout implements View.OnClickListene
     mTitleTv.setText(title);
   }
 
-  public void setTitle(Integer id) {
-    if (id != null)
-      mTitleTv.setText(getResources().getString(id));
+  public void setTitle(Integer idRes) {
+    if (idRes != null) {
+      mTitleTv.setText(getResources().getString(idRes));
+    }
   }
 
   public String getTitle() {
@@ -214,11 +219,15 @@ public class ToolbarView extends ConstraintLayout implements View.OnClickListene
   }
 
   public void setOnActionLeftListener(OnActionLeftListener onActionLeftListener) {
-    this.mOnActionLeftListener = onActionLeftListener;
+    if (onActionLeftListener != null) {
+      this.mOnActionLeftListener = onActionLeftListener;
+    }
   }
 
   public void setOnActionRightListener(OnActionRightListener onActionRightListener) {
-    this.mOnActionRightListener = onActionRightListener;
+    if (onActionRightListener != null) {
+      this.mOnActionRightListener = onActionRightListener;
+    }
   }
 
   public interface OnActionLeftListener {

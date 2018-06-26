@@ -1,6 +1,8 @@
 package com.gem.mpi.screen.main.main;
 
-import com.gem.mpi.widget.ToolbarView;
+import com.gem.mpi.widget.ToolbarView.ActionStyle;
+import com.gem.mpi.widget.ToolbarView.OnActionLeftListener;
+import com.gem.mpi.widget.ToolbarView.OnActionRightListener;
 import com.gemvietnam.base.viper.interfaces.IInteractor;
 import com.gemvietnam.base.viper.interfaces.IPresenter;
 import com.gemvietnam.base.viper.interfaces.PresentView;
@@ -11,23 +13,27 @@ import com.gemvietnam.base.viper.interfaces.PresentView;
 interface MainContract {
 
   interface Interactor extends IInteractor<Presenter> {
+
   }
 
   interface View extends PresentView<Presenter> {
-    void initToolbar(ToolbarView.ActionStyle actionLeftStyle, ToolbarView.ActionStyle actionRightStyle,Integer titleId,
+    void initToolbar(ActionStyle actionLeftStyle, ActionStyle actionRightStyle, Integer titleId,
                      Integer actionLeftDrawbleId, Integer actionLeftStringId, Integer actionRightDrawableId, Integer actionRightStringId,
-                     ToolbarView.OnActionLeftListener onActionLeftListener, ToolbarView.OnActionRightListener onActionRightListener);
+                     OnActionLeftListener onActionLeftListener, OnActionRightListener onActionRightListener);
 
-    void initMenu();
+    void onMenuClick();
 
-    void initToolbarListener();
+    void onLogoutClick();
+
+    void initSlideMenu();
   }
 
   interface Presenter extends IPresenter<View, Interactor> {
+    SlideMenuAdaper getSlideMenuAdaper();
 
     void handleActionLeft();
 
-    void handleActionRight();
+    void handleLogout();
   }
 }
 
