@@ -52,7 +52,7 @@ public class MainFragment extends ViewFragment<MainContract.Presenter> implement
   }
 
   @Override
-  public void onMenuClick() {
+  public void onSlideMenuChange() {
     if (mDrawerDl.isDrawerOpen(GravityCompat.START)) {
       mDrawerDl.closeDrawer(GravityCompat.START);
     } else {
@@ -70,6 +70,12 @@ public class MainFragment extends ViewFragment<MainContract.Presenter> implement
   public void initListSlideMenu() {
     mSlideMenuRv.setLayoutManager(new LinearLayoutManager(getViewContext()));
     mSlideMenuRv.setAdapter(getPresenter().getSlideMenuAdaper());
+  }
+
+  @Override
+  @OnClick(R.id.viewprofile_iv_action)
+  public void onSettingClick() {
+    getPresenter().navigateToProfileDetail();
   }
 
   @Override

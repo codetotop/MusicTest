@@ -21,11 +21,13 @@ interface MainContract {
                      Integer actionLeftDrawbleId, Integer actionLeftStringId, Integer actionRightDrawableId, Integer actionRightStringId,
                      OnActionLeftListener onActionLeftListener, OnActionRightListener onActionRightListener);
 
-    void onMenuClick();
+    void onSlideMenuChange();
 
     void onLogoutClick();
 
     void initListSlideMenu();
+
+    void onSettingClick();
   }
 
   interface Presenter extends IPresenter<View, Interactor> {
@@ -34,6 +36,8 @@ interface MainContract {
     void handleActionLeft();
 
     void handleLogout();
+
+    void navigateToProfileDetail();
   }
 }
 

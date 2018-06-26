@@ -31,6 +31,6 @@ public class ProfileDetailPresenter extends Presenter<ProfileDetailContract.View
 
   @Override
   public void handleActionLeft() {
-
+    getView().getFragmentManager().popBackStack();
   }
 }
