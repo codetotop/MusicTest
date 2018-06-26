@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <declare-styleable name="FormInputView">
+        <attr name="tvlabel_name" format="string" />
+        <attr name="edtvalue_inputtype" format="integer|reference" />
+        <attr name="imgevent_source" format="reference" />
+        <attr name="imgevent_action" format="string" />
+        <attr name="imgevent_visibility" format="boolean" />
+    </declare-styleable>
+
     <declare-styleable name="ProfileView">
         <attr name="profileview_avatar" format="reference|color" />
         <attr name="profileview_name" format="reference|string" />

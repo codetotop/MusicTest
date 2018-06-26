@@ -2,6 +2,7 @@ package com.gem.mpi.screen.authentication.login;
 
 import android.os.Bundle;
 
+import com.gem.mpi.screen.authentication.forgot.ForgotPasswordPresenter;
 import com.gemvietnam.base.viper.Presenter;
 import com.gemvietnam.base.viper.interfaces.ContainerView;
 
@@ -29,5 +30,15 @@ public class LoginPresenter extends Presenter<LoginContract.View, LoginContract.
   @Override
   public LoginContract.View onCreateView(Bundle data) {
     return LoginFragment.getInstance(data);
+  }
+
+  @Override
+  public void login(String username, String password) {
+
+  }
+
+  @Override
+  public void openScreenForgotPassWord() {
+    new ForgotPasswordPresenter(mContainerView).getFragment();
   }
 }

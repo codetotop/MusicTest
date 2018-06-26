@@ -40,4 +40,5 @@
     <dimen name="large_divider">8dp</dimen>
 
     <dimen name="input_common_radius">2dp</dimen>
+    <dimen name="shape_button_radius">4dp</dimen>
 </resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="edtvalue_marginleft">-4dp</dimen>
+    <dimen name="edtvalue_marginright">-4dp</dimen>
+    <dimen name="tvlabel_size">12sp</dimen>
+    <dimen name="edtvalue_size">18sp</dimen>
+    <dimen name="edtvalue_paddingright">28dp</dimen>
+    <dimen name="imgevent_marginbottom">10dp</dimen>
+
+</resources>

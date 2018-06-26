@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="viewforminput_tvlabel_textcolor">#676c72</color>
+    <color name="viewforminput_edtvalue_textcolor">#000000</color>
+    <color name="tvforgotpassword_textcolor">#2c84eb</color>
+    <color name="tvversion_textcolor">#9b9b9b</color>
+</resources>

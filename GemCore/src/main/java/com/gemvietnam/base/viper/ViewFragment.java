@@ -195,4 +195,13 @@ public abstract class ViewFragment<P extends IPresenter>
     mToast = Toast.makeText(getViewContext(), msg, Toast.LENGTH_LONG);
     mToast.show();
   }
+
+  @Override
+  public void showToast(int id_msg) {
+    if (mToast != null){
+      mToast.cancel();
+    }
+    mToast = Toast.makeText(getViewContext(), id_msg, Toast.LENGTH_LONG);
+    mToast.show();
+  }
 }
