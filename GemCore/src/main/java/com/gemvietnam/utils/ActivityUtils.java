@@ -95,7 +95,7 @@ public class ActivityUtils {
           new Handler().post(new Runnable() {
             @Override
             public void run() {
-              ((ViewFragment) existingFragment).getPresenter().onFragmentDisplay();
+              ((ViewFragment) existingFragment).onDisplay();
             }
           });
         }
@@ -104,6 +104,53 @@ public class ActivityUtils {
       }
     } else {
       transaction.add(frameId, fragment, tag);
+    }
+//    transaction.commit();
+    transaction.commitAllowingStateLoss();
+  }
+  /**
+   * The {@code fragment} is added to the container view with id {@code frameId}. The operation
+   * is
+   * performed by the {@code fragmentManager}.
+   */
+  public static void addFragmentToActivityWithReplaceOption(@NonNull FragmentManager fragmentManager,
+                                                            @NonNull Fragment fragment, int frameId, boolean
+                                                                addToBackStack, String tag, boolean loadExisted) {
+    checkNotNull(fragmentManager);
+    checkNotNull(fragment);
+    FragmentTransaction transaction = fragmentManager.beginTransaction();
+//    transaction.setCustomAnimations(
+//        R.anim.screen_enter,
+//        R.anim.screen_exit,
+//        R.anim.slide_none,
+//        R.anim.screen_pop_exit);
+
+    if (addToBackStack) {
+      transaction.setCustomAnimations(com.gemvietnam.common.R.anim.slide_right_in, com.gemvietnam.common.R.anim.slide_left_out, android.R.anim.slide_in_left, android.R.anim.slide_out_right);
+      transaction.addToBackStack(tag);
+    }
+
+    if (loadExisted) {
+      final Fragment existingFragment = fragmentManager.findFragmentByTag(tag);
+      if (existingFragment != null) {
+        for (Fragment f : fragmentManager.getFragments()) {
+          transaction.hide(f);
+        }
+        transaction.show(existingFragment);
+        // transaction.replace(frameId, existingFragment, tag);
+        if (existingFragment instanceof ViewFragment) {
+          new Handler().post(new Runnable() {
+            @Override
+            public void run() {
+              ((ViewFragment) existingFragment).onDisplay();
+            }
+          });
+        }
+      } else {
+        transaction.replace(frameId, fragment, tag);
+      }
+    } else {
+      transaction.replace(frameId, fragment, tag);
     }
 //    transaction.commit();
     transaction.commitAllowingStateLoss();
