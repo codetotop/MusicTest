@@ -40,7 +40,7 @@ public class DocumentView extends ConstraintLayout{
 
     private void init(AttributeSet attributeSet,int defStyleAttr){
         LayoutInflater inflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        inflater.inflate(R.layout.view_document,null,true);
+        inflater.inflate(R.layout.view_document,this,true);
         ButterKnife.bind(this);
 
         TypedArray input = getContext().obtainStyledAttributes(attributeSet, R.styleable.DocumentView,0,0);
@@ -51,25 +51,27 @@ public class DocumentView extends ConstraintLayout{
         setDocumentName(namedocument);
         Drawable drawableDownload = input.getDrawable(R.styleable.DocumentView_imgdownloaddocument_backgound);
         setDownloadDocument(drawableDownload);
+
+        input.recycle();
     }
 
-    private void setAvatarDocument(Drawable drawable){
+    public void setAvatarDocument(Drawable drawable){
         imgAvatarDocument.setImageDrawable(drawable);
     }
 
-    private void setDocumentName(String name){
+    public void setDocumentName(String name){
         tvNameDocument.setText(name);
     }
 
-    private String getDocumentName(){
+    public String getDocumentName(){
         return tvNameDocument.getText().toString();
     }
 
-    private void setDownloadDocument(Drawable drawable){
+    public void setDownloadDocument(Drawable drawable){
         imgDownloadDocument.setImageDrawable(drawable);
     }
 
-    private void setDownloadDocumentVisibility(boolean bool){
+    public void setDownloadDocumentVisibility(boolean bool){
         if(bool)
             imgDownloadDocument.setVisibility(VISIBLE);
         else

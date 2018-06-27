@@ -32,7 +32,7 @@
         <item name="android:textSize">@dimen/small_text_size</item>
     </style>
 
-    <style name="TextSmallestBlackCommon">
+    <style name="TextSmallestGrayCommon">
         <item name="android:textColor">@color/colorGrayCommon</item>
         <item name="android:textSize">@dimen/smallest_text_size</item>
     </style>

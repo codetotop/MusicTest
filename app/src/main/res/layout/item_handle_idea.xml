@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/imgEmployeeAvatar"
+        android:layout_width="@dimen/itemhandleidea_imgemployeeavatar_width"
+        android:layout_height="@dimen/itemhandleidea_imgemployeeavatar_height"
+        android:background="@color/colorAccent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvEmployeeName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/itemhandleidea_tvemployeename_marginleft"
+        android:text="@string/itemhandleidea_tvemployeename_exp"
+        style="@style/TextSmallBlackCommon"
+        app:layout_constraintLeft_toRightOf="@+id/imgEmployeeAvatar"
+        app:layout_constraintTop_toTopOf="@+id/imgEmployeeAvatar" />
+
+    <TextView
+        android:id="@+id/tvTimeSendIdea"
+        style="@style/TextSmallestGrayCommon"
+        android:layout_width="wrap_content"
+        android:layout_height="12dp"
+        android:text="@string/itemhandleidea_tvtimesendidea_exp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvEmployeeName" />
+
+    <TextView
+        android:id="@+id/tvDescIdea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/itemhandleidea_tvdescidea_margintop"
+        android:text="@string/itemhandleidea_tvdescidea_exp"
+       style="@style/TextSmallGrayCommon"
+        app:layout_constraintLeft_toLeftOf="@id/tvEmployeeName"
+        app:layout_constraintTop_toBottomOf="@id/tvEmployeeName" />
+
+    <TextView
+        android:id="@+id/tvLabelSign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/itemhandleidea_tvlabelsign_exp"
+        style="@style/TextSmallGrayCommon"
+        app:layout_constraintLeft_toLeftOf="@+id/tvEmployeeName"
+        app:layout_constraintTop_toBottomOf="@id/tvDescIdea" />
+
+    <ImageView
+        android:id="@+id/imgSign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/itemhandleidea_imgsign_marginleft"
+        android:background="@drawable/ic_star"
+        app:layout_constraintLeft_toRightOf="@+id/tvLabelSign"
+        app:layout_constraintTop_toTopOf="@id/tvLabelSign" />
+
+    <TextView
+        android:id="@+id/tvPersonSign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/itemhandleidea_tvpersonsign_marginleft"
+        android:text="@string/itemhandleidea_tvoersonsign_exp"
+        style="@style/TextSmallestGrayCommon"
+        app:layout_constraintLeft_toRightOf="@+id/imgSign"
+        app:layout_constraintTop_toTopOf="@id/imgSign" />
+
+    <com.gem.mpi.widget.DocumentView
+        android:id="@+id/documentViewHandleIdea"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:tvnamedocument_name="@string/itemhandleidea_documentview_exp"
+        app:layout_constraintLeft_toLeftOf="@id/tvLabelSign"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPersonSign"/>
+
+</android.support.constraint.ConstraintLayout>

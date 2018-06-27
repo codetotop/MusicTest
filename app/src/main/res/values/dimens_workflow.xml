@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="itemhandleidea_imgemployeeavatar_width">40dp</dimen>
+    <dimen name="itemhandleidea_imgemployeeavatar_height">53dp</dimen>
+    <dimen name="itemhandleidea_tvemployeename_marginleft">8dp</dimen>
+    <dimen name="itemhandleidea_tvdescidea_margintop">4dp</dimen>
+    <dimen name="itemhandleidea_imgsign_marginleft">6dp</dimen>
+    <dimen name="itemhandleidea_tvpersonsign_marginleft">6dp</dimen>
+    <dimen name="itemhandleflow_tvduty_marginleft">8dp</dimen>
+    <dimen name="itemhandleflow_tvdescworkflow">4dp</dimen>
+    <dimen name="viewdocument_tvnamedocument_marginleft">10dp</dimen>
+    <dimen name="itemheaderworkflow_tvcontentfile_marginleft">28dp</dimen>
+    <dimen name="itemheaderworkflow_tvlabeldayopenfile">14dp</dimen>
+    <dimen name="itemheaderworkflow_tvlabelcreatorfile_margintop">14dp</dimen>
+    <dimen name="itemheaderworkflow_tvlabeldeadlinehandle">14dp</dimen>
+    <dimen name="itemheaderworkflow_tvlabelrequest_margintop">14dp</dimen>
+    <string name="itemhandleidea_documentview_exp">Example.docx</string>
+</resources>

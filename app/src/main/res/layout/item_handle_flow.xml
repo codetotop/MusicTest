@@ -8,7 +8,7 @@
         android:id="@+id/tvNameStaff"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Lê Quang Mạnh"
+        android:text="@string/itemhandleflow_tvnamestaff_exp"
         style="@style/TextMediumBlackCommon"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -17,12 +17,12 @@
         android:id="@+id/tvDuty"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="- Thủ trưởng"
+        android:text="@string/itemhandleflow_tvduty_exp"
         style="@style/TextSmallBlackCommon"
         app:layout_constraintLeft_toRightOf="@id/tvNameStaff"
         app:layout_constraintTop_toTopOf="@id/tvNameStaff"
         app:layout_constraintBottom_toBottomOf="@id/tvNameStaff"
-        android:layout_marginLeft="8dp"
+        android:layout_marginLeft="@dimen/itemhandleflow_tvduty_marginleft"
         />
     <TextView
         android:id="@+id/tvDescWorkFlow"
@@ -30,19 +30,19 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/tvNameStaff"
         style="@style/TextSmallBlackCommon"
-        android:text="Lãnh đạo giao việc"
+        android:text="@string/itemhandleflow_tvdescworkflow_exp"
         app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="@dimen/itemhandleflow_tvdescworkflow"
         />
 
     <TextView
         android:id="@+id/tvTimeHandle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        style="@style/TextSmallestBlackCommon"
-        android:text="28/05/2018 - 15:38:35 "
+        style="@style/TextSmallestGrayCommon"
+        android:text="@string/itemhandleflow_tvtimehandle_exp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvDescWorkFlow"
-        android:layout_marginTop="2dp"
+        android:layout_marginTop="@dimen/itemhandleflow_tvtimehandle_margintop"
         />
 </android.support.constraint.ConstraintLayout>

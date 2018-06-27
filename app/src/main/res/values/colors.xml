@@ -20,4 +20,5 @@
     <color name="color_divider_bg">#e0e0e0</color>
     <color name="colorSlateGrey">#676c72</color>
     <color name="tvdecorationline_backgoundcolor">#e3e3e3</color>
+    <color name="colorDecorationLine">#e6e6e6</color>
 </resources>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tvLabelContentFile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/itemheaderworkflow_tvlabelcontentfile_exp"
+        style="@style/TextSmallGrayCommon"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvContentFile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextSmallBlackCommon"
+        android:text="@string/itemheaderworkflow_tvcontentfile_exp"
+        app:layout_constraintTop_toTopOf="@id/tvLabelContentFile"
+        app:layout_constraintLeft_toRightOf="@id/tvLabelContentFile"
+        android:layout_marginLeft="@dimen/itemheaderworkflow_tvcontentfile_marginleft"
+        />
+    <TextView
+        android:id="@+id/tvLabelDayOpenFile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextSmallGrayCommon"
+        android:text="@string/itemheaderworkflow_tvlabeldayopenfile_exp"
+        app:layout_constraintTop_toBottomOf="@id/tvContentFile"
+        app:layout_constraintLeft_toLeftOf="@id/tvLabelContentFile"
+        android:layout_marginTop="@dimen/itemheaderworkflow_tvlabeldayopenfile"
+        />
+
+    <TextView
+        android:id="@+id/tvDayOpenFile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextSmallBlackCommon"
+        android:text="@string/itemheaderworkflow_tvdayopenfile_exp"
+        app:layout_constraintTop_toTopOf="@id/tvLabelDayOpenFile"
+        app:layout_constraintLeft_toLeftOf="@id/tvContentFile"
+        />
+
+    <TextView
+        android:id="@+id/tvLabelCreatorFile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextSmallGrayCommon"
+        android:text="@string/itemheaderworkflow_tvlabelcreatorfile_exp"
+        app:layout_constraintTop_toBottomOf="@id/tvLabelDayOpenFile"
+        app:layout_constraintLeft_toLeftOf="@id/tvLabelDayOpenFile"
+        android:layout_marginTop="@dimen/itemheaderworkflow_tvlabelcreatorfile_margintop"
+        />
+
+    <TextView
+        android:id="@+id/tvCreatorFile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextSmallBlackCommon"
+        android:text="@string/itemheaderworkflow_tvcreatorfile_exp"
+        app:layout_constraintTop_toTopOf="@id/tvLabelCreatorFile"
+        app:layout_constraintLeft_toLeftOf="@id/tvContentFile"
+        />
+
+    <TextView
+        android:id="@+id/tvLabelDeadlineHandle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextSmallGrayCommon"
+        android:text="@string/itemheaderworkflow_tvlabeldeadlinehandle"
+        app:layout_constraintTop_toBottomOf="@id/tvLabelCreatorFile"
+        app:layout_constraintLeft_toLeftOf="@id/tvLabelCreatorFile"
+        android:layout_marginTop="@dimen/itemheaderworkflow_tvlabeldeadlinehandle"
+        />
+
+    <TextView
+        android:id="@+id/tvDeadlineHandle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextSmallBlackCommon"
+        android:text="@string/itemheaderworkflow_tvdeadlinehandle_exp"
+        app:layout_constraintTop_toTopOf="@id/tvLabelDeadlineHandle"
+        app:layout_constraintLeft_toLeftOf="@id/tvContentFile"
+        />
+
+    <TextView
+        android:id="@+id/tvLabelRequest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextSmallGrayCommon"
+        android:text="@string/itemheaderworkflow_tvlabelrequest_exp"
+        app:layout_constraintTop_toBottomOf="@id/tvLabelDeadlineHandle"
+        app:layout_constraintLeft_toLeftOf="@id/tvLabelContentFile"
+        android:layout_marginTop="@dimen/itemheaderworkflow_tvlabelrequest_margintop"
+        />
+
+    <TextView
+        style="@style/TextSmallBlackCommon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/itemheaderworkflow_tvrequest_exp"
+        app:layout_constraintLeft_toLeftOf="@id/tvContentFile"
+        app:layout_constraintTop_toTopOf="@id/tvLabelRequest" />
+
+
+</android.support.constraint.ConstraintLayout>
