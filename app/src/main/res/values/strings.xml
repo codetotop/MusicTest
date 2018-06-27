@@ -24,8 +24,38 @@
     <string name="logout">Đăng Xuất</string>
     <string name="login_error_message">Đăng nhập thất bại</string>
 
+    <!--Action toolbar-->
     <string name="action_save">Lưu</string>
     <string name="action_change">Sửa</string>
-    <string name="title_about_profile">Thông Tin Cá Nhân</string>
+
+    <!--Unit-->
     <string name="unit_billion">Tỷ đồng</string>
+    <string name="unit_million_usd">Triệu USD</string>
+    <string name="unit_project">dự án</string>
+    <string name="unit_turn_project">lượt dự án</string>
+
+    <!--Title-->
+    <string name="title_about_profile">Thông Tin Cá Nhân</string>
+    <string name="title_business_registration">Số Liệu Đăng Ký Doanh Nghiệp</string>
+    <string name="title_foreign_investment_data">Công Khai Số Liệu Đầu Tư Nước Ngoài</string>
+
+    <string name="title_work_flow">Danh Sách Luồng Công Việc</string>
+
+    <!--MenuItem-->
+    <string name="document_of_unit">Văn Bản Của Đơn Vị</string>
+    <string name="document_of_ministry">Văn Bản Của Bộ</string>
+    <string name="work_flow">Luồng Xử Lý Công Việc</string>
+    <string name="profile_for_ministry_leadership">Hồ Sơ Trình Lãnh Đạo Bộ</string>
+    <string name="business_registration">Số Liệu Thống Kê Về Đăng Ký Doanh Nghiệp</string>
+    <string name="foreign_investment_data">Số Liệu Đầu Tư Trực Tiếp Nước Ngoài</string>
+
+    <string-array name="menu_items">
+        <item>@string/document_of_unit</item>
+        <item>@string/document_of_ministry</item>
+        <item>@string/work_flow</item>
+        <item>@string/profile_for_ministry_leadership</item>
+        <item>@string/business_registration</item>
+        <item>@string/foreign_investment_data</item>
+    </string-array>
+
 </resources>

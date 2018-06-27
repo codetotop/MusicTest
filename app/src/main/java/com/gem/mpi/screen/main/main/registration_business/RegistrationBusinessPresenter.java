@@ -1,6 +1,7 @@
 package com.gem.mpi.screen.main.main.registration_business;
 
 import android.os.Bundle;
+import android.os.Handler;
 
 import com.gemvietnam.base.viper.Presenter;
 import com.gemvietnam.base.viper.interfaces.ContainerView;
@@ -18,7 +19,14 @@ public class RegistrationBusinessPresenter extends Presenter<RegistrationBusines
   @Override
   public void start() {
     mRegistrationBusinessAdapter = new RegistrationBusinessAdapter(null);
-    getView().initListRegistrationBusiness();
+    getView().showProgress();
+    new Handler().postDelayed(new Runnable() {
+      @Override
+      public void run() {
+        getView().initListRegistrationBusiness();
+        getView().hideProgress();
+      }
+    }, 300);
   }
 
   @Override

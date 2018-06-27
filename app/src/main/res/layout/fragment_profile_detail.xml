@@ -39,7 +39,7 @@
             <com.gem.mpi.widget.ProfileInformationView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/large_divider"
+                android:layout_marginTop="@dimen/medium_divider"
                 app:profileinformation_content="@string/profile_exam_birthday"
                 app:profileinformation_title="@string/profile_birthday" />
 

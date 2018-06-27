@@ -28,6 +28,8 @@ interface MainContract {
     void initListSlideMenu();
 
     void onSettingClick();
+
+    void onSlideMenuItemClick();
   }
 
   interface Presenter extends IPresenter<View, Interactor> {

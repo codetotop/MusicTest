@@ -5,7 +5,6 @@ import android.os.Bundle;
 import com.gem.mpi.R;
 import com.gem.mpi.screen.base.AppBaseActivity;
 import com.gem.mpi.screen.main.main.MainPresenter;
-import com.gem.mpi.screen.main.profiledetail.ProfileDetailPresenter;
 import com.gemvietnam.base.viper.ViewFragment;
 
 public class MainActivity extends AppBaseActivity {

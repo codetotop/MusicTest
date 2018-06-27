@@ -3,6 +3,8 @@ package com.gemvietnam.widget.loading;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.view.Gravity;
 import android.widget.TextView;
 
@@ -17,8 +19,9 @@ public class LoadingDialog extends Dialog {
   private TextView mMessageTv;
 
   private LoadingDialog(Context context) {
-    super(context, android.R.style.Theme_Translucent_NoTitleBar);
+    super(context);
     setContentView(R.layout.layout_loading_progress);
+    getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
     getWindow().setGravity(Gravity.CENTER);
     mProgressSpinner = (LoadingIndicatorView) findViewById(R.id.loading_dialog_progress_spinner);
     mMessageTv = (TextView) findViewById(R.id.loading_dialog_message_tv);

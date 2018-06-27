@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--realized_capital-->
+    <string name="foreign_investment_data_realized_capital">Vốn thực hiện</string>
+    <string name="foreign_investment_data_exam_realized_capital">1,050</string>
+
+    <!--registered_capital-->
+    <string name="foreign_investment_data_registered_capital">Vốn đăng ký</string>
+    <string name="foreign_investment_data_registered_new">Đăng ký cấp mới</string>
+    <string name="foreign_investment_data_exam_registered_new">442,59</string>
+    <string name="foreign_investment_data_registered_additional">Đăng ký tăng thêm</string>
+    <string name="foreign_investment_data_exam_registered_additional">456,78</string>
+    <string name="foreign_investment_data_registered_capital_contribution_share_purchase">Góp vốn, mua cổ phần</string>
+    <string name="foreign_investment_data_exam_registered_capital_contribution_share_purchase">356,04</string>
+
+    <!--number_of_projects-->
+    <string name="foreign_investment_data_number_of_projects">Số dự án</string>
+    <string name="foreign_investment_data_projects_new_level">Cấp mới</string>
+    <string name="foreign_investment_data_exam_projects_new_level">166</string>
+    <string name="foreign_investment_data_projects_capital_increase">Tăng vốn</string>
+    <string name="foreign_investment_data_exam_projects_capital_increase">61</string>
+    <string name="foreign_investment_data_projects_capital_contribution_share_purchase">Góp vốn, mua cổ phần</string>
+    <string name="foreign_investment_data_exam_projects_capital_contribution_share_purchase">415</string>
+
+    <!--export-->
+    <string name="foreign_investment_data_export">Xuất khẩu</string>
+
+    <string name="foreign_investment_data_export_inc_cru_oil">Xuất khẩu (kể cả dầu thô)</string>
+    <string name="foreign_investment_data_exam_export_inc_cru_oil">13,591</string>
+
+    <string name="foreign_investment_data_export_exc_cru_oil">Xuất khẩu (không kể cả dầu thô)</string>
+    <string name="foreign_investment_data_exam_export_exc_cru_oil">13,400</string>
+
+    <!--import-->
+    <string name="foreign_investment_data_import">Nhập khẩu</string>
+    <string name="foreign_investment_data_exam_import">7,800</string>
+
+</resources>

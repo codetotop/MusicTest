@@ -27,6 +27,12 @@
         <item name="android:textSize">@dimen/small_text_size</item>
     </style>
 
+    <style name="TextSmallBlackBold">
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">@dimen/small_text_size</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
     <style name="TextXSmallWhite">
         <item name="android:textColor">@color/colorWhite</item>
         <item name="android:textSize">@dimen/x_small_text_size</item>
@@ -40,6 +46,12 @@
     <style name="TextMediumBlack">
         <item name="android:textColor">@color/colorBlack</item>
         <item name="android:textSize">@dimen/medium_text_size</item>
+    </style>
+
+    <style name="TextMediumBlackBold">
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">@dimen/medium_text_size</item>
+        <item name="android:textStyle">bold</item>
     </style>
 
 

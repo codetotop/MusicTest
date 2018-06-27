@@ -5,6 +5,8 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
 import com.gem.mpi.R;
+import com.gem.mpi.screen.main.main.MainFragment;
+import com.gem.mpi.widget.ToolbarView;
 import com.gemvietnam.base.viper.ViewFragment;
 
 import butterknife.BindView;
@@ -35,5 +37,15 @@ public class RegistrationBusinessFragment extends ViewFragment<RegistrationBusin
   public void initListRegistrationBusiness() {
     mListRegistrationBusinessRv.setLayoutManager(new LinearLayoutManager(getViewContext()));
     mListRegistrationBusinessRv.setAdapter(getPresenter().getRegistrationBusinessAdapter());
+  }
+
+  @Override
+  public void onDisplay() {
+    super.onDisplay();
+    if (getParentFragment() != null && getParentFragment() instanceof MainFragment) {
+      ((MainFragment) getParentFragment()).initToolbar(ToolbarView.ActionStyle.IMAGE, ToolbarView.ActionStyle.NONE, R.string.title_business_registration,
+          R.drawable.ic_slide_menu, null, null, null, null, null
+      );
+    }
   }
 }

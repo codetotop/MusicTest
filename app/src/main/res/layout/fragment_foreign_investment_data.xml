@@ -1,5 +1,5 @@
 <android.support.v7.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/fragmentregistrationbusiness_rv_list_registration_business"
+    android:id="@+id/fragmentforeigninvestmentdata_rv_list_foreigninvestmentdata"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorWhite" />
