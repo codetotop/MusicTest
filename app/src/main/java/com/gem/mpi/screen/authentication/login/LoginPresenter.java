@@ -10,6 +10,7 @@ import com.gem.mpi.data.remote.callback.BaseResponse;
 import com.gem.mpi.data.remote.callback.CommonCallback;
 import com.gem.mpi.mapper.LoginMapper;
 import com.gem.mpi.model.LoginModel;
+import com.gem.mpi.pref.PrefWrapper;
 import com.gem.mpi.screen.authentication.forgot.ForgotPasswordPresenter;
 import com.gem.mpi.screen.main.workflow.WorkFlowPresenter;
 import com.gem.mpi.screen.main.workflowlist.WorkFlowListPresenter;
@@ -49,34 +50,41 @@ public class LoginPresenter extends Presenter<LoginContract.View, LoginContract.
 
   @Override
   public void login(String username, String password) {
-        checkValidate(username,password);
-        mInteractor.login(username, password, new CommonCallback<LoginDTO>(getViewContext()) {
-          @Override
-          public void onResponse(@NonNull Response<BaseResponse<LoginDTO>> response) {
-            super.onResponse(response);
-          }
+    if (checkValidate(username, password))
+      return;
+    mInteractor.login(username, password, new CommonCallback<LoginDTO>(getViewContext()) {
+      @Override
+      public void onResponse(@NonNull Response<BaseResponse<LoginDTO>> response) {
+        super.onResponse(response);
+      }
 
-          @Override
-          protected void onError(String errorMessage) {
-            super.onError(errorMessage);
-          }
+      @Override
+      protected void onError(String errorMessage) {
+        super.onError(errorMessage);
+        mView.showToast("Error");
+      }
 
-          @Override
-          protected void onSuccess(BaseResponse<LoginDTO> responseBody) {
-            super.onSuccess(responseBody);
-            LoginDTO loginDTO = responseBody.getData();
-            LoginModel loginModel = LoginMapper.transform(loginDTO);
-            Log.e("LOGIN_PRESENTER", "onSuccess: "+ loginModel.toString() );
-          }
-        });
+      @Override
+      protected void onSuccess(BaseResponse<LoginDTO> responseBody) {
+        super.onSuccess(responseBody);
+        LoginDTO loginDTO = responseBody.getData();
+        LoginModel loginModel = LoginMapper.transform(loginDTO);
+        //Log.e("LOGIN_PRESENTER", "onSuccess: " + loginModel.toString());
+        PrefWrapper.saveLoginResponse(getViewContext(),loginDTO);
+        mView.showToast("Success");
+      }
+    });
   }
 
-  private void checkValidate(String username,String password) {
-    if(StringUtils.isEmpty(username)){
+  private boolean checkValidate(String username, String password) {
+    if (StringUtils.isEmpty(username)) {
       mView.showToast(R.string.validate_username);
-    }else if(StringUtils.isEmpty(password)){
+      return true;
+    } else if (StringUtils.isEmpty(password)) {
       mView.showToast(R.string.validate_password);
+      return true;
     }
+    return false;
   }
 
   @Override

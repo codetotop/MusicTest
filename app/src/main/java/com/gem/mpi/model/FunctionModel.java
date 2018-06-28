@@ -23,4 +23,12 @@ public class FunctionModel implements Serializable {
     public void setType(String type) {
         this.type = type;
     }
+
+    @Override
+    public String toString() {
+        return "FunctionModel{" +
+            "desc='" + desc + '\'' +
+            ", type='" + type + '\'' +
+            '}';
+    }
 }

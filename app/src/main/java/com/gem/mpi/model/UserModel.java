@@ -85,4 +85,19 @@ public class UserModel implements Serializable {
     public void setUserAvatar(String userAvatar) {
         this.userAvatar = userAvatar;
     }
+
+    @Override
+    public String toString() {
+        return "UserModel{" +
+            "userName='" + userName + '\'' +
+            ", userID=" + userID +
+            ", userDepartment='" + userDepartment + '\'' +
+            ", userPosition='" + userPosition + '\'' +
+            ", userDob='" + userDob + '\'' +
+            ", userEmail='" + userEmail + '\'' +
+            ", userDepartmentPhone='" + userDepartmentPhone + '\'' +
+            ", userCellPhone='" + userCellPhone + '\'' +
+            ", userAvatar='" + userAvatar + '\'' +
+            '}';
+    }
 }

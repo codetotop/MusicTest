@@ -4,6 +4,7 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 public class LoginDTO implements Serializable{
@@ -16,6 +17,11 @@ public class LoginDTO implements Serializable{
     @SerializedName("user")
     @Expose
     private UserDTO userDTO;
+
+    public LoginDTO() {
+        functionDTOS = new ArrayList<FunctionDTO>();
+        userDTO = new UserDTO();
+    }
 
     public List<FunctionDTO> getFunctionDTOS() {
         return functionDTOS;
