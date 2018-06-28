@@ -39,7 +39,7 @@ public class RegistrationBusinessFragment extends ViewFragment<RegistrationBusin
 
   @Override
   public void initListRegistrationBusiness() {
-    mRefreshListRegistrationBusiness.setColorSchemeColors(Color.GREEN);
+    mRefreshListRegistrationBusiness.setColorSchemeResources(R.color.bgBlueMonthHeader);
     mListRegistrationBusinessRv.setLayoutManager(new LinearLayoutManager(getViewContext()));
     mListRegistrationBusinessRv.setAdapter(getPresenter().getRegistrationBusinessAdapter());
   }

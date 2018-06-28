@@ -1,6 +1,8 @@
 package com.gem.mpi.screen.main.main.foreign_investment_data;
 
+import android.graphics.Color;
 import android.os.Bundle;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
@@ -18,6 +20,8 @@ public class ForeignInvestmentDataFragment extends ViewFragment<ForeignInvestmen
 
   @BindView(R.id.fragmentforeigninvestmentdata_rv_list_foreigninvestmentdata)
   RecyclerView mListForeignInvestmentDataRv;
+  @BindView(R.id.fragmentforeigninvestmentdata_srl_refresh_list_foreigninvestmentdata)
+  SwipeRefreshLayout mRefreshListForeignInvestmentData;
 
   public static ForeignInvestmentDataFragment getInstance() {
     return new ForeignInvestmentDataFragment();
@@ -46,7 +50,37 @@ public class ForeignInvestmentDataFragment extends ViewFragment<ForeignInvestmen
 
   @Override
   public void initListForeignInvestmentData() {
+    mRefreshListForeignInvestmentData.setColorSchemeResources(R.color.bgBlueMonthHeader);
     mListForeignInvestmentDataRv.setLayoutManager(new LinearLayoutManager(getViewContext()));
     mListForeignInvestmentDataRv.setAdapter(getPresenter().getForeignInvestmentDataAdapter());
+  }
+
+  @Override
+  public void moveToTopListForeignInvestmentData() {
+    mListForeignInvestmentDataRv.scrollToPosition(0);
+  }
+
+  @Override
+  public void initRefreshListForeignInvestmentDataListener() {
+    mRefreshListForeignInvestmentData.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+      @Override
+      public void onRefresh() {
+        getPresenter().handleRefreshListForeignInvestmentData();
+      }
+    });
+  }
+
+  @Override
+  public void showRefreshListForeignInvestmentData() {
+    if (!mRefreshListForeignInvestmentData.isRefreshing()) {
+      mRefreshListForeignInvestmentData.setRefreshing(true);
+    }
+  }
+
+  @Override
+  public void hideRefreshListForeignInvestmentData() {
+    if (mRefreshListForeignInvestmentData.isRefreshing()) {
+      mRefreshListForeignInvestmentData.setRefreshing(false);
+    }
   }
 }

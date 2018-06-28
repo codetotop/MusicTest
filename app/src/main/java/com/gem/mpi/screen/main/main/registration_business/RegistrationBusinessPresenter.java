@@ -87,8 +87,7 @@ public class RegistrationBusinessPresenter extends Presenter<RegistrationBusines
     }
   }
 
-  private List<RegistrationBusinessDTO> getListRegistrationBusinessDTO
-      (Response<BaseResponse<ListRegistrationBusinessDTO>> response) {
+  private List<RegistrationBusinessDTO> getListRegistrationBusinessDTO(Response<BaseResponse<ListRegistrationBusinessDTO>> response) {
     if (response == null || response.body() == null || response.body().getData() == null) {
       return null;
     }
