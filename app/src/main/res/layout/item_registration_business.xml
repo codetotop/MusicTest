@@ -87,7 +87,6 @@
         style="@style/TextMediumBlackBold"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/tiny_margin"
         android:layout_marginStart="@dimen/tiny_margin"
         android:gravity="end"
         android:text="@string/registration_exam_number_of_newly"
@@ -102,6 +101,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/unit_billion"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="@id/itemregistrationbusiness_tv_regis_capital"
         app:layout_constraintRight_toRightOf="@id/itemregistrationbusiness_g_right"
         app:layout_constraintTop_toTopOf="@id/itemregistrationbusiness_tv_regis_capital" />

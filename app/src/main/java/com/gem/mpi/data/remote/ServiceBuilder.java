@@ -2,6 +2,7 @@ package com.gem.mpi.data.remote;
 
 import com.gem.mpi.BuildConfig;
 import com.gem.mpi.data.remote.services.AuthenticationServices;
+import com.gem.mpi.data.remote.services.RegistrationBusinessService;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonDeserializationContext;
@@ -76,7 +77,11 @@ public class ServiceBuilder {
     return BuildConfig.BASE_URL;
   }
 
-  private static AuthenticationServices getAuthenticationServices() {
+  public static AuthenticationServices getAuthenticationServices() {
     return getRetrofit(getBaseUrl()).create(AuthenticationServices.class);
+  }
+
+  public static RegistrationBusinessService getRegistrationBusinessService() {
+    return getRetrofit(getBaseUrl()).create(RegistrationBusinessService.class);
   }
 }

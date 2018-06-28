@@ -274,7 +274,7 @@
         style="@style/TextTinyBlack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/unit_million_usd"
+        android:text="@string/unit_project"
         app:layout_constraintBottom_toBottomOf="@id/itemforeigninvestmentdata_tv_projects_new_level"
         app:layout_constraintRight_toRightOf="@id/itemforeigninvestmentdata_g_right"
         app:layout_constraintTop_toTopOf="@id/itemforeigninvestmentdata_tv_projects_new_level" />
@@ -319,7 +319,7 @@
         style="@style/TextTinyBlack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/unit_million_usd"
+        android:text="@string/unit_turn_project"
         app:layout_constraintBottom_toBottomOf="@id/itemforeigninvestmentdata_tv_projects_capital_increase"
         app:layout_constraintRight_toRightOf="@id/itemforeigninvestmentdata_g_right"
         app:layout_constraintTop_toTopOf="@id/itemforeigninvestmentdata_tv_projects_capital_increase" />
@@ -364,7 +364,7 @@
         style="@style/TextTinyBlack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/unit_million_usd"
+        android:text="@string/unit_turn_project"
         app:layout_constraintBottom_toBottomOf="@id/itemforeigninvestmentdata_tv_projects_capital_contribution_share_purchase"
         app:layout_constraintRight_toRightOf="@id/itemforeigninvestmentdata_g_right"
         app:layout_constraintTop_toTopOf="@id/itemforeigninvestmentdata_tv_projects_capital_contribution_share_purchase" />

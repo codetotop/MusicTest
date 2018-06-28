@@ -1,6 +1,8 @@
 package com.gem.mpi.screen.main.main.registration_business;
 
+import android.graphics.Color;
 import android.os.Bundle;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
@@ -17,6 +19,8 @@ import butterknife.BindView;
 public class RegistrationBusinessFragment extends ViewFragment<RegistrationBusinessContract.Presenter> implements RegistrationBusinessContract.View {
   @BindView(R.id.fragmentregistrationbusiness_rv_list_registration_business)
   RecyclerView mListRegistrationBusinessRv;
+  @BindView(R.id.fragmentregistrationbusiness_srl_refresh_list_registration_business)
+  SwipeRefreshLayout mRefreshListRegistrationBusiness;
 
   public static RegistrationBusinessFragment getInstance() {
     return new RegistrationBusinessFragment();
@@ -35,8 +39,38 @@ public class RegistrationBusinessFragment extends ViewFragment<RegistrationBusin
 
   @Override
   public void initListRegistrationBusiness() {
+    mRefreshListRegistrationBusiness.setColorSchemeColors(Color.GREEN);
     mListRegistrationBusinessRv.setLayoutManager(new LinearLayoutManager(getViewContext()));
     mListRegistrationBusinessRv.setAdapter(getPresenter().getRegistrationBusinessAdapter());
+  }
+
+  @Override
+  public void moveToTopListRegistrationBusiness() {
+    mListRegistrationBusinessRv.scrollToPosition(0);
+  }
+
+  @Override
+  public void initRefreshListRegistrationBusinessListener() {
+    mRefreshListRegistrationBusiness.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+      @Override
+      public void onRefresh() {
+        getPresenter().handleRefreshListRegistrationBusiness();
+      }
+    });
+  }
+
+  @Override
+  public void showRefreshListRegistrationBusiness() {
+    if (!mRefreshListRegistrationBusiness.isRefreshing()) {
+      mRefreshListRegistrationBusiness.setRefreshing(true);
+    }
+  }
+
+  @Override
+  public void hideRefreshListRegistrationBusiness() {
+    if (mRefreshListRegistrationBusiness.isRefreshing()) {
+      mRefreshListRegistrationBusiness.setRefreshing(false);
+    }
   }
 
   @Override

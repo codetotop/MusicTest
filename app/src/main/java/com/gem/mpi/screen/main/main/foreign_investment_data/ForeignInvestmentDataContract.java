@@ -13,7 +13,7 @@ interface ForeignInvestmentDataContract {
   }
 
   interface View extends PresentView<Presenter> {
-    void initListForeignInvestmentDataAdapter();
+    void initListForeignInvestmentData();
   }
 
   interface Presenter extends IPresenter<View, Interactor> {

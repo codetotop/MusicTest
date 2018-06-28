@@ -24,7 +24,7 @@ public class ForeignInvestmentDataPresenter extends Presenter<ForeignInvestmentD
     new Handler().postDelayed(new Runnable() {
       @Override
       public void run() {
-        getView().initListForeignInvestmentDataAdapter();
+        getView().initListForeignInvestmentData();
         getView().hideProgress();
       }
     }, 300);

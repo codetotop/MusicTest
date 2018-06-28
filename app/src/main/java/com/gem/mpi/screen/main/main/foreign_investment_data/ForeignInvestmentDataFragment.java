@@ -45,7 +45,7 @@ public class ForeignInvestmentDataFragment extends ViewFragment<ForeignInvestmen
   }
 
   @Override
-  public void initListForeignInvestmentDataAdapter() {
+  public void initListForeignInvestmentData() {
     mListForeignInvestmentDataRv.setLayoutManager(new LinearLayoutManager(getViewContext()));
     mListForeignInvestmentDataRv.setAdapter(getPresenter().getForeignInvestmentDataAdapter());
   }
