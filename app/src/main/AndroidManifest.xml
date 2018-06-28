@@ -18,12 +18,14 @@
         android:theme="@style/AppTheme.NoActionBar">
         <activity
             android:name=".screen.main.MainActivity"
-            android:windowSoftInputMode="adjustPan" />
-        <activity android:name=".screen.authentication.AuthencationActivity">
+            android:windowSoftInputMode="adjustPan">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".screen.authentication.AuthencationActivity">
+
         </activity>
     </application>
 

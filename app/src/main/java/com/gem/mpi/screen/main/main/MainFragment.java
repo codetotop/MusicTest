@@ -9,6 +9,7 @@ import android.view.View;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.gem.mpi.R;
+import com.gem.mpi.screen.main.category_profile.CategoryProfilePresenter;
 import com.gem.mpi.screen.main.main.foreign_investment_data.ForeignInvestmentDataPresenter;
 import com.gem.mpi.screen.main.main.registration_business.RegistrationBusinessPresenter;
 import com.gem.mpi.widget.ToolbarView;
@@ -97,6 +98,8 @@ public class MainFragment extends ViewFragment<MainContract.Presenter> implement
           case 2:
             break;
           case 3:
+            CategoryProfilePresenter categoryProfilePresenter = new CategoryProfilePresenter((ContainerView) getActivity());
+            categoryProfilePresenter.pushView();
             break;
           case 4:
             RegistrationBusinessPresenter registrationBusinessPresenter = new RegistrationBusinessPresenter((ContainerView) getActivity());
