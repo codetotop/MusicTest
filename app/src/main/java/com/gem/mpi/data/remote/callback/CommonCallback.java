@@ -16,9 +16,6 @@ import retrofit2.Response;
  */
 
 public abstract class CommonCallback<T> extends BaseCallback<BaseResponse<T>> {
-  protected static final int SERVER_ERROR = 9999;
-  protected static final int NETWORK_ERROR = 9998;
-
   private Context mContext;
   private boolean mErrorDialogAllowed = true;
 
@@ -37,7 +34,7 @@ public abstract class CommonCallback<T> extends BaseCallback<BaseResponse<T>> {
     if (body != null && body.getData() != null) {
       onSuccess(body);
     } else {
-      onError(SERVER_ERROR, getServerMsg());
+      onError(getServerMsg());
     }
   }
 
@@ -62,7 +59,7 @@ public abstract class CommonCallback<T> extends BaseCallback<BaseResponse<T>> {
     }
   }
 
-  protected void onError(int errorCode, String errorMessage) {
+  protected void onError(String errorMessage) {
     DialogUtils.dismissProgressDialog();
     if (mErrorDialogAllowed) {
       DialogUtils.showErrorAlert(mContext, errorMessage);

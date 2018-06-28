@@ -1,14 +1,13 @@
 package com.gem.mpi.data.remote;
 
+import com.gem.mpi.BuildConfig;
 import com.gem.mpi.data.remote.services.AuthenticationServices;
-import com.gemvietnam.utils.StringUtils;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonDeserializationContext;
 import com.google.gson.JsonDeserializer;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParseException;
-import com.gem.mpi.BuildConfig;
 
 import java.io.IOException;
 import java.lang.reflect.Type;
@@ -50,6 +49,8 @@ public class ServiceBuilder {
                 .header("Content-Type", "application/json")
                 .method(original.method(), original.body());
 
+            // Save token
+
             return chain.proceed(builder.build());
           }
         })
@@ -75,11 +76,7 @@ public class ServiceBuilder {
     return BuildConfig.BASE_URL;
   }
 
-  private static String buildUrl(String serviceName) {
-    return getBaseUrl() + BuildConfig.API_VERSION + "/" + (StringUtils.isEmpty(serviceName) ? "" : serviceName + "/");
-  }
-
-  private static AuthenticationServices getAuthenticationServices(){
-      return getRetrofit(buildUrl("")).create(AuthenticationServices.class);
+  private static AuthenticationServices getAuthenticationServices() {
+    return getRetrofit(getBaseUrl()).create(AuthenticationServices.class);
   }
 }

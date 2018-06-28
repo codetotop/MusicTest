@@ -10,31 +10,34 @@ import java.io.Serializable;
  */
 
 public class BaseResponse<T> implements Serializable {
-
-  @SerializedName("is_error")
-  private boolean isError;
-
-  @SerializedName("status_code")
-  private int statusCode;
-
-  @SerializedName("message_code")
-  private String messageCode;
-
-  @SerializedName("errors")
-  private Error errors;
-
+  @SerializedName("errcode")
+  Integer errcode;
+  @SerializedName("message")
+  String message;
   @SerializedName("data")
   private T data;
+
+  public Integer getErrcode() {
+    return errcode;
+  }
+
+  public void setErrcode(Integer errcode) {
+    this.errcode = errcode;
+  }
+
+  public String getMessage() {
+    return message;
+  }
+
+  public void setMessage(String message) {
+    this.message = message;
+  }
 
   public T getData() {
     return data;
   }
 
-  private static class Error {
-    @SerializedName("first_error")
-    private String firstError;
-
-    @SerializedName("all")
-    private String all;
+  public void setData(T data) {
+    this.data = data;
   }
 }
