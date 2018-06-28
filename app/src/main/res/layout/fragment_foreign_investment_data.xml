@@ -1,0 +1,11 @@
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragmentforeigninvestmentdata_srl_refresh_list_foreigninvestmentdata"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/fragmentforeigninvestmentdata_rv_list_foreigninvestmentdata"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite" />
+</android.support.v4.widget.SwipeRefreshLayout>

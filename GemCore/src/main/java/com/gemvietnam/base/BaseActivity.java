@@ -1,10 +1,5 @@
 package com.gemvietnam.base;
 
-import com.gemvietnam.utils.ActivityUtils;
-import com.gemvietnam.utils.DialogUtils;
-import com.gemvietnam.utils.ViewUtils;
-
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -12,10 +7,12 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentManager.OnBackStackChangedListener;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
 import android.view.WindowManager;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
+
+import com.gemvietnam.utils.ActivityUtils;
+import com.gemvietnam.utils.DialogUtils;
+import com.gemvietnam.utils.ViewUtils;
 
 import java.util.List;
 
@@ -68,7 +65,6 @@ public abstract class BaseActivity extends AppCompatActivity {
   @Override
   protected void onResume() {
     super.onResume();
-    onFragmentDisplay();
   }
 
   @Override
@@ -140,7 +136,7 @@ public abstract class BaseActivity extends AppCompatActivity {
   }
 
   public void addChildFragment(int containerId, FragmentManager fragmentManager, BaseFragment fragment, boolean addToBackStack,
-                          String tag, boolean loadExisted) {
+                               String tag, boolean loadExisted) {
     ActivityUtils.addFragmentToActivity(fragmentManager, fragment, containerId,
         addToBackStack, tag, loadExisted);
   }

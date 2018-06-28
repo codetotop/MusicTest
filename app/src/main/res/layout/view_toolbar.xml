@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/colorPrimary"
-    android:minHeight="?actionBarSize">
+    android:minHeight="?attr/actionBarSize">
 
     <android.support.constraint.Guideline
         android:id="@+id/viewtoolbar_g_left"
@@ -66,23 +66,25 @@
         style="@style/TextActionToolbar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/tiny_padding"
+        android:paddingRight="@dimen/small_padding"
         android:text="@string/action_save"
         app:layout_constraintBottom_toTopOf="@id/viewtoolbar_v_divider_toolbar"
         app:layout_constraintRight_toRightOf="@id/viewtoolbar_g_right"
         app:layout_constraintTop_toTopOf="parent" />
 
     <android.support.constraint.Barrier
-        app:barrierDirection="left"
         android:id="@+id/viewtoolbar_br_action_right"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        app:barrierDirection="left"
         app:constraint_referenced_ids="viewtoolbar_iv_action_right,viewtoolbar_tv_action_right" />
 
     <android.support.constraint.Barrier
-        app:barrierDirection="right"
         android:id="@+id/viewtoolbar_br_action_left"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        app:barrierDirection="right"
         app:constraint_referenced_ids="viewtoolbar_iv_action_left,viewtoolbar_tv_action_Left" />
 
     <TextView
@@ -90,7 +92,6 @@
         style="@style/TextTitleToolbar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/tiny_margin"
         android:gravity="center"
         android:text="@string/title_about_profile"
         app:layout_constraintBottom_toTopOf="@id/viewtoolbar_v_divider_toolbar"

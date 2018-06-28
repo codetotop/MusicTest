@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="registration_exam_month">Tháng 1</string>
+
+
+    <string name="registration_number_of_newly">Số DN thành lập mới</string>
+    <string name="registration_exam_number_of_newly">10,839</string>
+
+    <string name="registration_number_of_regis_capital">Số vốn đăng ký</string>
+
+    <string name="registration_number_of_employees_regis">Số lao động đăng ký</string>
+    <string name="registration_exam_number_of_employees_regis">85,272</string>
+
+    <string name="registration_number_of_comple_procedure_dissolution">Số DN hoàn tất thủ tục giải thể</string>
+    <string name="registration_exam_number_of_comple_procedure_dissolution">1,544</string>
+
+    <string name="registration_number_of_difficulty_temporary_suspension">Số DN gặp khó khăn, tạm ngừng hoạt động</string>
+    <string name="registration_exam_number_of_difficulty_temporary_suspension">-</string>
+
+    <string name="registration_number_of_returned_operation">Số DN quay trở lại hoạt động</string>
+    <string name="registration_exam_number_of_returned_operation">4,176</string>
+</resources>

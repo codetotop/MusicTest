@@ -2,8 +2,6 @@ package com.gem.mpi.widget;
 
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.support.constraint.ConstraintLayout;
 import android.util.AttributeSet;
@@ -19,11 +17,16 @@ import butterknife.ButterKnife;
 
 public class ProfileView extends ConstraintLayout {
 
-  @BindView(R.id.viewprofile_iv_avatar) ImageView mAvatarIv;
-  @BindView(R.id.viewprofile_tv_name) TextView mNameTv;
-  @BindView(R.id.viewprofile_tv_duty) TextView mDutyTv;
-  @BindView(R.id.viewprofile_tv_department) TextView mDepartment;
-  @BindView(R.id.viewprofile_iv_action) ImageView mAction;
+  @BindView(R.id.viewprofile_iv_avatar)
+  ImageView mAvatarIv;
+  @BindView(R.id.viewprofile_tv_name)
+  TextView mNameTv;
+  @BindView(R.id.viewprofile_tv_duty)
+  TextView mDutyTv;
+  @BindView(R.id.viewprofile_tv_department)
+  TextView mDepartment;
+  @BindView(R.id.viewprofile_iv_action)
+  ImageView mAction;
   OnActionListener mOnActionListener;
 
   public ProfileView(Context context) {
@@ -51,7 +54,7 @@ public class ProfileView extends ConstraintLayout {
       Drawable avatar = input.getDrawable(R.styleable.ProfileView_profileview_avatar);
       setAvatar(avatar);
     } else {
-      Drawable avatar = new ColorDrawable(Color.GRAY);
+      Drawable avatar = getResources().getDrawable(R.drawable.ic_avatar_default);
       setAvatar(avatar);
     }
 

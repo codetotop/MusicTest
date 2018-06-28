@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/itemforeigninvestmentdata_g_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/large_space" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/itemforeigninvestmentdata_g_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/large_space" />
+
+    <TextView
+        android:id="@+id/itemforeigninvestmentdata_tv_month"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/bgBlueMonthHeader"
+        android:gravity="center_vertical"
+        android:minHeight="@dimen/header_month_min_height"
+        android:paddingEnd="@dimen/large_space"
+        android:paddingStart="@dimen/large_space"
+        android:text="@string/registration_exam_month"
+        android:textAllCaps="true"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/medium_text_size"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--realized_capital-->
+    <TextView
+        android:id="@+id/itemforeigninvestmentdata_tvlb_realized_capital"
+        style="@style/TextSmallBlackBold"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/large_space"
+        android:text="@string/foreign_investment_data_realized_capital"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintLeft_toLeftOf="@id/itemforeigninvestmentdata_g_left"
+        app:layout_constraintRight_toLeftOf="@+id/itemforeigninvestmentdata_tv_realized_capital"
+        app:layout_constraintTop_toBottomOf="@id/itemforeigninvestmentdata_tv_month" />
+
+    <TextView
+        android:id="@+id/itemforeigninvestmentdata_tv_realized_capital"
+        style="@style/TextMediumBlack"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:text="@string/foreign_investment_data_exam_realized_capital"
+        android:textStyle="bold"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintLeft_toRightOf="@id/itemforeigninvestmentdata_tvlb_realized_capital"
+        app:layout_constraintRight_toLeftOf="@+id/itemforeigninvestmentdata_tvlb_realized_capital_unit"
+        app:layout_constraintTop_toTopOf="@id/itemforeigninvestmentdata_tvlb_realized_capital" />
+
+    <TextView
+        android:id="@+id/itemforeigninvestmentdata_tvlb_realized_capital_unit"
+        style="@style/TextTinyBlack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/unit_million_usd"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/itemforeigninvestmentdata_tv_realized_capital"
+        app:layout_constraintRight_toRightOf="@id/itemforeigninvestmentdata_g_right"
+        app:layout_constraintTop_toTopOf="@id/itemforeigninvestmentdata_tv_realized_capital" />
+
+    <android.support.constraint.Barrier
+        android:id="@+id/itemforeigninvestmentdata_br_realized_capital"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="itemforeigninvestmentdata_tvlb_realized_capital,itemforeigninvestmentdata_tv_realized_capital" />
+
+    <!--registered_capital-->
+    <TextView
+        android:id="@+id/itemforeigninvestmentdata_tvlb_registered_capital"
+        style="@style/TextSmallBlackBold"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/medium_margin"
+        android:text="@string/foreign_investment_data_registered_capital"
+        app:layout_constraintLeft_toLeftOf="@id/itemforeigninvestmentdata_g_left"
+        app:layout_constraintRight_toRightOf="@id/itemforeigninvestmentdata_g_right"
+        app:layout_constraintTop_toBottomOf="@id/itemforeigninvestmentdata_br_realized_capital" />
+
+    <!--registered_new-->
+    <TextView
+        android:id="@+id/itemforeigninvestmentdata_tvlb_registered_new"
+        style="@style/TextSmallGrayCommon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_margin"
+        android:text="@string/foreign_investment_data_registered_new"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintLeft_toLeftOf="@id/itemforeigninvestmentdata_g_left"
+        app:layout_constraintRight_toLeftOf="@+id/itemforeigninvestmentdata_tv_registered_new"
+        app:layout_constraintTop_toBottomOf="@id/itemforeigninvestmentdata_tvlb_registered_capital" />
+
+    <TextView
+        android:id="@+id/itemforeigninvestmentdata_tv_registered_new"
+        style="@style/TextMediumBlack"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:text="@string/foreign_investment_data_exam_registered_new"
+        android:textStyle="bold"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintLeft_toRightOf="@id/itemforeigninvestmentdata_tvlb_registered_new"
+        app:layout_constraintRight_toLeftOf="@+id/itemforeigninvestmentdata_tvlb_registered_new_unit"
+        app:layout_constraintTop_toTopOf="@id/itemforeigninvestmentdata_tvlb_registered_new" />
+
+    <TextView
+        android:id="@+id/itemforeigninvestmentdata_tvlb_registered_new_unit"
+        style="@style/TextTinyBlack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/unit_million_usd"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/itemforeigninvestmentdata_tv_registered_new"
+        app:layout_constraintRight_toRightOf="@id/itemforeigninvestmentdata_g_right"
+        app:layout_constraintTop_toTopOf="@id/itemforeigninvestmentdata_tv_registered_new" />
+
+    <android.support.constraint.Barrier
+        android:id="@+id/itemforeigninvestmentdata_br_registered_new"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="itemforeigninvestmentdata_tvlb_registered_new,itemforeigninvestmentdata_tv_registered_new" />
+
+
+    <!--registered_additional-->
+    <TextView
+        android:id="@+id/itemforeigninvestmentdata_tvlb_registered_additional"
+        style="@style/TextSmallGrayCommon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_margin"
+        android:text="@string/foreign_investment_data_registered_additional"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintLeft_toLeftOf="@id/itemforeigninvestmentdata_g_left"
+        app:layout_constraintRight_toLeftOf="@+id/itemforeigninvestmentdata_tv_registered_additional"
+        app:layout_constraintTop_toBottomOf="@id/itemforeigninvestmentdata_br_registered_new" />
+
+    <TextView
+        android:id="@+id/itemforeigninvestmentdata_tv_registered_additional"
+        style="@style/TextMediumBlack"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:text="@string/foreign_investment_data_exam_registered_additional"
+        android:textStyle="bold"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintLeft_toRightOf="@id/itemforeigninvestmentdata_tvlb_registered_additional"
+        app:layout_constraintRight_toLeftOf="@+id/itemforeigninvestmentdata_tvlb_registered_additional_unit"
+        app:layout_constraintTop_toTopOf="@id/itemforeigninvestmentdata_tvlb_registered_additional" />
+
+    <TextView
+        android:id="@+id/itemforeigninvestmentdata_tvlb_registered_additional_unit"
+        style="@style/TextTinyBlack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/unit_million_usd"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/itemforeigninvestmentdata_tv_registered_additional"
+        app:layout_constraintRight_toRightOf="@id/itemforeigninvestmentdata_g_right"
+        app:layout_constraintTop_toTopOf="@id/itemforeigninvestmentdata_tv_registered_additional" />
+
+    <android.support.constraint.Barrier
+        android:id="@+id/itemforeigninvestmentdata_br_registered_additional"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="itemforeigninvestmentdata_tvlb_registered_additional,itemforeigninvestmentdata_tv_registered_additional" />
+
+    <!--registered_capital_contribution_share_purchase-->
+    <TextView
+        android:id="@+id/itemforeigninvestmentdata_tvlb_registered_capital_contribution_share_purchase"
+        style="@style/TextSmallGrayCommon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_margin"
+        android:text="@string/foreign_investment_data_registered_capital_contribution_share_purchase"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintLeft_toLeftOf="@id/itemforeigninvestmentdata_g_left"
+        app:layout_constraintRight_toLeftOf="@+id/itemforeigninvestmentdata_tv_registered_capital_contribution_share_purchase"
+        app:layout_constraintTop_toBottomOf="@id/itemforeigninvestmentdata_br_registered_additional" />
+
+    <TextView
+        android:id="@+id/itemforeigninvestmentdata_tv_registered_capital_contribution_share_purchase"
+        style="@style/TextMediumBlack"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:text="@string/foreign_investment_data_exam_registered_capital_contribution_share_purchase"
+        android:textStyle="bold"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintLeft_toRightOf="@id/itemforeigninvestmentdata_tvlb_registered_capital_contribution_share_purchase"
+        app:layout_constraintRight_toLeftOf="@+id/itemforeigninvestmentdata_tvlb_registered_capital_contribution_share_purchase_unit"
+        app:layout_constraintTop_toTopOf="@id/itemforeigninvestmentdata_tvlb_registered_capital_contribution_share_purchase" />
+
+    <TextView
+        android:id="@+id/itemforeigninvestmentdata_tvlb_registered_capital_contribution_share_purchase_unit"
+        style="@style/TextTinyBlack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/unit_million_usd"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/itemforeigninvestmentdata_tv_registered_capital_contribution_share_purchase"
+        app:layout_constraintRight_toRightOf="@id/itemforeigninvestmentdata_g_right"
+        app:layout_constraintTop_toTopOf="@id/itemforeigninvestmentdata_tv_registered_capital_contribution_share_purchase" />
+
+    <android.support.constraint.Barrier
+        android:id="@+id/itemforeigninvestmentdata_br_registered_capital_contribution_share_purchase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="itemforeigninvestmentdata_tvlb_registered_capital_contribution_share_purchase,itemforeigninvestmentdata_tv_registered_capital_contribution_share_purchase" />
+
+    <!--registered_capital_contribution_share_purchase-->
+    <TextView
+        android:id="@+id/itemforeigninvestmentdata_tvlb_number_of_projects"
+        style="@style/TextSmallBlackBold"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/medium_margin"
+        android:text="@string/foreign_investment_data_number_of_projects"
+        app:layout_constraintLeft_toLeftOf="@id/itemforeigninvestmentdata_g_left"
+        app:layout_constraintRight_toRightOf="@id/itemforeigninvestmentdata_g_right"
+        app:layout_constraintTop_toBottomOf="@id/itemforeigninvestmentdata_br_registered_capital_contribution_share_purchase" />
+
+    <!--projects_new_level-->
+    <TextView
+        android:id="@+id/itemforeigninvestmentdata_tvlb_projects_new_level"
+        style="@style/TextSmallGrayCommon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_margin"
+        android:text="@string/foreign_investment_data_projects_new_level"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintLeft_toLeftOf="@id/itemforeigninvestmentdata_g_left"
+        app:layout_constraintRight_toLeftOf="@+id/itemforeigninvestmentdata_tv_projects_new_level"
+        app:layout_constraintTop_toBottomOf="@id/itemforeigninvestmentdata_tvlb_number_of_projects" />
+
+    <TextView
+        android:id="@+id/itemforeigninvestmentdata_tv_projects_new_level"
+        style="@style/TextMediumBlack"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:text="@string/foreign_investment_data_exam_projects_new_level"
+        android:textStyle="bold"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintLeft_toRightOf="@id/itemforeigninvestmentdata_tvlb_projects_new_level"
+        app:layout_constraintRight_toLeftOf="@+id/itemforeigninvestmentdata_tvlb_projects_new_level_unit"
+        app:layout_constraintTop_toTopOf="@id/itemforeigninvestmentdata_tvlb_projects_new_level" />
+
+    <TextView
+        android:id="@+id/itemforeigninvestmentdata_tvlb_projects_new_level_unit"
+        style="@style/TextTinyBlack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/unit_project"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/itemforeigninvestmentdata_tv_projects_new_level"
+        app:layout_constraintRight_toRightOf="@id/itemforeigninvestmentdata_g_right"
+        app:layout_constraintTop_toTopOf="@id/itemforeigninvestmentdata_tv_projects_new_level" />
+
+    <android.support.constraint.Barrier
+        android:id="@+id/itemforeigninvestmentdata_br_projects_new_level"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="itemforeigninvestmentdata_tvlb_projects_new_level,itemforeigninvestmentdata_tv_projects_new_level" />
+
+    <!--projects_capital_increase-->
+    <TextView
+        android:id="@+id/itemforeigninvestmentdata_tvlb_projects_capital_increase"
+        style="@style/TextSmallGrayCommon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_margin"
+        android:text="@string/foreign_investment_data_projects_capital_increase"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintLeft_toLeftOf="@id/itemforeigninvestmentdata_g_left"
+        app:layout_constraintRight_toLeftOf="@+id/itemforeigninvestmentdata_tv_projects_capital_increase"
+        app:layout_constraintTop_toBottomOf="@id/itemforeigninvestmentdata_br_projects_new_level" />
+
+    <TextView
+        android:id="@+id/itemforeigninvestmentdata_tv_projects_capital_increase"
+        style="@style/TextMediumBlack"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:text="@string/foreign_investment_data_exam_projects_capital_increase"
+        android:textStyle="bold"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintLeft_toRightOf="@id/itemforeigninvestmentdata_tvlb_projects_capital_increase"
+        app:layout_constraintRight_toLeftOf="@+id/itemforeigninvestmentdata_tvlb_projects_capital_increase_unit"
+        app:layout_constraintTop_toTopOf="@id/itemforeigninvestmentdata_tvlb_projects_capital_increase" />
+
+    <TextView
+        android:id="@+id/itemforeigninvestmentdata_tvlb_projects_capital_increase_unit"
+        style="@style/TextTinyBlack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/unit_turn_project"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/itemforeigninvestmentdata_tv_projects_capital_increase"
+        app:layout_constraintRight_toRightOf="@id/itemforeigninvestmentdata_g_right"
+        app:layout_constraintTop_toTopOf="@id/itemforeigninvestmentdata_tv_projects_capital_increase" />
+
+    <android.support.constraint.Barrier
+        android:id="@+id/itemforeigninvestmentdata_br_projects_capital_increase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="itemforeigninvestmentdata_tvlb_projects_capital_increase,itemforeigninvestmentdata_tv_projects_capital_increase" />
+
+    <!--projects_capital_contribution_share_purchase-->
+    <TextView
+        android:id="@+id/itemforeigninvestmentdata_tvlb_projects_capital_contribution_share_purchase"
+        style="@style/TextSmallGrayCommon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_margin"
+        android:text="@string/foreign_investment_data_projects_capital_contribution_share_purchase"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintLeft_toLeftOf="@id/itemforeigninvestmentdata_g_left"
+        app:layout_constraintRight_toLeftOf="@+id/itemforeigninvestmentdata_tv_projects_capital_contribution_share_purchase"
+        app:layout_constraintTop_toBottomOf="@id/itemforeigninvestmentdata_br_projects_capital_increase" />
+
+    <TextView
+        android:id="@+id/itemforeigninvestmentdata_tv_projects_capital_contribution_share_purchase"
+        style="@style/TextMediumBlack"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:text="@string/foreign_investment_data_exam_projects_capital_contribution_share_purchase"
+        android:textStyle="bold"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintLeft_toRightOf="@id/itemforeigninvestmentdata_tvlb_projects_capital_contribution_share_purchase"
+        app:layout_constraintRight_toLeftOf="@+id/itemforeigninvestmentdata_tvlb_projects_capital_contribution_share_purchase_unit"
+        app:layout_constraintTop_toTopOf="@id/itemforeigninvestmentdata_tvlb_projects_capital_contribution_share_purchase" />
+
+    <TextView
+        android:id="@+id/itemforeigninvestmentdata_tvlb_projects_capital_contribution_share_purchase_unit"
+        style="@style/TextTinyBlack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/unit_turn_project"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/itemforeigninvestmentdata_tv_projects_capital_contribution_share_purchase"
+        app:layout_constraintRight_toRightOf="@id/itemforeigninvestmentdata_g_right"
+        app:layout_constraintTop_toTopOf="@id/itemforeigninvestmentdata_tv_projects_capital_contribution_share_purchase" />
+
+    <android.support.constraint.Barrier
+        android:id="@+id/itemforeigninvestmentdata_br_projects_capital_contribution_share_purchase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="itemforeigninvestmentdata_tvlb_projects_capital_contribution_share_purchase,itemforeigninvestmentdata_tv_projects_capital_contribution_share_purchase" />
+
+    <!--export-->
+    <TextView
+        android:id="@+id/itemforeigninvestmentdata_tvlb_export"
+        style="@style/TextSmallBlackBold"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/medium_margin"
+        android:text="@string/foreign_investment_data_export"
+        app:layout_constraintLeft_toLeftOf="@id/itemforeigninvestmentdata_g_left"
+        app:layout_constraintRight_toRightOf="@id/itemforeigninvestmentdata_g_right"
+        app:layout_constraintTop_toBottomOf="@id/itemforeigninvestmentdata_br_projects_capital_contribution_share_purchase" />
+
+    <!--export_inc_cru_oil-->
+    <TextView
+        android:id="@+id/itemforeigninvestmentdata_tvlb_export_inc_cru_oil"
+        style="@style/TextSmallGrayCommon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_margin"
+        android:text="@string/foreign_investment_data_export_inc_cru_oil"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintLeft_toLeftOf="@id/itemforeigninvestmentdata_g_left"
+        app:layout_constraintRight_toLeftOf="@+id/itemforeigninvestmentdata_tv_export_inc_cru_oil"
+        app:layout_constraintTop_toBottomOf="@id/itemforeigninvestmentdata_tvlb_export" />
+
+    <TextView
+        android:id="@+id/itemforeigninvestmentdata_tv_export_inc_cru_oil"
+        style="@style/TextMediumBlack"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:text="@string/foreign_investment_data_exam_export_inc_cru_oil"
+        android:textStyle="bold"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintLeft_toRightOf="@id/itemforeigninvestmentdata_tvlb_export_inc_cru_oil"
+        app:layout_constraintRight_toLeftOf="@+id/itemforeigninvestmentdata_tvlb_export_inc_cru_oil_unit"
+        app:layout_constraintTop_toTopOf="@id/itemforeigninvestmentdata_tvlb_export_inc_cru_oil" />
+
+    <TextView
+        android:id="@+id/itemforeigninvestmentdata_tvlb_export_inc_cru_oil_unit"
+        style="@style/TextTinyBlack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/unit_million_usd"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/itemforeigninvestmentdata_tv_export_inc_cru_oil"
+        app:layout_constraintRight_toRightOf="@id/itemforeigninvestmentdata_g_right"
+        app:layout_constraintTop_toTopOf="@id/itemforeigninvestmentdata_tv_export_inc_cru_oil" />
+
+    <android.support.constraint.Barrier
+        android:id="@+id/itemforeigninvestmentdata_br_export_inc_cru_oil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="itemforeigninvestmentdata_tvlb_export_inc_cru_oil,itemforeigninvestmentdata_tv_export_inc_cru_oil" />
+
+    <!--export_exc_cru_oil-->
+    <TextView
+        android:id="@+id/itemforeigninvestmentdata_tvlb_export_exc_cru_oil"
+        style="@style/TextSmallGrayCommon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_margin"
+        android:text="@string/foreign_investment_data_export_exc_cru_oil"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintLeft_toLeftOf="@id/itemforeigninvestmentdata_g_left"
+        app:layout_constraintRight_toLeftOf="@+id/itemforeigninvestmentdata_tv_export_exc_cru_oil"
+        app:layout_constraintTop_toBottomOf="@id/itemforeigninvestmentdata_br_export_inc_cru_oil" />
+
+    <TextView
+        android:id="@+id/itemforeigninvestmentdata_tv_export_exc_cru_oil"
+        style="@style/TextMediumBlack"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:text="@string/foreign_investment_data_exam_export_exc_cru_oil"
+        android:textStyle="bold"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintLeft_toRightOf="@id/itemforeigninvestmentdata_tvlb_export_exc_cru_oil"
+        app:layout_constraintRight_toLeftOf="@+id/itemforeigninvestmentdata_tvlb_export_exc_cru_oil_unit"
+        app:layout_constraintTop_toTopOf="@id/itemforeigninvestmentdata_tvlb_export_exc_cru_oil" />
+
+    <TextView
+        android:id="@+id/itemforeigninvestmentdata_tvlb_export_exc_cru_oil_unit"
+        style="@style/TextTinyBlack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/unit_million_usd"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/itemforeigninvestmentdata_tv_export_exc_cru_oil"
+        app:layout_constraintRight_toRightOf="@id/itemforeigninvestmentdata_g_right"
+        app:layout_constraintTop_toTopOf="@id/itemforeigninvestmentdata_tv_export_exc_cru_oil" />
+
+    <android.support.constraint.Barrier
+        android:id="@+id/itemforeigninvestmentdata_br_export_exc_cru_oil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="itemforeigninvestmentdata_tvlb_export_exc_cru_oil,itemforeigninvestmentdata_tv_export_exc_cru_oil" />
+
+    <!--import-->
+    <TextView
+        android:id="@+id/itemforeigninvestmentdata_tvlb_import"
+        style="@style/TextSmallBlackBold"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/medium_margin"
+        android:text="@string/foreign_investment_data_import"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintLeft_toLeftOf="@id/itemforeigninvestmentdata_g_left"
+        app:layout_constraintRight_toLeftOf="@+id/itemforeigninvestmentdata_tv_import"
+        app:layout_constraintTop_toBottomOf="@id/itemforeigninvestmentdata_br_export_exc_cru_oil" />
+
+    <TextView
+        android:id="@+id/itemforeigninvestmentdata_tv_import"
+        style="@style/TextMediumBlack"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:text="@string/foreign_investment_data_exam_import"
+        android:textStyle="bold"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintLeft_toRightOf="@id/itemforeigninvestmentdata_tvlb_import"
+        app:layout_constraintRight_toLeftOf="@+id/itemforeigninvestmentdata_tvlb_import_unit"
+        app:layout_constraintTop_toTopOf="@id/itemforeigninvestmentdata_tvlb_import" />
+
+    <TextView
+        android:id="@+id/itemforeigninvestmentdata_tvlb_import_unit"
+        style="@style/TextTinyBlack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/unit_million_usd"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/itemforeigninvestmentdata_tv_import"
+        app:layout_constraintRight_toRightOf="@id/itemforeigninvestmentdata_g_right"
+        app:layout_constraintTop_toTopOf="@id/itemforeigninvestmentdata_tv_import" />
+
+    <android.support.constraint.Barrier
+        android:id="@+id/itemforeigninvestmentdata_br_import"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="itemforeigninvestmentdata_tvlb_import,itemforeigninvestmentdata_tv_import" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="@dimen/large_divider"
+        android:layout_marginTop="@dimen/large_space"
+        android:background="@color/bgCommon"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/itemforeigninvestmentdata_br_import" />
+</android.support.constraint.ConstraintLayout>

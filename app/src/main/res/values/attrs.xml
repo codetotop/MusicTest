@@ -28,5 +28,10 @@
         </attr>
     </declare-styleable>
 
+    <declare-styleable name="ProfileInformationView">
+        <attr name="profileinformation_title" format="string|reference" />
+        <attr name="profileinformation_content" format="string|reference" />
+    </declare-styleable>
+
     <declare-styleable name="ToolbarView" />
 </resources>

@@ -12,6 +12,7 @@
     <dimen name="xx_medium_space">18dp</dimen>
     <dimen name="large_space">20dp</dimen>
 
+    <dimen name="medium_margin">12dp</dimen>
     <dimen name="small_margin">8dp</dimen>
     <dimen name="tiny_margin">4dp</dimen>
 
@@ -20,6 +21,7 @@
     <dimen name="large_padding">16dp</dimen>
 
     <dimen name="smallest_text_size">12dp</dimen>
+    <dimen name="tiny_text_size">12sp</dimen>
     <dimen name="small_text_size">14sp</dimen>
     <dimen name="x_small_text_size">15sp</dimen>
     <dimen name="medium_text_size">16sp</dimen>
@@ -38,9 +40,12 @@
     <dimen name="picture_large_size">32dp</dimen>
 
     <dimen name="small_divider">1dp</dimen>
-    <dimen name="large_divider">8dp</dimen>
+    <dimen name="medium_divider">8dp</dimen>
+    <dimen name="large_divider">12dp</dimen>
 
     <dimen name="input_common_radius">2dp</dimen>
     <dimen name="shape_button_radius">4dp</dimen>
     <dimen name="itemhandleflow_tvtimehandle_margintop">2dp</dimen>
+
+    <dimen name="header_month_min_height">46dp</dimen>
 </resources>

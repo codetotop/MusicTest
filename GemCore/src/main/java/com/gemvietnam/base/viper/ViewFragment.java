@@ -1,5 +1,13 @@
 package com.gemvietnam.base.viper;
 
+import android.app.Activity;
+import android.os.Bundle;
+import android.support.annotation.Nullable;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Toast;
+
 import com.gemvietnam.base.BaseActivity;
 import com.gemvietnam.base.BaseFragment;
 import com.gemvietnam.base.viper.interfaces.IPresenter;
@@ -10,20 +18,12 @@ import com.gemvietnam.utils.DialogUtils;
 import com.gemvietnam.utils.NetworkUtils;
 import com.gemvietnam.utils.ViewUtils;
 
-import android.app.Activity;
-import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Toast;
-
 /**
  * Fragments that stand for View
  * Created by neo on 9/15/2016.
  */
 public abstract class ViewFragment<P extends IPresenter>
-        extends BaseFragment implements PresentView<P> {
+    extends BaseFragment implements PresentView<P> {
   protected P mPresenter;
   protected boolean mIsInitialized = false;
   private boolean mViewHidden;
@@ -92,6 +92,7 @@ public abstract class ViewFragment<P extends IPresenter>
   @Override
   public void initLayout() {
     // Override this method when need to preview some views, layouts
+    onDisplay();
   }
 
   @Override
@@ -189,7 +190,7 @@ public abstract class ViewFragment<P extends IPresenter>
 
   @Override
   public void showToast(String msg) {
-    if (mToast != null){
+    if (mToast != null) {
       mToast.cancel();
     }
     mToast = Toast.makeText(getViewContext(), msg, Toast.LENGTH_LONG);
@@ -198,7 +199,7 @@ public abstract class ViewFragment<P extends IPresenter>
 
   @Override
   public void showToast(int id_msg) {
-    if (mToast != null){
+    if (mToast != null) {
       mToast.cancel();
     }
     mToast = Toast.makeText(getViewContext(), id_msg, Toast.LENGTH_LONG);

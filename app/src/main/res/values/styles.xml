@@ -27,8 +27,14 @@
         <item name="android:textSize">@dimen/small_text_size</item>
     </style>
 
-    <style name="TextSmallBlackCommon">
+    <style name="TextSmallBlackBold">
         <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">@dimen/small_text_size</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextSmallBlackCommon">
+        <item name="android:textColor">@color/colorBlackCommon</item>
         <item name="android:textSize">@dimen/small_text_size</item>
     </style>
 
@@ -56,6 +62,12 @@
         <item name="android:textSize">@dimen/medium_text_size</item>
     </style>
 
+    <style name="TextMediumBlackBold">
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">@dimen/medium_text_size</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
 
     <style name="TextMediumBlackCommon">
         <item name="android:textColor">@color/colorBlackCommon</item>
@@ -70,6 +82,11 @@
     <style name="TextActionToolbar">
         <item name="android:textColor">@color/colorBlueTextActionToolbar</item>
         <item name="android:textSize">@dimen/large_text_size</item>
+    </style>
+
+    <style name="TextTinyBlack">
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">@dimen/tiny_text_size</item>
     </style>
 
     <!--Base view-->

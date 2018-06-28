@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/itemregistrationbusiness_g_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/large_space" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/itemregistrationbusiness_g_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/large_space" />
+
+    <TextView
+        android:id="@+id/itemregistrationbusiness_tv_month"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/bgBlueMonthHeader"
+        android:gravity="center_vertical"
+        android:minHeight="@dimen/header_month_min_height"
+        android:paddingEnd="@dimen/large_space"
+        android:paddingStart="@dimen/large_space"
+        android:text="@string/registration_exam_month"
+        android:textAllCaps="true"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/medium_text_size"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--newly-->
+    <TextView
+        android:id="@+id/itemregistrationbusiness_tvlb_newly"
+        style="@style/TextSmallGrayCommon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/large_space"
+        android:text="@string/registration_number_of_newly"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintLeft_toLeftOf="@id/itemregistrationbusiness_g_left"
+        app:layout_constraintRight_toLeftOf="@+id/itemregistrationbusiness_tv_newly"
+        app:layout_constraintTop_toBottomOf="@id/itemregistrationbusiness_tv_month" />
+
+    <TextView
+        android:id="@+id/itemregistrationbusiness_tv_newly"
+        style="@style/TextMediumBlackBold"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/tiny_margin"
+        android:gravity="end"
+        android:text="@string/registration_exam_number_of_newly"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toRightOf="@id/itemregistrationbusiness_tvlb_newly"
+        app:layout_constraintRight_toRightOf="@id/itemregistrationbusiness_g_right"
+        app:layout_constraintTop_toTopOf="@id/itemregistrationbusiness_tvlb_newly" />
+
+    <android.support.constraint.Barrier
+        android:id="@+id/itemregistrationbusiness_br_newly"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="itemregistrationbusiness_tvlb_newly,itemregistrationbusiness_tv_newly" />
+
+    <!--regis_capital-->
+    <TextView
+        android:id="@+id/itemregistrationbusiness_tvlb_regis_capital"
+        style="@style/TextSmallGrayCommon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_margin"
+        android:text="@string/registration_number_of_regis_capital"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintLeft_toLeftOf="@id/itemregistrationbusiness_g_left"
+        app:layout_constraintRight_toLeftOf="@+id/itemregistrationbusiness_tv_regis_capital"
+        app:layout_constraintTop_toBottomOf="@id/itemregistrationbusiness_br_newly" />
+
+    <TextView
+        android:id="@+id/itemregistrationbusiness_tv_regis_capital"
+        style="@style/TextMediumBlackBold"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/tiny_margin"
+        android:gravity="end"
+        android:text="@string/registration_exam_number_of_newly"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintLeft_toRightOf="@id/itemregistrationbusiness_tvlb_regis_capital"
+        app:layout_constraintRight_toLeftOf="@+id/itemregistrationbusiness_tvlb_regis_capital_unit"
+        app:layout_constraintTop_toTopOf="@id/itemregistrationbusiness_tvlb_regis_capital" />
+
+    <TextView
+        android:id="@+id/itemregistrationbusiness_tvlb_regis_capital_unit"
+        style="@style/TextTinyBlack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/unit_billion"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/itemregistrationbusiness_tv_regis_capital"
+        app:layout_constraintRight_toRightOf="@id/itemregistrationbusiness_g_right"
+        app:layout_constraintTop_toTopOf="@id/itemregistrationbusiness_tv_regis_capital" />
+
+    <android.support.constraint.Barrier
+        android:id="@+id/itemregistrationbusiness_br_registered_capital"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="itemregistrationbusiness_tvlb_regis_capital,itemregistrationbusiness_tv_regis_capital" />
+
+    <!--employees_regis-->
+    <TextView
+        android:id="@+id/itemregistrationbusiness_tvlb_employees_regis"
+        style="@style/TextSmallGrayCommon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_margin"
+        android:text="@string/registration_number_of_employees_regis"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintLeft_toLeftOf="@id/itemregistrationbusiness_g_left"
+        app:layout_constraintRight_toLeftOf="@+id/itemregistrationbusiness_tv_employees_regis"
+        app:layout_constraintTop_toBottomOf="@id/itemregistrationbusiness_br_registered_capital" />
+
+    <TextView
+        android:id="@+id/itemregistrationbusiness_tv_employees_regis"
+        style="@style/TextMediumBlackBold"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/tiny_margin"
+        android:gravity="end"
+        android:text="@string/registration_exam_number_of_employees_regis"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toRightOf="@id/itemregistrationbusiness_tvlb_employees_regis"
+        app:layout_constraintRight_toRightOf="@id/itemregistrationbusiness_g_right"
+        app:layout_constraintTop_toTopOf="@id/itemregistrationbusiness_tvlb_employees_regis" />
+
+    <android.support.constraint.Barrier
+        android:id="@+id/itemregistrationbusiness_br_employees_regis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="itemregistrationbusiness_tvlb_employees_regis,itemregistrationbusiness_tv_employees_regis" />
+
+    <!--comple_procedure_dissolution-->
+    <TextView
+        android:id="@+id/itemregistrationbusiness_tvlb_comple_procedure_dissolution"
+        style="@style/TextSmallGrayCommon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_margin"
+        android:text="@string/registration_number_of_comple_procedure_dissolution"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintLeft_toLeftOf="@id/itemregistrationbusiness_g_left"
+        app:layout_constraintRight_toLeftOf="@+id/itemregistrationbusiness_tv_comple_procedure_dissolution"
+        app:layout_constraintTop_toBottomOf="@id/itemregistrationbusiness_br_employees_regis" />
+
+    <TextView
+        android:id="@+id/itemregistrationbusiness_tv_comple_procedure_dissolution"
+        style="@style/TextMediumBlackBold"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/tiny_margin"
+        android:gravity="end"
+        android:text="@string/registration_exam_number_of_comple_procedure_dissolution"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toRightOf="@id/itemregistrationbusiness_tvlb_comple_procedure_dissolution"
+        app:layout_constraintRight_toRightOf="@id/itemregistrationbusiness_g_right"
+        app:layout_constraintTop_toTopOf="@id/itemregistrationbusiness_tvlb_comple_procedure_dissolution" />
+
+    <android.support.constraint.Barrier
+        android:id="@+id/itemregistrationbusiness_br_comple_procedure_dissolution"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="itemregistrationbusiness_tvlb_comple_procedure_dissolution,itemregistrationbusiness_tv_comple_procedure_dissolution" />
+
+    <!--difficulty_temporary_suspension-->
+    <TextView
+        android:id="@+id/itemregistrationbusiness_tvlb_difficulty_temporary_suspension"
+        style="@style/TextSmallGrayCommon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_margin"
+        android:text="@string/registration_number_of_difficulty_temporary_suspension"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintLeft_toLeftOf="@id/itemregistrationbusiness_g_left"
+        app:layout_constraintRight_toLeftOf="@+id/itemregistrationbusiness_tv_difficulty_temporary_suspension"
+        app:layout_constraintTop_toBottomOf="@id/itemregistrationbusiness_br_comple_procedure_dissolution" />
+
+    <TextView
+        android:id="@+id/itemregistrationbusiness_tv_difficulty_temporary_suspension"
+        style="@style/TextMediumBlackBold"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/tiny_margin"
+        android:gravity="end"
+        android:text="@string/registration_exam_number_of_difficulty_temporary_suspension"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toRightOf="@id/itemregistrationbusiness_tvlb_difficulty_temporary_suspension"
+        app:layout_constraintRight_toRightOf="@id/itemregistrationbusiness_g_right"
+        app:layout_constraintTop_toTopOf="@id/itemregistrationbusiness_tvlb_difficulty_temporary_suspension" />
+
+    <android.support.constraint.Barrier
+        android:id="@+id/itemregistrationbusiness_br_difficulty_temporary_suspension"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="itemregistrationbusiness_tvlb_difficulty_temporary_suspension,itemregistrationbusiness_tv_difficulty_temporary_suspension" />
+
+    <!--returned_operation-->
+    <TextView
+        android:id="@+id/itemregistrationbusiness_tvlb_comple_returned_operation"
+        style="@style/TextSmallGrayCommon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_margin"
+        android:text="@string/registration_number_of_returned_operation"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintLeft_toLeftOf="@id/itemregistrationbusiness_g_left"
+        app:layout_constraintRight_toLeftOf="@+id/itemregistrationbusiness_tv_comple_returned_operation"
+        app:layout_constraintTop_toBottomOf="@id/itemregistrationbusiness_br_difficulty_temporary_suspension" />
+
+    <TextView
+        android:id="@+id/itemregistrationbusiness_tv_comple_returned_operation"
+        style="@style/TextMediumBlackBold"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/tiny_margin"
+        android:gravity="end"
+        android:text="@string/registration_exam_number_of_returned_operation"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toRightOf="@id/itemregistrationbusiness_tvlb_comple_returned_operation"
+        app:layout_constraintRight_toRightOf="@id/itemregistrationbusiness_g_right"
+        app:layout_constraintTop_toTopOf="@id/itemregistrationbusiness_tvlb_comple_returned_operation" />
+
+    <android.support.constraint.Barrier
+        android:id="@+id/itemregistrationbusiness_br_comple_returned_operation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="itemregistrationbusiness_tvlb_comple_returned_operation,itemregistrationbusiness_tv_comple_returned_operation" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="@dimen/large_divider"
+        android:layout_marginTop="@dimen/large_space"
+        android:background="@color/bgCommon"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/itemregistrationbusiness_br_comple_returned_operation" />
+</android.support.constraint.ConstraintLayout>

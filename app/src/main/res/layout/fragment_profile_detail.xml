@@ -1,0 +1,86 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgCommon"
+    android:orientation="vertical">
+
+    <com.gem.mpi.widget.ToolbarView
+        android:id="@+id/fragmentprofiledetail_tbv_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <com.gem.mpi.widget.ProfileView
+                android:id="@+id/fragmentprofiledetail_pv_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:paddingBottom="@dimen/small_space"
+                android:paddingLeft="@dimen/large_space"
+                android:paddingRight="@dimen/large_space"
+                android:paddingTop="@dimen/large_space"
+                app:profileview_action_visibility="gone"
+                app:profileview_avatar="@drawable/ic_avatar_default"
+                app:profileview_department="@string/profile_exam_department"
+                app:profileview_duty="@string/profile_exam_duty"
+                app:profileview_name="@string/profile_exam_name" />
+
+            <com.gem.mpi.widget.ProfileInformationView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/medium_divider"
+                app:profileinformation_content="@string/profile_exam_birthday"
+                app:profileinformation_title="@string/profile_birthday" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/small_divider"
+                android:background="@color/color_divider_gray" />
+
+            <com.gem.mpi.widget.ProfileInformationView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:profileinformation_content="@string/profile_exam_email"
+                app:profileinformation_title="@string/profile_email" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/small_divider"
+                android:background="@color/color_divider_gray" />
+
+            <com.gem.mpi.widget.ProfileInformationView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:profileinformation_content="@string/profile_exam_phone_number_of_organization"
+                app:profileinformation_title="@string/profile_phone_number_of_organization" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/small_divider"
+                android:background="@color/color_divider_gray" />
+
+            <com.gem.mpi.widget.ProfileInformationView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:profileinformation_content="@string/profile_exam_phone_number"
+                app:profileinformation_title="@string/profile_phone_number" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/small_divider"
+                android:background="@color/color_divider_gray" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

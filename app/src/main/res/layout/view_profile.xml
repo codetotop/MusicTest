@@ -2,16 +2,17 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite">
 
     <ImageView
         android:id="@+id/viewprofile_iv_avatar"
         android:layout_width="@dimen/avatar_width"
         android:layout_height="@dimen/avatar_height"
-        android:background="@color/colorGrayCommon"
+        android:background="@color/bgPicture"
         android:contentDescription="@null"
-        android:scaleType="fitXY"
-        android:src="@mipmap/ic_launcher"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_avatar_default"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -33,23 +34,31 @@
         style="@style/TextSmallGrayCommon"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/tiny_margin"
+        android:layout_marginTop="@dimen/small_margin"
         android:text="@string/profile_exam_duty"
-        app:layout_constraintBottom_toTopOf="@+id/viewprofile_tv_department"
         app:layout_constraintLeft_toLeftOf="@id/viewprofile_tv_name"
-        app:layout_constraintRight_toRightOf="@id/viewprofile_tv_name" />
+        app:layout_constraintRight_toLeftOf="@id/viewprofile_iv_action"
+        app:layout_constraintRight_toRightOf="@id/viewprofile_tv_name"
+        app:layout_constraintTop_toBottomOf="@id/viewprofile_tv_name" />
 
     <TextView
         android:id="@+id/viewprofile_tv_department"
         style="@style/TextSmallGrayCommon"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/tiny_margin"
         android:maxLines="2"
         android:text="@string/profile_exam_department"
-        app:layout_constraintBottom_toBottomOf="@id/viewprofile_iv_avatar"
         app:layout_constraintLeft_toLeftOf="@id/viewprofile_tv_name"
-        app:layout_constraintRight_toLeftOf="@id/viewprofile_iv_action"
-        app:layout_constraintRight_toRightOf="@id/viewprofile_tv_name" />
+        app:layout_constraintRight_toRightOf="@id/viewprofile_tv_duty"
+        app:layout_constraintTop_toBottomOf="@id/viewprofile_tv_duty" />
+
+    <View
+        android:id="@+id/viewprofile_bottom"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/small_margin"
+        app:layout_constraintTop_toBottomOf="@id/viewprofile_iv_avatar" />
 
     <ImageView
         android:id="@+id/viewprofile_iv_action"
@@ -58,8 +67,7 @@
         android:background="@drawable/bg_action_circle_gray"
         android:contentDescription="@null"
         android:padding="@dimen/small_padding"
-        android:scaleType="centerInside"
         android:src="@drawable/ic_settings"
-        app:layout_constraintBottom_toBottomOf="@id/viewprofile_iv_avatar"
+        app:layout_constraintBottom_toTopOf="@id/viewprofile_bottom"
         app:layout_constraintRight_toRightOf="parent" />
 </android.support.constraint.ConstraintLayout>

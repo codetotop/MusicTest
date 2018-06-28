@@ -3,4 +3,18 @@
     <string name="profile_exam_name">Nguyễn Đức Thuần</string>
     <string name="profile_exam_department">Trung Tâm Tin Học</string>
     <string name="profile_exam_duty">Phó Giám Đốc</string>
+    <string name="profile_exam_birthday">05/10/1982</string>
+    <string name="profile_exam_email">thuannd@mpi.gov.vn</string>
+    <string name="profile_exam_phone_number">09812345678</string>
+    <string name="profile_exam_phone_number_of_organization">09876543210</string>
+
+    <string name="profile_unit">Đơn vị</string>
+    <string name="profile_duty">Chức vụ</string>
+    <string name="profile_birthday">Ngày sinh</string>
+    <string name="profile_email">Email</string>
+    <string name="profile_phone_number_of_organization">Số điện thoại cơ quan</string>
+    <string name="profile_phone_number">Số điện di động</string>
+
+
+
 </resources>
