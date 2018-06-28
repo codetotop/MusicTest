@@ -3,6 +3,7 @@ package com.gem.mpi.screen.main.workflow.adapter;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -46,9 +47,14 @@ public class HandleIdeaAdapter extends RecyclerView.Adapter<HandleIdeaAdapter.Vi
         holder.tvDescIdea.setText(handleIdeaModel.getDescIdea());
         holder.tvPersonSign.setText(handleIdeaModel.getPersonSign());
         holder.documentViewHandleIdea.setDocumentName(handleIdeaModel.getDocumentRelationName());
+        holder.documentViewHandleIdea.setVisibilityDecorationLine(false);
+        if (position == (handleIdeaModels.size()-1)) {
+            holder.setInVisibleDecorationLine();
+            Log.e("ABC", "onBindViewHolder: Test !" );
+        }
     }
 
-    public void refresh(ArrayList<HandleIdeaModel> handleIdeaModels){
+    public void refresh(ArrayList<HandleIdeaModel> handleIdeaModels) {
         this.handleIdeaModels.clear();
         this.handleIdeaModels.addAll(handleIdeaModels);
         notifyDataSetChanged();
@@ -61,7 +67,7 @@ public class HandleIdeaAdapter extends RecyclerView.Adapter<HandleIdeaAdapter.Vi
 
     class ViewHolder extends RecyclerView.ViewHolder {
         ImageView imgEmployeeAvatar;
-        TextView tvEmployeeName, tvTimeSendData, tvDescIdea, tvPersonSign;
+        TextView tvEmployeeName, tvTimeSendData, tvDescIdea, tvPersonSign, tvDecoration;
         DocumentView documentViewHandleIdea;
 
         public ViewHolder(View itemView) {
@@ -72,6 +78,11 @@ public class HandleIdeaAdapter extends RecyclerView.Adapter<HandleIdeaAdapter.Vi
             tvDescIdea = itemView.findViewById(R.id.tvDescIdea);
             tvPersonSign = itemView.findViewById(R.id.tvPersonSign);
             documentViewHandleIdea = itemView.findViewById(R.id.documentViewHandleIdea);
+            tvDecoration = itemView.findViewById(R.id.tvDecorationLineIdea);
+        }
+
+        public void setInVisibleDecorationLine(){
+            tvDecoration.setVisibility(View.GONE);
         }
     }
 }

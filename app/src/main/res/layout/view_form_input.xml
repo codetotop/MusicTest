@@ -20,10 +20,10 @@
         android:layout_height="wrap_content"
         android:textSize="@dimen/edtvalue_size"
         android:textColor="@color/viewforminput_edtvalue_textcolor"
-        android:layout_marginLeft="@dimen/edtvalue_marginleft"
-        android:layout_marginRight="@dimen/edtvalue_marginright"
+        android:layout_marginStart="@dimen/edtvalue_marginleft"
+        android:layout_marginEnd="@dimen/edtvalue_marginright"
         android:text="@string/value_username_exp"
-        android:paddingRight="@dimen/edtvalue_paddingright"
+        android:paddingEnd="@dimen/edtvalue_paddingend"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvLabel" />

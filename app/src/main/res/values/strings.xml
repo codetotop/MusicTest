@@ -28,4 +28,6 @@
     <string name="action_change">Sửa</string>
     <string name="title_about_profile">Thông Tin Cá Nhân</string>
     <string name="itemhandleflow_tvtimehandle_exp">28/05/2018 - 15:38:35</string>
+    <string name="validate_username">Bạn cần nhập tài khoản !</string>
+    <string name="validate_password">Bạn cần nhập mật khẩu !</string>
 </resources>

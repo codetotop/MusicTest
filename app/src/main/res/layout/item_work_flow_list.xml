@@ -19,7 +19,7 @@
         android:id="@+id/imgStatus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/itemworkflowlist_imgstatus_marginleft"
+        android:layout_marginStart="@dimen/itemworkflowlist_imgstatus_marginleft"
         android:background="@drawable/ic_error"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintLeft_toRightOf="@+id/tvTitle"
@@ -56,7 +56,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tvNewIdea" />
 
     <TextView
-        android:id="@+id/tvDecorationLine"
+        android:id="@+id/tvDecorationLineIdea"
         android:layout_width="match_parent"
         android:layout_height="@dimen/tvdecorationline_height"
         android:layout_marginTop="@dimen/tvdecorationline_margintop"

@@ -16,7 +16,7 @@
         android:id="@+id/tvEmployeeName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/itemhandleidea_tvemployeename_marginleft"
+        android:layout_marginStart="@dimen/itemhandleidea_tvemployeename_marginleft"
         android:text="@string/itemhandleidea_tvemployeename_exp"
         style="@style/TextSmallBlackCommon"
         app:layout_constraintLeft_toRightOf="@+id/imgEmployeeAvatar"
@@ -55,7 +55,7 @@
         android:id="@+id/imgSign"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/itemhandleidea_imgsign_marginleft"
+        android:layout_marginStart="@dimen/itemhandleidea_imgsign_marginleft"
         android:background="@drawable/ic_star"
         app:layout_constraintLeft_toRightOf="@+id/tvLabelSign"
         app:layout_constraintTop_toTopOf="@id/tvLabelSign" />
@@ -64,7 +64,7 @@
         android:id="@+id/tvPersonSign"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/itemhandleidea_tvpersonsign_marginleft"
+        android:layout_marginStart="@dimen/itemhandleidea_tvpersonsign_marginleft"
         android:text="@string/itemhandleidea_tvoersonsign_exp"
         style="@style/TextSmallestGrayCommon"
         app:layout_constraintLeft_toRightOf="@+id/imgSign"
@@ -78,5 +78,16 @@
         app:layout_constraintLeft_toLeftOf="@id/tvLabelSign"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvPersonSign"/>
+    <TextView
+        android:id="@+id/tvDecorationLineIdea"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorDecorationLine"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/documentViewHandleIdea"
+        android:layout_marginTop="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="12dp"
+        />
 
 </android.support.constraint.ConstraintLayout>

@@ -1,5 +1,7 @@
 package com.gem.mpi.screen.authentication.login;
 
+import com.gem.mpi.data.dto.LoginDTO;
+import com.gem.mpi.data.remote.callback.CommonCallback;
 import com.gemvietnam.base.viper.interfaces.IInteractor;
 import com.gemvietnam.base.viper.interfaces.IPresenter;
 import com.gemvietnam.base.viper.interfaces.PresentView;
@@ -12,7 +14,7 @@ import retrofit2.Callback;
 interface LoginContract {
 
   interface Interactor extends IInteractor<Presenter> {
-    //void login(String username, String password, Callback<UserDTO> callback);
+    void login(String username, String password, CommonCallback<LoginDTO> callback);
 
   }
 

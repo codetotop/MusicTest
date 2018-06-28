@@ -9,7 +9,7 @@
         android:id="@+id/imgFolder"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/imgfolder_marginleft"
+        android:layout_marginStart="@dimen/imgfolder_marginleft"
         android:layout_marginTop="@dimen/imgfolder_margintop"
         android:src="@drawable/ic_folder"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -20,7 +20,7 @@
         style="@style/TextSmallBlackCommon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/tvheader_marginleft"
+        android:layout_marginStart="@dimen/tvheader_marginleft"
         android:text="@string/tvheader_exp"
         app:layout_constraintLeft_toRightOf="@id/imgFolder"
         app:layout_constraintTop_toTopOf="@+id/imgFolder" />
@@ -31,7 +31,7 @@
         app:layout_constraintLeft_toRightOf="@id/tvHeader"
         android:background="@drawable/ic_expand"
         app:layout_constraintBottom_toBottomOf="@+id/tvHeader"
-        android:layout_marginLeft="@dimen/imgexpand_marginleft"
+        android:layout_marginStart="@dimen/imgexpand_marginleft"
         android:layout_marginBottom="@dimen/imgexpand_marginbottom"
         />
 
@@ -39,7 +39,7 @@
         android:id="@+id/rcvWorkList"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginRight="@dimen/rcvworklist_marginright"
+        android:layout_marginEnd="@dimen/rcvworklist_marginright"
         android:layout_marginTop="@dimen/rcvworklist_margintop"
         app:layout_constraintLeft_toLeftOf="@id/imgFolder"
         app:layout_constraintRight_toRightOf="parent"

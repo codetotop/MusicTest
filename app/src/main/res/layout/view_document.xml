@@ -19,7 +19,7 @@
         android:text="@string/viewdocument_tvnamedocument_exp"
         app:layout_constraintLeft_toRightOf="@+id/imgAvatarDocument"
         app:layout_constraintRight_toLeftOf="@+id/imgDownloadDocument"
-        android:layout_marginLeft="@dimen/viewdocument_tvnamedocument_marginleft"
+        android:layout_marginStart="@dimen/viewdocument_tvnamedocument_marginleft"
         />
     <ImageView
         android:id="@+id/imgDownloadDocument"
@@ -31,10 +31,10 @@
         app:layout_constraintBottom_toBottomOf="@id/imgAvatarDocument"
         />
     <TextView
-        android:id="@+id/tvDecorationLine2"
+        android:id="@+id/tvDecorationLineIdea"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@color/colorSlateGrey"
+        android:background="@color/colorDecorationLine"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/imgAvatarDocument"
         android:layout_marginTop="12dp"

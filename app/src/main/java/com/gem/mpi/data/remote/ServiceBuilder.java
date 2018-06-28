@@ -79,7 +79,7 @@ public class ServiceBuilder {
     return getBaseUrl() + BuildConfig.API_VERSION + "/" + (StringUtils.isEmpty(serviceName) ? "" : serviceName + "/");
   }
 
-  private static AuthenticationServices getAuthenticationServices(){
+  public static AuthenticationServices getAuthenticationServices(){
       return getRetrofit(buildUrl("")).create(AuthenticationServices.class);
   }
 }

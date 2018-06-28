@@ -37,9 +37,9 @@ public class WorkFlowListAdapter extends RecyclerView.Adapter<WorkFlowListAdapte
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         WorkFlowListModel workFlowModel = workFlowModels.get(position);
         holder.tvTitle.setText(workFlowModel.getTitle());
-        holder.tvDocSymbol.setText(Constants.PREFIX_DOC_SYMBOL + workFlowModel.getDocSymbol());
-        holder.tvNewIdea.setText(Constants.PREFIX_NEW_IDEA + workFlowModel.getNewIdea());
-        holder.tvDuration.setText(Constants.PREFIX_DURATION + workFlowModel.getDuration());
+        holder.tvDocSymbol.setText(context.getString(R.string.prefix_doc_symbol) + workFlowModel.getDocSymbol());
+        holder.tvNewIdea.setText(context.getString(R.string.prefix_new_idea) + workFlowModel.getNewIdea());
+        holder.tvDuration.setText(context.getString(R.string.prefix_duration) + workFlowModel.getDuration());
         String status = workFlowModel.getStatus();
         if (status.equals("warning")) {
             holder.imgStatus.setBackgroundResource(R.drawable.ic_warning);

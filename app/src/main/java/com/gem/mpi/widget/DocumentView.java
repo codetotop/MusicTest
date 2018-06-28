@@ -14,36 +14,39 @@ import com.gem.mpi.R;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class DocumentView extends ConstraintLayout{
+public class DocumentView extends ConstraintLayout {
     @BindView(R.id.imgAvatarDocument)
     ImageView imgAvatarDocument;
     @BindView(R.id.tvNameDocument)
     TextView tvNameDocument;
     @BindView(R.id.imgDownloadDocument)
     ImageView imgDownloadDocument;
+    @BindView(R.id.tvDecorationLineIdea)
+    TextView tvDecoration;
+
     public DocumentView(Context context) {
         super(context);
-        init(null,0);
+        init(null, 0);
     }
 
     public DocumentView(Context context, AttributeSet attrs) {
         super(context, attrs);
-        init(attrs,0);
+        init(attrs, 0);
 
     }
 
     public DocumentView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        init(attrs,defStyleAttr);
+        init(attrs, defStyleAttr);
 
     }
 
-    private void init(AttributeSet attributeSet,int defStyleAttr){
+    private void init(AttributeSet attributeSet, int defStyleAttr) {
         LayoutInflater inflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        inflater.inflate(R.layout.view_document,this,true);
+        inflater.inflate(R.layout.view_document, this, true);
         ButterKnife.bind(this);
 
-        TypedArray input = getContext().obtainStyledAttributes(attributeSet, R.styleable.DocumentView,0,0);
+        TypedArray input = getContext().obtainStyledAttributes(attributeSet, R.styleable.DocumentView, 0, 0);
         Drawable drawableAvatar = input.getDrawable(R.styleable.DocumentView_imgavatardocument_backgound);
         setAvatarDocument(drawableAvatar);
 
@@ -55,28 +58,41 @@ public class DocumentView extends ConstraintLayout{
         input.recycle();
     }
 
-    public void setAvatarDocument(Drawable drawable){
+    public void setAvatarDocument(Drawable drawable) {
         imgAvatarDocument.setImageDrawable(drawable);
     }
 
-    public void setDocumentName(String name){
+    public void setDocumentName(String name) {
         tvNameDocument.setText(name);
     }
 
-    public String getDocumentName(){
+    public String getDocumentName() {
         return tvNameDocument.getText().toString();
     }
 
-    public void setDownloadDocument(Drawable drawable){
+    public void setDownloadDocument(Drawable drawable) {
         imgDownloadDocument.setImageDrawable(drawable);
     }
 
-    public void setDownloadDocumentVisibility(boolean bool){
-        if(bool)
+    public void setDownloadDocumentVisibility(boolean bool) {
+        if (bool)
             imgDownloadDocument.setVisibility(VISIBLE);
         else
             imgDownloadDocument.setVisibility(INVISIBLE);
     }
 
+    public TextView getTvDecoration() {
+        return tvDecoration;
+    }
 
+    public void setTvDecoration(TextView tvDecoration) {
+        this.tvDecoration = tvDecoration;
+    }
+
+    public void setVisibilityDecorationLine(boolean bool) {
+        if (bool)
+            tvDecoration.setVisibility(VISIBLE);
+        else if(!bool)
+            tvDecoration.setVisibility(INVISIBLE);
+    }
 }

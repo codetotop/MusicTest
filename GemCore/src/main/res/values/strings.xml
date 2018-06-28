@@ -8,4 +8,5 @@
     <string name="msg_network_lost">Please check your network connection and try again!</string>
     <string name="has_no_phone_card">No SIM card is available in the device</string>
     <string name="title_caution">Caution</string>
+    <string name="loading_dialog_message_tv_text">Loading</string>
 </resources>

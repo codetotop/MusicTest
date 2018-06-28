@@ -38,6 +38,9 @@ public class HandleFlowAdapter extends RecyclerView.Adapter<HandleFlowAdapter.Vi
       holder.tvDuty.setText(handleFlowModel.getDuty());
       holder.tvDescWorkFlow.setText(handleFlowModel.getDescWorkFlow());
       holder.tvTimeHandle.setText(handleFlowModel.getTimeHandle());
+
+        if (position == (handleFlowModels.size()-1))
+            holder.tvDecoration.setVisibility(View.INVISIBLE);
     }
 
     public void refreshData(ArrayList<HandleFlowModel> handleFlowModels){
@@ -52,13 +55,14 @@ public class HandleFlowAdapter extends RecyclerView.Adapter<HandleFlowAdapter.Vi
     }
 
     class ViewHolder extends RecyclerView.ViewHolder{
-        TextView tvNameStaff,tvDuty,tvDescWorkFlow,tvTimeHandle;
+        TextView tvNameStaff,tvDuty,tvDescWorkFlow,tvTimeHandle,tvDecoration;
         public ViewHolder(View itemView) {
             super(itemView);
             tvNameStaff = itemView.findViewById(R.id.tvNameStaff);
             tvDuty = itemView.findViewById(R.id.tvDuty);
             tvDescWorkFlow = itemView.findViewById(R.id.tvDescWorkFlow);
             tvTimeHandle = itemView.findViewById(R.id.tvTimeHandle);
+            tvDecoration = itemView.findViewById(R.id.tvDecorationLineIdea);
         }
     }
 }

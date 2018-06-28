@@ -21,7 +21,7 @@
         android:text="@string/itemheaderworkflow_tvcontentfile_exp"
         app:layout_constraintTop_toTopOf="@id/tvLabelContentFile"
         app:layout_constraintLeft_toRightOf="@id/tvLabelContentFile"
-        android:layout_marginLeft="@dimen/itemheaderworkflow_tvcontentfile_marginleft"
+        android:layout_marginStart="@dimen/itemheaderworkflow_tvcontentfile_marginleft"
         />
     <TextView
         android:id="@+id/tvLabelDayOpenFile"
