@@ -57,8 +57,8 @@ public class LoginPresenter extends Presenter<LoginContract.View, LoginContract.
           }
 
           @Override
-          protected void onError(int errorCode, String errorMessage) {
-            super.onError(errorCode, errorMessage);
+          protected void onError(String errorMessage) {
+            super.onError(errorMessage);
           }
 
           @Override
