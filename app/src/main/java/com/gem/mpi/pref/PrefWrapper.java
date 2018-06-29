@@ -81,7 +81,7 @@ public class PrefWrapper {
 
   public static void saveLoginResponse(Context context, LoginDTO loginDTO){
     String loginResponse = new Gson().toJson(loginDTO);
-    SharedPreferences.Editor editor = (SharedPreferences.Editor) getPreference(context);
+    SharedPreferences.Editor editor = (SharedPreferences.Editor) getPreference(context).edit();
     editor.putString(KEY_LOGIN,loginResponse);
     editor.apply();
   }

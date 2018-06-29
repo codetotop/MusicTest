@@ -1,6 +1,7 @@
 package com.gem.mpi.screen.authentication.login;
 
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.text.InputType;
 
 import com.gem.mpi.R;
@@ -47,7 +48,7 @@ public class LoginFragment extends ViewFragment<LoginContract.Presenter> impleme
         mformInputPassWord.setText("");
         mformInputUserName.setAction(Constants.LOGIN_ACTION_DELETE);
         mformInputPassWord.setAction(Constants.LOGIN_ACTION_VIEW);
-        mformInputUserName.setInputType(InputType.TYPE_CLASS_TEXT);
+        mformInputUserName.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
         mformInputPassWord.setInputType(InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_VARIATION_PASSWORD);
     }
 

@@ -21,7 +21,7 @@ public class DocumentView extends ConstraintLayout {
     TextView tvNameDocument;
     @BindView(R.id.imgDownloadDocument)
     ImageView imgDownloadDocument;
-    @BindView(R.id.tvDecorationLineIdea)
+    @BindView(R.id.tvDecorationLineDocument)
     TextView tvDecoration;
 
     public DocumentView(Context context) {
@@ -49,7 +49,6 @@ public class DocumentView extends ConstraintLayout {
         TypedArray input = getContext().obtainStyledAttributes(attributeSet, R.styleable.DocumentView, 0, 0);
         Drawable drawableAvatar = input.getDrawable(R.styleable.DocumentView_imgavatardocument_backgound);
         setAvatarDocument(drawableAvatar);
-
         String namedocument = input.getString(R.styleable.DocumentView_tvnamedocument_name);
         setDocumentName(namedocument);
         Drawable drawableDownload = input.getDrawable(R.styleable.DocumentView_imgdownloaddocument_backgound);

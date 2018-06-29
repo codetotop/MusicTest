@@ -2,38 +2,46 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorWhite"
-    >
+    android:background="@color/colorWhite">
 
-    <ImageView
-        android:id="@+id/imgFolder"
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/headerViewWorkList"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/imgfolder_marginleft"
         android:layout_marginTop="@dimen/imgfolder_margintop"
-        android:src="@drawable/ic_folder"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:id="@+id/tvHeader"
-        style="@style/TextSmallBlackCommon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/tvheader_marginleft"
-        android:text="@string/tvheader_exp"
-        app:layout_constraintLeft_toRightOf="@id/imgFolder"
-        app:layout_constraintTop_toTopOf="@+id/imgFolder" />
-    <ImageView
-        android:id="@+id/imgExpand"
-        android:layout_width="@dimen/imgexpand_width"
-        android:layout_height="@dimen/imgexpand_height"
-        app:layout_constraintLeft_toRightOf="@id/tvHeader"
-        android:background="@drawable/ic_expand"
-        app:layout_constraintBottom_toBottomOf="@+id/tvHeader"
-        android:layout_marginStart="@dimen/imgexpand_marginleft"
-        android:layout_marginBottom="@dimen/imgexpand_marginbottom"
-        />
+        <ImageView
+            android:id="@+id/imgFolder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_folder"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvHeader"
+            style="@style/TextSmallBlackCommon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/tvheader_marginleft"
+            android:text="@string/tvheader_exp"
+            app:layout_constraintLeft_toRightOf="@id/imgFolder"
+            app:layout_constraintTop_toTopOf="@+id/imgFolder" />
+
+        <ImageView
+            android:id="@+id/imgExpand"
+            android:layout_width="@dimen/imgexpand_width"
+            android:layout_height="@dimen/imgexpand_height"
+            android:layout_marginBottom="@dimen/imgexpand_marginbottom"
+            android:layout_marginStart="@dimen/imgexpand_marginleft"
+            android:background="@drawable/ic_expand"
+            app:layout_constraintBottom_toBottomOf="@+id/tvHeader"
+            app:layout_constraintLeft_toRightOf="@id/tvHeader" />
+    </android.support.constraint.ConstraintLayout>
+
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rcvWorkList"
@@ -41,10 +49,9 @@
         android:layout_height="0dp"
         android:layout_marginEnd="@dimen/rcvworklist_marginright"
         android:layout_marginTop="@dimen/rcvworklist_margintop"
-        app:layout_constraintLeft_toLeftOf="@id/imgFolder"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/imgFolder"
         app:layout_constraintBottom_toBottomOf="parent"
-        />
+        app:layout_constraintStart_toStartOf="@id/headerViewWorkList"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/headerViewWorkList" />
 
 </android.support.constraint.ConstraintLayout>

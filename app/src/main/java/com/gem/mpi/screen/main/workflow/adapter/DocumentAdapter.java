@@ -55,7 +55,7 @@ public class DocumentAdapter extends RecyclerView.Adapter<DocumentAdapter.ViewHo
             tvDocumentName = itemView.findViewById(R.id.tvNameDocument);
             imgAvatarDocument = itemView.findViewById(R.id.imgAvatarDocument);
             imgDownloadDocument = itemView.findViewById(R.id.imgDownloadDocument);
-            tvDecoration = itemView.findViewById(R.id.tvDecorationLineIdea);
+            tvDecoration = itemView.findViewById(R.id.tvDecorationLineDocument);
         }
     }
 }

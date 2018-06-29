@@ -3,7 +3,7 @@
 
     <declare-styleable name="FormInputView">
         <attr name="tvlabel_name" format="string" />
-        <attr name="edtvalue_inputtype" format="integer|reference" />
+        <attr name="edtvalue_inputtype" format="integer|string|reference" />
         <attr name="imgevent_source" format="reference" />
         <attr name="imgevent_action" format="string" />
         <attr name="imgevent_visibility" format="boolean" />

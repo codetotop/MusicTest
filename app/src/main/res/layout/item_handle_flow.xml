@@ -9,7 +9,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/itemhandleflow_tvnamestaff_exp"
-        style="@style/TextMediumBlackCommon"
+        style="@style/TextMediumBlackBold"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -26,28 +26,30 @@
         />
     <TextView
         android:id="@+id/tvDescWorkFlow"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/tvNameStaff"
         style="@style/TextSmallBlackCommon"
         android:text="@string/itemhandleflow_tvdescworkflow_exp"
-        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="@dimen/itemhandleflow_tvdescworkflow"
+        app:layout_constraintEnd_toEndOf="parent"
         />
 
     <TextView
         android:id="@+id/tvTimeHandle"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         style="@style/TextSmallestGrayCommon"
         android:text="@string/itemhandleflow_tvtimehandle_exp"
-        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvDescWorkFlow"
         android:layout_marginTop="@dimen/itemhandleflow_tvtimehandle_margintop"
+        app:layout_constraintEnd_toEndOf="parent"
         />
 
     <TextView
-        android:id="@+id/tvDecorationLineIdea"
+        android:id="@+id/tvDecorationLineFlow"
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@color/colorDecorationLine"

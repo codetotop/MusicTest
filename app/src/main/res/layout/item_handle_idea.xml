@@ -14,11 +14,11 @@
 
     <TextView
         android:id="@+id/tvEmployeeName"
+        style="@style/TextSmallBlackBold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/itemhandleidea_tvemployeename_marginleft"
         android:text="@string/itemhandleidea_tvemployeename_exp"
-        style="@style/TextSmallBlackCommon"
         app:layout_constraintLeft_toRightOf="@+id/imgEmployeeAvatar"
         app:layout_constraintTop_toTopOf="@+id/imgEmployeeAvatar" />
 
@@ -26,28 +26,29 @@
         android:id="@+id/tvTimeSendIdea"
         style="@style/TextSmallestGrayCommon"
         android:layout_width="wrap_content"
-        android:layout_height="12dp"
+        android:layout_height="wrap_content"
         android:text="@string/itemhandleidea_tvtimesendidea_exp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="@id/tvEmployeeName" />
 
     <TextView
         android:id="@+id/tvDescIdea"
-        android:layout_width="wrap_content"
+        style="@style/TextSmallGrayCommon"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/itemhandleidea_tvdescidea_margintop"
         android:text="@string/itemhandleidea_tvdescidea_exp"
-       style="@style/TextSmallGrayCommon"
-        app:layout_constraintLeft_toLeftOf="@id/tvEmployeeName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/tvEmployeeName"
         app:layout_constraintTop_toBottomOf="@id/tvEmployeeName" />
 
     <TextView
         android:id="@+id/tvLabelSign"
+        style="@style/TextSmallGrayCommon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:text="@string/itemhandleidea_tvlabelsign_exp"
-        style="@style/TextSmallGrayCommon"
         app:layout_constraintLeft_toLeftOf="@+id/tvEmployeeName"
         app:layout_constraintTop_toBottomOf="@id/tvDescIdea" />
 
@@ -62,32 +63,34 @@
 
     <TextView
         android:id="@+id/tvPersonSign"
-        android:layout_width="wrap_content"
+        style="@style/TextSmallestGrayCommon"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/itemhandleidea_tvpersonsign_marginleft"
         android:text="@string/itemhandleidea_tvoersonsign_exp"
-        style="@style/TextSmallestGrayCommon"
-        app:layout_constraintLeft_toRightOf="@+id/imgSign"
+        app:layout_constraintStart_toEndOf="@+id/imgSign"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/imgSign" />
 
     <com.gem.mpi.widget.DocumentView
         android:id="@+id/documentViewHandleIdea"
-        android:layout_width="0dp"
+        th="0dp"
         android:layout_height="wrap_content"
-        app:tvnamedocument_name="@string/itemhandleidea_documentview_exp"
+        android:layout_marginTop="6dp"
+        android:layout_width="0dp"
         app:layout_constraintLeft_toLeftOf="@id/tvLabelSign"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvPersonSign"/>
+        app:layout_constraintTop_toBottomOf="@+id/tvPersonSign"
+        app:tvnamedocument_name="@string/itemhandleidea_documentview_exp" />
+
     <TextView
         android:id="@+id/tvDecorationLineIdea"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@color/colorDecorationLine"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/documentViewHandleIdea"
-        android:layout_marginTop="12dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginBottom="12dp"
-        />
+        android:background="@color/colorDecorationLine"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/documentViewHandleIdea" />
 
 </android.support.constraint.ConstraintLayout>

@@ -51,8 +51,8 @@ public class FormInputView extends ConstraintLayout implements View.OnFocusChang
         mLabeltv.setText(title);
         Drawable drawable = input.getDrawable(R.styleable.FormInputView_imgevent_source);
         mEventImg.setImageDrawable(drawable);
-        Boolean bool = input.getBoolean(R.styleable.FormInputView_imgevent_visibility, false);
-        setVisibilityEvent(bool);
+       setVisibilityEvent(false);
+       setInputType(InputType.TYPE_TEXT_FLAG_NO_SUGGESTIONS);
         mValueEdt.setOnFocusChangeListener(this);
         mEventImg.setOnClickListener(new OnClickListener() {
             @Override

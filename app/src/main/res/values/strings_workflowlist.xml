@@ -5,8 +5,8 @@
     <string name="itemworkflowlist_tvdocsymbol_exp">Ký hiệu văn bản: 0001/TTTH-TTRH</string>
     <string name="itemworkflowlist_tvnewidea_exp">Ý kiến xử lý mới: Bùi Thị Tùng Linh - 18/05/2018 6:19 40PM</string>
     <string name="itemworkflowlist_tvduration_exp">Thời hạn: 31/12/2018</string>
-    <string name="prefix_doc_symbol">\"Ký hiệu văn bản: \"</string>
-    <string name="prefix_new_idea">\"Ý kiến xử lý mới: \\n\"</string>
-    <string name="prefix_duration">\"Thời hạn: \"</string>
+    <string name="prefix_doc_symbol">"Ký hiệu văn bản: "</string>
+    <string name="prefix_new_idea">"Ý kiến xử lý mới: \n"</string>
+    <string name="prefix_duration">"Thời hạn: "</string>
 
 </resources>

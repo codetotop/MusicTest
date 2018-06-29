@@ -62,7 +62,7 @@ public class HandleFlowAdapter extends RecyclerView.Adapter<HandleFlowAdapter.Vi
             tvDuty = itemView.findViewById(R.id.tvDuty);
             tvDescWorkFlow = itemView.findViewById(R.id.tvDescWorkFlow);
             tvTimeHandle = itemView.findViewById(R.id.tvTimeHandle);
-            tvDecoration = itemView.findViewById(R.id.tvDecorationLineIdea);
+            tvDecoration = itemView.findViewById(R.id.tvDecorationLineFlow);
         }
     }
 }

@@ -69,9 +69,9 @@ public class LoginPresenter extends Presenter<LoginContract.View, LoginContract.
         super.onSuccess(responseBody);
         LoginDTO loginDTO = responseBody.getData();
         LoginModel loginModel = LoginMapper.transform(loginDTO);
-        //Log.e("LOGIN_PRESENTER", "onSuccess: " + loginModel.toString());
+        Log.e("LOGIN_PRESENTER", "onSuccess: " + loginModel.getFuncitonModels().toString());
         PrefWrapper.saveLoginResponse(getViewContext(),loginDTO);
-        mView.showToast("Success");
+        mView.showToast(responseBody.getMessage());
       }
     });
   }

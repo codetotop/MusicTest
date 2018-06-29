@@ -22,6 +22,7 @@
         android:textColor="@color/viewforminput_edtvalue_textcolor"
         android:layout_marginStart="@dimen/edtvalue_marginleft"
         android:layout_marginEnd="@dimen/edtvalue_marginright"
+        android:inputType="textFilter|textMultiLine"
         android:text="@string/value_username_exp"
         android:paddingEnd="@dimen/edtvalue_paddingend"
         app:layout_constraintRight_toRightOf="parent"
