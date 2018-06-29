@@ -4,9 +4,9 @@ import android.os.Bundle;
 
 import com.gem.mpi.R;
 import com.gem.mpi.screen.main.profiledetail.ProfileDetailPresenter;
+import com.gem.mpi.screen.main.workflowlist.WorkFlowListPresenter;
 import com.gemvietnam.base.viper.Presenter;
 import com.gemvietnam.base.viper.interfaces.ContainerView;
-import com.gemvietnam.utils.ActivityUtils;
 
 /**
  * The Main Presenter
@@ -21,9 +21,19 @@ public class MainPresenter extends Presenter<MainContract.View, MainContract.Int
 
   @Override
   public void start() {
+    initFirstFragment();
+    initListSlideMenu();
+  }
+
+  private void initListSlideMenu() {
     mSlideMenuAdaper = new SlideMenuAdaper(null, getViewContext().getResources().getStringArray(R.array.menu_items));
     getView().initListSlideMenu();
     getView().onSlideMenuItemClick();
+  }
+
+  private void initFirstFragment() {
+    WorkFlowListPresenter workFlowListPresenter = new WorkFlowListPresenter(mContainerView);
+    workFlowListPresenter.loadChildView(R.id.container_frame, getFragment().getChildFragmentManager());
   }
 
   @Override
