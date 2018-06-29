@@ -47,6 +47,7 @@
         <item name="android:textColor">@color/colorGrayCommon</item>
         <item name="android:textSize">@dimen/smallest_text_size</item>
     </style>
+
     <style name="TextSmallSlateGreyCommon">
         <item name="android:textColor">@color/colorSlateGrey</item>
         <item name="android:textSize">@dimen/small_text_size</item>
@@ -85,7 +86,7 @@
     </style>
 
     <style name="TextActionToolbar">
-        <item name="android:textColor">@color/colorBlueTextActionToolbar</item>
+        <item name="android:textColor">@color/color_blue_text_action_toolbar</item>
         <item name="android:textSize">@dimen/large_text_size</item>
     </style>
 

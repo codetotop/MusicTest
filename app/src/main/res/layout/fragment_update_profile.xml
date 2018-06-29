@@ -1,0 +1,38 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgCommon"
+    android:orientation="vertical">
+
+    <com.gem.mpi.widget.ToolbarView
+        android:id="@+id/fragmentupdateprofile_tbv_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.gem.mpi.widget.ProfileView
+                android:id="@+id/fragmentupdateprofile_pv_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:paddingBottom="@dimen/small_space"
+                android:paddingLeft="@dimen/large_space"
+                android:paddingRight="@dimen/large_space"
+                android:paddingTop="@dimen/large_space"
+                app:profileview_action_visibility="gone"
+                app:profileview_avatar="@drawable/ic_avatar_default"
+                app:profileview_name="@string/profile_exam_name" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

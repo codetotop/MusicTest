@@ -1,4 +1,4 @@
-package com.gem.mpi.screen.main.profiledetail;
+package com.gem.mpi.screen.main.profiledetail.update_profile;
 
 import android.os.Bundle;
 
@@ -9,45 +9,39 @@ import com.gemvietnam.base.viper.ViewFragment;
 import butterknife.BindView;
 
 /**
- * The ProfileDetail Fragment
+ * The UpdateProfile Fragment
  */
-public class ProfileDetailFragment extends ViewFragment<ProfileDetailContract.Presenter> implements ProfileDetailContract.View {
+public class UpdateProfileFragment extends ViewFragment<UpdateProfileContract.Presenter> implements UpdateProfileContract.View {
 
-  @BindView(R.id.fragmentprofiledetail_tbv_toolbar)
+  @BindView(R.id.fragmentupdateprofile_tbv_toolbar)
   ToolbarView mToolbarTbv;
 
-  public static ProfileDetailFragment getInstance() {
-    return new ProfileDetailFragment();
+  public static UpdateProfileFragment getInstance() {
+    return new UpdateProfileFragment();
   }
 
-  public static ProfileDetailFragment getInstance(Bundle data) {
-    ProfileDetailFragment profileDetailFragment = new ProfileDetailFragment();
-    profileDetailFragment.setArguments(data);
-    return profileDetailFragment;
+  public static UpdateProfileFragment getInstance(Bundle data) {
+    UpdateProfileFragment updateProfileFragment = new UpdateProfileFragment();
+    updateProfileFragment.setArguments(data);
+    return updateProfileFragment;
   }
 
   @Override
   protected int getLayoutId() {
-    return R.layout.fragment_profile_detail;
+    return R.layout.fragment_update_profile;
   }
 
   @Override
   public void onDisplay() {
     super.onDisplay();
     initToolbar(ToolbarView.ActionStyle.IMAGE, ToolbarView.ActionStyle.TEXT, R.string.title_about_profile,
-        R.drawable.ic_cancel, null, null, R.string.action_change,
+        R.drawable.ic_cancel, null, null, R.string.action_save,
         new ToolbarView.OnActionLeftListener() {
           @Override
           public void onActionLeftClick() {
             getPresenter().handleActionLeft();
           }
-        },
-        new ToolbarView.OnActionRightListener() {
-          @Override
-          public void onActionRightClick() {
-            getPresenter().handleActionRight();
-          }
-        }
+        }, null
     );
   }
 

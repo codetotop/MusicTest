@@ -1,4 +1,4 @@
-package com.gem.mpi.screen.main.profiledetail;
+package com.gem.mpi.screen.main.profiledetail.update_profile;
 
 import com.gem.mpi.widget.ToolbarView;
 import com.gemvietnam.base.viper.interfaces.IInteractor;
@@ -6,9 +6,9 @@ import com.gemvietnam.base.viper.interfaces.IPresenter;
 import com.gemvietnam.base.viper.interfaces.PresentView;
 
 /**
- * The ProfileDetail Contract
+ * The UpdateProfile Contract
  */
-interface ProfileDetailContract {
+interface UpdateProfileContract {
 
   interface Interactor extends IInteractor<Presenter> {
   }
@@ -21,8 +21,6 @@ interface ProfileDetailContract {
 
   interface Presenter extends IPresenter<View, Interactor> {
     void handleActionLeft();
-
-    void handleActionRight();
   }
 }
 
