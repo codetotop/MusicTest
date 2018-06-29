@@ -5,7 +5,7 @@
     android:layout_height="wrap_content">
 
     <ImageView
-        android:id="@+id/imgEmployeeAvatar"
+        android:id="@+id/itemhandleidea_img_employee_avatar"
         android:layout_width="@dimen/itemhandleidea_imgemployeeavatar_width"
         android:layout_height="@dimen/itemhandleidea_imgemployeeavatar_height"
         android:background="@color/colorAccent"
@@ -13,84 +13,84 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tvEmployeeName"
+        android:id="@+id/itemhandleidea_tv_employeename"
         style="@style/TextSmallBlackBold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/itemhandleidea_tvemployeename_marginleft"
         android:text="@string/itemhandleidea_tvemployeename_exp"
-        app:layout_constraintLeft_toRightOf="@+id/imgEmployeeAvatar"
-        app:layout_constraintTop_toTopOf="@+id/imgEmployeeAvatar" />
+        app:layout_constraintLeft_toRightOf="@+id/itemhandleidea_img_employee_avatar"
+        app:layout_constraintTop_toTopOf="@+id/itemhandleidea_img_employee_avatar" />
 
     <TextView
-        android:id="@+id/tvTimeSendIdea"
+        android:id="@+id/itemhandleidea_tv_time_sendidea"
         style="@style/TextSmallestGrayCommon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/itemhandleidea_tvtimesendidea_exp"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="@id/tvEmployeeName" />
+        app:layout_constraintTop_toTopOf="@id/itemhandleidea_tv_employeename" />
 
     <TextView
-        android:id="@+id/tvDescIdea"
+        android:id="@+id/itemhandleidea_tv_descidea"
         style="@style/TextSmallGrayCommon"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/itemhandleidea_tvdescidea_margintop"
         android:text="@string/itemhandleidea_tvdescidea_exp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@id/tvEmployeeName"
-        app:layout_constraintTop_toBottomOf="@id/tvEmployeeName" />
+        app:layout_constraintStart_toStartOf="@id/itemhandleidea_tv_employeename"
+        app:layout_constraintTop_toBottomOf="@id/itemhandleidea_tv_employeename" />
 
     <TextView
-        android:id="@+id/tvLabelSign"
+        android:id="@+id/itemhandleidea_tv_labelsign"
         style="@style/TextSmallGrayCommon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:text="@string/itemhandleidea_tvlabelsign_exp"
-        app:layout_constraintLeft_toLeftOf="@+id/tvEmployeeName"
-        app:layout_constraintTop_toBottomOf="@id/tvDescIdea" />
+        app:layout_constraintLeft_toLeftOf="@+id/itemhandleidea_tv_employeename"
+        app:layout_constraintTop_toBottomOf="@id/itemhandleidea_tv_descidea" />
 
     <ImageView
-        android:id="@+id/imgSign"
+        android:id="@+id/itemhandleidea_img_sign"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/itemhandleidea_imgsign_marginleft"
         android:background="@drawable/ic_star"
-        app:layout_constraintLeft_toRightOf="@+id/tvLabelSign"
-        app:layout_constraintTop_toTopOf="@id/tvLabelSign" />
+        app:layout_constraintLeft_toRightOf="@+id/itemhandleidea_tv_labelsign"
+        app:layout_constraintTop_toTopOf="@id/itemhandleidea_tv_labelsign" />
 
     <TextView
-        android:id="@+id/tvPersonSign"
+        android:id="@+id/itemhandleidea_tv_personsign"
         style="@style/TextSmallestGrayCommon"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/itemhandleidea_tvpersonsign_marginleft"
         android:text="@string/itemhandleidea_tvoersonsign_exp"
-        app:layout_constraintStart_toEndOf="@+id/imgSign"
+        app:layout_constraintStart_toEndOf="@+id/itemhandleidea_img_sign"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/imgSign" />
+        app:layout_constraintTop_toTopOf="@id/itemhandleidea_img_sign" />
 
     <com.gem.mpi.widget.DocumentView
-        android:id="@+id/documentViewHandleIdea"
+        android:id="@+id/itemhandleidea_documentview"
         th="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="6dp"
         android:layout_width="0dp"
-        app:layout_constraintLeft_toLeftOf="@id/tvLabelSign"
+        app:layout_constraintLeft_toLeftOf="@id/itemhandleidea_tv_labelsign"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvPersonSign"
+        app:layout_constraintTop_toBottomOf="@+id/itemhandleidea_tv_personsign"
         app:tvnamedocument_name="@string/itemhandleidea_documentview_exp" />
 
     <TextView
-        android:id="@+id/tvDecorationLineIdea"
+        android:id="@+id/itemhandleidea_tv_decorationline"
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_marginBottom="12dp"
         android:background="@color/colorDecorationLine"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/documentViewHandleIdea" />
+        app:layout_constraintTop_toBottomOf="@id/itemhandleidea_documentview" />
 
 </android.support.constraint.ConstraintLayout>

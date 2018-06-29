@@ -48,4 +48,7 @@
     <dimen name="itemhandleflow_tvtimehandle_margintop">2dp</dimen>
 
     <dimen name="header_month_min_height">46dp</dimen>
+    <dimen name="documentrelation_rcvdocumentrelation_marginend">15dp</dimen>
+    <dimen name="documentrelation_rcvdocumentrelation_marginstart">15dp</dimen>
+    <dimen name="documentrelation_rcvdocumentrelation_margintop">18dp</dimen>
 </resources>

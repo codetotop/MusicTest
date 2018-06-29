@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="imgcountry_margintop">32dp</dimen>
-    <dimen name="tvsectorministries_margintop">21dp</dimen>
-    <dimen name="tvsectorministries_textsize">20sp</dimen>
-    <dimen name="tvsoftwaremanagement_textsize">13sp</dimen>
-    <dimen name="tvsoftwaremanagement_margintop">50dp</dimen>
-    <dimen name="forminputviewusername_margintop">117dp</dimen>
+    <dimen name="login_imgcountry_margintop">32dp</dimen>
+    <dimen name="login_tvsectorministries_margintop">21dp</dimen>
+    <dimen name="login_tvsectorministries_textsize">20sp</dimen>
+    <dimen name="login_tvsoftwaremanagement_textsize">13sp</dimen>
+    <dimen name="login_tvsoftwaremanagement_margintop">50dp</dimen>
+    <dimen name="forminputview_username_margintop">117dp</dimen>
     <dimen name="login_marginleft">38dp</dimen>
     <dimen name="login_marginright">38dp</dimen>
-    <dimen name="tvforgotpassword_textsize">14sp</dimen>
-    <dimen name="tvforgotpassword_margintop">15dp</dimen>
-    <dimen name="btnlogin_height">40dp</dimen>
-    <dimen name="btnlogin_margintop">16dp</dimen>
-    <dimen name="tvversion_textsize">12sp</dimen>
-    <dimen name="tvversion_marginbottom">12dp</dimen>
+    <dimen name="login_tvforgotpassword_textsize">14sp</dimen>
+    <dimen name="login_tvforgotpassword_margintop">15dp</dimen>
+    <dimen name="login_btnlogin_height">40dp</dimen>
+    <dimen name="login_btnlogin_margintop">16dp</dimen>
+    <dimen name="login_tvversion_textsize">12sp</dimen>
+    <dimen name="login_tvversion_marginbottom">12dp</dimen>
 </resources>

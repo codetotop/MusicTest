@@ -2,7 +2,6 @@ package com.gem.mpi.screen.main.workflowlist;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
-import android.support.constraint.ConstraintLayout;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,7 +10,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.gem.mpi.R;
-import com.gem.mpi.util.Constants;
 
 import java.util.ArrayList;
 
@@ -39,15 +37,15 @@ public class WorkFlowListAdapter extends RecyclerView.Adapter<WorkFlowListAdapte
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, final int position) {
         WorkFlowListModel workFlowModel = workFlowModels.get(position);
-        holder.tvTitle.setText(workFlowModel.getTitle());
-        holder.tvDocSymbol.setText(context.getString(R.string.prefix_doc_symbol) + workFlowModel.getDocSymbol());
-        holder.tvNewIdea.setText(context.getString(R.string.prefix_new_idea) + workFlowModel.getNewIdea());
-        holder.tvDuration.setText(context.getString(R.string.prefix_duration) + workFlowModel.getDuration());
+        holder.mTitleTv.setText(workFlowModel.getTitle());
+        holder.mDocSymbolTv.setText(context.getString(R.string.workflowlist_prefix_doc_symbol) + workFlowModel.getDocSymbol());
+        holder.mNewIdeaTv.setText(context.getString(R.string.workflowlist_prefix_new_idea) + workFlowModel.getNewIdea());
+        holder.mDurationTv.setText(context.getString(R.string.workflowlist_prefix_duration) + workFlowModel.getDuration());
         String status = workFlowModel.getStatus();
         if (status.equals("warning")) {
-            holder.imgStatus.setBackgroundResource(R.drawable.ic_warning);
+            holder.mStatusImg.setBackgroundResource(R.drawable.ic_warning);
         } else if (status.equals("error")) {
-            holder.imgStatus.setBackgroundResource(R.drawable.ic_error);
+            holder.mStatusImg.setBackgroundResource(R.drawable.ic_error);
         }
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
@@ -70,16 +68,16 @@ public class WorkFlowListAdapter extends RecyclerView.Adapter<WorkFlowListAdapte
     }
 
     class ViewHolder extends RecyclerView.ViewHolder {
-        TextView tvTitle, tvDocSymbol, tvNewIdea, tvDuration;
-        ImageView imgStatus;
+        TextView mTitleTv, mDocSymbolTv, mNewIdeaTv, mDurationTv;
+        ImageView mStatusImg;
 
         public ViewHolder(View itemView) {
             super(itemView);
-            tvTitle = itemView.findViewById(R.id.tvTitle);
-            tvDocSymbol = itemView.findViewById(R.id.tvDocSymbol);
-            tvNewIdea = itemView.findViewById(R.id.tvNewIdea);
-            tvDuration = itemView.findViewById(R.id.tvDuration);
-            imgStatus = itemView.findViewById(R.id.imgStatus);
+            mTitleTv = itemView.findViewById(R.id.itemhandleidea_tv_title);
+            mDocSymbolTv = itemView.findViewById(R.id.itemhandleidea_tv_docsymbol);
+            mNewIdeaTv = itemView.findViewById(R.id.itemhandleidea_tv_newidea);
+            mDurationTv = itemView.findViewById(R.id.itemhandleidea_tv_duration);
+            mStatusImg = itemView.findViewById(R.id.itemhandleidea_img_status);
         }
     }
 

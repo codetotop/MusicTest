@@ -19,11 +19,11 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class FormInputView extends ConstraintLayout implements View.OnFocusChangeListener {
-    @BindView(R.id.tvLabel)
+    @BindView(R.id.viewforminput_tv_label)
     TextView mLabeltv;
-    @BindView(R.id.edtValue)
+    @BindView(R.id.viewforminput_edt_value)
     EditText mValueEdt;
-    @BindView(R.id.imgEvent)
+    @BindView(R.id.viewforminput_img_event)
     ImageView mEventImg;
 
     public FormInputView(Context context) {

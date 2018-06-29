@@ -34,9 +34,9 @@ public class DocumentAdapter extends RecyclerView.Adapter<DocumentAdapter.ViewHo
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         String documentName = documents.get(position);
-        holder.tvDocumentName.setText(documentName);
+        holder.mDocumentNameTv.setText(documentName);
         if (position == (documents.size()-1))
-            holder.tvDecoration.setVisibility(View.INVISIBLE);
+            holder.mDecorationTv.setVisibility(View.INVISIBLE);
     }
 
     @Override
@@ -45,17 +45,17 @@ public class DocumentAdapter extends RecyclerView.Adapter<DocumentAdapter.ViewHo
     }
 
     class ViewHolder extends RecyclerView.ViewHolder {
-        ImageView imgAvatarDocument;
-        TextView tvDocumentName;
-        ImageView imgDownloadDocument;
-        TextView tvDecoration;
+        ImageView mAvatarDocumentImg;
+        TextView mDocumentNameTv;
+        ImageView mDownloadDocumentImg;
+        TextView mDecorationTv;
 
         public ViewHolder(View itemView) {
             super(itemView);
-            tvDocumentName = itemView.findViewById(R.id.tvNameDocument);
-            imgAvatarDocument = itemView.findViewById(R.id.imgAvatarDocument);
-            imgDownloadDocument = itemView.findViewById(R.id.imgDownloadDocument);
-            tvDecoration = itemView.findViewById(R.id.tvDecorationLineDocument);
+            mDocumentNameTv = itemView.findViewById(R.id.viewdocument_tv_namedocument);
+            mAvatarDocumentImg = itemView.findViewById(R.id.viewdocument_img_avatardocument);
+            mDownloadDocumentImg = itemView.findViewById(R.id.viewdocument_img_downloaddocument);
+            mDecorationTv = itemView.findViewById(R.id.viewdocument_tv_decorationline);
         }
     }
 }

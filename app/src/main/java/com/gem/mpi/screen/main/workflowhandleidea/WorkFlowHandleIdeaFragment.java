@@ -1,7 +1,6 @@
 package com.gem.mpi.screen.main.workflowhandleidea;
 
 import android.os.Bundle;
-import android.widget.Button;
 import android.widget.EditText;
 
 import com.gem.mpi.R;
@@ -16,8 +15,8 @@ import butterknife.OnClick;
  * The WorkFlowHandleIdea Fragment
  */
 public class WorkFlowHandleIdeaFragment extends ViewFragment<WorkFlowHandleIdeaContract.Presenter> implements WorkFlowHandleIdeaContract.View {
-  @BindView(R.id.edtContentHandleIdea)
-  EditText edtContentHandleIdea;
+  @BindView(R.id.workflowhandleidea_edt_content_handleidea)
+  EditText mContentHandleIdeaEdt;
   public static WorkFlowHandleIdeaFragment getInstance(Bundle data) {
     return new WorkFlowHandleIdeaFragment();
   }
@@ -39,7 +38,7 @@ public class WorkFlowHandleIdeaFragment extends ViewFragment<WorkFlowHandleIdeaC
 
   }
 
-  @OnClick(R.id.btnSendIdea) void onClickSendIdea(){
+  @OnClick(R.id.workflowhandleidea_btn_sendidea) void onClickSendIdea(){
     // TODO handle send idea
   }
 }

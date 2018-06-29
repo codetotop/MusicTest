@@ -2,7 +2,7 @@ package com.gem.mpi.screen.main.workflow;
 
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.widget.ArrayAdapter;
+import android.widget.Button;
 
 import com.gem.mpi.R;
 import com.gem.mpi.screen.main.main.MainFragment;
@@ -14,22 +14,23 @@ import com.gem.mpi.screen.main.workflow.model.HandleIdeaModel;
 import com.gem.mpi.widget.ToolbarView;
 import com.gemvietnam.base.viper.ViewFragment;
 
-import org.w3c.dom.Document;
-
 import java.util.ArrayList;
 
 import butterknife.BindView;
+import butterknife.OnClick;
 
 /**
  * The WorkFlow Fragment
  */
 public class WorkFlowFragment extends ViewFragment<WorkFlowContract.Presenter> implements WorkFlowContract.View {
-  @BindView(R.id.rcvDocumentRelation)
-  RecyclerView rcvDocumentRelation;
-  @BindView(R.id.rcvHandleFlow)
-  RecyclerView rcvHandleFlow;
-  @BindView(R.id.rcvHandleIdea)
-  RecyclerView rcvHandleIdea;
+  @BindView(R.id.workflow_rcv_documentrelation)
+  RecyclerView mDocumentRelationRcv;
+  @BindView(R.id.workflow_rcv_handleflow)
+  RecyclerView mHandleFlowRcv;
+  @BindView(R.id.workflow_rcv_handleidea)
+  RecyclerView mHandleIdeaRcv;
+  @BindView(R.id.workflow_btn_handleidea)
+  Button mHandleIdeaBtn;
 
   DocumentAdapter documentAdapter;
   HandleFlowAdapter handleFlowAdapter;
@@ -61,9 +62,9 @@ public class WorkFlowFragment extends ViewFragment<WorkFlowContract.Presenter> i
   }
 
   private void addView() {
-    rcvDocumentRelation.setLayoutManager(new LinearLayoutManager(getViewContext()));
-    rcvHandleFlow.setLayoutManager(new LinearLayoutManager(getViewContext()));
-    rcvHandleIdea.setLayoutManager(new LinearLayoutManager(getViewContext()));
+    mDocumentRelationRcv.setLayoutManager(new LinearLayoutManager(getViewContext()));
+    mHandleFlowRcv.setLayoutManager(new LinearLayoutManager(getViewContext()));
+    mHandleIdeaRcv.setLayoutManager(new LinearLayoutManager(getViewContext()));
 
     documents = new ArrayList<>();
     addDocumentFakeData();
@@ -76,9 +77,9 @@ public class WorkFlowFragment extends ViewFragment<WorkFlowContract.Presenter> i
     handleFlowAdapter = new HandleFlowAdapter(getViewContext(), handleFlowModels);
     handleIdeaAdapter = new HandleIdeaAdapter(getViewContext(), handleIdeaModels);
 
-    rcvDocumentRelation.setAdapter(documentAdapter);
-    rcvHandleFlow.setAdapter(handleFlowAdapter);
-    rcvHandleIdea.setAdapter(handleIdeaAdapter);
+    mDocumentRelationRcv.setAdapter(documentAdapter);
+    mHandleFlowRcv.setAdapter(handleFlowAdapter);
+    mHandleIdeaRcv.setAdapter(handleIdeaAdapter);
   }
 
   private void addDocumentFakeData() {
@@ -100,6 +101,10 @@ public class WorkFlowFragment extends ViewFragment<WorkFlowContract.Presenter> i
         "Tôi xin gửi Quý vụ ý kiến CLPT ( A.Thắng đã ký) trong hồ sơ đính kèm.", "Nguyen Ba Dung", "Danh sach.docx"));
     handleIdeaModels.add(new HandleIdeaModel("https://www.flaticon.com/free-icon/avatar_126486#term=person&page=1&position=2", "Nguyen Huy Anh", "20/5/2018", "Kính gửi vụ Quản lý quy hoạch,\n" +
         "Tôi xin gửi Quý vụ ý kiến CLPT ( A.Thắng đã ký) trong hồ sơ đính kèm.", "Nguyen Ba Dung", "Danh sach.docx"));
+  }
+
+  @OnClick(R.id.workflow_btn_handleidea) void clickBtnHandleIdea(){
+    mPresenter.openHandleIdeaFragment();
   }
 
 

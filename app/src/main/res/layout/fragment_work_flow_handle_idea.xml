@@ -2,9 +2,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorWhite"
+    >
    <EditText
-       android:id="@+id/edtContentHandleIdea"
+       android:id="@+id/workflowhandleidea_edt_content_handleidea"
        android:layout_width="0dp"
        android:layout_height="0dp"
        android:hint="Nội dung"
@@ -16,10 +18,10 @@
        app:layout_constraintTop_toTopOf="parent"
        android:layout_marginTop="12dp"
        android:layout_marginBottom="16dp"
-       app:layout_constraintBottom_toTopOf="@+id/btnSendIdea"
+       app:layout_constraintBottom_toTopOf="@+id/workflowhandleidea_btn_sendidea"
        />
 <Button
-    android:id="@+id/btnSendIdea"
+    android:id="@+id/workflowhandleidea_btn_sendidea"
     android:layout_width="0dp"
     android:layout_height="40dp"
     app:layout_constraintStart_toStartOf="parent"

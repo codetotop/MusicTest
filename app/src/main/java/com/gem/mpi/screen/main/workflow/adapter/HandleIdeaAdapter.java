@@ -1,10 +1,8 @@
 package com.gem.mpi.screen.main.workflow.adapter;
 
 import android.content.Context;
-import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -42,16 +40,16 @@ public class HandleIdeaAdapter extends RecyclerView.Adapter<HandleIdeaAdapter.Vi
     Glide
         .with(context)
         .load(handleIdeaModel.getEmployeeAvatar())
-        .into(holder.imgEmployeeAvatar);
-    holder.tvEmployeeName.setText(handleIdeaModel.getEmployeeName());
-    holder.tvTimeSendData.setText(handleIdeaModel.getTimeSendIdea());
-    holder.tvDescIdea.setText(handleIdeaModel.getDescIdea());
-    holder.tvPersonSign.setText(handleIdeaModel.getPersonSign());
-    holder.documentViewHandleIdea.setDocumentName(handleIdeaModel.getDocumentRelationName());
-    holder.documentViewHandleIdea.setVisibilityDecorationLine(false);//Hide decorationline of document
-    holder.documentViewHandleIdea.setDownloadDocumentVisibility(false);
+        .into(holder.mEmployeeAvatarImg);
+    holder.mEmployeeNameTv.setText(handleIdeaModel.getEmployeeName());
+    holder.mTimeSendDataTv.setText(handleIdeaModel.getTimeSendIdea());
+    holder.mDescIdeaTv.setText(handleIdeaModel.getDescIdea());
+    holder.mPersonSignTv.setText(handleIdeaModel.getPersonSign());
+    holder.mdocumentViewHandleIdea.setDocumentName(handleIdeaModel.getDocumentRelationName());
+    holder.mdocumentViewHandleIdea.setVisibilityDecorationLine(false);//Hide decorationline of document
+    holder.mdocumentViewHandleIdea.setDownloadDocumentVisibility(false);
     if (position == (handleIdeaModels.size() - 1))
-      holder.tvDecoration.setVisibility(View.INVISIBLE);
+      holder.mDecorationTv.setVisibility(View.INVISIBLE);
   }
 
   public void refresh(ArrayList<HandleIdeaModel> handleIdeaModels) {
@@ -66,19 +64,19 @@ public class HandleIdeaAdapter extends RecyclerView.Adapter<HandleIdeaAdapter.Vi
   }
 
   class ViewHolder extends RecyclerView.ViewHolder {
-    ImageView imgEmployeeAvatar;
-    TextView tvEmployeeName, tvTimeSendData, tvDescIdea, tvPersonSign, tvDecoration;
-    DocumentView documentViewHandleIdea;
+    ImageView mEmployeeAvatarImg;
+    TextView mEmployeeNameTv, mTimeSendDataTv, mDescIdeaTv, mPersonSignTv, mDecorationTv;
+    DocumentView mdocumentViewHandleIdea;
 
     public ViewHolder(View itemView) {
       super(itemView);
-      imgEmployeeAvatar = itemView.findViewById(R.id.imgEmployeeAvatar);
-      tvEmployeeName = itemView.findViewById(R.id.tvEmployeeName);
-      tvTimeSendData = itemView.findViewById(R.id.tvTimeSendIdea);
-      tvDescIdea = itemView.findViewById(R.id.tvDescIdea);
-      tvPersonSign = itemView.findViewById(R.id.tvPersonSign);
-      documentViewHandleIdea = itemView.findViewById(R.id.documentViewHandleIdea);
-      tvDecoration = itemView.findViewById(R.id.tvDecorationLineIdea);
+      mEmployeeAvatarImg = itemView.findViewById(R.id.itemhandleidea_img_employee_avatar);
+      mEmployeeNameTv = itemView.findViewById(R.id.itemhandleidea_tv_employeename);
+      mTimeSendDataTv = itemView.findViewById(R.id.itemhandleidea_tv_time_sendidea);
+      mDescIdeaTv = itemView.findViewById(R.id.itemhandleidea_tv_descidea);
+      mPersonSignTv = itemView.findViewById(R.id.itemhandleidea_tv_personsign);
+      mdocumentViewHandleIdea = itemView.findViewById(R.id.itemhandleidea_documentview);
+      mDecorationTv = itemView.findViewById(R.id.itemhandleidea_tv_decorationline);
     }
 
   }

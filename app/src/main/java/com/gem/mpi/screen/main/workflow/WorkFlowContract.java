@@ -16,6 +16,7 @@ interface WorkFlowContract {
     }
 
     interface Presenter extends IPresenter<View, Interactor> {
+        void openHandleIdeaFragment();
     }
 }
 

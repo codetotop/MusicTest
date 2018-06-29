@@ -1,7 +1,6 @@
 package com.gem.mpi.screen.authentication.login;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.text.InputType;
 
 import com.gem.mpi.R;
@@ -16,9 +15,9 @@ import butterknife.OnClick;
  * The Login Fragment
  */
 public class LoginFragment extends ViewFragment<LoginContract.Presenter> implements LoginContract.View {
-    @BindView(R.id.formInputUserName)
+    @BindView(R.id.login_username_forminputview)
     FormInputView mformInputUserName;
-    @BindView(R.id.formInputPassWord)
+    @BindView(R.id.login_password_formInputview)
     FormInputView mformInputPassWord;
 
     public static LoginFragment getInstance() {
@@ -52,12 +51,12 @@ public class LoginFragment extends ViewFragment<LoginContract.Presenter> impleme
         mformInputPassWord.setInputType(InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_VARIATION_PASSWORD);
     }
 
-    @OnClick(R.id.btnLogin)
+    @OnClick(R.id.login_btn_login)
     void onClickLogin() {
         mPresenter.login(mformInputUserName.getText(), mformInputPassWord.getText());
     }
 
-    @OnClick(R.id.tvForgotPassWord)
+    @OnClick(R.id.login_tv_forgot_password)
     void onClickForgotPassWord() {
         mPresenter.openScreenForgotPassWord();
     }

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="label_username_exp">TÀI KHOẢN</string>
-    <string name="label_password_exp">MẬT KHẨU</string>
-    <string name="value_username_exp">DungNB</string>
-    <string name="value_password_exp">123456</string>
+    <string name="forminputview_label_username_exp">TÀI KHOẢN</string>
+    <string name="forminputview_label_password_exp">MẬT KHẨU</string>
+    <string name="forminputview_value_username_exp">DungNB</string>
+    <string name="forminputview_value_password_exp">123456</string>
 </resources>

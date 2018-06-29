@@ -6,56 +6,56 @@
     android:background="@android:color/white">
 
     <ImageView
-        android:id="@+id/imgCountry"
+        android:id="@+id/login_img_country"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/imgcountry_margintop"
+        android:layout_marginTop="@dimen/login_imgcountry_margintop"
         android:src="@drawable/ic_country"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tvSectorMinistries"
+        android:id="@+id/login_tv_sector_ministries"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/tvsectorministries_margintop"
+        android:layout_marginTop="@dimen/login_tvsectorministries_margintop"
         android:gravity="center_horizontal"
-        android:text="@string/tvsectorministries_text"
+        android:text="@string/login_tvsectorministries_text"
         android:textColor="@color/colorBlack"
-        android:textSize="@dimen/tvsectorministries_textsize"
+        android:textSize="@dimen/login_tvsectorministries_textsize"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgCountry" />
+        app:layout_constraintTop_toBottomOf="@+id/login_img_country" />
 
     <TextView
-        android:id="@+id/tvSoftWareManagement"
+        android:id="@+id/login_tv_software_management"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/tvsoftwaremanagement_margintop"
+        android:layout_marginTop="@dimen/login_tvsoftwaremanagement_margintop"
         android:gravity="center_horizontal"
-        android:text="@string/tvsoftwaremanagement_text"
+        android:text="@string/login_tvsoftwaremanagement_text"
         android:textColor="@color/colorBlack"
-        android:textSize="@dimen/tvsoftwaremanagement_textsize"
+        android:textSize="@dimen/login_tvsoftwaremanagement_textsize"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgCountry" />
+        app:layout_constraintTop_toBottomOf="@+id/login_img_country" />
 
     <com.gem.mpi.widget.FormInputView
-        android:id="@+id/formInputUserName"
+        android:id="@+id/login_username_forminputview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/login_marginleft"
         android:layout_marginEnd="@dimen/login_marginright"
-        android:layout_marginTop="@dimen/forminputviewusername_margintop"
+        android:layout_marginTop="@dimen/forminputview_username_margintop"
         app:imgevent_source="@drawable/ic_clear"
         app:imgevent_visibility="false"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/imgCountry"
-        app:tvlabel_name="@string/label_username_exp" />
+        app:layout_constraintTop_toBottomOf="@id/login_img_country"
+        app:tvlabel_name="@string/forminputview_label_username_exp" />
 
     <com.gem.mpi.widget.FormInputView
-        android:id="@+id/formInputPassWord"
+        android:id="@+id/login_password_formInputview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/login_marginleft"
@@ -63,41 +63,41 @@
         app:imgevent_source="@drawable/ic_un_view"
         app:imgevent_visibility="false"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/formInputUserName"
-        app:tvlabel_name="@string/label_password_exp" />
+        app:layout_constraintTop_toBottomOf="@+id/login_username_forminputview"
+        app:tvlabel_name="@string/forminputview_label_password_exp" />
 
     <TextView
-        android:id="@+id/tvForgotPassWord"
+        android:id="@+id/login_tv_forgot_password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/login_marginleft"
-        android:layout_marginTop="@dimen/tvforgotpassword_margintop"
-        android:text="@string/tvforgotpassword_text"
+        android:layout_marginTop="@dimen/login_tvforgotpassword_margintop"
+        android:text="@string/login_tvforgotpassword_text"
         android:textColor="@color/tvforgotpassword_textcolor"
-        android:textSize="@dimen/tvforgotpassword_textsize"
+        android:textSize="@dimen/login_tvforgotpassword_textsize"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/formInputPassWord" />
+        app:layout_constraintTop_toBottomOf="@+id/login_password_formInputview" />
 
     <Button
-        android:id="@+id/btnLogin"
+        android:id="@+id/login_btn_login"
         style="@style/ButtonCommon"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/btnlogin_height"
+        android:layout_height="@dimen/login_btnlogin_height"
         android:layout_marginStart="@dimen/login_marginright"
         android:layout_marginEnd="@dimen/login_marginleft"
-        android:layout_marginTop="@dimen/btnlogin_margintop"
+        android:layout_marginTop="@dimen/login_btnlogin_margintop"
         android:background="@drawable/bg_blue_button_common"
-        android:text="@string/btnlogin_text"
-        app:layout_constraintTop_toBottomOf="@+id/tvForgotPassWord" />
+        android:text="@string/login_btnlogin_text"
+        app:layout_constraintTop_toBottomOf="@+id/login_tv_forgot_password" />
 
     <TextView
-        android:id="@+id/tvVersion"
+        android:id="@+id/login_tv_version"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/tvversion_marginbottom"
-        android:text="@string/tvversion_text"
+        android:layout_marginBottom="@dimen/login_tvversion_marginbottom"
+        android:text="@string/login_tvversion_text"
         android:textColor="@color/tvversion_textcolor"
-        android:textSize="@dimen/tvversion_textsize"
+        android:textSize="@dimen/login_tvversion_textsize"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent" />

@@ -19,8 +19,8 @@
     <string name="itemheaderworkflow_tvdeadlinehandle_exp">31/12/2020</string>
     <string name="itemheaderworkflow_tvlabelrequest_exp">Yêu cầu</string>
     <string name="itemheaderworkflow_tvrequest_exp">Đề nghị mọi người theo dõi, xử lý</string>
-    <string name="tvLabelDocumentRelation_exp">Văn bản liên quan</string>
-    <string name="tvLabelHandleFlow">Luồng xử lý</string>
-    <string name="tvLabelHandleIdea_exp">Ý kiến xử lý</string>
-    <string name="btnHandleIdea_text">Ý Kiến Xử Lý</string>
+    <string name="forminputview_tvlabeldocumentrelation_exp">Văn bản liên quan</string>
+    <string name="workflow_handleflow_tvlabel">Luồng xử lý</string>
+    <string name="workflow_tvlabelhandleIdea_exp">Ý kiến xử lý</string>
+    <string name="workflow_btnhandleIdea_text">Ý Kiến Xử Lý</string>
 </resources>

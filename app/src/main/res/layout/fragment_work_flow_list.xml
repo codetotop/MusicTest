@@ -5,7 +5,7 @@
     android:background="@color/colorWhite">
 
     <android.support.constraint.ConstraintLayout
-        android:id="@+id/headerViewWorkList"
+        android:id="@+id/workflowlist_header_view_worklist"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/bgCommon"
@@ -13,45 +13,45 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/imgFolder"
+            android:id="@+id/workflowlist_img_folder"
             android:layout_width="@dimen/picture_medium_size"
             android:layout_height="@dimen/picture_medium_size"
             android:layout_marginBottom="@dimen/medium_margin"
-            android:layout_marginStart="@dimen/imgfolder_marginleft"
+            android:layout_marginStart="@dimen/workflowlist_imgfolder_marginleft"
             android:layout_marginTop="@dimen/medium_margin"
             android:src="@drawable/folder"
-            app:layout_constraintBottom_toBottomOf="@id/headerViewWorkList"
+            app:layout_constraintBottom_toBottomOf="@id/workflowlist_header_view_worklist"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
 
         <TextView
-            android:id="@+id/tvHeader"
+            android:id="@+id/workflowlist_tv_header"
             style="@style/TextSmallBlackCommon"
             android:layout_width="0dp"
-            app:layout_constraintRight_toLeftOf="@id/imgExpand"
+            app:layout_constraintRight_toLeftOf="@id/workflowlist_img_expand"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/medium_margin"
-            android:layout_marginLeft="@dimen/tvheader_marginleft"
+            android:layout_marginLeft="@dimen/workflowlist_tvheader_marginleft"
             android:layout_marginTop="@dimen/medium_margin"
-            android:text="@string/tvheader_exp"
+            android:text="@string/workflowlist_tvheader_exp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toRightOf="@id/imgFolder"
+            app:layout_constraintLeft_toRightOf="@id/workflowlist_img_folder"
             app:layout_constraintTop_toTopOf="parent" />
-
+\
         <ImageView
-            android:id="@+id/imgExpand"
-            android:layout_width="@dimen/imgexpand_width"
-            android:layout_height="@dimen/imgexpand_height"
+            android:id="@+id/workflowlist_img_expand"
+            android:layout_width="@dimen/workflowlist_imgexpand_width"
+            android:layout_height="@dimen/workflowlist_imgexpand_height"
             android:layout_marginBottom="@dimen/medium_margin"
-            android:layout_marginEnd="@dimen/imgexpand_marginend"
+            android:layout_marginEnd="@dimen/workflowlist_imgexpand_marginend"
             android:layout_marginStart="@dimen/small_margin"
             android:layout_marginTop="@dimen/medium_margin"
-            android:layout_toEndOf="@id/tvHeader"
+            android:layout_toEndOf="@id/workflowlist_tv_header"
             android:background="@drawable/ic_expand"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintHorizontal_bias="0"
-            app:layout_constraintLeft_toRightOf="@+id/tvHeader"
+            app:layout_constraintLeft_toRightOf="@+id/workflowlist_tv_header"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -59,15 +59,14 @@
 
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/rcvWorkList"
+        android:id="@+id/workflowlist_rcv_worklist"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginEnd="@dimen/rcvworklist_marginright"
+        android:layout_marginEnd="@dimen/workflowlist_rcvworklist_marginright"
         android:layout_marginStart="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="16dp"
-        app:layout_constraintTop_toBottomOf="@id/headerViewWorkList" />
+        app:layout_constraintTop_toBottomOf="@id/workflowlist_header_view_worklist" />
 
 </android.support.constraint.ConstraintLayout>

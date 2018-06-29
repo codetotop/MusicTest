@@ -2,6 +2,7 @@ package com.gem.mpi.screen.main.workflow;
 
 import android.os.Bundle;
 
+import com.gem.mpi.screen.main.workflowhandleidea.WorkFlowHandleIdeaPresenter;
 import com.gemvietnam.base.viper.Presenter;
 import com.gemvietnam.base.viper.interfaces.ContainerView;
 
@@ -30,5 +31,10 @@ public class WorkFlowPresenter extends Presenter<WorkFlowContract.View, WorkFlow
     public WorkFlowContract.View onCreateView(Bundle data) {
         return WorkFlowFragment.getInstance();
 
+    }
+
+    @Override
+    public void openHandleIdeaFragment() {
+        new WorkFlowHandleIdeaPresenter(mContainerView).pushView();
     }
 }

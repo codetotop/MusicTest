@@ -5,39 +5,39 @@
     android:layout_height="wrap_content">
 
     <TextView
-        android:id="@+id/tvLabel"
+        android:id="@+id/viewforminput_tv_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="@dimen/tvlabel_size"
+        android:textSize="@dimen/forminputview_tvlabel_size"
         android:textColor="@color/viewforminput_tvlabel_textcolor"
-        android:text="@string/label_username_exp"
+        android:text="@string/forminputview_label_username_exp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/edtValue"
+        android:id="@+id/viewforminput_edt_value"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="@dimen/edtvalue_size"
+        android:textSize="@dimen/forminputview_edtvalue_size"
         android:textColor="@color/viewforminput_edtvalue_textcolor"
-        android:layout_marginStart="@dimen/edtvalue_marginleft"
-        android:layout_marginEnd="@dimen/edtvalue_marginright"
+        android:layout_marginStart="@dimen/forminputview_edtvalue_marginleft"
+        android:layout_marginEnd="@dimen/forminputview_edtvalue_marginright"
         android:inputType="textFilter|textMultiLine"
-        android:text="@string/value_username_exp"
-        android:paddingEnd="@dimen/edtvalue_paddingend"
+        android:text="@string/forminputview_value_username_exp"
+        android:paddingEnd="@dimen/forminputview_edtvalue_paddingend"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvLabel" />
+        app:layout_constraintTop_toBottomOf="@+id/viewforminput_tv_label" />
 
     <ImageView
-        android:id="@+id/imgEvent"
+        android:id="@+id/viewforminput_img_event"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_view"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvLabel"
-        app:layout_constraintBottom_toBottomOf="@+id/edtValue"
-        android:layout_marginBottom="@dimen/imgevent_marginbottom"
+        app:layout_constraintTop_toBottomOf="@+id/viewforminput_tv_label"
+        app:layout_constraintBottom_toBottomOf="@+id/viewforminput_edt_value"
+        android:layout_marginBottom="@dimen/forminputview_imgevent_marginbottom"
         />
 
 </android.support.constraint.ConstraintLayout>

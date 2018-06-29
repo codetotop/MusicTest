@@ -15,13 +15,13 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class DocumentView extends ConstraintLayout {
-    @BindView(R.id.imgAvatarDocument)
+    @BindView(R.id.viewdocument_img_avatardocument)
     ImageView imgAvatarDocument;
-    @BindView(R.id.tvNameDocument)
+    @BindView(R.id.viewdocument_tv_namedocument)
     TextView tvNameDocument;
-    @BindView(R.id.imgDownloadDocument)
+    @BindView(R.id.viewdocument_img_downloaddocument)
     ImageView imgDownloadDocument;
-    @BindView(R.id.tvDecorationLineDocument)
+    @BindView(R.id.viewdocument_tv_decorationline)
     TextView tvDecoration;
 
     public DocumentView(Context context) {

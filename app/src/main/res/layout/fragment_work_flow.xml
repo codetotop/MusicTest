@@ -14,166 +14,156 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <TextView
-                android:id="@+id/tvDecorationLine1"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/colorDecorationLine"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:layout_marginTop="20dp"
-                />
-
             <include
-                android:id="@+id/itemHeaderWorkFlow"
+                android:id="@+id/item_header_wrorkflow"
                 layout="@layout/item_header_work_flow"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="12dp"
                 android:layout_marginRight="12dp"
-                app:layout_constraintBottom_toBottomOf="@id/tvDecorationLine2"
+                app:layout_constraintBottom_toBottomOf="@id/workflow_tv_decoration_line_1"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="@id/tvDecorationLine1"
+                app:layout_constraintTop_toTopOf="parent"
                 />
 
             <TextView
-                android:id="@+id/tvDecorationLine2"
+                android:id="@+id/workflow_tv_decoration_line_1"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_marginTop="12dp"
                 android:background="@color/colorDecorationLine"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/itemHeaderWorkFlow" />
+                app:layout_constraintTop_toBottomOf="@id/item_header_wrorkflow" />
 
             <TextView
-                android:id="@+id/tvDecorationLine3"
+                android:id="@+id/workflow_tv_decoration_line_2"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_marginTop="12dp"
                 android:background="@color/colorDecorationLine"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvDecorationLine2" />
+                app:layout_constraintTop_toBottomOf="@id/workflow_tv_decoration_line_1" />
 
             <TextView
-                android:id="@+id/tvLabelDocumentRelation"
+                android:id="@+id/workflow_tv_label_documentrelation"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
-                android:text="@string/tvLabelDocumentRelation_exp"
+                android:text="@string/forminputview_tvlabeldocumentrelation_exp"
                 style="@style/TextMediumBlackBold"
-                app:layout_constraintLeft_toLeftOf="@id/itemHeaderWorkFlow"
-                app:layout_constraintTop_toBottomOf="@id/tvDecorationLine3" />
+                app:layout_constraintLeft_toLeftOf="@id/item_header_wrorkflow"
+                app:layout_constraintTop_toBottomOf="@id/workflow_tv_decoration_line_2" />
 
             <android.support.v7.widget.RecyclerView
-                android:id="@+id/rcvDocumentRelation"
+                android:id="@+id/workflow_rcv_documentrelation"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="12dp"
                 android:layout_marginTop="12dp"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintLeft_toLeftOf="@id/itemHeaderWorkFlow"
+                app:layout_constraintLeft_toLeftOf="@id/item_header_wrorkflow"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvLabelDocumentRelation" />
+                app:layout_constraintTop_toBottomOf="@id/workflow_tv_label_documentrelation" />
 
             <TextView
-                android:id="@+id/tvDecorationLine4"
+                android:id="@+id/workflow_tv_decoration_line_3"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_marginTop="12dp"
                 android:background="@color/colorDecorationLine"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/rcvDocumentRelation" />
+                app:layout_constraintTop_toBottomOf="@id/workflow_rcv_documentrelation" />
 
             <TextView
-                android:id="@+id/tvDecorationLine5"
+                android:id="@+id/workflow_tv_decoration_line_4"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_marginTop="12dp"
                 android:background="@color/colorDecorationLine"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvDecorationLine4" />
+                app:layout_constraintTop_toBottomOf="@id/workflow_tv_decoration_line_3" />
 
             <TextView
-                android:id="@+id/tvLabelHandleFlow"
+                android:id="@+id/workflow_tv_label_handleflow"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
-                android:text="@string/tvLabelHandleFlow"
+                android:text="@string/workflow_handleflow_tvlabel"
                 style="@style/TextMediumBlackBold"
-                app:layout_constraintLeft_toLeftOf="@id/itemHeaderWorkFlow"
-                app:layout_constraintTop_toBottomOf="@id/tvDecorationLine5" />
+                app:layout_constraintLeft_toLeftOf="@id/item_header_wrorkflow"
+                app:layout_constraintTop_toBottomOf="@id/workflow_tv_decoration_line_4" />
 
             <android.support.v7.widget.RecyclerView
-                android:id="@+id/rcvHandleFlow"
+                android:id="@+id/workflow_rcv_handleflow"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="12dp"
                 android:layout_marginTop="12dp"
-                app:layout_constraintLeft_toLeftOf="@id/itemHeaderWorkFlow"
+                app:layout_constraintLeft_toLeftOf="@id/item_header_wrorkflow"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvLabelHandleFlow" />
+                app:layout_constraintTop_toBottomOf="@id/workflow_tv_label_handleflow" />
 
             <TextView
-                android:id="@+id/tvDecorationLine6"
+                android:id="@+id/workflow_tv_decoration_line_5"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_marginTop="12dp"
                 android:background="@color/colorDecorationLine"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/rcvHandleFlow" />
+                app:layout_constraintTop_toBottomOf="@id/workflow_rcv_handleflow" />
 
             <TextView
-                android:id="@+id/tvDecorationLine7"
+                android:id="@+id/workflow_tv_decoration_line_6"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_marginTop="12dp"
                 android:background="@color/colorDecorationLine"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvDecorationLine6" />
+                app:layout_constraintTop_toBottomOf="@id/workflow_tv_decoration_line_5" />
 
             <TextView
-                android:id="@+id/tvLabelHandleIdea"
+                android:id="@+id/workflow_tv_label_handleidea"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
-                android:text="@string/tvLabelHandleIdea_exp"
+                android:text="@string/workflow_tvlabelhandleIdea_exp"
                 style="@style/TextMediumBlackBold"
-                app:layout_constraintLeft_toLeftOf="@id/itemHeaderWorkFlow"
-                app:layout_constraintTop_toBottomOf="@id/tvDecorationLine7" />
+                app:layout_constraintLeft_toLeftOf="@id/item_header_wrorkflow"
+                app:layout_constraintTop_toBottomOf="@id/workflow_tv_decoration_line_6" />
 
             <android.support.v7.widget.RecyclerView
-                android:id="@+id/rcvHandleIdea"
+                android:id="@+id/workflow_rcv_handleidea"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="12dp"
                 android:layout_marginTop="12dp"
-                app:layout_constraintLeft_toLeftOf="@id/itemHeaderWorkFlow"
+                app:layout_constraintLeft_toLeftOf="@id/item_header_wrorkflow"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvLabelHandleIdea" />
+                app:layout_constraintTop_toBottomOf="@id/workflow_tv_label_handleidea" />
 
             <TextView
-                android:id="@+id/tvDecorationLine9"
+                android:id="@+id/workflow_tv_decoration_line_7"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_marginTop="12dp"
                 android:background="@color/colorDecorationLine"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/rcvHandleIdea" />
+                app:layout_constraintTop_toBottomOf="@id/workflow_rcv_handleidea" />
 
             <Button
-                android:id="@+id/btnHandleIdea"
+                android:id="@+id/workflow_btn_handleidea"
                 style="@style/ButtonCommon"
                 android:layout_width="0dp"
-                android:layout_height="@dimen/btnlogin_height"
+                android:layout_height="@dimen/login_btnlogin_height"
                 android:layout_marginBottom="12dp"
                 android:layout_marginTop="30dp"
                 android:background="@drawable/bg_blue_button_common"
-                android:text="@string/btnHandleIdea_text"
+                android:text="@string/workflow_btnhandleIdea_text"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintLeft_toLeftOf="@id/rcvHandleIdea"
-                app:layout_constraintRight_toRightOf="@+id/rcvHandleIdea"
-                app:layout_constraintTop_toBottomOf="@+id/tvDecorationLine9" />
+                app:layout_constraintLeft_toLeftOf="@id/workflow_rcv_handleidea"
+                app:layout_constraintRight_toRightOf="@+id/workflow_rcv_handleidea"
+                app:layout_constraintTop_toBottomOf="@+id/workflow_tv_decoration_line_7" />
 
         </android.support.constraint.ConstraintLayout>
 

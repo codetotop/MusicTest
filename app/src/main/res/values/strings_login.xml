@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="tvsectorministries_text">BỘ KẾ HOẠCH VÀ ĐẦU TƯ</string>
-    <string name="tvsoftwaremanagement_text">PHẦN MỀM QUẢN LÝ CÔNG VIỆC</string>
-    <string name="tvforgotpassword_text">Quên mật khẩu?</string>
-    <string name="btnlogin_text">Đăng nhập</string>
-    <string name="tvversion_text">Phiên bản 1.0</string>
+    <string name="login_tvsectorministries_text">BỘ KẾ HOẠCH VÀ ĐẦU TƯ</string>
+    <string name="login_tvsoftwaremanagement_text">PHẦN MỀM QUẢN LÝ CÔNG VIỆC</string>
+    <string name="login_tvforgotpassword_text">Quên mật khẩu?</string>
+    <string name="login_btnlogin_text">Đăng nhập</string>
+    <string name="login_tvversion_text">Phiên bản 1.0</string>
     <string name="login_success_message">Đăng nhập thành công</string>
 </resources>

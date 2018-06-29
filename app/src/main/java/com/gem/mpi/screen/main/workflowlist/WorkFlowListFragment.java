@@ -9,7 +9,6 @@ import android.widget.TextView;
 
 import com.gem.mpi.R;
 import com.gem.mpi.screen.main.main.MainFragment;
-import com.gem.mpi.screen.main.workflow.WorkFlowPresenter;
 import com.gem.mpi.widget.ToolbarView;
 import com.gemvietnam.base.viper.ViewFragment;
 
@@ -23,12 +22,12 @@ import butterknife.BindView;
 public class WorkFlowListFragment extends ViewFragment<WorkFlowListContract.Presenter> implements WorkFlowListContract.View, View.OnClickListener, WorkFlowListAdapter.OnItemClick {
   private ArrayList<WorkFlowListModel> workFlowModels;
   private WorkFlowListAdapter workFlowListAdapter;
-  @BindView(R.id.headerViewWorkList)
-  ConstraintLayout headerViewWorkList;
-  @BindView(R.id.tvHeader)
-  TextView tvHeader;
-  @BindView(R.id.rcvWorkList)
-  RecyclerView rcvWorkList;
+  @BindView(R.id.workflowlist_header_view_worklist)
+  ConstraintLayout mHeaderViewWorkListConstrainLayout;
+  @BindView(R.id.workflowlist_tv_header)
+  TextView mHeaderTv;
+  @BindView(R.id.workflowlist_rcv_worklist)
+  RecyclerView mWorkListRcv;
 
   public static WorkFlowListFragment getInstance(Bundle data) {
     return new WorkFlowListFragment();
@@ -49,13 +48,13 @@ public class WorkFlowListFragment extends ViewFragment<WorkFlowListContract.Pres
       );
     }
     RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getViewContext());
-    rcvWorkList.setLayoutManager(layoutManager);
+    mWorkListRcv.setLayoutManager(layoutManager);
     workFlowModels = new ArrayList<>();
     addFakeData();
     workFlowListAdapter = new WorkFlowListAdapter(getViewContext(), workFlowModels,this);
-    rcvWorkList.setAdapter(workFlowListAdapter);
+    mWorkListRcv.setAdapter(workFlowListAdapter);
 
-    headerViewWorkList.setOnClickListener(this);
+    mHeaderViewWorkListConstrainLayout.setOnClickListener(this);
   }
 
   private void addFakeData() {
@@ -71,7 +70,7 @@ public class WorkFlowListFragment extends ViewFragment<WorkFlowListContract.Pres
   @Override
   public void onClick(View view) {
     switch (view.getId()) {
-      case R.id.headerViewWorkList:
+      case R.id.workflowlist_header_view_worklist:
         break;
       default:
         break;
