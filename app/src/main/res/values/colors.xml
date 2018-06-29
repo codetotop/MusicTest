@@ -5,6 +5,7 @@
     <color name="colorAccent">#FF4081</color>
 
     <color name="colorWhite">#ffffff</color>
+    <color name="colorWhitePressed">#e0e0e0</color>
     <color name="colorBlack">#000000</color>
     <color name="colorBlackCommon">#030303</color>
     <color name="colorGrayCommon">#323538</color>
@@ -21,6 +22,7 @@
     <color name="colorTitleToobar">@color/colorBlackCommon</color>
     <color name="color_divider_gray">#e0e0e0</color>
     <color name="color_divider_bg">#e0e0e0</color>
+
     <color name="colorSlateGrey">#676c72</color>
     <color name="tvdecorationline_backgoundcolor">#e3e3e3</color>
     <color name="colorDecorationLine">#e6e6e6</color>

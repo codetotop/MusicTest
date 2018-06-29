@@ -72,12 +72,12 @@ public class ForeignInvestmentDataPresenter extends Presenter<ForeignInvestmentD
       @Override
       public void onResponse(@NonNull Response<BaseResponse<ListForeignInvestmentDataDTO>> response) {
         super.onResponse(response);
-        updateListForeignInvestmentData(getListForeignInvestmentDataModel(response));
+        updateListForeignInvestmentDataUI(getListForeignInvestmentDataModel(response));
       }
     });
   }
 
-  private void updateListForeignInvestmentData(List<ForeignInvestmentDataModel> listForeignInvestmentDataModel) {
+  private void updateListForeignInvestmentDataUI(List<ForeignInvestmentDataModel> listForeignInvestmentDataModel) {
     getView().hideRefreshListForeignInvestmentData();
     getView().moveToTopListForeignInvestmentData();
     mListForeignInvestmentDataModel.clear();

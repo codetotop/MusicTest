@@ -36,13 +36,10 @@
 
     <!--Title-->
     <string name="title_about_profile">Thông Tin Cá Nhân</string>
-    <string name="itemhandleflow_tvtimehandle_exp">28/05/2018 - 15:38:35</string>
-    <string name="validate_username">Bạn cần nhập tài khoản !</string>
-    <string name="validate_password">Bạn cần nhập mật khẩu !</string>
     <string name="title_business_registration">Số Liệu Đăng Ký Doanh Nghiệp</string>
     <string name="title_foreign_investment_data">Công Khai Số Liệu Đầu Tư Nước Ngoài</string>
-
     <string name="title_work_flow">Danh Sách Luồng Công Việc</string>
+    <string name="title_category_profile">Phân Loại Hồ Sơ</string>
 
     <!--MenuItem-->
     <string name="document_of_unit">Văn Bản Của Đơn Vị</string>
@@ -60,5 +57,9 @@
         <item>@string/business_registration</item>
         <item>@string/foreign_investment_data</item>
     </string-array>
+
+    <string name="itemhandleflow_tvtimehandle_exp">28/05/2018 - 15:38:35</string>
+    <string name="validate_username">Bạn cần nhập tài khoản !</string>
+    <string name="validate_password">Bạn cần nhập mật khẩu !</string>
 
 </resources>
