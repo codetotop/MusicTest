@@ -6,8 +6,8 @@
 
     <android.support.constraint.ConstraintLayout
         android:id="@+id/headerViewWorkList"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
         android:layout_marginStart="@dimen/imgfolder_marginleft"
         android:layout_marginTop="@dimen/imgfolder_margintop"
         app:layout_constraintStart_toStartOf="parent"
@@ -19,7 +19,9 @@
             android:layout_height="wrap_content"
             android:src="@drawable/ic_folder"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/headerViewWorkList"
+            />
 
         <TextView
             android:id="@+id/tvHeader"
@@ -50,8 +52,8 @@
         android:layout_marginEnd="@dimen/rcvworklist_marginright"
         android:layout_marginTop="@dimen/rcvworklist_margintop"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@id/headerViewWorkList"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/headerViewWorkList"
         app:layout_constraintTop_toBottomOf="@id/headerViewWorkList" />
 
 </android.support.constraint.ConstraintLayout>
