@@ -19,10 +19,12 @@ public class WorkFlowListAdapter extends RecyclerView.Adapter<WorkFlowListAdapte
 
     private Context context;
     private ArrayList<WorkFlowListModel> workFlowModels;
+    private OnItemClick onItemClick;
 
-    public WorkFlowListAdapter(Context context, ArrayList<WorkFlowListModel> workFlowModels) {
+    public WorkFlowListAdapter(Context context, ArrayList<WorkFlowListModel> workFlowModels,OnItemClick onItemClick) {
         this.context = context;
         this.workFlowModels = workFlowModels;
+        this.onItemClick=onItemClick;
     }
 
     @NonNull
@@ -35,7 +37,7 @@ public class WorkFlowListAdapter extends RecyclerView.Adapter<WorkFlowListAdapte
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, final int position) {
         WorkFlowListModel workFlowModel = workFlowModels.get(position);
         holder.tvTitle.setText(workFlowModel.getTitle());
         holder.tvDocSymbol.setText(context.getString(R.string.prefix_doc_symbol) + workFlowModel.getDocSymbol());
@@ -51,7 +53,7 @@ public class WorkFlowListAdapter extends RecyclerView.Adapter<WorkFlowListAdapte
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                onItemClick.click(position);
             }
         });
     }
@@ -79,5 +81,9 @@ public class WorkFlowListAdapter extends RecyclerView.Adapter<WorkFlowListAdapte
             tvDuration = itemView.findViewById(R.id.tvDuration);
             imgStatus = itemView.findViewById(R.id.imgStatus);
         }
+    }
+
+    interface OnItemClick{
+        void click(int position);
     }
 }

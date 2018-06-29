@@ -9,26 +9,36 @@ import com.gemvietnam.base.viper.interfaces.ContainerView;
  * The WorkFlow Presenter
  */
 public class WorkFlowPresenter extends Presenter<WorkFlowContract.View, WorkFlowContract.Interactor>
-        implements WorkFlowContract.Presenter {
+    implements WorkFlowContract.Presenter {
 
-    public WorkFlowPresenter(ContainerView containerView) {
-        super(containerView);
-    }
+  public WorkFlowPresenter(ContainerView containerView) {
+    super(containerView);
+  }
 
 
-    @Override
-    public void start() {
-        // Start getting data here
-    }
+  @Override
+  public void start() {
+    // Start getting data here
+  }
 
-    @Override
-    public WorkFlowContract.Interactor onCreateInteractor() {
-        return new WorkFlowInteractor(this);
-    }
+  @Override
+  public WorkFlowContract.Interactor onCreateInteractor() {
+    return new WorkFlowInteractor(this);
+  }
 
-    @Override
-    public WorkFlowContract.View onCreateView(Bundle data) {
-        return WorkFlowFragment.getInstance();
+  @Override
+  public WorkFlowContract.View onCreateView(Bundle data) {
+    return WorkFlowFragment.getInstance();
 
-    }
+  }
+
+  @Override
+  public void handleActionLeft() {
+    getFragment().getFragmentManager().popBackStack();
+  }
+
+  @Override
+  public void handleActionRight() {
+
+  }
 }
