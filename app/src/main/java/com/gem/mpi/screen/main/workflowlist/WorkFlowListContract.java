@@ -16,6 +16,7 @@ interface WorkFlowListContract {
     }
 
     interface Presenter extends IPresenter<View, Interactor> {
+        void openDetailWorkFlow(int position);
     }
 }
 

@@ -2,6 +2,7 @@ package com.gem.mpi.screen.main.workflowlist;
 
 import android.os.Bundle;
 
+import com.gem.mpi.screen.main.workflow.WorkFlowPresenter;
 import com.gemvietnam.base.viper.Presenter;
 import com.gemvietnam.base.viper.interfaces.ContainerView;
 
@@ -28,5 +29,10 @@ public class WorkFlowListPresenter extends Presenter<WorkFlowListContract.View, 
     @Override
     public WorkFlowListContract.Interactor onCreateInteractor() {
         return new WorkFlowListInteractor(this);
+    }
+
+    @Override
+    public void openDetailWorkFlow(int position) {
+       new WorkFlowPresenter(mContainerView).pushView();
     }
 }

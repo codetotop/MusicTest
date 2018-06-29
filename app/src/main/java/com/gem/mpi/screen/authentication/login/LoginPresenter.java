@@ -1,5 +1,6 @@
 package com.gem.mpi.screen.authentication.login;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.util.Log;
@@ -12,6 +13,7 @@ import com.gem.mpi.mapper.LoginMapper;
 import com.gem.mpi.model.LoginModel;
 import com.gem.mpi.pref.PrefWrapper;
 import com.gem.mpi.screen.authentication.forgot.ForgotPasswordPresenter;
+import com.gem.mpi.screen.main.MainActivity;
 import com.gem.mpi.screen.main.workflow.WorkFlowPresenter;
 import com.gem.mpi.screen.main.workflowlist.WorkFlowListPresenter;
 import com.gemvietnam.base.viper.Presenter;
@@ -72,6 +74,8 @@ public class LoginPresenter extends Presenter<LoginContract.View, LoginContract.
         Log.e("LOGIN_PRESENTER", "onSuccess: " + loginModel.getFuncitonModels().toString());
         PrefWrapper.saveLoginResponse(getViewContext(),loginDTO);
         mView.showToast(responseBody.getMessage());
+        Intent intent = new Intent(getViewContext(), MainActivity.class);
+        getViewContext().startActivity(intent);
       }
     });
   }
@@ -90,7 +94,7 @@ public class LoginPresenter extends Presenter<LoginContract.View, LoginContract.
   @Override
   public void openScreenForgotPassWord() {
     //new ForgotPasswordPresenter(mContainerView).pushView();
-    //new WorkFlowListPresenter(mContainerView).pushView();
-    new WorkFlowPresenter(mContainerView).pushView();
+    new WorkFlowListPresenter(mContainerView).pushView();
+    //new WorkFlowPresenter(mContainerView).pushView();
   }
 }

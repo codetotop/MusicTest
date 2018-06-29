@@ -8,6 +8,9 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.gem.mpi.R;
+import com.gem.mpi.screen.main.main.MainFragment;
+import com.gem.mpi.screen.main.workflow.WorkFlowPresenter;
+import com.gem.mpi.widget.ToolbarView;
 import com.gemvietnam.base.viper.ViewFragment;
 
 import java.util.ArrayList;
@@ -17,7 +20,7 @@ import butterknife.BindView;
 /**
  * The WorkFlowList Fragment
  */
-public class WorkFlowListFragment extends ViewFragment<WorkFlowListContract.Presenter> implements WorkFlowListContract.View, View.OnClickListener {
+public class WorkFlowListFragment extends ViewFragment<WorkFlowListContract.Presenter> implements WorkFlowListContract.View, View.OnClickListener, WorkFlowListAdapter.OnItemClick {
   private ArrayList<WorkFlowListModel> workFlowModels;
   private WorkFlowListAdapter workFlowListAdapter;
   @BindView(R.id.headerViewWorkList)
@@ -39,11 +42,17 @@ public class WorkFlowListFragment extends ViewFragment<WorkFlowListContract.Pres
   @Override
   public void onDisplay() {
     super.onDisplay();
+
+    if (getParentFragment() != null && getParentFragment() instanceof MainFragment) {
+      ((MainFragment) getParentFragment()).initToolbar(ToolbarView.ActionStyle.IMAGE, ToolbarView.ActionStyle.NONE, R.string.title_list_workflow,
+          R.drawable.ic_slide_menu, null, null, null, null, null
+      );
+    }
     RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getViewContext());
     rcvWorkList.setLayoutManager(layoutManager);
     workFlowModels = new ArrayList<>();
     addFakeData();
-    workFlowListAdapter = new WorkFlowListAdapter(getViewContext(), workFlowModels);
+    workFlowListAdapter = new WorkFlowListAdapter(getViewContext(), workFlowModels,this);
     rcvWorkList.setAdapter(workFlowListAdapter);
 
     headerViewWorkList.setOnClickListener(this);
@@ -67,5 +76,10 @@ public class WorkFlowListFragment extends ViewFragment<WorkFlowListContract.Pres
       default:
         break;
     }
+  }
+
+  @Override
+  public void click(int position) {
+     mPresenter.openDetailWorkFlow(position);
   }
 }
