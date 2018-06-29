@@ -17,7 +17,7 @@
             android:layout_width="@dimen/picture_medium_size"
             android:layout_height="@dimen/picture_medium_size"
             android:layout_marginBottom="@dimen/medium_margin"
-            android:layout_marginStart="@dimen/imgfolder_marginleft"
+            android:layout_marginStart="@dimen/large_space"
             android:layout_marginTop="@dimen/medium_margin"
             android:src="@drawable/folder"
             app:layout_constraintBottom_toBottomOf="@id/headerViewWorkList"
@@ -29,14 +29,15 @@
             android:id="@+id/tvHeader"
             style="@style/TextSmallBlackCommon"
             android:layout_width="0dp"
-            app:layout_constraintRight_toLeftOf="@id/imgExpand"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/medium_margin"
-            android:layout_marginLeft="@dimen/tvheader_marginleft"
+            android:layout_marginEnd="@dimen/small_margin"
+            android:layout_marginStart="@dimen/large_space"
             android:layout_marginTop="@dimen/medium_margin"
             android:text="@string/tvheader_exp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toRightOf="@id/imgFolder"
+            app:layout_constraintRight_toLeftOf="@id/imgExpand"
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
@@ -44,14 +45,11 @@
             android:layout_width="@dimen/imgexpand_width"
             android:layout_height="@dimen/imgexpand_height"
             android:layout_marginBottom="@dimen/medium_margin"
-            android:layout_marginEnd="@dimen/imgexpand_marginend"
-            android:layout_marginStart="@dimen/small_margin"
+            android:layout_marginEnd="@dimen/large_space"
             android:layout_marginTop="@dimen/medium_margin"
             android:layout_toEndOf="@id/tvHeader"
             android:background="@drawable/ic_expand"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_bias="0"
-            app:layout_constraintLeft_toRightOf="@+id/tvHeader"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -64,10 +62,10 @@
         android:layout_height="0dp"
         android:layout_marginEnd="@dimen/rcvworklist_marginright"
         android:layout_marginStart="15dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="16dp"
         app:layout_constraintTop_toBottomOf="@id/headerViewWorkList" />
 
 </android.support.constraint.ConstraintLayout>

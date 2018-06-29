@@ -2,10 +2,8 @@ package com.gem.mpi.screen.main.workflow;
 
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.widget.ArrayAdapter;
 
 import com.gem.mpi.R;
-import com.gem.mpi.screen.main.main.MainFragment;
 import com.gem.mpi.screen.main.workflow.adapter.DocumentAdapter;
 import com.gem.mpi.screen.main.workflow.adapter.HandleFlowAdapter;
 import com.gem.mpi.screen.main.workflow.adapter.HandleIdeaAdapter;
@@ -13,8 +11,6 @@ import com.gem.mpi.screen.main.workflow.model.HandleFlowModel;
 import com.gem.mpi.screen.main.workflow.model.HandleIdeaModel;
 import com.gem.mpi.widget.ToolbarView;
 import com.gemvietnam.base.viper.ViewFragment;
-
-import org.w3c.dom.Document;
 
 import java.util.ArrayList;
 
@@ -30,6 +26,8 @@ public class WorkFlowFragment extends ViewFragment<WorkFlowContract.Presenter> i
   RecyclerView rcvHandleFlow;
   @BindView(R.id.rcvHandleIdea)
   RecyclerView rcvHandleIdea;
+  @BindView(R.id.tbvToolbar)
+  ToolbarView mToolbarTbv;
 
   DocumentAdapter documentAdapter;
   HandleFlowAdapter handleFlowAdapter;
@@ -47,17 +45,6 @@ public class WorkFlowFragment extends ViewFragment<WorkFlowContract.Presenter> i
   @Override
   protected int getLayoutId() {
     return R.layout.fragment_work_flow;
-  }
-
-  @Override
-  public void onDisplay() {
-    super.onDisplay();
-    if (getParentFragment() != null && getParentFragment() instanceof MainFragment) {
-      ((MainFragment) getParentFragment()).initToolbar(ToolbarView.ActionStyle.IMAGE, ToolbarView.ActionStyle.NONE, R.string.title_detail_workflow,
-          R.drawable.ic_slide_menu, null, null, null, null, null
-      );
-    }
-    addView();
   }
 
   private void addView() {
@@ -103,4 +90,30 @@ public class WorkFlowFragment extends ViewFragment<WorkFlowContract.Presenter> i
   }
 
 
+  @Override
+  public void onDisplay() {
+    super.onDisplay();
+    initToolbar(ToolbarView.ActionStyle.IMAGE, ToolbarView.ActionStyle.IMAGE, R.string.title_detail_workflow,
+        R.drawable.ic_back, null, R.drawable.word, null,
+        new ToolbarView.OnActionLeftListener() {
+          @Override
+          public void onActionLeftClick() {
+            getPresenter().handleActionLeft();
+          }
+        }, new ToolbarView.OnActionRightListener() {
+          @Override
+          public void onActionRightClick() {
+            getPresenter().handleActionRight();
+          }
+        }
+    );
+    addView();
+  }
+
+  @Override
+  public void initToolbar(ToolbarView.ActionStyle actionLeftStyle, ToolbarView.ActionStyle actionRightStyle, Integer titleId, Integer actionLeftDrawbleId, Integer actionLeftStringId, Integer actionRightDrawableId, Integer actionRightStringId, ToolbarView.OnActionLeftListener onActionLeftListener, ToolbarView.OnActionRightListener onActionRightListener) {
+    mToolbarTbv.init(actionLeftStyle, actionRightStyle, titleId,
+        actionLeftDrawbleId, actionLeftStringId, actionRightDrawableId, actionRightStringId,
+        onActionLeftListener, onActionRightListener);
+  }
 }

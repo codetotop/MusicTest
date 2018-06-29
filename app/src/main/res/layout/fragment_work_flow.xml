@@ -1,10 +1,15 @@
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/colorWhite"
+    android:orientation="vertical"
     android:theme="@style/AppTheme">
+
+    <com.gem.mpi.widget.ToolbarView
+        android:id="@+id/tbvToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -13,16 +18,6 @@
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-
-            <TextView
-                android:id="@+id/tvDecorationLine1"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/colorDecorationLine"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:layout_marginTop="20dp"
-                />
 
             <include
                 android:id="@+id/itemHeaderWorkFlow"
@@ -34,8 +29,7 @@
                 app:layout_constraintBottom_toBottomOf="@id/tvDecorationLine2"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="@id/tvDecorationLine1"
-                />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/tvDecorationLine2"
@@ -57,11 +51,11 @@
 
             <TextView
                 android:id="@+id/tvLabelDocumentRelation"
+                style="@style/TextMediumBlackBold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
                 android:text="@string/tvLabelDocumentRelation_exp"
-                style="@style/TextMediumBlackBold"
                 app:layout_constraintLeft_toLeftOf="@id/itemHeaderWorkFlow"
                 app:layout_constraintTop_toBottomOf="@id/tvDecorationLine3" />
 
@@ -71,6 +65,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="12dp"
                 android:layout_marginTop="12dp"
+                android:nestedScrollingEnabled="false"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintLeft_toLeftOf="@id/itemHeaderWorkFlow"
                 app:layout_constraintRight_toRightOf="parent"
@@ -96,11 +91,11 @@
 
             <TextView
                 android:id="@+id/tvLabelHandleFlow"
+                style="@style/TextMediumBlackBold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
                 android:text="@string/tvLabelHandleFlow"
-                style="@style/TextMediumBlackBold"
                 app:layout_constraintLeft_toLeftOf="@id/itemHeaderWorkFlow"
                 app:layout_constraintTop_toBottomOf="@id/tvDecorationLine5" />
 
@@ -110,6 +105,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="12dp"
                 android:layout_marginTop="12dp"
+                android:nestedScrollingEnabled="false"
                 app:layout_constraintLeft_toLeftOf="@id/itemHeaderWorkFlow"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvLabelHandleFlow" />
@@ -134,11 +130,11 @@
 
             <TextView
                 android:id="@+id/tvLabelHandleIdea"
+                style="@style/TextMediumBlackBold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
                 android:text="@string/tvLabelHandleIdea_exp"
-                style="@style/TextMediumBlackBold"
                 app:layout_constraintLeft_toLeftOf="@id/itemHeaderWorkFlow"
                 app:layout_constraintTop_toBottomOf="@id/tvDecorationLine7" />
 
@@ -148,6 +144,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="12dp"
                 android:layout_marginTop="12dp"
+                android:nestedScrollingEnabled="false"
                 app:layout_constraintLeft_toLeftOf="@id/itemHeaderWorkFlow"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvLabelHandleIdea" />
@@ -179,4 +176,4 @@
 
     </ScrollView>
 
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>

@@ -12,16 +12,11 @@ import com.gem.mpi.data.remote.callback.CommonCallback;
 import com.gem.mpi.mapper.LoginMapper;
 import com.gem.mpi.model.LoginModel;
 import com.gem.mpi.pref.PrefWrapper;
-import com.gem.mpi.screen.authentication.forgot.ForgotPasswordPresenter;
 import com.gem.mpi.screen.main.MainActivity;
-import com.gem.mpi.screen.main.workflow.WorkFlowPresenter;
-import com.gem.mpi.screen.main.workflowlist.WorkFlowListPresenter;
 import com.gemvietnam.base.viper.Presenter;
 import com.gemvietnam.base.viper.interfaces.ContainerView;
 import com.gemvietnam.utils.StringUtils;
 
-import retrofit2.Call;
-import retrofit2.Callback;
 import retrofit2.Response;
 
 /**
@@ -93,8 +88,6 @@ public class LoginPresenter extends Presenter<LoginContract.View, LoginContract.
 
   @Override
   public void openScreenForgotPassWord() {
-    //new ForgotPasswordPresenter(mContainerView).pushView();
-    new WorkFlowListPresenter(mContainerView).pushView();
-    //new WorkFlowPresenter(mContainerView).pushView();
+//    new WorkFlowListPresenter(mContainerView).pushView();
   }
 }

@@ -9,7 +9,6 @@ import android.widget.TextView;
 
 import com.gem.mpi.R;
 import com.gem.mpi.screen.main.main.MainFragment;
-import com.gem.mpi.screen.main.workflow.WorkFlowPresenter;
 import com.gem.mpi.widget.ToolbarView;
 import com.gemvietnam.base.viper.ViewFragment;
 
@@ -52,7 +51,7 @@ public class WorkFlowListFragment extends ViewFragment<WorkFlowListContract.Pres
     rcvWorkList.setLayoutManager(layoutManager);
     workFlowModels = new ArrayList<>();
     addFakeData();
-    workFlowListAdapter = new WorkFlowListAdapter(getViewContext(), workFlowModels,this);
+    workFlowListAdapter = new WorkFlowListAdapter(getViewContext(), workFlowModels, this);
     rcvWorkList.setAdapter(workFlowListAdapter);
 
     headerViewWorkList.setOnClickListener(this);
@@ -72,6 +71,7 @@ public class WorkFlowListFragment extends ViewFragment<WorkFlowListContract.Pres
   public void onClick(View view) {
     switch (view.getId()) {
       case R.id.headerViewWorkList:
+        getPresenter().openCategoryProfile();
         break;
       default:
         break;
@@ -80,6 +80,6 @@ public class WorkFlowListFragment extends ViewFragment<WorkFlowListContract.Pres
 
   @Override
   public void click(int position) {
-     mPresenter.openDetailWorkFlow(position);
+    mPresenter.openDetailWorkFlow(position);
   }
 }
