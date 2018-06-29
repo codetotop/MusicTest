@@ -1,6 +1,5 @@
 package com.gem.mpi.screen.main.main.registration_business;
 
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
@@ -20,7 +19,7 @@ public class RegistrationBusinessFragment extends ViewFragment<RegistrationBusin
   @BindView(R.id.fragmentregistrationbusiness_rv_list_registration_business)
   RecyclerView mListRegistrationBusinessRv;
   @BindView(R.id.fragmentregistrationbusiness_srl_refresh_list_registration_business)
-  SwipeRefreshLayout mRefreshListRegistrationBusiness;
+  SwipeRefreshLayout mRefreshListRegistrationBusinessSrl;
 
   public static RegistrationBusinessFragment getInstance() {
     return new RegistrationBusinessFragment();
@@ -39,7 +38,7 @@ public class RegistrationBusinessFragment extends ViewFragment<RegistrationBusin
 
   @Override
   public void initListRegistrationBusiness() {
-    mRefreshListRegistrationBusiness.setColorSchemeResources(R.color.bgBlueMonthHeader);
+    mRefreshListRegistrationBusinessSrl.setColorSchemeResources(R.color.bgBlueMonthHeader);
     mListRegistrationBusinessRv.setLayoutManager(new LinearLayoutManager(getViewContext()));
     mListRegistrationBusinessRv.setAdapter(getPresenter().getRegistrationBusinessAdapter());
   }
@@ -51,7 +50,7 @@ public class RegistrationBusinessFragment extends ViewFragment<RegistrationBusin
 
   @Override
   public void initRefreshListRegistrationBusinessListener() {
-    mRefreshListRegistrationBusiness.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+    mRefreshListRegistrationBusinessSrl.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
       @Override
       public void onRefresh() {
         getPresenter().handleRefreshListRegistrationBusiness();
@@ -61,15 +60,15 @@ public class RegistrationBusinessFragment extends ViewFragment<RegistrationBusin
 
   @Override
   public void showRefreshListRegistrationBusiness() {
-    if (!mRefreshListRegistrationBusiness.isRefreshing()) {
-      mRefreshListRegistrationBusiness.setRefreshing(true);
+    if (!mRefreshListRegistrationBusinessSrl.isRefreshing()) {
+      mRefreshListRegistrationBusinessSrl.setRefreshing(true);
     }
   }
 
   @Override
   public void hideRefreshListRegistrationBusiness() {
-    if (mRefreshListRegistrationBusiness.isRefreshing()) {
-      mRefreshListRegistrationBusiness.setRefreshing(false);
+    if (mRefreshListRegistrationBusinessSrl.isRefreshing()) {
+      mRefreshListRegistrationBusinessSrl.setRefreshing(false);
     }
   }
 

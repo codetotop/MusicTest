@@ -1,6 +1,9 @@
 package com.gem.mpi.screen.main.category_profile;
 
 import android.os.Bundle;
+import android.support.v4.widget.SwipeRefreshLayout;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 
 import com.gem.mpi.R;
 import com.gem.mpi.widget.ToolbarView;
@@ -17,6 +20,10 @@ import butterknife.BindView;
 public class CategoryProfileFragment extends ViewFragment<CategoryProfileContract.Presenter> implements CategoryProfileContract.View {
   @BindView(R.id.fragmentcategoryprofile_tbv_toolbar)
   ToolbarView mToolbarTbv;
+  @BindView(R.id.fragmentcategoryprofile_rv_list_category_profile)
+  RecyclerView mListCategoryProfileRv;
+  @BindView(R.id.fragmentcategoryprofile_srl_list_category_profile)
+  SwipeRefreshLayout mListCategoryProfileSrl;
 
   public static CategoryProfileFragment getInstance() {
     return new CategoryProfileFragment();
@@ -45,6 +52,26 @@ public class CategoryProfileFragment extends ViewFragment<CategoryProfileContrac
   public void finishFragment() {
     if (getFragmentManager() != null) {
       getFragmentManager().popBackStack();
+    }
+  }
+
+  @Override
+  public void initListCategoryProfile() {
+    mListCategoryProfileRv.setLayoutManager(new LinearLayoutManager(getViewContext()));
+    mListCategoryProfileRv.setAdapter(getPresenter().getCategoryProfileAdaper());
+  }
+
+  @Override
+  public void showRefreshListCategoryProfile() {
+    if (!mListCategoryProfileSrl.isRefreshing()) {
+      mListCategoryProfileSrl.setRefreshing(true);
+    }
+  }
+
+  @Override
+  public void hideRefreshListCategoryProfile() {
+    if (mListCategoryProfileSrl.isRefreshing()) {
+      mListCategoryProfileSrl.setRefreshing(false);
     }
   }
 

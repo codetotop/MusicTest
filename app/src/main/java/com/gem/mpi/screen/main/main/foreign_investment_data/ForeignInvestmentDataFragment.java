@@ -1,6 +1,5 @@
 package com.gem.mpi.screen.main.main.foreign_investment_data;
 
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
@@ -21,7 +20,7 @@ public class ForeignInvestmentDataFragment extends ViewFragment<ForeignInvestmen
   @BindView(R.id.fragmentforeigninvestmentdata_rv_list_foreigninvestmentdata)
   RecyclerView mListForeignInvestmentDataRv;
   @BindView(R.id.fragmentforeigninvestmentdata_srl_refresh_list_foreigninvestmentdata)
-  SwipeRefreshLayout mRefreshListForeignInvestmentData;
+  SwipeRefreshLayout mRefreshListForeignInvestmentDataSrl;
 
   public static ForeignInvestmentDataFragment getInstance() {
     return new ForeignInvestmentDataFragment();
@@ -50,7 +49,7 @@ public class ForeignInvestmentDataFragment extends ViewFragment<ForeignInvestmen
 
   @Override
   public void initListForeignInvestmentData() {
-    mRefreshListForeignInvestmentData.setColorSchemeResources(R.color.bgBlueMonthHeader);
+    mRefreshListForeignInvestmentDataSrl.setColorSchemeResources(R.color.bgBlueMonthHeader);
     mListForeignInvestmentDataRv.setLayoutManager(new LinearLayoutManager(getViewContext()));
     mListForeignInvestmentDataRv.setAdapter(getPresenter().getForeignInvestmentDataAdapter());
   }
@@ -62,7 +61,7 @@ public class ForeignInvestmentDataFragment extends ViewFragment<ForeignInvestmen
 
   @Override
   public void initRefreshListForeignInvestmentDataListener() {
-    mRefreshListForeignInvestmentData.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+    mRefreshListForeignInvestmentDataSrl.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
       @Override
       public void onRefresh() {
         getPresenter().handleRefreshListForeignInvestmentData();
@@ -72,15 +71,15 @@ public class ForeignInvestmentDataFragment extends ViewFragment<ForeignInvestmen
 
   @Override
   public void showRefreshListForeignInvestmentData() {
-    if (!mRefreshListForeignInvestmentData.isRefreshing()) {
-      mRefreshListForeignInvestmentData.setRefreshing(true);
+    if (!mRefreshListForeignInvestmentDataSrl.isRefreshing()) {
+      mRefreshListForeignInvestmentDataSrl.setRefreshing(true);
     }
   }
 
   @Override
   public void hideRefreshListForeignInvestmentData() {
-    if (mRefreshListForeignInvestmentData.isRefreshing()) {
-      mRefreshListForeignInvestmentData.setRefreshing(false);
+    if (mRefreshListForeignInvestmentDataSrl.isRefreshing()) {
+      mRefreshListForeignInvestmentDataSrl.setRefreshing(false);
     }
   }
 }

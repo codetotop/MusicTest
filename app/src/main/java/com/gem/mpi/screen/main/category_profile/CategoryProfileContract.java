@@ -20,9 +20,17 @@ interface CategoryProfileContract {
 
 
     void finishFragment();
+
+    void initListCategoryProfile();
+
+    void showRefreshListCategoryProfile();
+
+    void hideRefreshListCategoryProfile();
   }
 
   interface Presenter extends IPresenter<View, Interactor> {
+    CategoryProfileAdaper getCategoryProfileAdaper();
+
     void handleActionLeft();
   }
 }

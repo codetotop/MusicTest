@@ -5,10 +5,16 @@ import android.os.Bundle;
 import com.gemvietnam.base.viper.Presenter;
 import com.gemvietnam.base.viper.interfaces.ContainerView;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * The CategoryProfile Presenter
  */
 public class CategoryProfilePresenter extends Presenter<CategoryProfileContract.View, CategoryProfileContract.Interactor> implements CategoryProfileContract.Presenter {
+
+  private List<CategoryProfileModel> mListCategoryProfileModel;
+  private CategoryProfileAdaper mCategoryProfileAdapter;
 
   public CategoryProfilePresenter(ContainerView containerView) {
     super(containerView);
@@ -16,7 +22,13 @@ public class CategoryProfilePresenter extends Presenter<CategoryProfileContract.
 
   @Override
   public void start() {
-    // Start getting data here
+    initListCategoryProfile();
+  }
+
+  private void initListCategoryProfile() {
+    mListCategoryProfileModel = new ArrayList<>();
+    mCategoryProfileAdapter = new CategoryProfileAdaper(mListCategoryProfileModel);
+    getView().initListCategoryProfile();
   }
 
   @Override
@@ -27,6 +39,11 @@ public class CategoryProfilePresenter extends Presenter<CategoryProfileContract.
   @Override
   public CategoryProfileContract.View onCreateView(Bundle data) {
     return CategoryProfileFragment.getInstance(data);
+  }
+
+  @Override
+  public CategoryProfileAdaper getCategoryProfileAdaper() {
+    return mCategoryProfileAdapter;
   }
 
   @Override
