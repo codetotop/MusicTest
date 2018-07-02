@@ -21,6 +21,8 @@ interface MainContract {
                      Integer actionLeftDrawbleId, Integer actionLeftStringId, Integer actionRightDrawableId, Integer actionRightStringId,
                      OnActionLeftListener onActionLeftListener, OnActionRightListener onActionRightListener);
 
+    void initAnimationDrawer();
+
     void onSlideMenuChange();
 
     void onLogoutClick();
