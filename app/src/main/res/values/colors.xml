@@ -22,7 +22,7 @@
 
     <color name="colorTitleToobar">@color/colorBlackCommon</color>
     <color name="color_divider_gray">#e0e0e0</color>
-    <color name="color_divider_bg">#e0e0e0</color>
+    <color name="color_divider_bg">#f3f3f3</color>
 
     <color name="colorSlateGrey">#676c72</color>
     <color name="tvdecorationline_backgoundcolor">#e3e3e3</color>

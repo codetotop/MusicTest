@@ -245,11 +245,11 @@
         app:barrierDirection="bottom"
         app:constraint_referenced_ids="itemregistrationbusiness_tvlb_comple_returned_operation,itemregistrationbusiness_tv_comple_returned_operation" />
 
-    <View
+    <include
+        layout="@layout/view_divider_large"
         android:layout_width="0dp"
-        android:layout_height="@dimen/large_divider"
+        android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/large_space"
-        android:background="@color/bgCommon"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/itemregistrationbusiness_br_comple_returned_operation" />

@@ -6,57 +6,54 @@
 
     <TextView
         android:id="@+id/itemhandleflow_tv_namestaff"
+        style="@style/TextMediumBlackBold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/itemhandleflow_tvnamestaff_exp"
-        style="@style/TextMediumBlackBold"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/itemhandleflow_tv_duty"
+        style="@style/TextSmallBlackCommon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/itemhandleflow_tvduty_exp"
-        style="@style/TextSmallBlackCommon"
-        app:layout_constraintLeft_toRightOf="@id/itemhandleflow_tv_namestaff"
-        app:layout_constraintTop_toTopOf="@id/itemhandleflow_tv_namestaff"
-        app:layout_constraintBottom_toBottomOf="@id/itemhandleflow_tv_namestaff"
         android:layout_marginStart="@dimen/itemhandleflow_tvduty_marginleft"
-        />
+        android:text="@string/itemhandleflow_tvduty_exp"
+        app:layout_constraintBottom_toBottomOf="@id/itemhandleflow_tv_namestaff"
+        app:layout_constraintLeft_toRightOf="@id/itemhandleflow_tv_namestaff"
+        app:layout_constraintTop_toTopOf="@id/itemhandleflow_tv_namestaff" />
+
     <TextView
         android:id="@+id/itemhandleflow_tv_desc_workflow"
+        style="@style/TextSmallBlackCommon"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/itemhandleflow_tv_namestaff"
-        style="@style/TextSmallBlackCommon"
-        android:text="@string/itemhandleflow_tvdescworkflow_exp"
-        app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="@dimen/itemhandleflow_tvdescworkflow"
+        android:text="@string/itemhandleflow_tvdescworkflow_exp"
         app:layout_constraintEnd_toEndOf="parent"
-        />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/itemhandleflow_tv_namestaff" />
 
     <TextView
         android:id="@+id/itemhandleflow_tv_timehandle"
+        style="@style/TextSmallestGrayCommon"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        style="@style/TextSmallestGrayCommon"
-        android:text="@string/itemhandleflow_tvtimehandle_exp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/itemhandleflow_tv_desc_workflow"
         android:layout_marginTop="@dimen/itemhandleflow_tvtimehandle_margintop"
+        android:text="@string/itemhandleflow_tvtimehandle_exp"
         app:layout_constraintEnd_toEndOf="parent"
-        />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/itemhandleflow_tv_desc_workflow" />
 
     <TextView
         android:id="@+id/itemhandleflow_tv_decorationline"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@color/colorDecorationLine"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/itemhandleflow_tv_timehandle"
-        android:layout_marginTop="12dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginBottom="12dp"
-        />
+        android:layout_marginTop="12dp"
+        android:background="@color/colorDecorationLine"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/itemhandleflow_tv_timehandle" />
 </android.support.constraint.ConstraintLayout>

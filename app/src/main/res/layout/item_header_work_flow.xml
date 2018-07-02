@@ -6,10 +6,10 @@
 
     <TextView
         android:id="@+id/tvLabelContentFile"
+        style="@style/TextSmallGrayCommon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/itemheaderworkflow_tvlabelcontentfile_exp"
-        style="@style/TextSmallGrayCommon"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -26,90 +26,82 @@
 
     <TextView
         android:id="@+id/tvLabelDayOpenFile"
+        style="@style/TextSmallGrayCommon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        style="@style/TextSmallGrayCommon"
-        android:text="@string/itemheaderworkflow_tvlabeldayopenfile_exp"
-        app:layout_constraintTop_toBottomOf="@id/tvContentFile"
-        app:layout_constraintLeft_toLeftOf="@id/tvLabelContentFile"
         android:layout_marginTop="@dimen/itemheaderworkflow_tvlabeldayopenfile"
-        />
+        android:text="@string/itemheaderworkflow_tvlabeldayopenfile_exp"
+        app:layout_constraintLeft_toLeftOf="@id/tvLabelContentFile"
+        app:layout_constraintTop_toBottomOf="@id/tvContentFile" />
 
     <TextView
         android:id="@+id/tvDayOpenFile"
+        style="@style/TextSmallBlackCommon"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        style="@style/TextSmallBlackCommon"
         android:text="@string/itemheaderworkflow_tvdayopenfile_exp"
-        app:layout_constraintTop_toTopOf="@id/tvLabelDayOpenFile"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@id/tvContentFile"
-        />
+        app:layout_constraintTop_toTopOf="@id/tvLabelDayOpenFile" />
 
     <TextView
         android:id="@+id/tvLabelCreatorFile"
+        style="@style/TextSmallGrayCommon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        style="@style/TextSmallGrayCommon"
-        android:text="@string/itemheaderworkflow_tvlabelcreatorfile_exp"
-        app:layout_constraintTop_toBottomOf="@id/tvLabelDayOpenFile"
-        app:layout_constraintStart_toStartOf="@id/tvLabelDayOpenFile"
         android:layout_marginTop="@dimen/itemheaderworkflow_tvlabelcreatorfile_margintop"
-        />
+        android:text="@string/itemheaderworkflow_tvlabelcreatorfile_exp"
+        app:layout_constraintStart_toStartOf="@id/tvLabelDayOpenFile"
+        app:layout_constraintTop_toBottomOf="@id/tvLabelDayOpenFile" />
 
     <TextView
         android:id="@+id/tvCreatorFile"
+        style="@style/TextSmallBlackCommon"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        style="@style/TextSmallBlackCommon"
         android:text="@string/itemheaderworkflow_tvcreatorfile_exp"
-        app:layout_constraintTop_toTopOf="@id/tvLabelCreatorFile"
-        app:layout_constraintStart_toStartOf="@id/tvContentFile"
         app:layout_constraintEnd_toEndOf="parent"
-        />
+        app:layout_constraintStart_toStartOf="@id/tvContentFile"
+        app:layout_constraintTop_toTopOf="@id/tvLabelCreatorFile" />
 
     <TextView
         android:id="@+id/tvLabelDeadlineHandle"
+        style="@style/TextSmallGrayCommon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        style="@style/TextSmallGrayCommon"
-        android:text="@string/itemheaderworkflow_tvlabeldeadlinehandle"
-        app:layout_constraintTop_toBottomOf="@id/tvLabelCreatorFile"
-        app:layout_constraintLeft_toLeftOf="@id/tvLabelCreatorFile"
         android:layout_marginTop="@dimen/itemheaderworkflow_tvlabeldeadlinehandle"
-        />
+        android:text="@string/itemheaderworkflow_tvlabeldeadlinehandle"
+        app:layout_constraintLeft_toLeftOf="@id/tvLabelCreatorFile"
+        app:layout_constraintTop_toBottomOf="@id/tvLabelCreatorFile" />
 
     <TextView
         android:id="@+id/tvDeadlineHandle"
+        style="@style/TextSmallBlackCommon"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        style="@style/TextSmallBlackCommon"
         android:text="@string/itemheaderworkflow_tvdeadlinehandle_exp"
-        app:layout_constraintTop_toTopOf="@id/tvLabelDeadlineHandle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@id/tvContentFile"
-        />
+        app:layout_constraintTop_toTopOf="@id/tvLabelDeadlineHandle" />
 
     <TextView
         android:id="@+id/tvLabelRequest"
+        style="@style/TextSmallGrayCommon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        style="@style/TextSmallGrayCommon"
-        android:text="@string/itemheaderworkflow_tvlabelrequest_exp"
-        app:layout_constraintTop_toBottomOf="@id/tvLabelDeadlineHandle"
-        app:layout_constraintLeft_toLeftOf="@id/tvLabelContentFile"
         android:layout_marginTop="@dimen/itemheaderworkflow_tvlabelrequest_margintop"
-        />
+        android:text="@string/itemheaderworkflow_tvlabelrequest_exp"
+        app:layout_constraintLeft_toLeftOf="@id/tvLabelContentFile"
+        app:layout_constraintTop_toBottomOf="@id/tvLabelDeadlineHandle" />
 
     <TextView
         style="@style/TextSmallBlackCommon"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/itemheaderworkflow_tvrequest_exp"
-        app:layout_constraintStart_toStartOf="@id/tvContentFile"
-        app:layout_constraintTop_toTopOf="@id/tvLabelRequest"
         app:layout_constraintEnd_toEndOf="parent"
-        />
+        app:layout_constraintStart_toStartOf="@id/tvContentFile"
+        app:layout_constraintTop_toTopOf="@id/tvLabelRequest" />
 
 
 </android.support.constraint.ConstraintLayout>

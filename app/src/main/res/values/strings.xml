@@ -40,6 +40,7 @@
     <string name="title_foreign_investment_data">Công Khai Số Liệu Đầu Tư Nước Ngoài</string>
     <string name="title_work_flow">Danh Sách Luồng Công Việc</string>
     <string name="title_category_profile">Phân Loại Hồ Sơ</string>
+    <string name="title_document_send_detail">Công Văn Đi 2018</string>
 
     <!--MenuItem-->
     <string name="document_of_unit">Văn Bản Của Đơn Vị</string>

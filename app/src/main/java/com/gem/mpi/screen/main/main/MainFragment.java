@@ -35,7 +35,7 @@ public class MainFragment extends ViewFragment<MainContract.Presenter> implement
   @BindView(R.id.fragmentmain_rv_list_slide_menu)
   RecyclerView mSlideMenuRv;
   @BindView(R.id.fragmentmain_content)
-  View container;
+  View mContainer;
 
   public static MainFragment getInstance() {
     return new MainFragment();
@@ -68,7 +68,7 @@ public class MainFragment extends ViewFragment<MainContract.Presenter> implement
       public void onDrawerSlide(View drawerView, float slideOffset) {
         super.onDrawerSlide(drawerView, slideOffset);
         float slideX = drawerView.getWidth() * slideOffset;
-        container.setTranslationX(slideX);
+        mContainer.setTranslationX(slideX);
       }
     };
     mDrawerDl.setDrawerElevation(5);

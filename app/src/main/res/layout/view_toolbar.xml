@@ -98,11 +98,11 @@
         app:layout_constraintRight_toLeftOf="@id/viewtoolbar_br_action_right"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <View
+    <include
         android:id="@+id/viewtoolbar_v_divider_toolbar"
+        layout="@layout/view_divider_small"
         android:layout_width="0dp"
-        android:layout_height="@dimen/small_divider"
-        android:background="@color/color_divider_gray"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent" />
