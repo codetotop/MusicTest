@@ -7,7 +7,7 @@ public class ListForeignInvestmentDataMapper {
   public static ListForeignInvestmentDataModel transfer(ListForeignInvestmentDataDTO dto) {
     if (dto != null) {
       ListForeignInvestmentDataModel model = new ListForeignInvestmentDataModel();
-      model.setCompanyRegisterNn(ForeignInvestmentDataMapper.transferToModel(dto.getCompanyRegisterNn()));
+      model.setListForeignInvestmentData(ForeignInvestmentDataMapper.transferToModel(dto.getListForeignInvestmentData()));
       return model;
     }
     return null;

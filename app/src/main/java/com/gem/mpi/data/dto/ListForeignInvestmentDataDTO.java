@@ -8,13 +8,13 @@ import java.util.List;
 public class ListForeignInvestmentDataDTO {
   @SerializedName("company_register_nn")
   @Expose
-  private List<ForeignInvestmentDataDTO> companyRegisterNn;
+  private List<ForeignInvestmentDataDTO> listForeignInvestmentData;
 
-  public List<ForeignInvestmentDataDTO> getCompanyRegisterNn() {
-    return companyRegisterNn;
+  public List<ForeignInvestmentDataDTO> getListForeignInvestmentData() {
+    return listForeignInvestmentData;
   }
 
-  public void setCompanyRegisterNn(List<ForeignInvestmentDataDTO> companyRegisterNn) {
-    this.companyRegisterNn = companyRegisterNn;
+  public void setListForeignInvestmentData(List<ForeignInvestmentDataDTO> listForeignInvestmentData) {
+    this.listForeignInvestmentData = listForeignInvestmentData;
   }
 }
