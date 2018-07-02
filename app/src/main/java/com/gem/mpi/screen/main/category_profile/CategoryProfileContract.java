@@ -1,5 +1,7 @@
 package com.gem.mpi.screen.main.category_profile;
 
+import com.gem.mpi.data.dto.ListCategoryProfileDTO;
+import com.gem.mpi.data.remote.callback.CommonCallback;
 import com.gem.mpi.widget.ToolbarView;
 import com.gemvietnam.base.viper.interfaces.IInteractor;
 import com.gemvietnam.base.viper.interfaces.IPresenter;
@@ -11,6 +13,7 @@ import com.gemvietnam.base.viper.interfaces.PresentView;
 interface CategoryProfileContract {
 
   interface Interactor extends IInteractor<Presenter> {
+    void getListCategoryProfile(CommonCallback<ListCategoryProfileDTO> callback);
   }
 
   interface View extends PresentView<Presenter> {
@@ -26,12 +29,20 @@ interface CategoryProfileContract {
     void showRefreshListCategoryProfile();
 
     void hideRefreshListCategoryProfile();
+
+    void initRefreshListCategoryProfileListener();
+
+    void moveToTopListCategoryProfile();
   }
 
   interface Presenter extends IPresenter<View, Interactor> {
     CategoryProfileAdaper getCategoryProfileAdaper();
 
+    void handleRefreshListCategoryProfile();
+
     void handleActionLeft();
+
+    void getListCategoryProfile();
   }
 }
 

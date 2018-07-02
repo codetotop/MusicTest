@@ -57,6 +57,7 @@ public class CategoryProfileFragment extends ViewFragment<CategoryProfileContrac
 
   @Override
   public void initListCategoryProfile() {
+    mListCategoryProfileSrl.setColorSchemeResources(R.color.bgBlueMonthHeader);
     mListCategoryProfileRv.setLayoutManager(new LinearLayoutManager(getViewContext()));
     mListCategoryProfileRv.setAdapter(getPresenter().getCategoryProfileAdaper());
   }
@@ -73,6 +74,21 @@ public class CategoryProfileFragment extends ViewFragment<CategoryProfileContrac
     if (mListCategoryProfileSrl.isRefreshing()) {
       mListCategoryProfileSrl.setRefreshing(false);
     }
+  }
+
+  @Override
+  public void initRefreshListCategoryProfileListener() {
+    mListCategoryProfileSrl.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+      @Override
+      public void onRefresh() {
+        getPresenter().handleRefreshListCategoryProfile();
+      }
+    });
+  }
+
+  @Override
+  public void moveToTopListCategoryProfile() {
+    mListCategoryProfileRv.scrollToPosition(0);
   }
 
   @Override

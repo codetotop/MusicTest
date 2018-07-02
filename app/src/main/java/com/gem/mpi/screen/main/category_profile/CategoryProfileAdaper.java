@@ -5,8 +5,8 @@ import android.support.annotation.Nullable;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.gem.mpi.R;
+import com.gem.mpi.model.CategoryProfileModel;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class CategoryProfileAdaper extends BaseQuickAdapter<CategoryProfileModel, BaseViewHolder> {
@@ -15,11 +15,6 @@ public class CategoryProfileAdaper extends BaseQuickAdapter<CategoryProfileModel
   public CategoryProfileAdaper(@Nullable List<CategoryProfileModel> data) {
     super(R.layout.item_category_profile, data);
     currentPositionCategoryProfile = 0;
-    List<CategoryProfileModel> listFake = new ArrayList<>();
-    for (int i = 0; i < 10; i++) {
-      listFake.add(new CategoryProfileModel());
-    }
-    setNewData(listFake);
   }
 
   @Override
@@ -28,6 +23,35 @@ public class CategoryProfileAdaper extends BaseQuickAdapter<CategoryProfileModel
       helper.setVisible(R.id.itemcategoryprofile_iv_profile_type_selected, false);
     } else {
       helper.setVisible(R.id.itemcategoryprofile_iv_profile_type_selected, true);
+    }
+    helper.setText(R.id.itemcategoryprofile_tv_profile_type, item.getName().concat(" (").concat(item.getCount()).concat(")"));
+
+    switch (item.getKey()) {
+      case "0":
+      case "1":
+      case "8":
+      case "9":
+      case "11":
+        helper.setImageResource(R.id.itemcategoryprofile_iv_profile_type, R.drawable.ic_folder_yellow);
+        break;
+      case "2":
+      case "3":
+      case "4":
+        helper.setImageResource(R.id.itemcategoryprofile_iv_profile_type, R.drawable.ic_warning_blue);
+        break;
+      case "5":
+        helper.setImageResource(R.id.itemcategoryprofile_iv_profile_type, R.drawable.ic_warning_violet);
+        break;
+      case "6":
+        helper.setImageResource(R.id.itemcategoryprofile_iv_profile_type, R.drawable.ic_warning_red);
+        break;
+      case "7":
+        helper.setImageResource(R.id.itemcategoryprofile_iv_profile_type, R.drawable.ic_star_yellow);
+        break;
+      case "10":
+        helper.setImageResource(R.id.itemcategoryprofile_iv_profile_type, R.drawable.ic_checked_green);
+        break;
+
     }
   }
 

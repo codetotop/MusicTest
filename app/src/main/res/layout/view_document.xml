@@ -7,7 +7,7 @@
         android:id="@+id/imgAvatarDocument"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/word"
+        android:background="@drawable/ic_word"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         />

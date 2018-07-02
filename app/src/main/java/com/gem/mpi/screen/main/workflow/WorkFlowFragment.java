@@ -94,7 +94,7 @@ public class WorkFlowFragment extends ViewFragment<WorkFlowContract.Presenter> i
   public void onDisplay() {
     super.onDisplay();
     initToolbar(ToolbarView.ActionStyle.IMAGE, ToolbarView.ActionStyle.IMAGE, R.string.title_detail_workflow,
-        R.drawable.ic_back, null, R.drawable.word, null,
+        R.drawable.ic_back, null, R.drawable.ic_word, null,
         new ToolbarView.OnActionLeftListener() {
           @Override
           public void onActionLeftClick() {
