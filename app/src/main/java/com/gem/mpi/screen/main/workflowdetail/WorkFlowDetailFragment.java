@@ -1,16 +1,16 @@
-package com.gem.mpi.screen.main.workflow;
+package com.gem.mpi.screen.main.workflowdetail;
 
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.Button;
 
 import com.gem.mpi.R;
-import com.gem.mpi.screen.main.main.MainFragment;
-import com.gem.mpi.screen.main.workflow.adapter.DocumentAdapter;
-import com.gem.mpi.screen.main.workflow.adapter.HandleFlowAdapter;
-import com.gem.mpi.screen.main.workflow.adapter.HandleIdeaAdapter;
-import com.gem.mpi.screen.main.workflow.model.HandleFlowModel;
-import com.gem.mpi.screen.main.workflow.model.HandleIdeaModel;
+import com.gem.mpi.screen.main.workflowdetail.adapter.DocumentAdapter;
+import com.gem.mpi.screen.main.workflowdetail.adapter.HandleFlowAdapter;
+import com.gem.mpi.screen.main.workflowdetail.adapter.HandleIdeaAdapter;
+import com.gem.mpi.screen.main.workflowdetail.model.HandleFlowModel;
+import com.gem.mpi.screen.main.workflowdetail.model.HandleIdeaModel;
+import com.gem.mpi.screen.main.workflowlist.WorkFlowListFragment;
 import com.gem.mpi.widget.ToolbarView;
 import com.gemvietnam.base.viper.ViewFragment;
 
@@ -22,7 +22,7 @@ import butterknife.OnClick;
 /**
  * The WorkFlow Fragment
  */
-public class WorkFlowFragment extends ViewFragment<WorkFlowContract.Presenter> implements WorkFlowContract.View {
+public class WorkFlowDetailFragment extends ViewFragment<WorkFlowDetailContract.Presenter> implements WorkFlowDetailContract.View {
   @BindView(R.id.workflow_rcv_documentrelation)
   RecyclerView mDocumentRelationRcv;
   @BindView(R.id.workflow_rcv_handleflow)
@@ -41,8 +41,8 @@ public class WorkFlowFragment extends ViewFragment<WorkFlowContract.Presenter> i
   ArrayList<String> documents;
 
 
-  public static WorkFlowFragment getInstance() {
-    return new WorkFlowFragment();
+  public static WorkFlowDetailFragment getInstance() {
+    return new WorkFlowDetailFragment();
   }
 
   @Override
@@ -53,11 +53,6 @@ public class WorkFlowFragment extends ViewFragment<WorkFlowContract.Presenter> i
   @Override
   public void onDisplay() {
     super.onDisplay();
-    if (getParentFragment() != null && getParentFragment() instanceof MainFragment) {
-      ((MainFragment) getParentFragment()).initToolbar(ToolbarView.ActionStyle.IMAGE, ToolbarView.ActionStyle.NONE, R.string.title_detail_workflow,
-          R.drawable.ic_slide_menu, null, null, null, null, null
-      );
-    }
     addView();
   }
 
@@ -73,7 +68,7 @@ public class WorkFlowFragment extends ViewFragment<WorkFlowContract.Presenter> i
     handleIdeaModels = new ArrayList<>();
     addhandleIdeaFakeData();
 
-    documentAdapter = new DocumentAdapter(getViewContext(), documents);
+    documentAdapter = new DocumentAdapter(getViewContext(), documents, false);
     handleFlowAdapter = new HandleFlowAdapter(getViewContext(), handleFlowModels);
     handleIdeaAdapter = new HandleIdeaAdapter(getViewContext(), handleIdeaModels);
 
@@ -95,15 +90,28 @@ public class WorkFlowFragment extends ViewFragment<WorkFlowContract.Presenter> i
   }
 
   private void addhandleIdeaFakeData() {
+    ArrayList<String> document1 = new ArrayList<>();
+    document1.add("abc.docx");
+    document1.add("xyz.docx");
+    document1.add("123.docx");
+    ArrayList<String> document2 = new ArrayList<>();
+    document2.add("NguyenBaDung.docx");
+    document2.add("PhungVanCong.docx");
+    document2.add("VuHuuDuan.docx");
+    ArrayList<String> document3 = new ArrayList<>();
+    document3.add("NguyenTrongHoang.docx");
+    document3.add("NguenVanQuy.docx");
+    document3.add("PhamHuyAnh.docx");
+    handleIdeaModels.add(new HandleIdeaModel("https://www.flaticon.com/free-icon/avatar_126486#term=person&page=1&position=2", "Nguyen Huy Nam", "20/5/2018", "Kính gửi vụ Quản lý quy hoạch,\n" +
+        "Tôi xin gửi Quý vụ ý kiến CLPT ( A.Thắng đã ký) trong hồ sơ đính kèm.", "Nguyen Ba Dung", document1));
+    handleIdeaModels.add(new HandleIdeaModel("https://www.flaticon.com/free-icon/avatar_126486#term=person&page=1&position=2", "Nguyen Huy Hung", "20/5/2018", "Kính gửi vụ Quản lý quy hoạch,\n" +
+        "Tôi xin gửi Quý vụ ý kiến CLPT ( A.Thắng đã ký) trong hồ sơ đính kèm.", "Nguyen Ba Dung", document2));
     handleIdeaModels.add(new HandleIdeaModel("https://www.flaticon.com/free-icon/avatar_126486#term=person&page=1&position=2", "Nguyen Huy Anh", "20/5/2018", "Kính gửi vụ Quản lý quy hoạch,\n" +
-        "Tôi xin gửi Quý vụ ý kiến CLPT ( A.Thắng đã ký) trong hồ sơ đính kèm.", "Nguyen Ba Dung", "Danh sach.docx"));
-    handleIdeaModels.add(new HandleIdeaModel("https://www.flaticon.com/free-icon/avatar_126486#term=person&page=1&position=2", "Nguyen Huy Anh", "20/5/2018", "Kính gửi vụ Quản lý quy hoạch,\n" +
-        "Tôi xin gửi Quý vụ ý kiến CLPT ( A.Thắng đã ký) trong hồ sơ đính kèm.", "Nguyen Ba Dung", "Danh sach.docx"));
-    handleIdeaModels.add(new HandleIdeaModel("https://www.flaticon.com/free-icon/avatar_126486#term=person&page=1&position=2", "Nguyen Huy Anh", "20/5/2018", "Kính gửi vụ Quản lý quy hoạch,\n" +
-        "Tôi xin gửi Quý vụ ý kiến CLPT ( A.Thắng đã ký) trong hồ sơ đính kèm.", "Nguyen Ba Dung", "Danh sach.docx"));
+        "Tôi xin gửi Quý vụ ý kiến CLPT ( A.Thắng đã ký) trong hồ sơ đính kèm.", "Nguyen Ba Dung", document3));
   }
 
-  @OnClick(R.id.workflow_btn_handleidea) void clickBtnHandleIdea(){
+  @OnClick(R.id.workflow_btn_handleidea)
+  void clickBtnHandleIdea() {
     mPresenter.openHandleIdeaFragment();
   }
 

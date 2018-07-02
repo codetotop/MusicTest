@@ -1,4 +1,4 @@
-package com.gem.mpi.screen.main.workflow.model;
+package com.gem.mpi.screen.main.workflowdetail.model;
 
 import java.io.Serializable;
 

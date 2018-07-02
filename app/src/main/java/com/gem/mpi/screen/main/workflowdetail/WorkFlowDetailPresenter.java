@@ -1,4 +1,4 @@
-package com.gem.mpi.screen.main.workflow;
+package com.gem.mpi.screen.main.workflowdetail;
 
 import android.os.Bundle;
 
@@ -9,10 +9,10 @@ import com.gemvietnam.base.viper.interfaces.ContainerView;
 /**
  * The WorkFlow Presenter
  */
-public class WorkFlowPresenter extends Presenter<WorkFlowContract.View, WorkFlowContract.Interactor>
-        implements WorkFlowContract.Presenter {
+public class WorkFlowDetailPresenter extends Presenter<WorkFlowDetailContract.View, WorkFlowDetailContract.Interactor>
+        implements WorkFlowDetailContract.Presenter {
 
-    public WorkFlowPresenter(ContainerView containerView) {
+    public WorkFlowDetailPresenter(ContainerView containerView) {
         super(containerView);
     }
 
@@ -23,13 +23,13 @@ public class WorkFlowPresenter extends Presenter<WorkFlowContract.View, WorkFlow
     }
 
     @Override
-    public WorkFlowContract.Interactor onCreateInteractor() {
-        return new WorkFlowInteractor(this);
+    public WorkFlowDetailContract.Interactor onCreateInteractor() {
+        return new WorkFlowDetailInteractor(this);
     }
 
     @Override
-    public WorkFlowContract.View onCreateView(Bundle data) {
-        return WorkFlowFragment.getInstance();
+    public WorkFlowDetailContract.View onCreateView(Bundle data) {
+        return WorkFlowDetailFragment.getInstance();
 
     }
 

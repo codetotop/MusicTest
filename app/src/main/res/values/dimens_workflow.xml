@@ -14,5 +14,5 @@
     <dimen name="itemheaderworkflow_tvlabelcreatorfile_margintop">14dp</dimen>
     <dimen name="itemheaderworkflow_tvlabeldeadlinehandle">14dp</dimen>
     <dimen name="itemheaderworkflow_tvlabelrequest_margintop">14dp</dimen>
-    <string name="itemhandleidea_documentview_exp">Example.docx</string>
+    <dimen name="itemhandleidea_rcvdocument_margintop">10dp</dimen>
 </resources>

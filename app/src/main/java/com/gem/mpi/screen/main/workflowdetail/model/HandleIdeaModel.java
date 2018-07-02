@@ -1,6 +1,7 @@
-package com.gem.mpi.screen.main.workflow.model;
+package com.gem.mpi.screen.main.workflowdetail.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
 public class HandleIdeaModel implements Serializable {
     private String employeeAvatar;
@@ -8,18 +9,18 @@ public class HandleIdeaModel implements Serializable {
     private String timeSendIdea;
     private String descIdea;
     private String personSign;
-    private String documentRelationName;
+    private ArrayList<String> documentRelationNames;
 
     public HandleIdeaModel() {
     }
 
-    public HandleIdeaModel(String employeeAvatar, String employeeName, String timeSendIdea, String descIdea, String personSign, String documentRelationName) {
+    public HandleIdeaModel(String employeeAvatar, String employeeName, String timeSendIdea, String descIdea, String personSign, ArrayList<String> documentRelationNames) {
         this.employeeAvatar = employeeAvatar;
         this.employeeName = employeeName;
         this.timeSendIdea = timeSendIdea;
         this.descIdea = descIdea;
         this.personSign = personSign;
-        this.documentRelationName = documentRelationName;
+        this.documentRelationNames = documentRelationNames;
     }
 
     public String getEmployeeAvatar() {
@@ -62,11 +63,11 @@ public class HandleIdeaModel implements Serializable {
         this.personSign = personSign;
     }
 
-    public String getDocumentRelationName() {
-        return documentRelationName;
+    public ArrayList<String> getDocumentRelationNames() {
+        return documentRelationNames;
     }
 
-    public void setDocumentRelationName(String documentRelationName) {
-        this.documentRelationName = documentRelationName;
+    public void setDocumentRelationNames(ArrayList<String> documentRelationName) {
+        this.documentRelationNames = documentRelationName;
     }
 }

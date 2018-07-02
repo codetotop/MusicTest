@@ -23,4 +23,6 @@
     <string name="workflow_handleflow_tvlabel">Luồng xử lý</string>
     <string name="workflow_tvlabelhandleIdea_exp">Ý kiến xử lý</string>
     <string name="workflow_btnhandleIdea_text">Ý Kiến Xử Lý</string>
+    <string name="itemhandleidea_documentview_exp">Example.docx</string>
+
 </resources>

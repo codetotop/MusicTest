@@ -1,7 +1,8 @@
-package com.gem.mpi.screen.main.workflow.adapter;
+package com.gem.mpi.screen.main.workflowdetail.adapter;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,8 +12,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.gem.mpi.R;
-import com.gem.mpi.screen.main.workflow.model.HandleIdeaModel;
-import com.gem.mpi.widget.DocumentView;
+import com.gem.mpi.screen.main.workflowdetail.model.HandleIdeaModel;
 
 import java.util.ArrayList;
 
@@ -45,14 +45,13 @@ public class HandleIdeaAdapter extends RecyclerView.Adapter<HandleIdeaAdapter.Vi
     holder.mTimeSendDataTv.setText(handleIdeaModel.getTimeSendIdea());
     holder.mDescIdeaTv.setText(handleIdeaModel.getDescIdea());
     holder.mPersonSignTv.setText(handleIdeaModel.getPersonSign());
-    holder.mdocumentViewHandleIdea.setDocumentName(handleIdeaModel.getDocumentRelationName());
-    holder.mdocumentViewHandleIdea.setVisibilityDecorationLine(false);//Hide decorationline of document
-    holder.mdocumentViewHandleIdea.setDownloadDocumentVisibility(false);
+
+    holder.documentAdapter.refreshData(handleIdeaModel.getDocumentRelationNames());
     if (position == (handleIdeaModels.size() - 1))
       holder.mDecorationTv.setVisibility(View.INVISIBLE);
   }
 
-  public void refresh(ArrayList<HandleIdeaModel> handleIdeaModels) {
+  public void refreshData(ArrayList<HandleIdeaModel> handleIdeaModels) {
     this.handleIdeaModels.clear();
     this.handleIdeaModels.addAll(handleIdeaModels);
     notifyDataSetChanged();
@@ -66,7 +65,9 @@ public class HandleIdeaAdapter extends RecyclerView.Adapter<HandleIdeaAdapter.Vi
   class ViewHolder extends RecyclerView.ViewHolder {
     ImageView mEmployeeAvatarImg;
     TextView mEmployeeNameTv, mTimeSendDataTv, mDescIdeaTv, mPersonSignTv, mDecorationTv;
-    DocumentView mdocumentViewHandleIdea;
+    RecyclerView mDocumentRcv;
+    ArrayList<String> documentViews;
+    DocumentAdapter documentAdapter;
 
     public ViewHolder(View itemView) {
       super(itemView);
@@ -75,7 +76,13 @@ public class HandleIdeaAdapter extends RecyclerView.Adapter<HandleIdeaAdapter.Vi
       mTimeSendDataTv = itemView.findViewById(R.id.itemhandleidea_tv_time_sendidea);
       mDescIdeaTv = itemView.findViewById(R.id.itemhandleidea_tv_descidea);
       mPersonSignTv = itemView.findViewById(R.id.itemhandleidea_tv_personsign);
-      mdocumentViewHandleIdea = itemView.findViewById(R.id.itemhandleidea_documentview);
+
+      mDocumentRcv = itemView.findViewById(R.id.itemhandleidea_rcvDocument);
+      mDocumentRcv.setLayoutManager(new LinearLayoutManager(context));
+      documentViews = new ArrayList<>();
+      documentAdapter = new DocumentAdapter(context, documentViews,true);
+      mDocumentRcv.setAdapter(documentAdapter);
+
       mDecorationTv = itemView.findViewById(R.id.itemhandleidea_tv_decorationline);
     }
 

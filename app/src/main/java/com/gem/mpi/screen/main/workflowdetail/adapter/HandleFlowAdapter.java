@@ -1,4 +1,4 @@
-package com.gem.mpi.screen.main.workflow.adapter;
+package com.gem.mpi.screen.main.workflowdetail.adapter;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.gem.mpi.R;
-import com.gem.mpi.screen.main.workflow.model.HandleFlowModel;
+import com.gem.mpi.screen.main.workflowdetail.model.HandleFlowModel;
 
 import java.util.ArrayList;
 

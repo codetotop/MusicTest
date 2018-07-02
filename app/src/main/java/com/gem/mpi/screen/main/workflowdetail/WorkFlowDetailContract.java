@@ -1,4 +1,4 @@
-package com.gem.mpi.screen.main.workflow;
+package com.gem.mpi.screen.main.workflowdetail;
 
 import com.gemvietnam.base.viper.interfaces.IInteractor;
 import com.gemvietnam.base.viper.interfaces.IPresenter;
@@ -7,7 +7,7 @@ import com.gemvietnam.base.viper.interfaces.PresentView;
 /**
  * The WorkFlow Contract
  */
-interface WorkFlowContract {
+interface WorkFlowDetailContract {
 
     interface Interactor extends IInteractor<Presenter> {
     }

@@ -72,16 +72,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/itemhandleidea_img_sign" />
 
-    <com.gem.mpi.widget.DocumentView
-        android:id="@+id/itemhandleidea_documentview"
-        th="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="6dp"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/itemhandleidea_rcvDocument"
         android:layout_width="0dp"
+        android:layout_height="wrap_content"
         app:layout_constraintLeft_toLeftOf="@id/itemhandleidea_tv_labelsign"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/itemhandleidea_tv_personsign"
-        app:tvnamedocument_name="@string/itemhandleidea_documentview_exp" />
+        android:layout_marginTop="@dimen/itemhandleidea_rcvdocument_margintop"
+        />
 
     <TextView
         android:id="@+id/itemhandleidea_tv_decorationline"
@@ -91,6 +90,6 @@
         android:background="@color/colorDecorationLine"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/itemhandleidea_documentview" />
+        app:layout_constraintTop_toBottomOf="@id/itemhandleidea_rcvDocument" />
 
 </android.support.constraint.ConstraintLayout>
