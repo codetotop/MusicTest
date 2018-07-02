@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/medium_space"
+    android:paddingLeft="@dimen/large_space"
+    android:paddingRight="@dimen/large_space"
+    android:paddingTop="@dimen/medium_space">
+
+    <TextView
+        android:id="@+id/viewprofileinput_tv_title"
+        style="@style/TextSmallGrayCommon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/profile_birthday" />
+
+    <EditText
+        android:id="@+id/viewprofileinput_et_content"
+        style="@style/TextMediumBlack"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_margin"
+        android:background="@drawable/bg_input_common"
+        android:maxLines="1"
+        android:paddingBottom="@dimen/tiny_padding"
+        android:paddingEnd="@dimen/large_padding"
+        android:paddingStart="@dimen/tiny_padding"
+        android:paddingTop="@dimen/tiny_padding"
+        android:text="@string/profile_exam_birthday"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewprofileinput_tv_title" />
+
+    <ImageView
+        android:id="@+id/viewprofileinput_iv_content_drawable_right"
+        android:layout_width="@dimen/picture_small_size"
+        android:layout_height="@dimen/picture_small_size"
+        android:layout_marginEnd="@dimen/tiny_margin"
+        android:src="@drawable/ic_arrow_down"
+        app:layout_constraintBottom_toBottomOf="@id/viewprofileinput_et_content"
+        app:layout_constraintRight_toRightOf="@id/viewprofileinput_et_content"
+        app:layout_constraintTop_toTopOf="@id/viewprofileinput_et_content" />
+</android.support.constraint.ConstraintLayout>

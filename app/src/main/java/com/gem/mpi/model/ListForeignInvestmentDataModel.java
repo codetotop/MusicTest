@@ -1,17 +1,15 @@
 package com.gem.mpi.model;
 
-import com.gem.mpi.data.dto.ForeignInvestmentDataDTO;
-
 import java.util.List;
 
 public class ListForeignInvestmentDataModel {
-  private List<ForeignInvestmentDataModel> companyRegisterNn;
+  private List<ForeignInvestmentDataModel> listForeignInvestmentData;
 
-  public List<ForeignInvestmentDataModel> getCompanyRegisterNn() {
-    return companyRegisterNn;
+  public List<ForeignInvestmentDataModel> getListForeignInvestmentData() {
+    return listForeignInvestmentData;
   }
 
-  public void setCompanyRegisterNn(List<ForeignInvestmentDataModel> companyRegisterNn) {
-    this.companyRegisterNn = companyRegisterNn;
+  public void setListForeignInvestmentData(List<ForeignInvestmentDataModel> listForeignInvestmentData) {
+    this.listForeignInvestmentData = listForeignInvestmentData;
   }
 }

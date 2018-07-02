@@ -1,9 +1,13 @@
 package com.gem.mpi.data.remote;
 
+import com.gem.mpi.App;
 import com.gem.mpi.BuildConfig;
 import com.gem.mpi.data.remote.services.AuthenticationServices;
+import com.gem.mpi.data.remote.services.CategoryProfileService;
 import com.gem.mpi.data.remote.services.ForeignInvestmentDataService;
 import com.gem.mpi.data.remote.services.RegistrationBusinessService;
+import com.gem.mpi.model.LoginModel;
+import com.gem.mpi.pref.PrefWrapper;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonDeserializationContext;
@@ -35,7 +39,7 @@ public class ServiceBuilder {
     if (BuildConfig.DEBUG) {
       interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
     }
-    OkHttpClient client = new OkHttpClient.Builder()
+    final OkHttpClient client = new OkHttpClient.Builder()
         .readTimeout(90, TimeUnit.SECONDS)
         .connectTimeout(90, TimeUnit.SECONDS)
         .addInterceptor(interceptor)
@@ -51,7 +55,11 @@ public class ServiceBuilder {
                 .header("Content-Type", "application/json")
                 .method(original.method(), original.body());
 
-            // Save token
+            // Get token
+            LoginModel loginModel = PrefWrapper.getLoginResponse(App.getInstance());
+            if (loginModel != null && !loginModel.getActionToken().isEmpty()) {
+              builder.header("access_token", loginModel.getActionToken());
+            }
 
             return chain.proceed(builder.build());
           }
@@ -85,7 +93,12 @@ public class ServiceBuilder {
   public static RegistrationBusinessService getRegistrationBusinessService() {
     return getRetrofit(getBaseUrl()).create(RegistrationBusinessService.class);
   }
+
   public static ForeignInvestmentDataService getForeignInvestmentDataService() {
     return getRetrofit(getBaseUrl()).create(ForeignInvestmentDataService.class);
+  }
+
+  public static CategoryProfileService getCategoryProfileService() {
+    return getRetrofit(getBaseUrl()).create(CategoryProfileService.class);
   }
 }

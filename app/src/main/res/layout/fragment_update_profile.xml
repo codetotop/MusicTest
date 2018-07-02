@@ -6,7 +6,7 @@
     android:orientation="vertical">
 
     <com.gem.mpi.widget.ToolbarView
-        android:id="@+id/fragmentprofiledetail_tbv_toolbar"
+        android:id="@+id/fragmentupdateprofile_tbv_toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
@@ -17,12 +17,10 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:paddingBottom="@dimen/large_space">
-
+            android:orientation="vertical">
 
             <com.gem.mpi.widget.ProfileView
-                android:id="@+id/fragmentprofiledetail_pv_profile"
+                android:id="@+id/fragmentupdateprofile_pv_profile"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/colorWhite"
@@ -32,8 +30,6 @@
                 android:paddingTop="@dimen/large_space"
                 app:profileview_action_visibility="gone"
                 app:profileview_avatar="@drawable/ic_avatar_default"
-                app:profileview_department="@string/profile_exam_department"
-                app:profileview_duty="@string/profile_exam_duty"
                 app:profileview_name="@string/profile_exam_name" />
 
             <View
@@ -54,47 +50,72 @@
             <com.gem.mpi.widget.ProfileInformationView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:profileinformationview_content="@string/profile_exam_birthday"
-                app:profileinformationview_title="@string/profile_birthday" />
+                app:profileinformationview_content="@string/profile_exam_department"
+                app:profileinformationview_title="@string/profile_unit" />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/small_divider"
                 android:background="@color/color_divider_gray" />
 
-            <com.gem.mpi.widget.ProfileInformationView
+            <com.gem.mpi.widget.ProfileInputView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:profileinformationview_content="@string/profile_exam_email"
-                app:profileinformationview_title="@string/profile_email" />
+                app:profileinputview_content="@string/profile_exam_duty"
+                app:profileinputview_title="@string/profile_duty" />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/small_divider"
                 android:background="@color/color_divider_gray" />
 
-            <com.gem.mpi.widget.ProfileInformationView
+            <com.gem.mpi.widget.ProfileInputView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:profileinformationview_content="@string/profile_exam_phone_number_of_organization"
-                app:profileinformationview_title="@string/profile_phone_number_of_organization" />
+                app:profileinputview_content="@string/profile_exam_birthday"
+                app:profileinputview_content_drawable_right="@drawable/ic_arrow_down"
+                app:profileinputview_content_drawable_right_show="true"
+                app:profileinputview_content_focusable="false"
+                app:profileinputview_title="@string/profile_birthday" />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/small_divider"
                 android:background="@color/color_divider_gray" />
 
-            <com.gem.mpi.widget.ProfileInformationView
+            <com.gem.mpi.widget.ProfileInputView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:profileinformationview_content="@string/profile_exam_phone_number"
-                app:profileinformationview_title="@string/profile_phone_number" />
+                app:profileinputview_content="@string/profile_exam_email"
+                app:profileinputview_title="@string/profile_email" />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/small_divider"
                 android:background="@color/color_divider_gray" />
 
+            <com.gem.mpi.widget.ProfileInputView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:profileinputview_content="@string/profile_exam_phone_number_of_organization"
+                app:profileinputview_title="@string/profile_phone_number_of_organization" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/small_divider"
+                android:background="@color/color_divider_gray" />
+
+            <com.gem.mpi.widget.ProfileInputView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:profileinputview_content="@string/profile_exam_phone_number"
+                app:profileinputview_title="@string/profile_phone_number" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/small_divider"
+                android:background="@color/color_divider_gray" />
         </LinearLayout>
     </ScrollView>
+
 </LinearLayout>

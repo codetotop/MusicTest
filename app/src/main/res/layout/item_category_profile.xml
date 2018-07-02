@@ -27,7 +27,7 @@
         android:layout_height="@dimen/picture_medium_size"
         android:layout_marginBottom="@dimen/medium_space"
         android:layout_marginTop="@dimen/medium_space"
-        android:src="@drawable/folder"
+        android:src="@drawable/ic_folder_yellow"
         app:layout_constraintBottom_toTopOf="@+id/itemcategoryprofile_v_divider"
         app:layout_constraintLeft_toLeftOf="@id/itemcategoryprofile_g_left"
         app:layout_constraintTop_toTopOf="parent" />
@@ -39,7 +39,7 @@
         android:layout_marginBottom="@dimen/medium_space"
         android:layout_marginTop="@dimen/medium_space"
         android:scaleType="centerInside"
-        android:src="@drawable/tick_blue"
+        android:src="@drawable/ic_tick_blue"
         app:layout_constraintBottom_toTopOf="@id/itemcategoryprofile_v_divider"
         app:layout_constraintRight_toRightOf="@id/itemcategoryprofile_g_right"
         app:layout_constraintTop_toTopOf="parent" />

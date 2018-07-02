@@ -4,4 +4,6 @@
     android:id="@+id/container_frame"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:fitsSystemWindows="true"
     tools:context="com.gem.mpi.screen.authentication.AuthencationActivity" />

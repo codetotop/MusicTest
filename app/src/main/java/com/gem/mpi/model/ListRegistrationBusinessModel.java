@@ -3,13 +3,13 @@ package com.gem.mpi.model;
 import java.util.List;
 
 public class ListRegistrationBusinessModel {
-  List<RegistrationBusinessModel> companyRegister;
+  List<RegistrationBusinessModel> listRegistrationBusiness;
 
-  public List<RegistrationBusinessModel> getCompanyRegister() {
-    return companyRegister;
+  public List<RegistrationBusinessModel> getListRegistrationBusiness() {
+    return listRegistrationBusiness;
   }
 
-  public void setCompanyRegister(List<RegistrationBusinessModel> companyRegister) {
-    this.companyRegister = companyRegister;
+  public void setListRegistrationBusiness(List<RegistrationBusinessModel> listRegistrationBusiness) {
+    this.listRegistrationBusiness = listRegistrationBusiness;
   }
 }

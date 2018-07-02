@@ -2,6 +2,7 @@ package com.gem.mpi.screen.main.profiledetail;
 
 import android.os.Bundle;
 
+import com.gem.mpi.screen.main.profiledetail.update_profile.UpdateProfilePresenter;
 import com.gemvietnam.base.viper.Presenter;
 import com.gemvietnam.base.viper.interfaces.ContainerView;
 
@@ -32,5 +33,11 @@ public class ProfileDetailPresenter extends Presenter<ProfileDetailContract.View
   @Override
   public void handleActionLeft() {
     getView().getFragmentManager().popBackStack();
+  }
+
+  @Override
+  public void handleActionRight() {
+    UpdateProfilePresenter updateProfilePresenter = new UpdateProfilePresenter(mContainerView);
+    updateProfilePresenter.pushView();
   }
 }

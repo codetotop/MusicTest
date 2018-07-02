@@ -91,7 +91,7 @@ public class RegistrationBusinessPresenter extends Presenter<RegistrationBusines
     if (response == null || response.body() == null || response.body().getData() == null) {
       return null;
     }
-    return response.body().getData().getCompanyRegister();
+    return response.body().getData().getListRegistrationBusiness();
   }
 
   private List<RegistrationBusinessModel> getListRegistrationBusinessModel

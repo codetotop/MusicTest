@@ -10,7 +10,6 @@ import com.gem.mpi.screen.main.workflowdetail.adapter.HandleFlowAdapter;
 import com.gem.mpi.screen.main.workflowdetail.adapter.HandleIdeaAdapter;
 import com.gem.mpi.screen.main.workflowdetail.model.HandleFlowModel;
 import com.gem.mpi.screen.main.workflowdetail.model.HandleIdeaModel;
-import com.gem.mpi.screen.main.workflowlist.WorkFlowListFragment;
 import com.gem.mpi.widget.ToolbarView;
 import com.gemvietnam.base.viper.ViewFragment;
 
@@ -31,6 +30,8 @@ public class WorkFlowDetailFragment extends ViewFragment<WorkFlowDetailContract.
   RecyclerView mHandleIdeaRcv;
   @BindView(R.id.workflow_btn_handleidea)
   Button mHandleIdeaBtn;
+  @BindView(R.id.tbvToolbar)
+  ToolbarView mToolbarTbv;
 
   DocumentAdapter documentAdapter;
   HandleFlowAdapter handleFlowAdapter;
@@ -48,12 +49,6 @@ public class WorkFlowDetailFragment extends ViewFragment<WorkFlowDetailContract.
   @Override
   protected int getLayoutId() {
     return R.layout.fragment_work_flow;
-  }
-
-  @Override
-  public void onDisplay() {
-    super.onDisplay();
-    addView();
   }
 
   private void addView() {
@@ -116,4 +111,30 @@ public class WorkFlowDetailFragment extends ViewFragment<WorkFlowDetailContract.
   }
 
 
+  @Override
+  public void onDisplay() {
+    super.onDisplay();
+    initToolbar(ToolbarView.ActionStyle.IMAGE, ToolbarView.ActionStyle.IMAGE, R.string.title_detail_workflow,
+        R.drawable.ic_back, null, R.drawable.ic_word, null,
+        new ToolbarView.OnActionLeftListener() {
+          @Override
+          public void onActionLeftClick() {
+            getPresenter().handleActionLeft();
+          }
+        }, new ToolbarView.OnActionRightListener() {
+          @Override
+          public void onActionRightClick() {
+            getPresenter().handleActionRight();
+          }
+        }
+    );
+    addView();
+  }
+
+  @Override
+  public void initToolbar(ToolbarView.ActionStyle actionLeftStyle, ToolbarView.ActionStyle actionRightStyle, Integer titleId, Integer actionLeftDrawbleId, Integer actionLeftStringId, Integer actionRightDrawableId, Integer actionRightStringId, ToolbarView.OnActionLeftListener onActionLeftListener, ToolbarView.OnActionRightListener onActionRightListener) {
+    mToolbarTbv.init(actionLeftStyle, actionRightStyle, titleId,
+        actionLeftDrawbleId, actionLeftStringId, actionRightDrawableId, actionRightStringId,
+        onActionLeftListener, onActionRightListener);
+  }
 }

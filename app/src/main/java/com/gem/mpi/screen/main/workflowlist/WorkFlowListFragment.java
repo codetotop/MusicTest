@@ -70,6 +70,7 @@ public class WorkFlowListFragment extends ViewFragment<WorkFlowListContract.Pres
   public void onClick(View view) {
     switch (view.getId()) {
       case R.id.workflowlist_header_view_worklist:
+        getPresenter().openCategoryProfile();
         break;
       default:
         break;
@@ -78,7 +79,7 @@ public class WorkFlowListFragment extends ViewFragment<WorkFlowListContract.Pres
 
   @Override
   public void click(int position) {
-     mPresenter.openDetailWorkFlow(position);
+    mPresenter.openDetailWorkFlow(position);
   }
 
   @Override

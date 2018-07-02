@@ -21,6 +21,8 @@ interface ProfileDetailContract {
 
   interface Presenter extends IPresenter<View, Interactor> {
     void handleActionLeft();
+
+    void handleActionRight();
   }
 }
 

@@ -93,7 +93,7 @@ public class ForeignInvestmentDataPresenter extends Presenter<ForeignInvestmentD
     if (response == null || response.body() == null || response.body().getData() == null) {
       return listForeignInvestmentDataDTO;
     }
-    return response.body().getData().getCompanyRegisterNn();
+    return response.body().getData().getListForeignInvestmentData();
   }
 
   private List<ForeignInvestmentDataModel> getListForeignInvestmentDataModel(Response<BaseResponse<ListForeignInvestmentDataDTO>> response) {

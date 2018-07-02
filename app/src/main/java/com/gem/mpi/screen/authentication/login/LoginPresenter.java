@@ -88,8 +88,6 @@ public class LoginPresenter extends Presenter<LoginContract.View, LoginContract.
 
   @Override
   public void openScreenForgotPassWord() {
-    //new ForgotPasswordPresenter(mContainerView).pushView();
-    //new WorkFlowListPresenter(mContainerView).pushView();
-    //new WorkFlowDetailPresenter(mContainerView).pushView();
+//    new WorkFlowListPresenter(mContainerView).pushView();
   }
 }

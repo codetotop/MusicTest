@@ -8,13 +8,13 @@ import java.util.List;
 public class ListRegistrationBusinessDTO {
   @SerializedName("company_register")
   @Expose
-  List<RegistrationBusinessDTO> companyRegister;
+  List<RegistrationBusinessDTO> listRegistrationBusiness;
 
-  public List<RegistrationBusinessDTO> getCompanyRegister() {
-    return companyRegister;
+  public List<RegistrationBusinessDTO> getListRegistrationBusiness() {
+    return listRegistrationBusiness;
   }
 
-  public void setCompanyRegister(List<RegistrationBusinessDTO> companyRegister) {
-    this.companyRegister = companyRegister;
+  public void setListRegistrationBusiness(List<RegistrationBusinessDTO> listRegistrationBusiness) {
+    this.listRegistrationBusiness = listRegistrationBusiness;
   }
 }
