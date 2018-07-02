@@ -19,7 +19,7 @@
             android:layout_marginBottom="@dimen/medium_margin"
             android:layout_marginStart="@dimen/workflowlist_imgfolder_marginleft"
             android:layout_marginTop="@dimen/medium_margin"
-            android:src="@drawable/folder"
+            android:src="@drawable/ic_folder_yellow"
             app:layout_constraintBottom_toBottomOf="@id/workflowlist_header_view_worklist"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -29,16 +29,16 @@
             android:id="@+id/workflowlist_tv_header"
             style="@style/TextSmallBlackCommon"
             android:layout_width="0dp"
-            app:layout_constraintRight_toLeftOf="@id/workflowlist_img_expand"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/medium_margin"
-            android:layout_marginLeft="@dimen/workflowlist_tvheader_marginleft"
+            android:layout_marginStart="@dimen/workflowlist_tvheader_marginleft"
             android:layout_marginTop="@dimen/medium_margin"
             android:text="@string/workflowlist_tvheader_exp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toRightOf="@id/workflowlist_img_folder"
+            app:layout_constraintRight_toLeftOf="@id/workflowlist_img_expand"
             app:layout_constraintTop_toTopOf="parent" />
-\
+
         <ImageView
             android:id="@+id/workflowlist_img_expand"
             android:layout_width="@dimen/workflowlist_imgexpand_width"

@@ -3,8 +3,8 @@ package com.gem.mpi.screen.main.main;
 import android.os.Bundle;
 
 import com.gem.mpi.R;
-import com.gem.mpi.screen.main.profiledetail.ProfileDetailPresenter;
-import com.gem.mpi.screen.main.workflowlist.WorkFlowListPresenter;
+import com.gem.mpi.screen.main.main.profiledetail.ProfileDetailPresenter;
+import com.gem.mpi.screen.main.main.workflowlist.WorkFlowListPresenter;
 import com.gemvietnam.base.viper.Presenter;
 import com.gemvietnam.base.viper.interfaces.ContainerView;
 

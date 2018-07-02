@@ -57,7 +57,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/itemhandleidea_imgsign_marginleft"
-        android:background="@drawable/ic_star"
+        android:background="@drawable/ic_star_yellow"
         app:layout_constraintLeft_toRightOf="@+id/itemhandleidea_tv_labelsign"
         app:layout_constraintTop_toTopOf="@id/itemhandleidea_tv_labelsign" />
 
@@ -68,19 +68,18 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/itemhandleidea_tvpersonsign_marginleft"
         android:text="@string/itemhandleidea_tvoersonsign_exp"
-        app:layout_constraintStart_toEndOf="@+id/itemhandleidea_img_sign"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/itemhandleidea_img_sign"
         app:layout_constraintTop_toTopOf="@id/itemhandleidea_img_sign" />
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/itemhandleidea_rcvDocument"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/itemhandleidea_rcvdocument_margintop"
         app:layout_constraintLeft_toLeftOf="@id/itemhandleidea_tv_labelsign"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/itemhandleidea_tv_personsign"
-        android:layout_marginTop="@dimen/itemhandleidea_rcvdocument_margintop"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/itemhandleidea_tv_personsign" />
 
     <TextView
         android:id="@+id/itemhandleidea_tv_decorationline"
