@@ -41,10 +41,10 @@ public class ProfileInformationView extends LinearLayout {
 
     TypedArray input = getContext().obtainStyledAttributes(attrs, R.styleable.ProfileInformationView, 0, 0);
 
-    String title = input.getString(R.styleable.ProfileInformationView_profileinformation_title);
+    String title = input.getString(R.styleable.ProfileInformationView_profileinformationview_title);
     setTitle(title);
 
-    String content = input.getString(R.styleable.ProfileInformationView_profileinformation_content);
+    String content = input.getString(R.styleable.ProfileInformationView_profileinformationview_content);
     setContent(content);
 
     input.recycle();

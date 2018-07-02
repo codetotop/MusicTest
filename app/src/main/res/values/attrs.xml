@@ -10,10 +10,10 @@
     </declare-styleable>
 
     <declare-styleable name="DocumentView">
-        <attr name="imgavatardocument_backgound" format="reference|color"/>
-        <attr name="tvnamedocument_name" format="string"/>
-        <attr name="imgdownloaddocument_visible" format="boolean"/>
-        <attr name="imgdownloaddocument_backgound" format="reference|color"/>
+        <attr name="imgavatardocument_backgound" format="reference|color" />
+        <attr name="tvnamedocument_name" format="string" />
+        <attr name="imgdownloaddocument_visible" format="boolean" />
+        <attr name="imgdownloaddocument_backgound" format="reference|color" />
     </declare-styleable>
 
     <declare-styleable name="ProfileView">
@@ -29,8 +29,17 @@
     </declare-styleable>
 
     <declare-styleable name="ProfileInformationView">
-        <attr name="profileinformation_title" format="string|reference" />
-        <attr name="profileinformation_content" format="string|reference" />
+        <attr name="profileinformationview_title" format="string|reference" />
+        <attr name="profileinformationview_content" format="string|reference" />
+    </declare-styleable>
+
+    <declare-styleable name="ProfileInputView">
+        <attr name="profileinputview_title" format="string|reference" />
+        <attr name="profileinputview_content_hint" format="string|reference" />
+        <attr name="profileinputview_content_focusable" format="boolean" />
+        <attr name="profileinputview_content_drawable_right" format="reference|color" />
+        <attr name="profileinputview_content_drawable_right_show" format="boolean" />
+        <attr name="profileinputview_content" format="string|reference" />
     </declare-styleable>
 
     <declare-styleable name="ToolbarView" />

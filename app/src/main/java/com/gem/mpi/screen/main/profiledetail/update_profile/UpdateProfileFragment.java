@@ -35,7 +35,7 @@ public class UpdateProfileFragment extends ViewFragment<UpdateProfileContract.Pr
   public void onDisplay() {
     super.onDisplay();
     initToolbar(ToolbarView.ActionStyle.IMAGE, ToolbarView.ActionStyle.TEXT, R.string.title_about_profile,
-        R.drawable.ic_cancel, null, null, R.string.action_save,
+        R.drawable.ic_back, null, null, R.string.action_save,
         new ToolbarView.OnActionLeftListener() {
           @Override
           public void onActionLeftClick() {
