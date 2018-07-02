@@ -36,20 +36,7 @@
                 app:profileview_duty="@string/profile_exam_duty"
                 app:profileview_name="@string/profile_exam_name" />
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/small_divider"
-                android:background="@color/color_divider_gray" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/large_divider"
-                android:background="@color/bgCommon" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/small_divider"
-                android:background="@color/color_divider_gray" />
+            <include layout="@layout/view_divider_large" />
 
             <com.gem.mpi.widget.ProfileInformationView
                 android:layout_width="match_parent"
@@ -57,10 +44,7 @@
                 app:profileinformationview_content="@string/profile_exam_birthday"
                 app:profileinformationview_title="@string/profile_birthday" />
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/small_divider"
-                android:background="@color/color_divider_gray" />
+            <include layout="@layout/view_divider_small" />
 
             <com.gem.mpi.widget.ProfileInformationView
                 android:layout_width="match_parent"
@@ -68,10 +52,7 @@
                 app:profileinformationview_content="@string/profile_exam_email"
                 app:profileinformationview_title="@string/profile_email" />
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/small_divider"
-                android:background="@color/color_divider_gray" />
+            <include layout="@layout/view_divider_small" />
 
             <com.gem.mpi.widget.ProfileInformationView
                 android:layout_width="match_parent"
@@ -79,10 +60,7 @@
                 app:profileinformationview_content="@string/profile_exam_phone_number_of_organization"
                 app:profileinformationview_title="@string/profile_phone_number_of_organization" />
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/small_divider"
-                android:background="@color/color_divider_gray" />
+            <include layout="@layout/view_divider_small" />
 
             <com.gem.mpi.widget.ProfileInformationView
                 android:layout_width="match_parent"
@@ -90,10 +68,7 @@
                 app:profileinformationview_content="@string/profile_exam_phone_number"
                 app:profileinformationview_title="@string/profile_phone_number" />
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/small_divider"
-                android:background="@color/color_divider_gray" />
+            <include layout="@layout/view_divider_small" />
 
         </LinearLayout>
     </ScrollView>

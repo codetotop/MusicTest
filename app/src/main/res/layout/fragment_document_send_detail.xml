@@ -1,0 +1,66 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.gem.mpi.widget.ToolbarView
+        android:id="@+id/fragmentdocumentsenddetail_tbv_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/medium_space"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/TextMediumBlackCommon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/large_space"
+                android:layout_marginRight="@dimen/large_space"
+                android:text="Bộ Kế Hoạch Và Đầu Tư"
+                android:textAllCaps="true"
+                android:textStyle="bold" />
+
+            <TextView
+                style="@style/TextSmallBlackCommon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/large_space"
+                android:layout_marginRight="@dimen/large_space"
+                android:text="Trung Tâm Tin Học" />
+        </LinearLayout>
+    </ScrollView>
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iva"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@color/colorWhitePressed"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivb"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@color/bgBlueMonthHeader"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@id/iva"
+            app:layout_constraintRight_toLeftOf="@id/ivb" />
+    </android.support.constraint.ConstraintLayout>
+</LinearLayout>

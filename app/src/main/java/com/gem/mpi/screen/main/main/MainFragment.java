@@ -1,8 +1,10 @@
 package com.gem.mpi.screen.main.main;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -32,6 +34,8 @@ public class MainFragment extends ViewFragment<MainContract.Presenter> implement
   DrawerLayout mDrawerDl;
   @BindView(R.id.fragmentmain_rv_list_slide_menu)
   RecyclerView mSlideMenuRv;
+  @BindView(R.id.fragmentmain_content)
+  View mContainer;
 
   public static MainFragment getInstance() {
     return new MainFragment();
@@ -55,6 +59,21 @@ public class MainFragment extends ViewFragment<MainContract.Presenter> implement
     mToolbarTbv.init(actionLeftStyle, actionRightStyle, titleId,
         actionLeftDrawbleId, actionLeftStringId, actionRightDrawableId, actionRightStringId,
         onActionLeftListener, onActionRightListener);
+  }
+
+  @Override
+  public void initAnimationDrawer() {
+    ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(getActivity(), mDrawerDl, R.string.navigation_drawer_open, R.string.navigation_drawer_close) {
+      @Override
+      public void onDrawerSlide(View drawerView, float slideOffset) {
+        super.onDrawerSlide(drawerView, slideOffset);
+        float slideX = drawerView.getWidth() * slideOffset;
+        mContainer.setTranslationX(slideX);
+      }
+    };
+    mDrawerDl.setDrawerElevation(5);
+    mDrawerDl.setScrimColor(Color.TRANSPARENT);
+    mDrawerDl.addDrawerListener(toggle);
   }
 
   @Override

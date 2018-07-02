@@ -27,6 +27,7 @@ public class MainPresenter extends Presenter<MainContract.View, MainContract.Int
 
   private void initListSlideMenu() {
     mSlideMenuAdaper = new SlideMenuAdaper(null, getViewContext().getResources().getStringArray(R.array.menu_items));
+    getView().initAnimationDrawer();
     getView().initListSlideMenu();
     getView().onSlideMenuItemClick();
   }

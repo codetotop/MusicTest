@@ -59,11 +59,11 @@
         app:layout_constraintRight_toLeftOf="@id/itemcategoryprofile_iv_profile_type_selected"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <View
+    <include
         android:id="@+id/itemcategoryprofile_v_divider"
+        layout="@layout/view_divider_small"
         android:layout_width="0dp"
-        android:layout_height="@dimen/small_divider"
-        android:background="@color/color_divider_gray"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent" />

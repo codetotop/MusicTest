@@ -513,11 +513,11 @@
         app:barrierDirection="bottom"
         app:constraint_referenced_ids="itemforeigninvestmentdata_tvlb_import,itemforeigninvestmentdata_tv_import" />
 
-    <View
+    <include
+        layout="@layout/view_divider_large"
         android:layout_width="0dp"
-        android:layout_height="@dimen/large_divider"
+        android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/large_space"
-        android:background="@color/bgCommon"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/itemforeigninvestmentdata_br_import" />
