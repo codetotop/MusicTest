@@ -48,7 +48,7 @@ public class WorkFlowDetailFragment extends ViewFragment<WorkFlowDetailContract.
 
   @Override
   protected int getLayoutId() {
-    return R.layout.fragment_work_flow;
+    return R.layout.fragment_work_flow_detail;
   }
 
   private void addView() {
@@ -57,11 +57,11 @@ public class WorkFlowDetailFragment extends ViewFragment<WorkFlowDetailContract.
     mHandleIdeaRcv.setLayoutManager(new LinearLayoutManager(getViewContext()));
 
     documents = new ArrayList<>();
-    addDocumentFakeData();
+    //addDocumentFakeData();
     handleFlowModels = new ArrayList<>();
-    addHandleFlowFakeData();
+    //addHandleFlowFakeData();
     handleIdeaModels = new ArrayList<>();
-    addhandleIdeaFakeData();
+    //addhandleIdeaFakeData();
 
     documentAdapter = new DocumentAdapter(getViewContext(), documents, false);
     handleFlowAdapter = new HandleFlowAdapter(getViewContext(), handleFlowModels);
@@ -70,6 +70,7 @@ public class WorkFlowDetailFragment extends ViewFragment<WorkFlowDetailContract.
     mDocumentRelationRcv.setAdapter(documentAdapter);
     mHandleFlowRcv.setAdapter(handleFlowAdapter);
     mHandleIdeaRcv.setAdapter(handleIdeaAdapter);
+
   }
 
   private void addDocumentFakeData() {

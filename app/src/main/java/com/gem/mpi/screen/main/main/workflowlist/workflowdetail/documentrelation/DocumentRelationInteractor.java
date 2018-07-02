@@ -1,4 +1,4 @@
-package com.gem.mpi.screen.main.main.workflowlist.workflowdetail.document_relation;
+package com.gem.mpi.screen.main.main.workflowlist.workflowdetail.documentrelation;
 
 import com.gemvietnam.base.viper.Interactor;
 

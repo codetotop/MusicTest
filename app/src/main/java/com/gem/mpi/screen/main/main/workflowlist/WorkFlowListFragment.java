@@ -41,11 +41,11 @@ public class WorkFlowListFragment extends ViewFragment<WorkFlowListContract.Pres
   @Override
   public void onDisplay() {
     super.onDisplay();
-    if (getParentFragment() != null && getParentFragment() instanceof MainFragment) {
+    /*if (getParentFragment() != null && getParentFragment() instanceof MainFragment) {
       ((MainFragment) getParentFragment()).initToolbar(ToolbarView.ActionStyle.IMAGE, ToolbarView.ActionStyle.NONE, R.string.title_list_workflow,
           R.drawable.ic_slide_menu, null, null, null, null, null
       );
-    }
+    }*/
     RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getViewContext());
     mWorkListRcv.setLayoutManager(layoutManager);
     workFlowModels = new ArrayList<>();
@@ -82,12 +82,4 @@ public class WorkFlowListFragment extends ViewFragment<WorkFlowListContract.Pres
     mPresenter.openDetailWorkFlow(position);
   }
 
-  @Override
-  public void initToolbar(ToolbarView.ActionStyle actionLeftStyle, ToolbarView.ActionStyle actionRightStyle, Integer titleId, Integer actionLeftDrawbleId, Integer actionLeftStringId, Integer actionRightDrawableId, Integer actionRightStringId, ToolbarView.OnActionLeftListener onActionLeftListener, ToolbarView.OnActionRightListener onActionRightListener) {
-    if (getParentFragment() != null && getParentFragment() instanceof MainFragment) {
-      ((MainFragment) getParentFragment()).initToolbar(ToolbarView.ActionStyle.IMAGE, ToolbarView.ActionStyle.NONE, titleId,
-          actionLeftDrawbleId, null, null, null, null, null
-      );
-    }
-  }
 }

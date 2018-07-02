@@ -1,36 +1,40 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/colorWhite"
-    >
-   <EditText
-       android:id="@+id/workflowhandleidea_edt_content_handleidea"
-       android:layout_width="0dp"
-       android:layout_height="0dp"
-       android:hint="Nội dung"
-       android:gravity="top"
-       app:layout_constraintStart_toStartOf="parent"
-       app:layout_constraintEnd_toEndOf="parent"
-       android:layout_marginStart="15dp"
-       android:layout_marginEnd="10dp"
-       app:layout_constraintTop_toTopOf="parent"
-       android:layout_marginTop="12dp"
-       android:layout_marginBottom="16dp"
-       app:layout_constraintBottom_toTopOf="@+id/workflowhandleidea_btn_sendidea"
-       />
-<Button
-    android:id="@+id/workflowhandleidea_btn_sendidea"
-    android:layout_width="0dp"
-    android:layout_height="40dp"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    style="@style/ButtonCommon"
-    android:text="Gửi ý kiến"
-    app:layout_constraintBottom_toBottomOf="parent"
-    android:layout_marginStart="15dp"
-    android:layout_marginEnd="15dp"
-    android:layout_marginBottom="16dp"
-    />
+    android:background="@color/colorWhite">
+
+    <com.gem.mpi.widget.ToolbarView
+        android:id="@+id/tbvIdeaHandle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/workflowhandleidea_edt_content_handleidea"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="12dp"
+        android:gravity="top"
+        android:hint="Nội dung"
+        app:layout_constraintBottom_toTopOf="@+id/workflowhandleidea_btn_sendidea"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tbvIdeaHandle" />
+
+    <Button
+        android:id="@+id/workflowhandleidea_btn_sendidea"
+        style="@style/ButtonCommon"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="15dp"
+        android:text="Gửi ý kiến"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </android.support.constraint.ConstraintLayout>

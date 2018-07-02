@@ -6,6 +6,7 @@ import com.gem.mpi.data.remote.services.AuthenticationServices;
 import com.gem.mpi.data.remote.services.CategoryProfileService;
 import com.gem.mpi.data.remote.services.ForeignInvestmentDataService;
 import com.gem.mpi.data.remote.services.RegistrationBusinessService;
+import com.gem.mpi.data.remote.services.WorkFlowServices;
 import com.gem.mpi.model.LoginModel;
 import com.gem.mpi.pref.PrefWrapper;
 import com.google.gson.Gson;
@@ -100,5 +101,9 @@ public class ServiceBuilder {
 
   public static CategoryProfileService getCategoryProfileService() {
     return getRetrofit(getBaseUrl()).create(CategoryProfileService.class);
+  }
+
+  public static WorkFlowServices getWorkFlowService(){
+    return getRetrofit(getBaseUrl()).create(WorkFlowServices.class);
   }
 }

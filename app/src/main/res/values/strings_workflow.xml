@@ -24,5 +24,8 @@
     <string name="workflow_tvlabelhandleIdea_exp">Ý kiến xử lý</string>
     <string name="workflow_btnhandleIdea_text">Ý Kiến Xử Lý</string>
     <string name="itemhandleidea_documentview_exp">Example.docx</string>
+    <string name="title_documentrelation_workflowdetail">Văn bản liên quan</string>
+    <string name="title_handleidea_workflowdetail">Ý kiến xử lý</string>
+    <string name="handleidea_idea_empty">Cần nhập ý kiến xử lý !</string>
 
 </resources>

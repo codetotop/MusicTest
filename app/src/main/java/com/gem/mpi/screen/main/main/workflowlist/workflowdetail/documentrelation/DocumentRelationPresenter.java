@@ -1,4 +1,4 @@
-package com.gem.mpi.screen.main.main.workflowlist.workflowdetail.document_relation;
+package com.gem.mpi.screen.main.main.workflowlist.workflowdetail.documentrelation;
 
 import android.os.Bundle;
 
@@ -29,5 +29,10 @@ public class DocumentRelationPresenter extends Presenter<DocumentRelationContrac
   @Override
   public DocumentRelationContract.View onCreateView(Bundle data) {
     return DocumentRelationFragment.getInstance(data);
+  }
+
+  @Override
+  public void handleActionLeft() {
+    getFragment().getFragmentManager().popBackStack();
   }
 }

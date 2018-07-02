@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.widget.EditText;
 
 import com.gem.mpi.R;
-import com.gem.mpi.screen.main.main.MainFragment;
 import com.gem.mpi.widget.ToolbarView;
 import com.gemvietnam.base.viper.ViewFragment;
 
@@ -15,6 +14,8 @@ import butterknife.OnClick;
  * The WorkFlowHandleIdea Fragment
  */
 public class WorkFlowHandleIdeaFragment extends ViewFragment<WorkFlowHandleIdeaContract.Presenter> implements WorkFlowHandleIdeaContract.View {
+  @BindView(R.id.tbvIdeaHandle)
+  ToolbarView mIdeaHandleTbv;
   @BindView(R.id.workflowhandleidea_edt_content_handleidea)
   EditText mContentHandleIdeaEdt;
   public static WorkFlowHandleIdeaFragment getInstance(Bundle data) {
@@ -29,16 +30,30 @@ public class WorkFlowHandleIdeaFragment extends ViewFragment<WorkFlowHandleIdeaC
   @Override
   public void onDisplay() {
     super.onDisplay();
-
-    if (getParentFragment() != null && getParentFragment() instanceof MainFragment) {
-      ((MainFragment) getParentFragment()).initToolbar(ToolbarView.ActionStyle.IMAGE, ToolbarView.ActionStyle.NONE, R.string.title_handle_idea,
-          R.drawable.ic_slide_menu, null, null, null, null, null
-      );
-    }
+    initToolbar(ToolbarView.ActionStyle.IMAGE, ToolbarView.ActionStyle.NONE, R.string.title_handleidea_workflowdetail,
+        R.drawable.ic_cancel, null, null, null,
+        new ToolbarView.OnActionLeftListener() {
+          @Override
+          public void onActionLeftClick() {
+            getPresenter().handleActionLeft();
+          }
+        }, null
+    );
 
   }
 
   @OnClick(R.id.workflowhandleidea_btn_sendidea) void onClickSendIdea(){
-    // TODO handle send idea
+    mPresenter.sendIdea("1",mContentHandleIdeaEdt.getText().toString(),1);
+  }
+
+  @Override
+  public void finishFragment() {
+    if(getFragmentManager()!=null)
+      getFragmentManager().popBackStack();
+  }
+
+  @Override
+  public void initToolbar(ToolbarView.ActionStyle actionLeftStyle, ToolbarView.ActionStyle actionRightStyle, Integer titleId, Integer actionLeftDrawbleId, Integer actionLeftStringId, Integer actionRightDrawableId, Integer actionRightStringId, ToolbarView.OnActionLeftListener onActionLeftListener, ToolbarView.OnActionRightListener onActionRightListener) {
+    mIdeaHandleTbv.init(actionLeftStyle,actionRightStyle,titleId,actionLeftDrawbleId,actionLeftStringId,actionRightDrawableId,actionRightStringId,onActionLeftListener,onActionRightListener);
   }
 }

@@ -3,14 +3,13 @@ package com.gem.mpi.pref;
 import android.content.Context;
 import android.content.SharedPreferences;
 
+import com.gem.mpi.data.dto.HandleIdeaDTO;
 import com.gem.mpi.data.dto.LoginDTO;
+import com.gem.mpi.mapper.HandleIdeaMapper;
 import com.gem.mpi.mapper.LoginMapper;
+import com.gem.mpi.model.HandleIdeaModel;
 import com.gem.mpi.model.LoginModel;
-import com.gem.mpi.util.FileUtils;
-import com.gemvietnam.utils.StringUtils;
 import com.google.gson.Gson;
-
-import java.io.InputStream;
 
 /**
  * Shared Preferences wrapper
@@ -26,6 +25,7 @@ public class PrefWrapper {
   private static final String KEY_LANGUAGE = "language";
   private static final String KEY_LOCATION = "location";
   private static final String KEY_LOGIN = "login";
+  private static final String KEY_HANDLE_IDEA = "handle_idea";
 
   private static SharedPreferences getPreference(Context context) {
     return context.getSharedPreferences(MY_PREFERENCES, Context.MODE_PRIVATE);
@@ -90,5 +90,18 @@ public class PrefWrapper {
     String loginResponse = getPreference(context).getString(KEY_LOGIN,"");
     LoginDTO loginDTO = new Gson().fromJson(loginResponse,LoginDTO.class);
     return LoginMapper.transform(loginDTO);
+  }
+
+  public static void saveHandleIdeaResponse(Context context, HandleIdeaDTO handleIdeaDTO){
+    String handleIdeaResponse = new Gson().toJson(handleIdeaDTO);
+    SharedPreferences.Editor editor = (SharedPreferences.Editor) getPreference(context).edit();
+    editor.putString(KEY_HANDLE_IDEA,handleIdeaResponse);
+    editor.apply();
+  }
+
+  public static HandleIdeaModel getHandleIdeaResponse(Context context){
+    String handleIdeaResponse = getPreference(context).getString(KEY_HANDLE_IDEA,"");
+    HandleIdeaDTO handleIdeaDTO = new Gson().fromJson(handleIdeaResponse,HandleIdeaDTO.class);
+    return HandleIdeaMapper.transform(handleIdeaDTO);
   }
 }

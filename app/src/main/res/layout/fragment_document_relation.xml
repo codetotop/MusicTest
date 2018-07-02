@@ -2,9 +2,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+
+    <com.gem.mpi.widget.ToolbarView
+        android:id="@+id/tbvToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
     <android.support.v7.widget.RecyclerView
+        android:id="@+id/documentrelation_rcv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/documentrelation_rcvdocumentrelation_marginend"
@@ -12,6 +19,6 @@
         android:layout_marginTop="@dimen/documentrelation_rcvdocumentrelation_margintop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@id/tbvToolbar" />
 
 </android.support.constraint.ConstraintLayout>
