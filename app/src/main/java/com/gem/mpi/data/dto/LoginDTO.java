@@ -19,7 +19,7 @@ public class LoginDTO implements Serializable{
     private UserDTO userDTO;
 
     public LoginDTO() {
-        functionDTOS = new ArrayList<FunctionDTO>();
+        functionDTOS = new ArrayList<>();
         userDTO = new UserDTO();
     }
 

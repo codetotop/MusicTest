@@ -5,21 +5,21 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class LoginModel implements Serializable {
-  private List<FunctionModel> funcitonModels;
+  private List<FunctionModel> functionModels;
   private UserModel userModel;
   private String actionToken;
 
   public LoginModel() {
-    funcitonModels = new ArrayList<>();
+    functionModels = new ArrayList<>();
     userModel = new UserModel();
   }
 
-  public List<FunctionModel> getFuncitonModels() {
-    return funcitonModels;
+  public List<FunctionModel> getFunctionModels() {
+    return functionModels;
   }
 
-  public void setFuncitonModels(List<FunctionModel> funcitonModels) {
-    this.funcitonModels = funcitonModels;
+  public void setFunctionModels(List<FunctionModel> functionModels) {
+    this.functionModels = functionModels;
   }
 
   public UserModel getUserModel() {
@@ -41,7 +41,7 @@ public class LoginModel implements Serializable {
   @Override
   public String toString() {
     return "LoginModel{" +
-        "funcitonModels=" + funcitonModels.get(0) +
+        "functionModels=" + functionModels.get(0) +
         ", userModel=" + userModel +
         ", actionToken='" + actionToken + '\'' +
         '}';

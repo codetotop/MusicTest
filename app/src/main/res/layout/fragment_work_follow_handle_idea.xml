@@ -1,0 +1,39 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+
+    <com.gem.mpi.widget.ToolbarView
+        android:id="@+id/tbvIdeaHandle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/workfollowhandleidea_edt_content_handleidea"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/workfollowhandleidea_edt_content_handleidea_marginbottom"
+        android:layout_marginEnd="@dimen/workfollowhandleidea_edt_content_handleidea_marginend"
+        android:layout_marginStart="@dimen/workfollowhandleidea_edt_content_handleidea_marginstart"
+        android:layout_marginTop="@dimen/workfollowhandleidea_edt_content_handleidea"
+        android:gravity="top"
+        android:hint="@string/workfollowhandleidea_edt_content_handleidea_hint"
+        app:layout_constraintBottom_toTopOf="@+id/workfollowhandleidea_btn_sendidea"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tbvIdeaHandle" />
+
+    <Button
+        android:id="@+id/workfollowhandleidea_btn_sendidea"
+        style="@style/ButtonCommon"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/workfollowhandleidea_btn_sendidea_height"
+        android:layout_marginBottom="@dimen/workfollowhandleidea_btn_sendidea_marginbottom"
+        android:layout_marginEnd="@dimen/workfollowhandleidea_btn_sendidea_marginend"
+        android:layout_marginStart="@dimen/workfollowhandleidea_btn_sendidea_marginstart"
+        android:text="@string/workfollowhandleidea_btn_sendidea_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</android.support.constraint.ConstraintLayout>

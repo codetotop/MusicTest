@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="itemhandleidea_imgemployeeavatar_width">40dp</dimen>
+    <dimen name="itemhandleidea_imgemployeeavatar_height">53dp</dimen>
+    <dimen name="itemhandleidea_tvemployeename_marginstart">8dp</dimen>
+    <dimen name="itemhandleidea_tvdescidea_margintop">4dp</dimen>
+    <dimen name="itemhandleidea_imgsign_marginstart">6dp</dimen>
+    <dimen name="itemhandleidea_tvpersonsign_marginstart">6dp</dimen>
+    <dimen name="itemhandlefollow_tvduty_marginstart">8dp</dimen>
+    <dimen name="itemhandlefollow_tvdescworkfollow">4dp</dimen>
+    <dimen name="viewdocument_tvnamedocument_marginstart">10dp</dimen>
+    <dimen name="itemheaderworkflow_tvcontentfile_marginstart">28dp</dimen>
+    <dimen name="itemheadderworkfollowdetail_tvlabeldayopenfile">14dp</dimen>
+    <dimen name="itemheadderworkfollowdetail_tvlabelcreatorfile_margintop">14dp</dimen>
+    <dimen name="itemheadderworkfollowdetail_tvlabeldeadlinehandle">14dp</dimen>
+    <dimen name="itemheadderworkfollowdetail_tvlabelrequest_margintop">14dp</dimen>
+    <dimen name="itemhandleidea_rcvdocument_margintop">10dp</dimen>
+    <dimen name="itemhandlefollow_tv_decorationline_marginbottom">12dp</dimen>
+    <dimen name="itemhandlefollow_tv_decorationline_margintop">12dp</dimen>
+    <dimen name="workfollowhandleidea_edt_content_handleidea_marginbottom">16dp</dimen>
+    <dimen name="workfollowhandleidea_edt_content_handleidea_marginend">10dp</dimen>
+    <dimen name="workfollowhandleidea_edt_content_handleidea_marginstart">15dp</dimen>
+    <dimen name="workfollowhandleidea_edt_content_handleidea">12dp</dimen>
+    <dimen name="workfollowhandleidea_btn_sendidea_marginbottom">16dp</dimen>
+    <dimen name="workfollowhandleidea_btn_sendidea_marginend">15dp</dimen>
+    <dimen name="workfollowhandleidea_btn_sendidea_marginstart">15dp</dimen>
+    <dimen name="workfollowdetail_itemheader_marginstart">12dp</dimen>
+    <dimen name="workfollowdetail_itemheader_marginend">12dp</dimen>
+    <dimen name="workfollowdetail_tv_decorationline">1dp</dimen>
+    <dimen name="workfollowdetail_tv_decorationline_margintop">12dp</dimen>
+    <dimen name="workfollowetail_tv_label_documentrelation_margintop">12dp</dimen>
+    <dimen name="workfollowdetail_rcv_marginend">12dp</dimen>
+    <dimen name="workfollowdetail_rcv_margintop">12dp</dimen>
+    <dimen name="workfollowdetail_btn_handleidea_marginbottom">12dp</dimen>
+    <dimen name="workfollowdetail_btn_handleidea_margintop">30dp</dimen>
+    <dimen name="workfollowdetail_tv_label_handleidea_margintop">12dp</dimen>
+    <dimen name="workfollowdetail_tv_label_handlefollow_margintop">12dp</dimen>
+    <dimen name="workfollowdetail_scv_margintop">16dp</dimen>
+    <dimen name="workfollowhandleidea_btn_sendidea_height">40dp</dimen>
+    <string name="workfollowhandleidea_btn_sendidea_text">Gửi ý kiến</string>
+</resources>

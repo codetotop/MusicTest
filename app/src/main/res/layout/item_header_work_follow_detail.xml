@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/itemheadderworkfollowdetail_tv_labelcontentfile"
+        style="@style/TextSmallGrayCommon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/itemheadderworkfollowdetail_tvlabelcontentfile_exp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/itemheadderworkfollowdetail_tv_contentfile"
+        style="@style/TextSmallBlackCommon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:text="@string/itemheadderworkfollowdetail_tvcontentfile_exp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/itemheadderworkfollowdetail_tv_labelcontentfile"
+        app:layout_constraintTop_toTopOf="@id/itemheadderworkfollowdetail_tv_labelcontentfile" />
+
+    <TextView
+        android:id="@+id/itemheadderworkfollowdetail_tv_labeldayopenfile"
+        style="@style/TextSmallGrayCommon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/itemheadderworkfollowdetail_tvlabeldayopenfile"
+        android:text="@string/itemheadderworkfollowdetail_tvlabeldayopenfile_exp"
+        app:layout_constraintStart_toStartOf="@id/itemheadderworkfollowdetail_tv_labelcontentfile"
+        app:layout_constraintTop_toBottomOf="@id/itemheadderworkfollowdetail_tv_contentfile" />
+
+    <TextView
+        android:id="@+id/itemheadderworkfollowdetail_tv_dayopenfile"
+        style="@style/TextSmallBlackCommon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/itemheadderworkfollowdetail_tvdayopenfile_exp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/itemheadderworkfollowdetail_tv_contentfile"
+        app:layout_constraintTop_toTopOf="@id/itemheadderworkfollowdetail_tv_labeldayopenfile" />
+
+    <TextView
+        android:id="@+id/itemheadderworkfollowdetail_tv_labelcreatorfile"
+        style="@style/TextSmallGrayCommon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/itemheadderworkfollowdetail_tvlabelcreatorfile_margintop"
+        android:text="@string/itemheadderworkfollowdetail_tvlabelcreatorfile_exp"
+        app:layout_constraintStart_toStartOf="@id/itemheadderworkfollowdetail_tv_labeldayopenfile"
+        app:layout_constraintTop_toBottomOf="@id/itemheadderworkfollowdetail_tv_labeldayopenfile" />
+
+    <TextView
+        android:id="@+id/itemheadderworkfollowdetail_tv_creatorfile"
+        style="@style/TextSmallBlackCommon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/itemheadderworkfollowdetail_tvcreatorfile_exp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/itemheadderworkfollowdetail_tv_contentfile"
+        app:layout_constraintTop_toTopOf="@id/itemheadderworkfollowdetail_tv_labelcreatorfile" />
+
+    <TextView
+        android:id="@+id/itemheadderworkfollowdetail_tv_labeldeadlinehandle"
+        style="@style/TextSmallGrayCommon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/itemheadderworkfollowdetail_tvlabeldeadlinehandle"
+        android:text="@string/itemheadderworkfollowdetail_tvlabeldeadlinehandle"
+        app:layout_constraintStart_toStartOf="@id/itemheadderworkfollowdetail_tv_labelcreatorfile"
+        app:layout_constraintTop_toBottomOf="@id/itemheadderworkfollowdetail_tv_labelcreatorfile" />
+
+    <TextView
+        android:id="@+id/itemheadderworkfollowdetail_tv_deadlinehandle"
+        style="@style/TextSmallBlackCommon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/itemheaderworkfollow_tvdeadlinehandle_exp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/itemheadderworkfollowdetail_tv_contentfile"
+        app:layout_constraintTop_toTopOf="@id/itemheadderworkfollowdetail_tv_labeldeadlinehandle" />
+
+    <TextView
+        android:id="@+id/itemheadderworkfollowdetail_tv_labelrequest"
+        style="@style/TextSmallGrayCommon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/itemheadderworkfollowdetail_tvlabelrequest_margintop"
+        android:text="@string/itemheadderworkfollowdetail_tvlabelrequest_exp"
+        app:layout_constraintStart_toStartOf="@id/itemheadderworkfollowdetail_tv_labelcontentfile"
+        app:layout_constraintTop_toBottomOf="@id/itemheadderworkfollowdetail_tv_labeldeadlinehandle" />
+
+    <TextView
+        android:id="@+id/itemheadderworkfollowdetail_tv_contentrequest"
+        style="@style/TextSmallBlackCommon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/itemheadderworkfollowdetail_tvrequest_exp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/itemheadderworkfollowdetail_tv_contentfile"
+        app:layout_constraintTop_toTopOf="@id/itemheadderworkfollowdetail_tv_labelrequest" />
+
+
+</android.support.constraint.ConstraintLayout>

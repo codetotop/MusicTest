@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="workfollowlist_imgfolder_margintop">48dp</dimen>
+    <dimen name="workfollowlist_tvheader_marginstart">8dp</dimen>
+    <dimen name="workfollowlist_imgfolder_marginstart">15dp</dimen>
+    <dimen name="itemworkfollowlist_imgstatus_marginstart">20dp</dimen>
+    <dimen name="itemworkfollowlist_tvdocsymbol_margintop">8dp</dimen>
+    <dimen name="itemworkfollowlist_tvnewidea_margintop">4dp</dimen>
+    <dimen name="itemworkfollowlist_tvduration_margintop">4dp</dimen>
+    <dimen name="workfollowlist_imgexpand_width">12dp</dimen>
+    <dimen name="workfollowlist_imgexpand_height">12dp</dimen>
+    <dimen name="workfollowlist_imgexpand_marginstart">9dp</dimen>
+    <dimen name="workfollowlist_imgexpand_marginbottom">2dp</dimen>
+    <dimen name="workfollowlist_rcvworklist_marginend">16dp</dimen>
+    <dimen name="workfollowlist_rcvworklist_margintop">12dp</dimen>
+    <dimen name="workfollowlist_tvdecorationline_height">1dp</dimen>
+    <dimen name="workfollowlist_tvdecorationline_margintop">16dp</dimen>
+    <dimen name="workfollowlist_imgexpand_marginend">15dp</dimen>
+</resources>

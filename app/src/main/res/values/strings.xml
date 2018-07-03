@@ -59,10 +59,10 @@
         <item>@string/foreign_investment_data</item>
     </string-array>
 
-    <string name="itemhandleflow_tvtimehandle_exp">28/05/2018 - 15:38:35</string>
+    <string name="itemhandlefollow_tvtimehandle_exp">28/05/2018 - 15:38:35</string>
     <string name="validate_username">Bạn cần nhập tài khoản !</string>
     <string name="validate_password">Bạn cần nhập mật khẩu !</string>
     <string name="title_list_workflow">Danh sách luồng công việc</string>
-    <string name="title_detail_workflow">Chi tiết luồng công việc</string>
+    <string name="title_detail__workfollowdetail">Chi tiết luồng công việc</string>
 
 </resources>

@@ -13,7 +13,7 @@ import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.gem.mpi.R;
 import com.gem.mpi.screen.main.main.foreign_investment_data.ForeignInvestmentDataPresenter;
 import com.gem.mpi.screen.main.main.registration_business.RegistrationBusinessPresenter;
-import com.gem.mpi.screen.main.main.workflowlist.WorkFlowListPresenter;
+import com.gem.mpi.screen.main.main.workfollowlist.WorkFollowListPresenter;
 import com.gem.mpi.widget.ToolbarView;
 import com.gem.mpi.widget.ToolbarView.ActionStyle;
 import com.gem.mpi.widget.ToolbarView.OnActionLeftListener;
@@ -115,8 +115,8 @@ public class MainFragment extends ViewFragment<MainContract.Presenter> implement
           case 1:
             break;
           case 2:
-            WorkFlowListPresenter workFlowListPresenter = new WorkFlowListPresenter((ContainerView) getActivity());
-            workFlowListPresenter.loadChildView(R.id.container_frame, getChildFragmentManager());
+            WorkFollowListPresenter workFollowListPresenter = new WorkFollowListPresenter((ContainerView) getActivity());
+            workFollowListPresenter.loadChildView(R.id.container_frame, getChildFragmentManager());
             break;
           case 3:
 

@@ -66,7 +66,7 @@ public class LoginPresenter extends Presenter<LoginContract.View, LoginContract.
         super.onSuccess(responseBody);
         LoginDTO loginDTO = responseBody.getData();
         LoginModel loginModel = LoginMapper.transform(loginDTO);
-        Log.e("LOGIN_PRESENTER", "onSuccess: " + loginModel.getFuncitonModels().toString());
+        Log.e("LOGIN_PRESENTER", "onSuccess: " + loginModel.getFunctionModels().toString());
         PrefWrapper.saveLoginResponse(getViewContext(),loginDTO);
         mView.showToast(responseBody.getMessage());
         Intent intent = new Intent(getViewContext(), MainActivity.class);
@@ -88,6 +88,6 @@ public class LoginPresenter extends Presenter<LoginContract.View, LoginContract.
 
   @Override
   public void openScreenForgotPassWord() {
-//    new WorkFlowListPresenter(mContainerView).pushView();
+//    new WorkFollowListPresenter(mContainerView).pushView();
   }
 }

@@ -4,7 +4,7 @@ import android.os.Bundle;
 
 import com.gem.mpi.R;
 import com.gem.mpi.screen.main.main.profiledetail.ProfileDetailPresenter;
-import com.gem.mpi.screen.main.main.workflowlist.WorkFlowListPresenter;
+import com.gem.mpi.screen.main.main.workfollowlist.WorkFollowListPresenter;
 import com.gemvietnam.base.viper.Presenter;
 import com.gemvietnam.base.viper.interfaces.ContainerView;
 
@@ -33,8 +33,8 @@ public class MainPresenter extends Presenter<MainContract.View, MainContract.Int
   }
 
   private void initFirstFragment() {
-    WorkFlowListPresenter workFlowListPresenter = new WorkFlowListPresenter(mContainerView);
-    workFlowListPresenter.loadChildView(R.id.container_frame, getFragment().getChildFragmentManager());
+    WorkFollowListPresenter workFollowListPresenter = new WorkFollowListPresenter(mContainerView);
+    workFollowListPresenter.loadChildView(R.id.container_frame, getFragment().getChildFragmentManager());
   }
 
   @Override

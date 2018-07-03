@@ -1,0 +1,180 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:orientation="vertical"
+    android:theme="@style/AppTheme">
+
+    <com.gem.mpi.widget.ToolbarView
+        android:id="@+id/tbvToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:id="@+id/workfollowdetail_scv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/workfollowdetail_scv_margintop">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include
+                android:id="@+id/workfollowdetail_itemheader"
+                layout="@layout/item_header_work_follow_detail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/workfollowdetail_itemheader_marginstart"
+                android:layout_marginEnd="@dimen/workfollowdetail_itemheader_marginend"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/workfollowdetail_tv_decoration_line_1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/workfollowdetail_tv_decorationline"
+                android:layout_marginTop="@dimen/workfollowdetail_tv_decorationline_margintop"
+                android:background="@color/colorDecorationLine"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/workfollowdetail_itemheader" />
+
+            <TextView
+                android:id="@+id/workfollowdetail_tv_decoration_line_2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/workfollowdetail_tv_decorationline"
+                android:layout_marginTop="@dimen/workfollowdetail_tv_decorationline_margintop"
+                android:background="@color/colorDecorationLine"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/workfollowdetail_tv_decoration_line_1" />
+
+            <TextView
+                android:id="@+id/workfollowdetail_tv_label_documentrelation"
+                style="@style/TextMediumBlackBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/workfollowetail_tv_label_documentrelation_margintop"
+                android:text="@string/workfollowdetail_tv_label_documentrelation_text"
+                app:layout_constraintStart_toStartOf="@id/workfollowdetail_itemheader"
+                app:layout_constraintTop_toBottomOf="@id/workfollowdetail_tv_decoration_line_2" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/workfollowdetail_rcv_documentrelation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/workfollowdetail_rcv_marginend"
+                android:layout_marginTop="@dimen/workfollowdetail_rcv_margintop"
+                android:nestedScrollingEnabled="false"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@id/workfollowdetail_itemheader"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/workfollowdetail_tv_label_documentrelation" />
+
+            <TextView
+                android:id="@+id/workfollowdetail_tv_decoration_line_3"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/workfollowdetail_tv_decorationline"
+                android:layout_marginTop="@dimen/workfollowdetail_tv_decorationline_margintop"
+                android:background="@color/colorDecorationLine"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/workfollowdetail_rcv_documentrelation" />
+
+            <TextView
+                android:id="@+id/workfollowdetail_tv_decoration_line_4"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/workfollowdetail_tv_decorationline"
+                android:layout_marginTop="@dimen/workfollowdetail_tv_decorationline_margintop"
+                android:background="@color/colorDecorationLine"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/workfollowdetail_tv_decoration_line_3" />
+
+            <TextView
+                android:id="@+id/workfollowdetail_tv_label_handlefollow"
+                style="@style/TextMediumBlackBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/workfollowdetail_tv_label_handlefollow_margintop"
+                android:text="@string/workfollowdetail_handlefollow_tvlabel"
+                app:layout_constraintStart_toStartOf="@id/workfollowdetail_itemheader"
+                app:layout_constraintTop_toBottomOf="@id/workfollowdetail_tv_decoration_line_4" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/workfollowdetail_rcv_handlefollow"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/workfollowdetail_rcv_marginend"
+                android:layout_marginTop="@dimen/workfollowdetail_rcv_margintop"
+                android:nestedScrollingEnabled="false"
+                app:layout_constraintStart_toStartOf="@id/workfollowdetail_itemheader"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/workfollowdetail_tv_label_handlefollow" />
+
+            <TextView
+                android:id="@+id/workfollowdetail_tv_decoration_line_5"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/workfollowdetail_tv_decorationline"
+                android:layout_marginTop="@dimen/workfollowdetail_tv_decorationline_margintop"
+                android:background="@color/colorDecorationLine"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/workfollowdetail_rcv_handlefollow" />
+
+            <TextView
+                android:id="@+id/workfollowdetail_tv_decoration_line_6"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/workfollowdetail_tv_decorationline"
+                android:layout_marginTop="@dimen/workfollowdetail_tv_decorationline_margintop"
+                android:background="@color/colorDecorationLine"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/workfollowdetail_tv_decoration_line_5" />
+
+            <TextView
+                android:id="@+id/workfollowdetail_tv_label_handleidea"
+                style="@style/TextMediumBlackBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/workfollowdetail_tv_label_handleidea_margintop"
+                android:text="@string/workfollowdetail_tvlabelhandleIdea_exp"
+                app:layout_constraintStart_toStartOf="@id/workfollowdetail_itemheader"
+                app:layout_constraintTop_toBottomOf="@id/workfollowdetail_tv_decoration_line_6" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/workfollowdetail_rcv_handleidea"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/workfollowdetail_rcv_marginend"
+                android:layout_marginTop="@dimen/workfollowdetail_rcv_margintop"
+                android:nestedScrollingEnabled="false"
+                app:layout_constraintStart_toStartOf="@id/workfollowdetail_itemheader"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/workfollowdetail_tv_label_handleidea" />
+
+            <TextView
+                android:id="@+id/workfollowdetail_tv_decoration_line_7"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/workfollowdetail_tv_decorationline"
+                android:layout_marginTop="@dimen/workfollowdetail_tv_decorationline_margintop"
+                android:background="@color/colorDecorationLine"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/workfollowdetail_rcv_handleidea" />
+
+            <Button
+                android:id="@+id/workfollowdetail_btn_handleidea"
+                style="@style/ButtonCommon"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/login_btnlogin_height"
+                android:layout_marginBottom="@dimen/workfollowdetail_btn_handleidea_marginbottom"
+                android:layout_marginTop="@dimen/workfollowdetail_btn_handleidea_margintop"
+                android:background="@drawable/bg_blue_button_common"
+                android:text="@string/workfollowdetail_btnhandleIdea_text"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@id/workfollowdetail_rcv_handleidea"
+                app:layout_constraintEnd_toEndOf="@+id/workfollowdetail_rcv_handleidea"
+                app:layout_constraintTop_toBottomOf="@+id/workfollowdetail_tv_decoration_line_7" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </ScrollView>
+
+</LinearLayout>

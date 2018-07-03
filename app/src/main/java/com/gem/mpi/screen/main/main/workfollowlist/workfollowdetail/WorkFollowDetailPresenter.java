@@ -1,0 +1,84 @@
+package com.gem.mpi.screen.main.main.workfollowlist.workfollowdetail;
+
+import android.os.Bundle;
+import android.support.annotation.NonNull;
+
+import com.gem.mpi.data.dto.WorkFlowDetailDTO;
+import com.gem.mpi.data.remote.callback.BaseResponse;
+import com.gem.mpi.data.remote.callback.CommonCallback;
+import com.gem.mpi.screen.main.main.workfollowlist.workfollowdetail.documentrelation.DocumentRelationPresenter;
+import com.gem.mpi.screen.main.main.workfollowlist.workfollowdetail.workfollowhandleidea.WorkFollowHandleIdeaPresenter;
+import com.gemvietnam.base.viper.Presenter;
+import com.gemvietnam.base.viper.interfaces.ContainerView;
+
+import java.util.ArrayList;
+
+import retrofit2.Call;
+
+/**
+ * The WorkFlow Presenter
+ */
+public class WorkFollowDetailPresenter extends Presenter<WorkFollowDetailContract.View, WorkFollowDetailContract.Interactor>
+    implements WorkFollowDetailContract.Presenter {
+
+  public WorkFollowDetailPresenter(ContainerView containerView) {
+    super(containerView);
+  }
+
+
+  @Override
+  public void start() {
+    // Start getting data here
+  }
+
+  @Override
+  public WorkFollowDetailContract.Interactor onCreateInteractor() {
+    return new WorkFollowDetailInteractor(this);
+  }
+
+  @Override
+  public WorkFollowDetailContract.View onCreateView(Bundle data) {
+    return WorkFollowDetailFragment.getInstance();
+
+  }
+
+  @Override
+  public void getWorkFlowDetailData(String work_flow_id) {
+    if (work_flow_id != null){
+      mInteractor.getWorkFlowDetailData(work_flow_id, new CommonCallback<WorkFlowDetailDTO>(getViewContext()) {
+        @Override
+        public void onFailure(@NonNull Call<BaseResponse<WorkFlowDetailDTO>> call, @NonNull Throwable t) {
+          super.onFailure(call, t);
+        }
+
+        @Override
+        protected void onSuccess(BaseResponse<WorkFlowDetailDTO> responseBody) {
+          super.onSuccess(responseBody);
+          WorkFlowDetailDTO workFlowDetailDTO = responseBody.getData();
+        }
+      });
+    }
+  }
+
+  @Override
+  public void openHandleIdeaFragment() {
+    new WorkFollowHandleIdeaPresenter(mContainerView).pushView();
+  }
+
+  @Override
+  public void handleActionLeft() {
+    getFragment().getFragmentManager().popBackStack();
+  }
+
+  @Override
+  public void handleActionRight(ArrayList<String> documentRelation, ArrayList<String> documentIdeaHandle) {
+    /*new DocumentRelationPresenter(mContainerView).pushView();
+    getFragment().getFragmentManager().putFragment();*/
+  }
+
+  @Override
+  public void handleActionRight() {
+    new DocumentRelationPresenter(mContainerView).pushView();
+  }
+
+}

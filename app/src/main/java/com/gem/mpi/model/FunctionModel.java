@@ -1,7 +1,5 @@
 package com.gem.mpi.model;
 
-import com.google.gson.annotations.SerializedName;
-
 import java.io.Serializable;
 
 public class FunctionModel implements Serializable {

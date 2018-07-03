@@ -6,8 +6,6 @@ import com.gemvietnam.base.viper.interfaces.IInteractor;
 import com.gemvietnam.base.viper.interfaces.IPresenter;
 import com.gemvietnam.base.viper.interfaces.PresentView;
 
-import retrofit2.Callback;
-
 /**
  * The Login Contract
  */

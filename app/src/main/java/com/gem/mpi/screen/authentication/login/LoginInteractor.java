@@ -6,8 +6,6 @@ import com.gem.mpi.data.remote.callback.CommonCallback;
 import com.gem.mpi.data.remote.request.LoginRequest;
 import com.gemvietnam.base.viper.Interactor;
 
-import retrofit2.Callback;
-
 /**
  * The Login interactor
  */

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="itemhandleidea_tvemployeename_exp">Nguyễn Như Ngọc</string>
+    <string name="itemhandleidea_tvtimesendidea_exp">25/05/2018 16:12:25</string>
+    <string name="itemhandleidea_tvdescidea_exp">Kính gửi vụ Quản lý quy hoạch, Tôi xin gửi Quý vụ ý kiến CLPT ( A.Thắng đã ký) trong hồ sơ đính kèm.</string>
+    <string name="itemhandleidea_tvlabelsign_exp">Ký bởi:</string>
+    <string name="itemhandleidea_tvoersonsign_exp">lamtanvth@mpi.com.vn (xác thực dữ liệu)</string>
+    <string name="itemhandlefollow_tvnamestaff_exp">Lê Quang Mạnh</string>
+    <string name="itemhandlefollow_tvduty_exp">- Thủ trưởng</string>
+    <string name="itemhandlefollow_tvdescworkfollow_exp">Lãnh đạo giao việc</string>
+    <string name="viewdocument_tvnamedocument_exp">Gui_Vu_CH.docx</string>
+    <string name="itemheadderworkfollowdetail_tvlabelcontentfile_exp">Nội dung HS</string>
+    <string name="itemheadderworkfollowdetail_tvcontentfile_exp">NHÓM THƯ KÝ - TỔ CÔNG TÁC THI HÀNH LUẬT QUY HOẠCH</string>
+    <string name="itemheadderworkfollowdetail_tvlabeldayopenfile_exp">Ngày mở HS</string>
+    <string name="itemheadderworkfollowdetail_tvdayopenfile_exp">15/05/2016</string>
+    <string name="itemheadderworkfollowdetail_tvlabelcreatorfile_exp">Người lập HS</string>
+    <string name="itemheadderworkfollowdetail_tvcreatorfile_exp">Vũ Quang Các</string>
+    <string name="itemheadderworkfollowdetail_tvlabeldeadlinehandle">Hạn xử lý</string>
+    <string name="itemheaderworkfollow_tvdeadlinehandle_exp">31/12/2020</string>
+    <string name="itemheadderworkfollowdetail_tvlabelrequest_exp">Yêu cầu</string>
+    <string name="itemheadderworkfollowdetail_tvrequest_exp">Đề nghị mọi người theo dõi, xử lý</string>
+    <string name="workfollowdetail_tv_label_documentrelation_text">Văn bản liên quan</string>
+    <string name="workfollowdetail_handlefollow_tvlabel">Luồng xử lý</string>
+    <string name="workfollowdetail_tvlabelhandleIdea_exp">Ý kiến xử lý</string>
+    <string name="workfollowdetail_btnhandleIdea_text">Ý Kiến Xử Lý</string>
+    <string name="itemhandleidea_documentview_exp">Example.docx</string>
+    <string name="title_documentrelation_workfollowdetail">Văn bản liên quan</string>
+    <string name="title_handleidea_workfollowdetail">Ý kiến xử lý</string>
+    <string name="handleidea_idea_empty">Cần nhập ý kiến xử lý !</string>
+    <string name="workfollowhandleidea_edt_content_handleidea_hint">Nội dung</string>
+
+    <dimen name="itemhandlefollow_tv_decorationline_height">1dp</dimen>
+</resources>

@@ -1,0 +1,72 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/workfollowlist_header_view_worklist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bgCommon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/workfollowlist_img_folder"
+            android:layout_width="@dimen/picture_medium_size"
+            android:layout_height="@dimen/picture_medium_size"
+            android:layout_marginBottom="@dimen/medium_margin"
+            android:layout_marginStart="@dimen/workfollowlist_imgfolder_marginstart"
+            android:layout_marginTop="@dimen/medium_margin"
+            android:src="@drawable/ic_folder_yellow"
+            app:layout_constraintBottom_toBottomOf="@id/workfollowlist_header_view_worklist"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/workfollowlist_tv_header"
+            style="@style/TextSmallBlackCommon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/medium_margin"
+            android:layout_marginStart="@dimen/workfollowlist_tvheader_marginstart"
+            android:layout_marginTop="@dimen/medium_margin"
+            android:text="@string/workfollowlist_tvheader_exp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/workfollowlist_img_folder"
+            app:layout_constraintEnd_toStartOf="@id/workfollowlist_img_expand"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/workfollowlist_img_expand"
+            android:layout_width="@dimen/workfollowlist_imgexpand_width"
+            android:layout_height="@dimen/workfollowlist_imgexpand_height"
+            android:layout_marginBottom="@dimen/medium_margin"
+            android:layout_marginEnd="@dimen/workfollowlist_imgexpand_marginend"
+            android:layout_marginStart="@dimen/small_margin"
+            android:layout_marginTop="@dimen/medium_margin"
+            android:layout_toEndOf="@id/workfollowlist_tv_header"
+            android:background="@drawable/ic_expand"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toEndOf="@+id/workfollowlist_tv_header"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/workfollowlist_rcv_worklist"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="@dimen/workfollowlist_rcvworklist_marginend"
+        android:layout_marginStart="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/workfollowlist_header_view_worklist" />
+
+</android.support.constraint.ConstraintLayout>

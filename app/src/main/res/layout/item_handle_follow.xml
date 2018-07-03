@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/itemhandlefollow_tv_namestaff"
+        style="@style/TextMediumBlackBold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/itemhandlefollow_tvnamestaff_exp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/itemhandlefollow_tv_duty"
+        style="@style/TextSmallBlackCommon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/itemhandlefollow_tvduty_marginstart"
+        android:text="@string/itemhandlefollow_tvduty_exp"
+        app:layout_constraintBottom_toBottomOf="@id/itemhandlefollow_tv_namestaff"
+        app:layout_constraintStart_toEndOf="@id/itemhandlefollow_tv_namestaff"
+        app:layout_constraintTop_toTopOf="@id/itemhandlefollow_tv_namestaff" />
+
+    <TextView
+        android:id="@+id/itemhandlefollow_tv_desc_workfollow"
+        style="@style/TextSmallBlackCommon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/itemhandlefollow_tvdescworkfollow"
+        android:text="@string/itemhandlefollow_tvdescworkfollow_exp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/itemhandlefollow_tv_namestaff" />
+
+    <TextView
+        android:id="@+id/itemhandlefollow_tv_timehandle"
+        style="@style/TextSmallestGrayCommon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/itemhandlefollow_tvtimehandle_margintop"
+        android:text="@string/itemhandlefollow_tvtimehandle_exp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/itemhandlefollow_tv_desc_workfollow" />
+
+    <TextView
+        android:id="@+id/itemhandlefollow_tv_decorationline"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/itemhandlefollow_tv_decorationline_height"
+        android:layout_marginBottom="@dimen/itemhandlefollow_tv_decorationline_marginbottom"
+        android:layout_marginTop="@dimen/itemhandlefollow_tv_decorationline_margintop"
+        android:background="@color/colorDecorationLine"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/itemhandlefollow_tv_timehandle" />
+</android.support.constraint.ConstraintLayout>

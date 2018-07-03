@@ -17,7 +17,7 @@
         style="@style/TextSmallGrayCommon"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/viewdocument_tvnamedocument_marginleft"
+        android:layout_marginStart="@dimen/viewdocument_tvnamedocument_marginstart"
         android:text="@string/viewdocument_tvnamedocument_exp"
         app:layout_constraintLeft_toRightOf="@+id/viewdocument_img_avatardocument"
         app:layout_constraintRight_toLeftOf="@+id/viewdocument_img_downloaddocument"
