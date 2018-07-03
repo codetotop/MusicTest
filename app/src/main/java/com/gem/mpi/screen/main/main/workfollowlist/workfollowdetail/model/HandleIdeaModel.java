@@ -9,12 +9,12 @@ public class HandleIdeaModel implements Serializable {
     private String timeSendIdea;
     private String descIdea;
     private String personSign;
-    private ArrayList<String> documentRelationNames;
+    private ArrayList<DocumentModel> documentRelationNames;
 
     public HandleIdeaModel() {
     }
 
-    public HandleIdeaModel(String employeeAvatar, String employeeName, String timeSendIdea, String descIdea, String personSign, ArrayList<String> documentRelationNames) {
+    public HandleIdeaModel(String employeeAvatar, String employeeName, String timeSendIdea, String descIdea, String personSign, ArrayList<DocumentModel> documentRelationNames) {
         this.employeeAvatar = employeeAvatar;
         this.employeeName = employeeName;
         this.timeSendIdea = timeSendIdea;
@@ -63,11 +63,11 @@ public class HandleIdeaModel implements Serializable {
         this.personSign = personSign;
     }
 
-    public ArrayList<String> getDocumentRelationNames() {
+    public ArrayList<DocumentModel> getDocumentRelationNames() {
         return documentRelationNames;
     }
 
-    public void setDocumentRelationNames(ArrayList<String> documentRelationName) {
-        this.documentRelationNames = documentRelationName;
+    public void setDocumentRelationNames(ArrayList<DocumentModel> documentRelationNames) {
+        this.documentRelationNames = documentRelationNames;
     }
 }

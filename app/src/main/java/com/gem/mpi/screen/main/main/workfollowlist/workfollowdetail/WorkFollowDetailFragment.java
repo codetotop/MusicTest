@@ -1,14 +1,16 @@
 package com.gem.mpi.screen.main.main.workfollowlist.workfollowdetail;
 
+import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.Button;
 
 import com.gem.mpi.R;
 import com.gem.mpi.screen.main.main.workfollowlist.workfollowdetail.adapter.DocumentAdapter;
-import com.gem.mpi.screen.main.main.workfollowlist.workfollowdetail.adapter.HandleFlowAdapter;
+import com.gem.mpi.screen.main.main.workfollowlist.workfollowdetail.adapter.HandleFollowAdapter;
 import com.gem.mpi.screen.main.main.workfollowlist.workfollowdetail.adapter.HandleIdeaAdapter;
-import com.gem.mpi.screen.main.main.workfollowlist.workfollowdetail.model.HandleFlowModel;
+import com.gem.mpi.screen.main.main.workfollowlist.workfollowdetail.model.DocumentModel;
+import com.gem.mpi.screen.main.main.workfollowlist.workfollowdetail.model.HandleFollowModel;
 import com.gem.mpi.screen.main.main.workfollowlist.workfollowdetail.model.HandleIdeaModel;
 import com.gem.mpi.widget.ToolbarView;
 import com.gemvietnam.base.viper.ViewFragment;
@@ -34,16 +36,18 @@ public class WorkFollowDetailFragment extends ViewFragment<WorkFollowDetailContr
   ToolbarView mToolbarTbv;
 
   DocumentAdapter documentAdapter;
-  HandleFlowAdapter handleFlowAdapter;
+  HandleFollowAdapter handleFlowAdapter;
   HandleIdeaAdapter handleIdeaAdapter;
 
-  ArrayList<HandleFlowModel> handleFlowModels;
+  ArrayList<HandleFollowModel> handleFollowModels;
   ArrayList<HandleIdeaModel> handleIdeaModels;
-  ArrayList<String> documents;
+  ArrayList<DocumentModel> documentModels;
 
 
-  public static WorkFollowDetailFragment getInstance() {
-    return new WorkFollowDetailFragment();
+  public static WorkFollowDetailFragment getInstance(Bundle data) {
+    WorkFollowDetailFragment fragment = new WorkFollowDetailFragment();
+    fragment.setArguments(data);
+    return fragment;
   }
 
   @Override
@@ -56,15 +60,15 @@ public class WorkFollowDetailFragment extends ViewFragment<WorkFollowDetailContr
     mHandleFlowRcv.setLayoutManager(new LinearLayoutManager(getViewContext()));
     mHandleIdeaRcv.setLayoutManager(new LinearLayoutManager(getViewContext()));
 
-    documents = new ArrayList<>();
-    //addDocumentFakeData();
-    handleFlowModels = new ArrayList<>();
-    //addHandleFlowFakeData();
+    documentModels = new ArrayList<>();
+    addDocumentFakeData();
+    handleFollowModels = new ArrayList<>();
+    addHandleFlowFakeData();
     handleIdeaModels = new ArrayList<>();
-    //addhandleIdeaFakeData();
+    addhandleIdeaFakeData();
 
-    documentAdapter = new DocumentAdapter(getViewContext(), documents, false);
-    handleFlowAdapter = new HandleFlowAdapter(getViewContext(), handleFlowModels);
+    documentAdapter = new DocumentAdapter(getViewContext(), documentModels);
+    handleFlowAdapter = new HandleFollowAdapter(getViewContext(), handleFollowModels);
     handleIdeaAdapter = new HandleIdeaAdapter(getViewContext(), handleIdeaModels);
 
     mDocumentRelationRcv.setAdapter(documentAdapter);
@@ -74,30 +78,30 @@ public class WorkFollowDetailFragment extends ViewFragment<WorkFollowDetailContr
   }
 
   private void addDocumentFakeData() {
-    documents.add("Danh sach can bo.dox");
-    documents.add("Danh sach phong ban.dox");
-    documents.add("Bao cao thang 5.dox");
+    documentModels.add(new DocumentModel(R.drawable.ic_word,"Danh sach can bo.dox",R.drawable.ic_download));
+    documentModels.add(new DocumentModel(R.drawable.ic_word,"Danh sach can bo.dox",R.drawable.ic_download));
+    documentModels.add(new DocumentModel(R.drawable.ic_word,"Danh sach can bo.dox",R.drawable.ic_download));
   }
 
   private void addHandleFlowFakeData() {
-    handleFlowModels.add(new HandleFlowModel("Nguyễn Huy Hùng", "Giám đốc", "Lãnh đạo đã giao việc", "20/5/2018"));
-    handleFlowModels.add(new HandleFlowModel("Nguyễn Huy Hùng", "Giám đốc", "Lãnh đạo đã giao việc", "20/5/2018"));
-    handleFlowModels.add(new HandleFlowModel("Nguyễn Huy Hùng", "Giám đốc", "Lãnh đạo đã giao việc", "20/5/2018"));
+    handleFollowModels.add(new HandleFollowModel("Nguyễn Huy Hùng", "Giám đốc", "Lãnh đạo đã giao việc", "20/5/2018"));
+    handleFollowModels.add(new HandleFollowModel("Nguyễn Huy Hùng", "Giám đốc", "Lãnh đạo đã giao việc", "20/5/2018"));
+    handleFollowModels.add(new HandleFollowModel("Nguyễn Huy Hùng", "Giám đốc", "Lãnh đạo đã giao việc", "20/5/2018"));
   }
 
   private void addhandleIdeaFakeData() {
-    ArrayList<String> document1 = new ArrayList<>();
-    document1.add("abc.docx");
-    document1.add("xyz.docx");
-    document1.add("123.docx");
-    ArrayList<String> document2 = new ArrayList<>();
-    document2.add("NguyenBaDung.docx");
-    document2.add("PhungVanCong.docx");
-    document2.add("VuHuuDuan.docx");
-    ArrayList<String> document3 = new ArrayList<>();
-    document3.add("NguyenTrongHoang.docx");
-    document3.add("NguenVanQuy.docx");
-    document3.add("PhamHuyAnh.docx");
+    ArrayList<DocumentModel> document1 = new ArrayList<>();
+    document1.add(new DocumentModel(R.drawable.ic_word,"abc.docx"));
+    document1.add(new DocumentModel(R.drawable.ic_word,"xyz.docx"));
+    document1.add(new DocumentModel(R.drawable.ic_word,"123.docx"));
+    ArrayList<DocumentModel> document2 = new ArrayList<>();
+    document2.add(new DocumentModel(R.drawable.ic_word,"NguyenBaDung.docx"));
+    document2.add(new DocumentModel(R.drawable.ic_word,"PhungVanCong.docx"));
+    document2.add(new DocumentModel(R.drawable.ic_word,"VuHuuDuan.docx"));
+    ArrayList<DocumentModel> document3 = new ArrayList<>();
+    document3.add(new DocumentModel(R.drawable.ic_word,"NguyenTrongHoang.docx"));
+    document3.add(new DocumentModel(R.drawable.ic_word,"NguenVanQuy.docx"));
+    document3.add(new DocumentModel(R.drawable.ic_word,"PhamHuyAnh.docx"));
     handleIdeaModels.add(new HandleIdeaModel("https://www.flaticon.com/free-icon/avatar_126486#term=person&page=1&position=2", "Nguyen Huy Nam", "20/5/2018", "Kính gửi vụ Quản lý quy hoạch,\n" +
         "Tôi xin gửi Quý vụ ý kiến CLPT ( A.Thắng đã ký) trong hồ sơ đính kèm.", "Nguyen Ba Dung", document1));
     handleIdeaModels.add(new HandleIdeaModel("https://www.flaticon.com/free-icon/avatar_126486#term=person&page=1&position=2", "Nguyen Huy Hung", "20/5/2018", "Kính gửi vụ Quản lý quy hoạch,\n" +
@@ -125,7 +129,7 @@ public class WorkFollowDetailFragment extends ViewFragment<WorkFollowDetailContr
         }, new ToolbarView.OnActionRightListener() {
           @Override
           public void onActionRightClick() {
-            getPresenter().handleActionRight();
+            getPresenter().handleActionRight(documentModels,handleIdeaModels);
           }
         }
     );

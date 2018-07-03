@@ -2,6 +2,8 @@ package com.gem.mpi.screen.main.main.workfollowlist.workfollowdetail;
 
 import com.gem.mpi.data.dto.WorkFlowDetailDTO;
 import com.gem.mpi.data.remote.callback.CommonCallback;
+import com.gem.mpi.screen.main.main.workfollowlist.workfollowdetail.model.DocumentModel;
+import com.gem.mpi.screen.main.main.workfollowlist.workfollowdetail.model.HandleIdeaModel;
 import com.gem.mpi.widget.ToolbarView;
 import com.gemvietnam.base.viper.interfaces.IInteractor;
 import com.gemvietnam.base.viper.interfaces.IPresenter;
@@ -28,8 +30,7 @@ interface WorkFollowDetailContract {
     void getWorkFlowDetailData(String work_flow_id);
     void openHandleIdeaFragment();
     void handleActionLeft();
-    void handleActionRight(ArrayList<String> documentRelation, ArrayList<String> documentIdeaHandle);
-    void handleActionRight();
+    void handleActionRight(ArrayList<DocumentModel> documentRelation, ArrayList<HandleIdeaModel> handleIdeaModels);
   }
 }
 

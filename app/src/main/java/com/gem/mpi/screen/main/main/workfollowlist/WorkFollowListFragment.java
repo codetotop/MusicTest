@@ -28,7 +28,9 @@ public class WorkFollowListFragment extends ViewFragment<WorkFollowListContract.
   RecyclerView mWorkListRcv;
 
   public static WorkFollowListFragment getInstance(Bundle data) {
-    return new WorkFollowListFragment();
+    WorkFollowListFragment fragment = new WorkFollowListFragment();
+    fragment.setArguments(data);
+    return fragment;
   }
 
   @Override

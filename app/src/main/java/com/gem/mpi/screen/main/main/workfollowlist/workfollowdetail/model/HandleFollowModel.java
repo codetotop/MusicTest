@@ -2,17 +2,17 @@ package com.gem.mpi.screen.main.main.workfollowlist.workfollowdetail.model;
 
 import java.io.Serializable;
 
-public class HandleFlowModel implements Serializable {
+public class HandleFollowModel implements Serializable {
     private String nameStaff;
     private String duty;
     private String descWorkFlow;
     private String timeHandle;
 
 
-    public HandleFlowModel() {
+    public HandleFollowModel() {
     }
 
-    public HandleFlowModel(String nameStaff, String duty, String descWorkFlow, String timeHandle) {
+    public HandleFollowModel(String nameStaff, String duty, String descWorkFlow, String timeHandle) {
         this.nameStaff = nameStaff;
         this.duty = duty;
         this.descWorkFlow = descWorkFlow;

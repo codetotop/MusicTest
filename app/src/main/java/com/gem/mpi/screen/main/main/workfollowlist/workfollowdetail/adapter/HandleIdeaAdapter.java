@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.gem.mpi.R;
+import com.gem.mpi.screen.main.main.workfollowlist.workfollowdetail.model.DocumentModel;
 import com.gem.mpi.screen.main.main.workfollowlist.workfollowdetail.model.HandleIdeaModel;
 
 import java.util.ArrayList;
@@ -65,7 +66,7 @@ public class HandleIdeaAdapter extends RecyclerView.Adapter<HandleIdeaAdapter.Vi
     ImageView mEmployeeAvatarImg;
     TextView mEmployeeNameTv, mTimeSendDataTv, mDescIdeaTv, mPersonSignTv, mDecorationTv;
     RecyclerView mDocumentRcv;
-    ArrayList<String> documentViews;
+    ArrayList<DocumentModel> documentViews;
     DocumentAdapter documentAdapter;
 
     public ViewHolder(View itemView) {
@@ -79,7 +80,7 @@ public class HandleIdeaAdapter extends RecyclerView.Adapter<HandleIdeaAdapter.Vi
       mDocumentRcv = itemView.findViewById(R.id.itemhandleidea_rcvDocument);
       mDocumentRcv.setLayoutManager(new LinearLayoutManager(context));
       documentViews = new ArrayList<>();
-      documentAdapter = new DocumentAdapter(context, documentViews,true);
+      documentAdapter = new DocumentAdapter(context, documentViews);
       mDocumentRcv.setAdapter(documentAdapter);
 
       mDecorationTv = itemView.findViewById(R.id.itemhandleidea_tv_decorationline);

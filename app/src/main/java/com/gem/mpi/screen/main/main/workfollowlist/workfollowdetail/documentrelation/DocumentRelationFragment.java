@@ -1,14 +1,18 @@
 package com.gem.mpi.screen.main.main.workfollowlist.workfollowdetail.documentrelation;
 
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
 import com.gem.mpi.R;
+import com.gem.mpi.screen.main.main.workfollowlist.workfollowdetail.WorkFollowDetailFragment;
 import com.gem.mpi.screen.main.main.workfollowlist.workfollowdetail.adapter.DocumentAdapter;
+import com.gem.mpi.screen.main.main.workfollowlist.workfollowdetail.model.DocumentModel;
 import com.gem.mpi.widget.ToolbarView;
 import com.gemvietnam.base.viper.ViewFragment;
 
 import java.util.ArrayList;
+import java.util.Collection;
 
 import butterknife.BindView;
 
@@ -20,7 +24,7 @@ public class DocumentRelationFragment extends ViewFragment<DocumentRelationContr
   ToolbarView mDocumentRelationTbv;
   @BindView(R.id.documentrelation_rcv)
   RecyclerView mDocumentRelationRcv;
-  ArrayList<String> documents;
+  static ArrayList<DocumentModel> documents;
   DocumentAdapter documentAdapter;
 
   public static DocumentRelationFragment getInstance(Bundle data) {
@@ -45,7 +49,20 @@ public class DocumentRelationFragment extends ViewFragment<DocumentRelationContr
         }, null
     );
 
+    addView();
 
+  }
+
+  private void addView() {
+    mDocumentRelationRcv.setLayoutManager(new LinearLayoutManager(getViewContext()));
+    documents = new ArrayList<>();
+    Bundle bundle = getArguments();
+    documents.addAll((Collection<? extends DocumentModel>) bundle.getSerializable("documents"));
+//    documents.add(new DocumentModel(R.drawable.ic_word,"Danh sach can bo.dox",R.drawable.ic_download));
+//    documents.add(new DocumentModel(R.drawable.ic_word,"Danh sach can bo.dox",R.drawable.ic_download));
+//    documents.add(new DocumentModel(R.drawable.ic_word,"Danh sach can bo.dox"));
+    documentAdapter = new DocumentAdapter(getViewContext(), documents);
+    mDocumentRelationRcv.setAdapter(documentAdapter);
   }
 
   @Override

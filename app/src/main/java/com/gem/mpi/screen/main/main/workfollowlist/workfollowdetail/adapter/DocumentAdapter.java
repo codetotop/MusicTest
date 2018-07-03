@@ -10,18 +10,17 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.gem.mpi.R;
+import com.gem.mpi.screen.main.main.workfollowlist.workfollowdetail.model.DocumentModel;
 
 import java.util.ArrayList;
 
 public class DocumentAdapter extends RecyclerView.Adapter<DocumentAdapter.ViewHolder> {
   private Context context;
-  private ArrayList<String> documents;
-  private boolean hideIconDownload;
+  private ArrayList<DocumentModel> documents;
 
-  public DocumentAdapter(Context context, ArrayList<String> documents, boolean hideIconDownload) {
+  public DocumentAdapter(Context context, ArrayList<DocumentModel> documents) {
     this.context = context;
     this.documents = documents;
-    this.hideIconDownload = hideIconDownload;
   }
 
   @NonNull
@@ -35,12 +34,16 @@ public class DocumentAdapter extends RecyclerView.Adapter<DocumentAdapter.ViewHo
 
   @Override
   public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-    String documentName = documents.get(position);
-    holder.mDocumentNameTv.setText(documentName);
+    DocumentModel document = documents.get(position);
+    holder.mDocumentNameTv.setText(document.getDocumentName());
+    if (document.getImgDocumentAvatar() != null)
+      holder.mAvatarDocumentImg.setBackgroundResource(document.getImgDocumentAvatar());
+    if (document.getImgDocumentDownload() != null)
+      holder.mDownloadDocumentImg.setBackgroundResource(document.getImgDocumentDownload());
     if (position == (documents.size() - 1))
       holder.mDecorationTv.setVisibility(View.INVISIBLE);
-    if (hideIconDownload)
-      holder.mDownloadDocumentImg.setVisibility(View.INVISIBLE);//set hide icon download when ...
+//    if (hideIconDownload)
+//      holder.mDownloadDocumentImg.setVisibility(View.INVISIBLE);//set hide icon download when ...
   }
 
   @Override
@@ -63,7 +66,7 @@ public class DocumentAdapter extends RecyclerView.Adapter<DocumentAdapter.ViewHo
     }
   }
 
-  public void refreshData(ArrayList<String> documents) {
+  public void refreshData(ArrayList<DocumentModel> documents) {
     this.documents.clear();
     this.documents.addAll(documents);
     notifyDataSetChanged();

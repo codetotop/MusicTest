@@ -30,4 +30,5 @@
     <string name="workfollowhandleidea_edt_content_handleidea_hint">Nội dung</string>
 
     <dimen name="itemhandlefollow_tv_decorationline_height">1dp</dimen>
+    <dimen name="viewdocument_img_avatardocument_with">18dp</dimen>
 </resources>

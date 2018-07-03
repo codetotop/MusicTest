@@ -6,9 +6,8 @@
 
     <ImageView
         android:id="@+id/viewdocument_img_avatardocument"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/ic_word"
+        android:layout_width="@dimen/viewdocument_img_avatardocument_with"
+        android:layout_height="@dimen/viewdocument_img_avatardocument_height"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -25,9 +24,8 @@
 
     <ImageView
         android:id="@+id/viewdocument_img_downloaddocument"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/ic_download"
+        android:layout_width="@dimen/viewdocument_img_downloaddocument_with"
+        android:layout_height="@dimen/viewdocument_img_downloaddocument_height"
         app:layout_constraintBottom_toBottomOf="@id/viewdocument_img_avatardocument"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="@id/viewdocument_img_avatardocument" />
@@ -35,9 +33,9 @@
     <TextView
         android:id="@+id/viewdocument_tv_decorationline"
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginBottom="12dp"
-        android:layout_marginTop="12dp"
+        android:layout_height="@dimen/viewdocument_tv_decorationline_height"
+        android:layout_marginBottom="@dimen/viewdocument_tv_decorationline_marginbottom"
+        android:layout_marginTop="@dimen/viewdocument_tv_decorationline_margintop"
         android:background="@color/colorDecorationLine"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"

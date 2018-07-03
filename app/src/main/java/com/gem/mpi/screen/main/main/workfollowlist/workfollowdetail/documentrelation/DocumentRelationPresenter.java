@@ -2,8 +2,11 @@ package com.gem.mpi.screen.main.main.workfollowlist.workfollowdetail.documentrel
 
 import android.os.Bundle;
 
+import com.gem.mpi.screen.main.main.workfollowlist.workfollowdetail.model.DocumentModel;
 import com.gemvietnam.base.viper.Presenter;
 import com.gemvietnam.base.viper.interfaces.ContainerView;
+
+import java.util.ArrayList;
 
 /**
  * The DocumentRelation Presenter

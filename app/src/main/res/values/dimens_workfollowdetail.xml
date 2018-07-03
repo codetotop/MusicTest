@@ -37,5 +37,11 @@
     <dimen name="workfollowdetail_tv_label_handlefollow_margintop">12dp</dimen>
     <dimen name="workfollowdetail_scv_margintop">16dp</dimen>
     <dimen name="workfollowhandleidea_btn_sendidea_height">40dp</dimen>
+    <dimen name="viewdocument_img_avatardocument_height">18dp</dimen>
+    <dimen name="viewdocument_img_downloaddocument_with">18dp</dimen>
+    <dimen name="viewdocument_img_downloaddocument_height">18dp</dimen>
+    <dimen name="viewdocument_tv_decorationline_height">1dp</dimen>
+    <dimen name="viewdocument_tv_decorationline_marginbottom">12dp</dimen>
+    <dimen name="viewdocument_tv_decorationline_margintop">12dp</dimen>
     <string name="workfollowhandleidea_btn_sendidea_text">Gửi ý kiến</string>
 </resources>

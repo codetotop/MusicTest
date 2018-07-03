@@ -9,17 +9,17 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.gem.mpi.R;
-import com.gem.mpi.screen.main.main.workfollowlist.workfollowdetail.model.HandleFlowModel;
+import com.gem.mpi.screen.main.main.workfollowlist.workfollowdetail.model.HandleFollowModel;
 
 import java.util.ArrayList;
 
-public class HandleFlowAdapter extends RecyclerView.Adapter<HandleFlowAdapter.ViewHolder>{
+public class HandleFollowAdapter extends RecyclerView.Adapter<HandleFollowAdapter.ViewHolder>{
     private Context context;
-    private ArrayList<HandleFlowModel> handleFlowModels;
+    private ArrayList<HandleFollowModel> handleFollowModels;
 
-    public HandleFlowAdapter(Context context, ArrayList<HandleFlowModel> handleFlowModels) {
+    public HandleFollowAdapter(Context context, ArrayList<HandleFollowModel> handleFollowModels) {
         this.context = context;
-        this.handleFlowModels = handleFlowModels;
+        this.handleFollowModels = handleFollowModels;
     }
 
     @NonNull
@@ -32,25 +32,25 @@ public class HandleFlowAdapter extends RecyclerView.Adapter<HandleFlowAdapter.Vi
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-      HandleFlowModel handleFlowModel = handleFlowModels.get(position);
-      holder.mNameStaffTv.setText(handleFlowModel.getNameStaff());
-      holder.mDutyTv.setText(handleFlowModel.getDuty());
-      holder.mDescWorkFlowTv.setText(handleFlowModel.getDescWorkFlow());
-      holder.mTimeHandleTv.setText(handleFlowModel.getTimeHandle());
+      HandleFollowModel handleFollowModel = handleFollowModels.get(position);
+      holder.mNameStaffTv.setText(handleFollowModel.getNameStaff());
+      holder.mDutyTv.setText(handleFollowModel.getDuty());
+      holder.mDescWorkFlowTv.setText(handleFollowModel.getDescWorkFlow());
+      holder.mTimeHandleTv.setText(handleFollowModel.getTimeHandle());
 
-        if (position == (handleFlowModels.size()-1))
+        if (position == (handleFollowModels.size()-1))
             holder.mDecorationTv.setVisibility(View.INVISIBLE);
     }
 
-    public void refreshData(ArrayList<HandleFlowModel> handleFlowModels){
-        this.handleFlowModels.clear();
-        this.handleFlowModels.addAll(handleFlowModels);
+    public void refreshData(ArrayList<HandleFollowModel> handleFollowModels){
+        this.handleFollowModels.clear();
+        this.handleFollowModels.addAll(handleFollowModels);
         notifyDataSetChanged();
     }
 
     @Override
     public int getItemCount() {
-        return handleFlowModels.size();
+        return handleFollowModels.size();
     }
 
     class ViewHolder extends RecyclerView.ViewHolder{
