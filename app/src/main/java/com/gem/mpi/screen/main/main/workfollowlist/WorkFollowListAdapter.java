@@ -44,7 +44,7 @@ public class WorkFollowListAdapter extends RecyclerView.Adapter<WorkFollowListAd
     if (status.equals("warning")) {
       holder.mStatusImg.setBackgroundResource(R.drawable.ic_warning);
     } else if (status.equals("error")) {
-      holder.mStatusImg.setBackgroundResource(R.drawable.ic_error);
+      holder.mStatusImg.setBackgroundResource(R.drawable.ic_attention);
     }
 
     holder.itemView.setOnClickListener(new View.OnClickListener() {

@@ -1,14 +1,11 @@
 package com.gem.mpi.screen.main.main.workfollowlist.workfollowdetail;
 
 import android.os.Bundle;
-import android.os.Parcelable;
 import android.support.annotation.NonNull;
 
 import com.gem.mpi.data.dto.WorkFlowDetailDTO;
 import com.gem.mpi.data.remote.callback.BaseResponse;
 import com.gem.mpi.data.remote.callback.CommonCallback;
-import com.gem.mpi.pref.PrefWrapper;
-import com.gem.mpi.screen.main.main.workfollowlist.workfollowdetail.documentrelation.DocumentRelationFragment;
 import com.gem.mpi.screen.main.main.workfollowlist.workfollowdetail.documentrelation.DocumentRelationPresenter;
 import com.gem.mpi.screen.main.main.workfollowlist.workfollowdetail.model.DocumentModel;
 import com.gem.mpi.screen.main.main.workfollowlist.workfollowdetail.model.HandleIdeaModel;

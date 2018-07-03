@@ -1,0 +1,216 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.gem.mpi.widget.ToolbarView
+        android:id="@+id/documentdetailto_tbv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/documentdetailto_tbv">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include
+                android:id="@+id/item_header_document_detail_to"
+                layout="@layout/item_header_document_detail_to"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
+                android:layout_marginStart="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/documentdetailto_decoration_line1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/decorationline_height"
+                android:layout_marginTop="20dp"
+                app:layout_constraintTop_toBottomOf="@id/item_header_document_detail_to" />
+
+            <TextView
+                android:id="@+id/documentdetailto_decoration_line2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/decorationline_height"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@id/documentdetailto_decoration_line1" />
+
+            <TextView
+                android:id="@+id/documentdetailto_tvlabel_desccontent"
+                style="@style/TextMediumBlackBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Trích yếu nội dung"
+                app:layout_constraintStart_toStartOf="@id/item_header_document_detail_to"
+                app:layout_constraintTop_toBottomOf="@+id/documentdetailto_decoration_line2" />
+
+            <TextView
+                android:id="@+id/documentdetailto_tvcontent_desccontent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="V/v phê duyệt kết hoạch, nội dung mua sắm, đề cương và dự đoán chi tiết nhiệm vụ &quot;Duy trì bản quyền phần mềm phòng chống virus&quot;"
+                android:textColor="#323538"
+                android:textSize="14sp"
+                app:layout_constraintLeft_toLeftOf="@+id/documentdetailto_tvlabel_desccontent"
+                app:layout_constraintTop_toBottomOf="@+id/documentdetailto_tvlabel_desccontent" />
+
+            <TextView
+                android:id="@+id/documentdetailto_decoration_line3"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/decorationline_height"
+                android:layout_marginTop="20dp"
+                app:layout_constraintTop_toBottomOf="@id/documentdetailto_tvcontent_desccontent" />
+
+            <TextView
+                android:id="@+id/documentdetailto_decoration_line4"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/decorationline_height"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@id/documentdetailto_decoration_line3" />
+
+            <TextView
+                android:id="@+id/documentdetailto_tvlabel_documentidea"
+                style="@style/TextMediumBlackBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Hồ sơ phân xử lý"
+                app:layout_constraintStart_toStartOf="@id/item_header_document_detail_to"
+                app:layout_constraintTop_toBottomOf="@id/documentdetailto_decoration_line4" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/documentdetailto_rcv_documentidea"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/workfollowdetail_rcv_marginend"
+                android:layout_marginTop="@dimen/workfollowdetail_rcv_margintop"
+                android:nestedScrollingEnabled="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@id/item_header_document_detail_to"
+                app:layout_constraintTop_toBottomOf="@id/documentdetailto_tvlabel_documentidea" />
+
+            <TextView
+                android:id="@+id/documentdetailto_decoration_line5"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/decorationline_height"
+                android:layout_marginTop="20dp"
+                app:layout_constraintTop_toBottomOf="@id/documentdetailto_rcv_documentidea" />
+
+            <TextView
+                android:id="@+id/documentdetailto_decoration_line6"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/decorationline_height"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@id/documentdetailto_decoration_line5" />
+
+            <TextView
+                android:id="@+id/documentdetailto_tvlabel_documentrelation"
+                style="@style/TextMediumBlackBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Hồ sơ liên quan"
+                app:layout_constraintStart_toStartOf="@id/item_header_document_detail_to"
+                app:layout_constraintTop_toBottomOf="@id/documentdetailto_decoration_line6" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/documentdetailto_rcv_documentrelation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/workfollowdetail_rcv_marginend"
+                android:layout_marginTop="@dimen/workfollowdetail_rcv_margintop"
+                android:nestedScrollingEnabled="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@id/item_header_document_detail_to"
+                app:layout_constraintTop_toBottomOf="@id/documentdetailto_tvlabel_documentrelation" />
+
+
+            <TextView
+                android:id="@+id/documentdetailto_decoration_line7"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/decorationline_height"
+                android:layout_marginTop="20dp"
+                app:layout_constraintTop_toBottomOf="@id/documentdetailto_rcv_documentrelation" />
+
+            <TextView
+                android:id="@+id/documentdetailto_decoration_line8"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/decorationline_height"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@id/documentdetailto_decoration_line7" />
+
+            <TextView
+                android:id="@+id/documentdetailto_tvlabel_documentcontent"
+                style="@style/TextMediumBlackBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Toàn văn nội dung"
+                app:layout_constraintStart_toStartOf="@id/item_header_document_detail_to"
+                app:layout_constraintTop_toBottomOf="@id/documentdetailto_decoration_line8" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/documentdetailto_rcv_documentcontent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/workfollowdetail_rcv_marginend"
+                android:layout_marginTop="@dimen/workfollowdetail_rcv_margintop"
+                android:nestedScrollingEnabled="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@id/item_header_document_detail_to"
+                app:layout_constraintTop_toBottomOf="@id/documentdetailto_tvlabel_documentcontent" />
+
+
+            <TextView
+                android:id="@+id/documentdetailto_decoration_line9"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/decorationline_height"
+                android:layout_marginTop="20dp"
+                app:layout_constraintTop_toBottomOf="@id/documentdetailto_rcv_documentrelation" />
+
+            <TextView
+                android:id="@+id/documentdetailto_decoration_line10"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/decorationline_height"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@id/documentdetailto_decoration_line9" />
+
+            <TextView
+                android:id="@+id/documentdetailto_tvlabel_history"
+                style="@style/TextMediumBlackBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Toàn văn nội dung"
+                app:layout_constraintStart_toStartOf="@id/item_header_document_detail_to"
+                app:layout_constraintTop_toBottomOf="@id/documentdetailto_decoration_line10" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/documentdetailto_rcv_history"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/workfollowdetail_rcv_marginend"
+                android:layout_marginTop="@dimen/workfollowdetail_rcv_margintop"
+                android:nestedScrollingEnabled="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@id/item_header_document_detail_to"
+                app:layout_constraintTop_toBottomOf="@id/documentdetailto_tvlabel_history" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </ScrollView>
+
+
+</android.support.constraint.ConstraintLayout>

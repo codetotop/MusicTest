@@ -51,4 +51,5 @@
     <dimen name="documentrelation_rcvdocumentrelation_marginend">15dp</dimen>
     <dimen name="documentrelation_rcvdocumentrelation_marginstart">15dp</dimen>
     <dimen name="documentrelation_rcvdocumentrelation_margintop">18dp</dimen>
+    <dimen name="decorationline_height">1dp</dimen>
 </resources>

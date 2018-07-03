@@ -20,7 +20,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/itemworkfollowlist_imgstatus_marginstart"
-        android:background="@drawable/ic_error"
+        android:background="@drawable/ic_attention"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/itemhandleidea_tv_title"
         app:layout_constraintTop_toTopOf="@+id/itemhandleidea_tv_title" />

@@ -58,9 +58,6 @@ public class DocumentRelationFragment extends ViewFragment<DocumentRelationContr
     documents = new ArrayList<>();
     Bundle bundle = getArguments();
     documents.addAll((Collection<? extends DocumentModel>) bundle.getSerializable("documents"));
-//    documents.add(new DocumentModel(R.drawable.ic_word,"Danh sach can bo.dox",R.drawable.ic_download));
-//    documents.add(new DocumentModel(R.drawable.ic_word,"Danh sach can bo.dox",R.drawable.ic_download));
-//    documents.add(new DocumentModel(R.drawable.ic_word,"Danh sach can bo.dox"));
     documentAdapter = new DocumentAdapter(getViewContext(), documents);
     mDocumentRelationRcv.setAdapter(documentAdapter);
   }
