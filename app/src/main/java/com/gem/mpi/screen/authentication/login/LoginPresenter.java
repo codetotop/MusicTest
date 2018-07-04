@@ -13,6 +13,7 @@ import com.gem.mpi.mapper.LoginMapper;
 import com.gem.mpi.model.LoginModel;
 import com.gem.mpi.pref.PrefWrapper;
 import com.gem.mpi.screen.main.MainActivity;
+import com.gem.mpi.screen.main.main.documentdetailto.DocumentDetailToPresenter;
 import com.gemvietnam.base.viper.Presenter;
 import com.gemvietnam.base.viper.interfaces.ContainerView;
 import com.gemvietnam.utils.StringUtils;
@@ -49,6 +50,7 @@ public class LoginPresenter extends Presenter<LoginContract.View, LoginContract.
   public void login(String username, String password) {
     if (checkValidate(username, password))
       return;
+
     mInteractor.login(username, password, new CommonCallback<LoginDTO>(getViewContext()) {
       @Override
       public void onResponse(@NonNull Response<BaseResponse<LoginDTO>> response) {
@@ -89,5 +91,6 @@ public class LoginPresenter extends Presenter<LoginContract.View, LoginContract.
   @Override
   public void openScreenForgotPassWord() {
 //    new WorkFollowListPresenter(mContainerView).pushView();
+    new DocumentDetailToPresenter(mContainerView).pushView();
   }
 }

@@ -44,6 +44,11 @@
         <item name="android:textSize">@dimen/small_text_size</item>
     </style>
 
+    <style name="TextSmallYellowCommon">
+        <item name="android:textColor">@color/colorYellowCommon</item>
+        <item name="android:textSize">@dimen/small_text_size</item>
+    </style>
+
     <style name="TextSmallestGrayCommon">
         <item name="android:textColor">@color/colorGrayCommon</item>
         <item name="android:textSize">@dimen/smallest_text_size</item>
@@ -111,4 +116,6 @@
         <item name="android:minHeight">@dimen/blue_button_common_min_height</item>
         <item name="android:stateListAnimator" tools:targetApi="lollipop">@null</item>
     </style>
+
+    <color name="colorYellowCommon">#f5a623</color>
 </resources>

@@ -16,6 +16,8 @@ interface DocumentDetailToContract {
   }
 
   interface Presenter extends IPresenter<View, Interactor> {
+    void handleActionLeft();
+    void handleActionRight();
   }
 }
 

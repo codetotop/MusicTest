@@ -1,2 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="itemheaderdocumentdetailto_tvlabel_addressname_text">VỤ KHOA HỌC GIÁO DỤC, TÀI NGUYÊN VÀ MÔI TRƯỜNG</string>
+    <string name="itemheaderdocumentdetailto_tvlabel_symboldocument_text">Ký hiệu văn bản</string>
+    <string name="itemheaderdocumentdetailto_tvcontent_symboldocument_text">04/TTR-TTTM</string>
+    <string name="itemheaderdocumentdetailto_tvlabel_creator_text">Người soạn thảo</string>
+    <string name="itemheaderdocumentdetailto_tvcontent_creator_text">Nguyễn Đức Thuần</string>
+    <string name="itemheaderdocumentdetailto_tvcontent_signperson">Nguyễn Văn Hiếu</string>
+    <string name="itemheaderdocumentdetailto_tvlabel_datesigndocument_text">Ngày ký văn bản</string>
+    <string name="itemheaderdocumentdetailto_tvlabel_hostaddress_text">Đơn vị chủ trì</string>
+    <string name="itemheaderdocumentdetailto_tvcontent_hostaddress_text"><![CDATA[PGĐ Thuần, CS&CSDL]]></string>
+    <string name="itemheaderdocumentdetailto_tvlabel_relationaddress_text">Đơn vị phối hợp</string>
+    <string name="itemheaderdocumentdetailto_tvcontent_relationaddress_text"><![CDATA[PGĐ Thuần, CS&CSDL]]></string>
+    <string name="itemheaderdocumentdetailto_tvlabel_deadlinehandle_text">Thời hạn giải quyết</string>
+    <string name="itemheaderdocumentdetailto_tvcontent_deadlinehandle_text">06/06/2018</string>
+    <string name="itemheaderdocumentdetailto_tvlabel_leaderidea_text">Ý kiến lãnh đạo</string>
+    <string name="itemheaderdocumentdetailto_tvcontent_leaderidea_text">Yêu cầu đơn vị phối hợp thực hiện dự án</string>
+    <string name="itemheaderdocumentdetailto_tvlabel_statushandle_text">Tình trạng xử lý</string>
+    <string name="itemheaderdocumentdetailto_tvcontent_statushandle_text">Đang xử lý</string>
+    <string name="itemheaderdocumentdetailto_tvlabel_numberreply_text">Số trả lời</string>
+    <string name="documentdetailto_tvlabel_desccontent_text">Trích yếu nội dung</string>
+    <string name="documentdetailto_tvcontent_desccontent_text">V/v phê duyệt kết hoạch, nội dung mua sắm, đề cương và dự đoán chi tiết nhiệm vụ \"Duy trì bản quyền phần mềm phòng chống virus\"</string>
+    <string name="documentdetailto_tvlabel_documentidea_text">Hồ sơ phân xử lý</string>
+    <string name="documentdetailto_tvlabel_documentrelation_text">Hồ sơ liên quan</string>
+    <string name="documentdetailto_tvlabel_documentcontent_text">Toàn văn nội dung</string>
+    <string name="documentdetailto_tvlabel_history_text">Lịch Sử</string>
+    <string name="itemheaderdocumentdetailto_tvlabel_numberdocumentreply_text">Trả lời văn bản số</string>
+    <string name="itemheaderdocumentdetailto_tvcontent_numberdocumentreply_text">02/TTR-TTTH</string>
+    <string name="itemheaderdocumentdetailto_tvlabel_signperson">Người ký</string>
+    <string name="itemheaderdocumentdetailto_tvcontent_datesigndocument">24/05/1018</string>
+    <string name="itemheaderdocumentdetailto_tvlabel_kinddocument_text">Loại văn bản</string>
+    <string name="title_documentdetailto_fragment">Chi tiết công văn đến</string>
+</resources>

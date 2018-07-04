@@ -1,2 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <dimen name="itemheaderdocumentdetailto_tvlabel_addressname_linespacinextra">7sp</dimen>
+    <dimen name="itemheaderdocumentdetailto_tvcontent_marginstart_common">32dp</dimen>
+    <dimen name="itemheaderdocumentdetailto_margintop_common">15dp</dimen>
+    <dimen name="item_header_document_detail_to_marginend">15dp</dimen>
+    <dimen name="item_header_document_detail_to_marginstart">15dp</dimen>
+    <dimen name="item_header_document_detail_to_margintop">15dp</dimen>
+    <dimen name="documentdetailto_decoration_line1_margintop">20dp</dimen>
+    <dimen name="documentdetailto_decoration_line2_margintop">8dp</dimen>
+    <dimen name="documentdetailto_tvcontent_desccontent_margintop">12dp</dimen>
+    <dimen name="documentdetailto_decoration_line3_margintop">20dp</dimen>
+    <dimen name="documentdetailto_decoration_line4_margintop">8dp</dimen>
+    <dimen name="documentdetailto_tvlabel_documentidea_margintop">15dp</dimen>
+    <dimen name="documentdetailto_decoration_line5_margintop">20dp</dimen>
+    <dimen name="documentdetailto_decoration_line6_margintop">8dp</dimen>
+    <dimen name="documentdetailto_tvlabel_documentrelation_margintop">15dp</dimen>
+    <dimen name="documentdetailto_decoration_line7_margintop">20dp</dimen>
+    <dimen name="documentdetailto_decoration_line8_margintop">8dp</dimen>
+    <dimen name="documentdetailto_tvlabel_documentcontent_margintop">15dp</dimen>
+    <dimen name="documentdetailto_decoration_line9_margintop">20dp</dimen>
+    <dimen name="documentdetailto_decoration_line10_margintop">8dp</dimen>
+    <dimen name="documentdetailto_tvlabel_history_margintop">15dp</dimen>
+    <dimen name="documentdetailto_rcv_history_marginbottom">12dp</dimen>
+
+</resources>

@@ -1,295 +1,298 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
     <TextView
-        android:id="@+id/itemheaderdocumentdetailto_addressname"
-        style="@style/TextMediumBlack"
+        android:id="@+id/itemheaderdocumentdetailto_tvlabel_addressname"
+        style="@style/TextMediumBlackBold"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
         android:letterSpacing="-0.02"
-        android:lineSpacingExtra="7sp"
-        android:text="Vụ khoa học giáo dục, tài nguyên và môi trường"
+        android:lineSpacingExtra="@dimen/itemheaderdocumentdetailto_tvlabel_addressname_linespacinextra"
+        android:text="@string/itemheaderdocumentdetailto_tvlabel_addressname_text"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        />
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/itemheaderdocumentdetailto_guideline1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.42" />
 
     <TextView
         android:id="@+id/itemheaderdocumentdetailto_tvlabel_symboldocument"
         style="@style/TextSmallBlackCommon"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        app:layout_constraintEnd_toStartOf="@id/itemheaderdocumentdetailto_tvcontent_symboldocument"
-        app:layout_constraintStart_toStartOf="@id/itemheaderdocumentdetailto_addressname"
-        app:layout_constraintTop_toBottomOf="@+id/itemheaderdocumentdetailto_addressname"
-        android:text="Ký hiệu văn bản" />
+        android:layout_marginTop="@dimen/itemheaderdocumentdetailto_margintop_common"
+        android:text="@string/itemheaderdocumentdetailto_tvlabel_symboldocument_text"
+        app:layout_constraintEnd_toStartOf="@id/itemheaderdocumentdetailto_guideline1"
+        app:layout_constraintStart_toStartOf="@id/itemheaderdocumentdetailto_tvlabel_addressname"
+        app:layout_constraintTop_toBottomOf="@+id/itemheaderdocumentdetailto_tvlabel_addressname" />
 
     <TextView
         android:id="@+id/itemheaderdocumentdetailto_tvcontent_symboldocument"
         style="@style/TextSmallBlackCommon"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="46dp"
+        android:layout_marginStart="@dimen/itemheaderdocumentdetailto_tvcontent_marginstart_common"
         android:gravity="end"
-        app:layout_constraintEnd_toEndOf="@id/itemheaderdocumentdetailto_addressname"
-        app:layout_constraintStart_toEndOf="@id/itemheaderdocumentdetailto_tvlabel_symboldocument"
-        app:layout_constraintTop_toTopOf="@+id/itemheaderdocumentdetailto_tvlabel_symboldocument"
-        android:text="Ký hiệu văn bản" />
+        android:text="@string/itemheaderdocumentdetailto_tvcontent_symboldocument_text"
+        app:layout_constraintEnd_toEndOf="@id/itemheaderdocumentdetailto_tvlabel_addressname"
+        app:layout_constraintStart_toEndOf="@id/itemheaderdocumentdetailto_guideline1"
+        app:layout_constraintTop_toTopOf="@+id/itemheaderdocumentdetailto_tvlabel_symboldocument" />
 
     <TextView
         android:id="@+id/itemheaderdocumentdetailto_tvlabel_creator"
         style="@style/TextSmallBlackCommon"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        app:layout_constraintEnd_toStartOf="@id/itemheaderdocumentdetailto_tvcontent_creator"
-        app:layout_constraintStart_toStartOf="@id/itemheaderdocumentdetailto_addressname"
-        app:layout_constraintTop_toBottomOf="@+id/itemheaderdocumentdetailto_tvcontent_symboldocument"
-        android:text="Ký hiệu văn bản" />
+        android:layout_marginTop="@dimen/itemheaderdocumentdetailto_margintop_common"
+        android:text="@string/itemheaderdocumentdetailto_tvlabel_creator_text"
+        app:layout_constraintEnd_toStartOf="@id/itemheaderdocumentdetailto_guideline1"
+        app:layout_constraintStart_toStartOf="@id/itemheaderdocumentdetailto_tvlabel_addressname"
+        app:layout_constraintTop_toBottomOf="@+id/itemheaderdocumentdetailto_tvcontent_symboldocument" />
 
     <TextView
         android:id="@+id/itemheaderdocumentdetailto_tvcontent_creator"
         style="@style/TextSmallBlackCommon"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="46dp"
+        android:layout_marginStart="@dimen/itemheaderdocumentdetailto_tvcontent_marginstart_common"
         android:gravity="end"
-        app:layout_constraintEnd_toEndOf="@id/itemheaderdocumentdetailto_addressname"
-        app:layout_constraintStart_toEndOf="@id/itemheaderdocumentdetailto_tvlabel_creator"
-        app:layout_constraintTop_toTopOf="@+id/itemheaderdocumentdetailto_tvlabel_creator"
-        android:text="Ký hiệu văn bản" />
+        android:text="@string/itemheaderdocumentdetailto_tvcontent_creator_text"
+        app:layout_constraintEnd_toEndOf="@id/itemheaderdocumentdetailto_tvlabel_addressname"
+        app:layout_constraintStart_toEndOf="@id/itemheaderdocumentdetailto_guideline1"
+        app:layout_constraintTop_toTopOf="@+id/itemheaderdocumentdetailto_tvlabel_creator" />
 
     <TextView
         android:id="@+id/itemheaderdocumentdetailto_tvlabel_numberdocumentreply"
         style="@style/TextSmallBlackCommon"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        app:layout_constraintEnd_toStartOf="@id/itemheaderdocumentdetailto_tvcontent_numberdocumentreply"
-        app:layout_constraintStart_toStartOf="@id/itemheaderdocumentdetailto_addressname"
-        app:layout_constraintTop_toBottomOf="@+id/itemheaderdocumentdetailto_tvlabel_creator"
-        android:text="Ký hiệu văn bản" />
+        android:layout_marginTop="@dimen/itemheaderdocumentdetailto_margintop_common"
+        android:text="@string/itemheaderdocumentdetailto_tvlabel_numberdocumentreply_text"
+        app:layout_constraintEnd_toStartOf="@id/itemheaderdocumentdetailto_guideline1"
+        app:layout_constraintStart_toStartOf="@id/itemheaderdocumentdetailto_tvlabel_addressname"
+        app:layout_constraintTop_toBottomOf="@+id/itemheaderdocumentdetailto_tvcontent_creator" />
 
     <TextView
         android:id="@+id/itemheaderdocumentdetailto_tvcontent_numberdocumentreply"
         style="@style/TextSmallBlackCommon"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="46dp"
+        android:layout_marginStart="@dimen/itemheaderdocumentdetailto_tvcontent_marginstart_common"
         android:gravity="end"
-        app:layout_constraintEnd_toEndOf="@id/itemheaderdocumentdetailto_addressname"
-        app:layout_constraintStart_toEndOf="@id/itemheaderdocumentdetailto_tvlabel_numberdocumentreply"
-        app:layout_constraintTop_toTopOf="@+id/itemheaderdocumentdetailto_tvlabel_numberdocumentreply"
-        android:text="Ký hiệu văn bản" />
+        android:text="@string/itemheaderdocumentdetailto_tvcontent_numberdocumentreply_text"
+        app:layout_constraintEnd_toEndOf="@id/itemheaderdocumentdetailto_tvlabel_addressname"
+        app:layout_constraintStart_toEndOf="@id/itemheaderdocumentdetailto_guideline1"
+        app:layout_constraintTop_toTopOf="@+id/itemheaderdocumentdetailto_tvlabel_numberdocumentreply" />
 
     <TextView
         android:id="@+id/itemheaderdocumentdetailto_tvlabel_signperson"
         style="@style/TextSmallBlackCommon"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        app:layout_constraintEnd_toStartOf="@id/itemheaderdocumentdetailto_tvcontent_signperson"
-        app:layout_constraintStart_toStartOf="@id/itemheaderdocumentdetailto_addressname"
-        app:layout_constraintTop_toBottomOf="@+id/itemheaderdocumentdetailto_tvlabel_numberdocumentreply"
-        android:text="Ký hiệu văn bản" />
+        android:layout_marginTop="@dimen/itemheaderdocumentdetailto_margintop_common"
+        android:text="@string/itemheaderdocumentdetailto_tvlabel_signperson"
+        app:layout_constraintEnd_toStartOf="@id/itemheaderdocumentdetailto_guideline1"
+        app:layout_constraintStart_toStartOf="@id/itemheaderdocumentdetailto_tvlabel_addressname"
+        app:layout_constraintTop_toBottomOf="@+id/itemheaderdocumentdetailto_tvcontent_numberdocumentreply" />
 
     <TextView
         android:id="@+id/itemheaderdocumentdetailto_tvcontent_signperson"
         style="@style/TextSmallBlackCommon"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="46dp"
+        android:layout_marginStart="@dimen/itemheaderdocumentdetailto_tvcontent_marginstart_common"
         android:gravity="end"
-        app:layout_constraintEnd_toEndOf="@id/itemheaderdocumentdetailto_addressname"
-        app:layout_constraintStart_toEndOf="@id/itemheaderdocumentdetailto_tvlabel_signperson"
-        app:layout_constraintTop_toTopOf="@+id/itemheaderdocumentdetailto_tvlabel_signperson"
-        android:text="Ký hiệu văn bản" />
+        android:text="@string/itemheaderdocumentdetailto_tvcontent_signperson"
+        app:layout_constraintEnd_toEndOf="@id/itemheaderdocumentdetailto_tvlabel_addressname"
+        app:layout_constraintStart_toEndOf="@id/itemheaderdocumentdetailto_guideline1"
+        app:layout_constraintTop_toTopOf="@+id/itemheaderdocumentdetailto_tvlabel_signperson" />
 
     <TextView
         android:id="@+id/itemheaderdocumentdetailto_tvlabel_datesigndocument"
         style="@style/TextSmallBlackCommon"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        app:layout_constraintEnd_toStartOf="@id/itemheaderdocumentdetailto_tvcontent_datesigndocument"
-        app:layout_constraintStart_toStartOf="@id/itemheaderdocumentdetailto_addressname"
-        app:layout_constraintTop_toBottomOf="@+id/itemheaderdocumentdetailto_tvlabel_signperson"
-        android:text="Ký hiệu văn bản" />
+        android:layout_marginTop="@dimen/itemheaderdocumentdetailto_margintop_common"
+        android:text="@string/itemheaderdocumentdetailto_tvlabel_datesigndocument_text"
+        app:layout_constraintEnd_toStartOf="@id/itemheaderdocumentdetailto_guideline1"
+        app:layout_constraintStart_toStartOf="@id/itemheaderdocumentdetailto_tvlabel_addressname"
+        app:layout_constraintTop_toBottomOf="@+id/itemheaderdocumentdetailto_tvcontent_signperson" />
 
     <TextView
         android:id="@+id/itemheaderdocumentdetailto_tvcontent_datesigndocument"
         style="@style/TextSmallBlackCommon"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="46dp"
+        android:layout_marginStart="@dimen/itemheaderdocumentdetailto_tvcontent_marginstart_common"
         android:gravity="end"
-        app:layout_constraintEnd_toEndOf="@id/itemheaderdocumentdetailto_addressname"
-        app:layout_constraintStart_toEndOf="@id/itemheaderdocumentdetailto_tvlabel_datesigndocument"
-        app:layout_constraintTop_toTopOf="@+id/itemheaderdocumentdetailto_tvlabel_datesigndocument"
-        android:text="Ký hiệu văn bản" />
+        android:text="@string/itemheaderdocumentdetailto_tvcontent_datesigndocument"
+        app:layout_constraintEnd_toEndOf="@id/itemheaderdocumentdetailto_tvlabel_addressname"
+        app:layout_constraintStart_toEndOf="@id/itemheaderdocumentdetailto_guideline1"
+        app:layout_constraintTop_toTopOf="@+id/itemheaderdocumentdetailto_tvlabel_datesigndocument" />
 
     <TextView
         android:id="@+id/itemheaderdocumentdetailto_tvlabel_hostaddress"
         style="@style/TextSmallBlackCommon"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        app:layout_constraintEnd_toStartOf="@id/itemheaderdocumentdetailto_tvcontent_hostaddress"
-        app:layout_constraintStart_toStartOf="@id/itemheaderdocumentdetailto_addressname"
-        app:layout_constraintTop_toBottomOf="@+id/itemheaderdocumentdetailto_tvlabel_datesigndocument"
-        android:text="Ký hiệu văn bản" />
+        android:layout_marginTop="@dimen/itemheaderdocumentdetailto_margintop_common"
+        android:text="@string/itemheaderdocumentdetailto_tvlabel_hostaddress_text"
+        app:layout_constraintEnd_toStartOf="@id/itemheaderdocumentdetailto_guideline1"
+        app:layout_constraintStart_toStartOf="@id/itemheaderdocumentdetailto_tvlabel_addressname"
+        app:layout_constraintTop_toBottomOf="@+id/itemheaderdocumentdetailto_tvcontent_datesigndocument" />
 
     <TextView
         android:id="@+id/itemheaderdocumentdetailto_tvcontent_hostaddress"
         style="@style/TextSmallBlackCommon"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="46dp"
+        android:layout_marginStart="@dimen/itemheaderdocumentdetailto_tvcontent_marginstart_common"
         android:gravity="end"
-        app:layout_constraintEnd_toEndOf="@id/itemheaderdocumentdetailto_addressname"
-        app:layout_constraintStart_toEndOf="@id/itemheaderdocumentdetailto_tvlabel_hostaddress"
-        app:layout_constraintTop_toTopOf="@+id/itemheaderdocumentdetailto_tvlabel_hostaddress"
-        android:text="Ký hiệu văn bản" />
+        android:text="@string/itemheaderdocumentdetailto_tvcontent_hostaddress_text"
+        app:layout_constraintEnd_toEndOf="@id/itemheaderdocumentdetailto_tvlabel_addressname"
+        app:layout_constraintStart_toEndOf="@id/itemheaderdocumentdetailto_guideline1"
+        app:layout_constraintTop_toTopOf="@+id/itemheaderdocumentdetailto_tvlabel_hostaddress" />
 
     <TextView
         android:id="@+id/itemheaderdocumentdetailto_tvlabel_relationaddress"
         style="@style/TextSmallBlackCommon"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        app:layout_constraintEnd_toStartOf="@id/itemheaderdocumentdetailto_tvcontent_relationaddress"
-        app:layout_constraintStart_toStartOf="@id/itemheaderdocumentdetailto_addressname"
-        app:layout_constraintTop_toBottomOf="@+id/itemheaderdocumentdetailto_tvlabel_hostaddress"
-        android:text="Ký hiệu văn bản" />
+        android:layout_marginTop="@dimen/itemheaderdocumentdetailto_margintop_common"
+        android:text="@string/itemheaderdocumentdetailto_tvlabel_relationaddress_text"
+        app:layout_constraintEnd_toStartOf="@id/itemheaderdocumentdetailto_guideline1"
+        app:layout_constraintStart_toStartOf="@id/itemheaderdocumentdetailto_tvlabel_addressname"
+        app:layout_constraintTop_toBottomOf="@+id/itemheaderdocumentdetailto_tvcontent_hostaddress" />
 
     <TextView
         android:id="@+id/itemheaderdocumentdetailto_tvcontent_relationaddress"
         style="@style/TextSmallBlackCommon"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="46dp"
+        android:layout_marginStart="@dimen/itemheaderdocumentdetailto_tvcontent_marginstart_common"
         android:gravity="end"
-        app:layout_constraintEnd_toEndOf="@id/itemheaderdocumentdetailto_addressname"
-        app:layout_constraintStart_toEndOf="@id/itemheaderdocumentdetailto_tvlabel_relationaddress"
-        app:layout_constraintTop_toTopOf="@+id/itemheaderdocumentdetailto_tvlabel_relationaddress"
-        android:text="Ký hiệu văn bản" />
+        android:text="@string/itemheaderdocumentdetailto_tvcontent_relationaddress_text"
+        app:layout_constraintEnd_toEndOf="@id/itemheaderdocumentdetailto_tvlabel_addressname"
+        app:layout_constraintStart_toEndOf="@id/itemheaderdocumentdetailto_guideline1"
+        app:layout_constraintTop_toTopOf="@+id/itemheaderdocumentdetailto_tvlabel_relationaddress" />
 
     <TextView
         android:id="@+id/itemheaderdocumentdetailto_tvlabel_deadlinehandle"
         style="@style/TextSmallBlackCommon"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        app:layout_constraintEnd_toStartOf="@id/itemheaderdocumentdetailto_tvcontent_deadlinehandle"
-        app:layout_constraintStart_toStartOf="@id/itemheaderdocumentdetailto_addressname"
-        app:layout_constraintTop_toBottomOf="@+id/itemheaderdocumentdetailto_tvlabel_relationaddress"
-        android:text="Ký hiệu văn bản" />
+        android:layout_marginTop="@dimen/itemheaderdocumentdetailto_margintop_common"
+        android:text="@string/itemheaderdocumentdetailto_tvlabel_deadlinehandle_text"
+        app:layout_constraintEnd_toStartOf="@id/itemheaderdocumentdetailto_guideline1"
+        app:layout_constraintStart_toStartOf="@id/itemheaderdocumentdetailto_tvlabel_addressname"
+        app:layout_constraintTop_toBottomOf="@+id/itemheaderdocumentdetailto_tvcontent_relationaddress" />
 
     <TextView
         android:id="@+id/itemheaderdocumentdetailto_tvcontent_deadlinehandle"
         style="@style/TextSmallBlackCommon"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="46dp"
+        android:layout_marginStart="@dimen/itemheaderdocumentdetailto_tvcontent_marginstart_common"
         android:gravity="end"
-        app:layout_constraintEnd_toEndOf="@id/itemheaderdocumentdetailto_addressname"
-        app:layout_constraintStart_toEndOf="@id/itemheaderdocumentdetailto_tvlabel_deadlinehandle"
-        app:layout_constraintTop_toTopOf="@+id/itemheaderdocumentdetailto_tvlabel_deadlinehandle"
-        android:text="Ký hiệu văn bản" />
+        android:text="@string/itemheaderdocumentdetailto_tvcontent_deadlinehandle_text"
+        app:layout_constraintEnd_toEndOf="@id/itemheaderdocumentdetailto_tvlabel_addressname"
+        app:layout_constraintStart_toEndOf="@id/itemheaderdocumentdetailto_guideline1"
+        app:layout_constraintTop_toTopOf="@+id/itemheaderdocumentdetailto_tvlabel_deadlinehandle" />
 
     <TextView
         android:id="@+id/itemheaderdocumentdetailto_tvlabel_leaderidea"
         style="@style/TextSmallBlackCommon"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        app:layout_constraintEnd_toStartOf="@id/itemheaderdocumentdetailto_tvcontent_leaderidea"
-        app:layout_constraintStart_toStartOf="@id/itemheaderdocumentdetailto_addressname"
-        app:layout_constraintTop_toBottomOf="@+id/itemheaderdocumentdetailto_tvlabel_deadlinehandle"
-        android:text="Ký hiệu văn bản" />
+        android:layout_marginTop="@dimen/itemheaderdocumentdetailto_margintop_common"
+        android:text="@string/itemheaderdocumentdetailto_tvlabel_leaderidea_text"
+        app:layout_constraintEnd_toStartOf="@id/itemheaderdocumentdetailto_guideline1"
+        app:layout_constraintStart_toStartOf="@id/itemheaderdocumentdetailto_tvlabel_addressname"
+        app:layout_constraintTop_toBottomOf="@+id/itemheaderdocumentdetailto_tvcontent_deadlinehandle" />
 
     <TextView
         android:id="@+id/itemheaderdocumentdetailto_tvcontent_leaderidea"
         style="@style/TextSmallBlackCommon"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="46dp"
+        android:layout_marginStart="@dimen/itemheaderdocumentdetailto_tvcontent_marginstart_common"
         android:gravity="end"
-        app:layout_constraintEnd_toEndOf="@id/itemheaderdocumentdetailto_addressname"
-        app:layout_constraintStart_toEndOf="@id/itemheaderdocumentdetailto_tvlabel_leaderidea"
-        app:layout_constraintTop_toTopOf="@+id/itemheaderdocumentdetailto_tvlabel_leaderidea"
-        android:text="Ký hiệu văn bản" />
+        android:text="@string/itemheaderdocumentdetailto_tvcontent_leaderidea_text"
+        app:layout_constraintEnd_toEndOf="@id/itemheaderdocumentdetailto_tvlabel_addressname"
+        app:layout_constraintStart_toEndOf="@id/itemheaderdocumentdetailto_guideline1"
+        app:layout_constraintTop_toTopOf="@+id/itemheaderdocumentdetailto_tvlabel_leaderidea" />
 
     <TextView
         android:id="@+id/itemheaderdocumentdetailto_tvlabel_statushandle"
         style="@style/TextSmallBlackCommon"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        app:layout_constraintEnd_toStartOf="@id/itemheaderdocumentdetailto_tvcontent_statushandle"
-        app:layout_constraintStart_toStartOf="@id/itemheaderdocumentdetailto_addressname"
-        app:layout_constraintTop_toBottomOf="@+id/itemheaderdocumentdetailto_tvlabel_leaderidea"
-        android:text="Ký hiệu văn bản" />
+        android:layout_marginTop="@dimen/itemheaderdocumentdetailto_margintop_common"
+        android:text="@string/itemheaderdocumentdetailto_tvlabel_statushandle_text"
+        app:layout_constraintEnd_toStartOf="@id/itemheaderdocumentdetailto_guideline1"
+        app:layout_constraintStart_toStartOf="@id/itemheaderdocumentdetailto_tvlabel_addressname"
+        app:layout_constraintTop_toBottomOf="@+id/itemheaderdocumentdetailto_tvcontent_leaderidea" />
 
     <TextView
         android:id="@+id/itemheaderdocumentdetailto_tvcontent_statushandle"
-        style="@style/TextSmallBlackCommon"
+        style="@style/TextSmallYellowCommon"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="46dp"
+        android:layout_marginStart="@dimen/itemheaderdocumentdetailto_tvcontent_marginstart_common"
         android:gravity="end"
-        app:layout_constraintEnd_toEndOf="@id/itemheaderdocumentdetailto_addressname"
-        app:layout_constraintStart_toEndOf="@id/itemheaderdocumentdetailto_tvlabel_statushandle"
-        app:layout_constraintTop_toTopOf="@+id/itemheaderdocumentdetailto_tvlabel_statushandle"
-        android:text="Ký hiệu văn bản" />
+        android:text="@string/itemheaderdocumentdetailto_tvcontent_statushandle_text"
+        app:layout_constraintEnd_toEndOf="@id/itemheaderdocumentdetailto_tvlabel_addressname"
+        app:layout_constraintStart_toEndOf="@id/itemheaderdocumentdetailto_guideline1"
+        app:layout_constraintTop_toTopOf="@+id/itemheaderdocumentdetailto_tvlabel_statushandle" />
 
     <TextView
         android:id="@+id/itemheaderdocumentdetailto_tvlabel_kinddocument"
         style="@style/TextSmallBlackCommon"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        app:layout_constraintEnd_toStartOf="@id/itemheaderdocumentdetailto_tvcontent_kinddocument"
-        app:layout_constraintStart_toStartOf="@id/itemheaderdocumentdetailto_addressname"
-        app:layout_constraintTop_toBottomOf="@+id/itemheaderdocumentdetailto_tvlabel_statushandle"
-        android:text="Ký hiệu văn bản" />
+        android:layout_marginTop="@dimen/itemheaderdocumentdetailto_margintop_common"
+        android:text="@string/itemheaderdocumentdetailto_tvlabel_kinddocument_text"
+        app:layout_constraintEnd_toStartOf="@id/itemheaderdocumentdetailto_guideline1"
+        app:layout_constraintStart_toStartOf="@id/itemheaderdocumentdetailto_tvlabel_addressname"
+        app:layout_constraintTop_toBottomOf="@+id/itemheaderdocumentdetailto_tvcontent_statushandle" />
 
     <TextView
         android:id="@+id/itemheaderdocumentdetailto_tvcontent_kinddocument"
         style="@style/TextSmallBlackCommon"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="46dp"
+        android:layout_marginStart="@dimen/itemheaderdocumentdetailto_tvcontent_marginstart_common"
         android:gravity="end"
-        app:layout_constraintEnd_toEndOf="@id/itemheaderdocumentdetailto_addressname"
-        app:layout_constraintStart_toEndOf="@id/itemheaderdocumentdetailto_tvlabel_kinddocument"
-        app:layout_constraintTop_toTopOf="@+id/itemheaderdocumentdetailto_tvlabel_kinddocument"
-        android:text="Ký hiệu văn bản" />
+        app:layout_constraintEnd_toEndOf="@id/itemheaderdocumentdetailto_tvlabel_addressname"
+        app:layout_constraintStart_toEndOf="@id/itemheaderdocumentdetailto_guideline1"
+        app:layout_constraintTop_toTopOf="@+id/itemheaderdocumentdetailto_tvlabel_kinddocument" />
 
     <TextView
         android:id="@+id/itemheaderdocumentdetailto_tvlabel_numberreply"
         style="@style/TextSmallBlackCommon"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        app:layout_constraintEnd_toStartOf="@id/itemheaderdocumentdetailto_tvcontent_numberreply"
-        app:layout_constraintStart_toStartOf="@id/itemheaderdocumentdetailto_addressname"
-        app:layout_constraintTop_toBottomOf="@+id/itemheaderdocumentdetailto_tvlabel_kinddocument"
-        android:text="Ký hiệu văn bản" />
+        android:layout_marginTop="@dimen/itemheaderdocumentdetailto_margintop_common"
+        android:text="@string/itemheaderdocumentdetailto_tvlabel_numberreply_text"
+        app:layout_constraintEnd_toStartOf="@id/itemheaderdocumentdetailto_guideline1"
+        app:layout_constraintStart_toStartOf="@id/itemheaderdocumentdetailto_tvlabel_addressname"
+        app:layout_constraintTop_toBottomOf="@+id/itemheaderdocumentdetailto_tvcontent_kinddocument" />
 
     <TextView
         android:id="@+id/itemheaderdocumentdetailto_tvcontent_numberreply"
         style="@style/TextSmallBlackCommon"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="46dp"
+        android:layout_marginStart="@dimen/itemheaderdocumentdetailto_tvcontent_marginstart_common"
         android:gravity="end"
-        app:layout_constraintEnd_toEndOf="@id/itemheaderdocumentdetailto_addressname"
-        app:layout_constraintStart_toEndOf="@id/itemheaderdocumentdetailto_tvlabel_numberreply"
-        app:layout_constraintTop_toTopOf="@+id/itemheaderdocumentdetailto_tvlabel_numberreply"
-        android:text="Ký hiệu văn bản" />
+        app:layout_constraintEnd_toEndOf="@id/itemheaderdocumentdetailto_tvlabel_addressname"
+        app:layout_constraintStart_toEndOf="@id/itemheaderdocumentdetailto_guideline1"
+        app:layout_constraintTop_toTopOf="@+id/itemheaderdocumentdetailto_tvlabel_numberreply" />
 </android.support.constraint.ConstraintLayout>

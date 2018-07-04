@@ -40,6 +40,9 @@ public class UpdateProfileFragment extends ViewFragment<UpdateProfileContract.Pr
           @Override
           public void onActionLeftClick() {
             getPresenter().handleActionLeft();
+            if (mOnBackListener != null) {
+              mOnBackListener.onBackClick();
+            }
           }
         }, null
     );
@@ -50,5 +53,15 @@ public class UpdateProfileFragment extends ViewFragment<UpdateProfileContract.Pr
     mToolbarTbv.init(actionLeftStyle, actionRightStyle, titleId,
         actionLeftDrawbleId, actionLeftStringId, actionRightDrawableId, actionRightStringId,
         onActionLeftListener, onActionRightListener);
+  }
+
+  OnBackListener mOnBackListener;
+
+  public void setOnBackListener(OnBackListener onBackListener) {
+    mOnBackListener = onBackListener;
+  }
+
+  public interface OnBackListener {
+    void onBackClick();
   }
 }

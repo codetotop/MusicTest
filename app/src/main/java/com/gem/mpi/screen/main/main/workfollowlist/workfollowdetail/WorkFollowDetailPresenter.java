@@ -68,7 +68,7 @@ public class WorkFollowDetailPresenter extends Presenter<WorkFollowDetailContrac
   }
 
   @Override
-  public void handleActionLeft() {
+  public void  handleActionLeft() {
     getFragment().getFragmentManager().popBackStack();
   }
 

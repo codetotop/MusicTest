@@ -1,8 +1,10 @@
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
 
     <com.gem.mpi.widget.ToolbarView
         android:id="@+id/documentdetailto_tbv"
@@ -10,11 +12,13 @@
         android:layout_height="wrap_content" />
 
     <ScrollView
+        android:id="@+id/documentdetailto_scrollview"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/documentdetailto_tbv">
 
         <android.support.constraint.ConstraintLayout
+            android:id="@+id/documentdetailto_container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
@@ -23,23 +27,28 @@
                 layout="@layout/item_header_document_detail_to"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="15dp"
-                android:layout_marginStart="15dp"
+                android:layout_marginEnd="@dimen/item_header_document_detail_to_marginend"
+                android:layout_marginStart="@dimen/item_header_document_detail_to_marginstart"
+                android:layout_marginTop="@dimen/item_header_document_detail_to_margintop"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/documentdetailto_container"
+                />
 
             <TextView
                 android:id="@+id/documentdetailto_decoration_line1"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/decorationline_height"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="@dimen/documentdetailto_decoration_line1_margintop"
+                android:background="@color/colorDecorationLine"
                 app:layout_constraintTop_toBottomOf="@id/item_header_document_detail_to" />
 
             <TextView
                 android:id="@+id/documentdetailto_decoration_line2"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/decorationline_height"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="@dimen/documentdetailto_decoration_line2_margintop"
+                android:background="@color/colorDecorationLine"
                 app:layout_constraintTop_toBottomOf="@id/documentdetailto_decoration_line1" />
 
             <TextView
@@ -47,7 +56,7 @@
                 style="@style/TextMediumBlackBold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Trích yếu nội dung"
+                android:text="@string/documentdetailto_tvlabel_desccontent_text"
                 app:layout_constraintStart_toStartOf="@id/item_header_document_detail_to"
                 app:layout_constraintTop_toBottomOf="@+id/documentdetailto_decoration_line2" />
 
@@ -55,10 +64,9 @@
                 android:id="@+id/documentdetailto_tvcontent_desccontent"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:text="V/v phê duyệt kết hoạch, nội dung mua sắm, đề cương và dự đoán chi tiết nhiệm vụ &quot;Duy trì bản quyền phần mềm phòng chống virus&quot;"
-                android:textColor="#323538"
-                android:textSize="14sp"
+                android:layout_marginTop="@dimen/documentdetailto_tvcontent_desccontent_margintop"
+                android:text="@string/documentdetailto_tvcontent_desccontent_text"
+                style="@style/TextSmallBlack"
                 app:layout_constraintLeft_toLeftOf="@+id/documentdetailto_tvlabel_desccontent"
                 app:layout_constraintTop_toBottomOf="@+id/documentdetailto_tvlabel_desccontent" />
 
@@ -66,14 +74,16 @@
                 android:id="@+id/documentdetailto_decoration_line3"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/decorationline_height"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="@dimen/documentdetailto_decoration_line3_margintop"
+                android:background="@color/colorDecorationLine"
                 app:layout_constraintTop_toBottomOf="@id/documentdetailto_tvcontent_desccontent" />
 
             <TextView
                 android:id="@+id/documentdetailto_decoration_line4"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/decorationline_height"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="@dimen/documentdetailto_decoration_line4_margintop"
+                android:background="@color/colorDecorationLine"
                 app:layout_constraintTop_toBottomOf="@id/documentdetailto_decoration_line3" />
 
             <TextView
@@ -81,8 +91,8 @@
                 style="@style/TextMediumBlackBold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:text="Hồ sơ phân xử lý"
+                android:layout_marginTop="@dimen/documentdetailto_tvlabel_documentidea_margintop"
+                android:text="@string/documentdetailto_tvlabel_documentidea_text"
                 app:layout_constraintStart_toStartOf="@id/item_header_document_detail_to"
                 app:layout_constraintTop_toBottomOf="@id/documentdetailto_decoration_line4" />
 
@@ -102,14 +112,16 @@
                 android:id="@+id/documentdetailto_decoration_line5"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/decorationline_height"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="@dimen/documentdetailto_decoration_line5_margintop"
+                android:background="@color/colorDecorationLine"
                 app:layout_constraintTop_toBottomOf="@id/documentdetailto_rcv_documentidea" />
 
             <TextView
                 android:id="@+id/documentdetailto_decoration_line6"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/decorationline_height"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="@dimen/documentdetailto_decoration_line6_margintop"
+                android:background="@color/colorDecorationLine"
                 app:layout_constraintTop_toBottomOf="@id/documentdetailto_decoration_line5" />
 
             <TextView
@@ -117,8 +129,8 @@
                 style="@style/TextMediumBlackBold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:text="Hồ sơ liên quan"
+                android:layout_marginTop="@dimen/documentdetailto_tvlabel_documentrelation_margintop"
+                android:text="@string/documentdetailto_tvlabel_documentrelation_text"
                 app:layout_constraintStart_toStartOf="@id/item_header_document_detail_to"
                 app:layout_constraintTop_toBottomOf="@id/documentdetailto_decoration_line6" />
 
@@ -139,14 +151,16 @@
                 android:id="@+id/documentdetailto_decoration_line7"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/decorationline_height"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="@dimen/documentdetailto_decoration_line7_margintop"
+                android:background="@color/colorDecorationLine"
                 app:layout_constraintTop_toBottomOf="@id/documentdetailto_rcv_documentrelation" />
 
             <TextView
                 android:id="@+id/documentdetailto_decoration_line8"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/decorationline_height"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="@dimen/documentdetailto_decoration_line8_margintop"
+                android:background="@color/colorDecorationLine"
                 app:layout_constraintTop_toBottomOf="@id/documentdetailto_decoration_line7" />
 
             <TextView
@@ -154,8 +168,8 @@
                 style="@style/TextMediumBlackBold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:text="Toàn văn nội dung"
+                android:layout_marginTop="@dimen/documentdetailto_tvlabel_documentcontent_margintop"
+                android:text="@string/documentdetailto_tvlabel_documentcontent_text"
                 app:layout_constraintStart_toStartOf="@id/item_header_document_detail_to"
                 app:layout_constraintTop_toBottomOf="@id/documentdetailto_decoration_line8" />
 
@@ -169,21 +183,24 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@id/item_header_document_detail_to"
-                app:layout_constraintTop_toBottomOf="@id/documentdetailto_tvlabel_documentcontent" />
+                app:layout_constraintTop_toBottomOf="@id/documentdetailto_tvlabel_documentcontent"
+                />
 
 
             <TextView
                 android:id="@+id/documentdetailto_decoration_line9"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/decorationline_height"
-                android:layout_marginTop="20dp"
-                app:layout_constraintTop_toBottomOf="@id/documentdetailto_rcv_documentrelation" />
+                android:layout_marginTop="@dimen/documentdetailto_decoration_line9_margintop"
+                android:background="@color/colorDecorationLine"
+                app:layout_constraintTop_toBottomOf="@id/documentdetailto_rcv_documentcontent" />
 
             <TextView
                 android:id="@+id/documentdetailto_decoration_line10"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/decorationline_height"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="@dimen/documentdetailto_decoration_line10_margintop"
+                android:background="@color/colorDecorationLine"
                 app:layout_constraintTop_toBottomOf="@id/documentdetailto_decoration_line9" />
 
             <TextView
@@ -191,8 +208,8 @@
                 style="@style/TextMediumBlackBold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:text="Toàn văn nội dung"
+                android:layout_marginTop="@dimen/documentdetailto_tvlabel_history_margintop"
+                android:text="@string/documentdetailto_tvlabel_history_text"
                 app:layout_constraintStart_toStartOf="@id/item_header_document_detail_to"
                 app:layout_constraintTop_toBottomOf="@id/documentdetailto_decoration_line10" />
 
@@ -202,15 +219,18 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/workfollowdetail_rcv_marginend"
                 android:layout_marginTop="@dimen/workfollowdetail_rcv_margintop"
+                android:layout_marginBottom="@dimen/documentdetailto_rcv_history_marginbottom"
                 android:nestedScrollingEnabled="false"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@id/item_header_document_detail_to"
-                app:layout_constraintTop_toBottomOf="@id/documentdetailto_tvlabel_history" />
+                app:layout_constraintTop_toBottomOf="@id/documentdetailto_tvlabel_history"
+                app:layout_constraintBottom_toBottomOf="parent"
+                />
 
         </android.support.constraint.ConstraintLayout>
 
     </ScrollView>
 
 
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>

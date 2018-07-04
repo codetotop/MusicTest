@@ -2,6 +2,7 @@ package com.gem.mpi.screen.main.main.documentdetailto;
 
 import android.os.Bundle;
 
+import com.gem.mpi.screen.main.main.workfollowlist.workfollowdetail.documentrelation.DocumentRelationFragment;
 import com.gemvietnam.base.viper.Presenter;
 import com.gemvietnam.base.viper.interfaces.ContainerView;
 
@@ -29,6 +30,16 @@ public class DocumentDetailToPresenter extends Presenter<DocumentDetailToContrac
 
   @Override
   public DocumentDetailToContract.View onCreateView(Bundle data) {
-    return null;
+    return DocumentDetailToFragment.getInstance(data);
+  }
+
+  @Override
+  public void handleActionLeft() {
+    getView().getFragmentManager().popBackStack();
+  }
+
+  @Override
+  public void handleActionRight() {
+
   }
 }

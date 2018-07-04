@@ -41,11 +41,6 @@ public class WorkFollowListFragment extends ViewFragment<WorkFollowListContract.
   @Override
   public void onDisplay() {
     super.onDisplay();
-    /*if (getParentFragment() != null && getParentFragment() instanceof MainFragment) {
-      ((MainFragment) getParentFragment()).initToolbar(ToolbarView.ActionStyle.IMAGE, ToolbarView.ActionStyle.NONE, R.string.title_list_workfollowlist,
-          R.drawable.ic_slide_menu, null, null, null, null, null
-      );
-    }*/
     RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getViewContext());
     mWorkListRcv.setLayoutManager(layoutManager);
     workfollowlistModels = new ArrayList<>();
